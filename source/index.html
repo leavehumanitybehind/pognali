@@ -13,7 +13,7 @@
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Закрыть</span>
       </button>
     </nav>
   </header>
@@ -21,25 +21,25 @@
     <h1 class="visually-hidden">Погнали-сервис поиска попутчиков для путешествий</h1>
     <section class="main-intro">
       <div class="main-intro__wrapper">
-        <h2>В путешествие с крутыми попутчиками</h2>
-        <ul class="main-intro__list site-list">
-          <li class="site-list__item">
-            <a href="#">
-              <span class="visually-hidden">Наш телефон</span>
-            </a>
-
-          </li>
-          <li class="site-list__item">
-            <a href="#"><span class="visually-hidden">Наша почта</span>
-            </a>
-
-          </li>
-          <li class="site-list__item">
-            <a href="#">Авторизация</a>
-
-          </li>
-        </ul>
+        <h2 class="main-intro__title">О сервисе направления попутчики</h2>
+        <a class="main-intro__authorize" href="#">Авторизация</a>
       </div>
+      <ul class="main-intro__list site-list">
+        <li class="site-list__item">
+          <a href="tel:88005558628">
+            <span class="visually-hidden">8 800 555-86-28</span>
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="email:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="main-intro__social-list">
+        <li class="social-list__item"><a href="#"><span class="visually-hidden">Facebook</span></a></li>
+        <li class="social-list__item"><a href="#"><span class="visually-hidden">VKontakte</span></a></li>
+        <li class="social-list__item"><a href="#"><span class="visually-hidden">Instagram</span></a></li>
+      </ul>
     </section>
     <blockquote class="recomendation">
       <p class="recomendation__desription">Лучшее приложение, что я видел в жизни!</p>
@@ -102,9 +102,8 @@
 
     </section>
     <section class="directions">
-      <h2 class="directions__title">
-        Направления
-      </h2>
+      <h2 class="visually-hidden">Выбор направлений для путешествий </h2>
+      <a class="directions__title" href="form.html">Направления</a>
       <p class="directions_description">
         Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
         там заняться.
@@ -135,10 +134,11 @@
           </div>
         </li>
       </ul>
-      <a class="directions__to-all" href="#">Показать все</a>
+      <a class="directions__to-all" href="form.html">Показать все</a>
     </section>
     <section class="companions">
-      <h2 class="companions__title">Попутчики</h2>
+      <h2 class="visually-hidden">Список попутчиков</h2>
+      <a class="companions__title" href="catalog.html">Попутчики</a>
       <p class="companions__description">
         Все мы индивидуальныи у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
         маршрут
@@ -156,6 +156,12 @@
           <img src="https://via.placeholder.com/270x270" width="270" height="270" alt="Аватар Таня Фирсова">
           <div class="companions__item__wrapper">
             <ul class="companions__item__list wish-list">
+              <li class="wish-list__item">
+                <a href=#><span class="visually-hidden">Шри Ланка</span></a>
+              </li>
+              <li class="wish-list__item">
+                <a href=#><span class="visually-hidden">Таиланд</span></a>
+              </li>
               <li class="wish-list__item">
                 <a href=#><span class="visually-hidden">Сейшелы</span></a>
               </li>
@@ -181,8 +187,8 @@
                 <a href="#"><span class="visually-hidden">Пешком</span></a>
               </li>
             </ul>
-              </div>
-            </li>
+          </div>
+        </li>
 
 
         <li class="companions__item">
@@ -220,10 +226,10 @@
                 <a href="#"><span class="visually-hidden">Пешком</span></a>
               </li>
             </ul>
-            </div>
+          </div>
         </li>
       </ul>
-      <a class="companions__to-all" href="#">Показать всех</a>
+      <a class="companions__to-all" href="catalog.html">Показать всех</a>
     </section>
     <section class="promotion">
       <h2 class="promotion__title">Бизнес-тарифы</h2>
@@ -259,7 +265,8 @@
     </ul>
     <div class="main-footer__copyright">
       <span class="copyright__desription"></span>
-      <a href=#><img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML-academy"></a>
+      <a href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/27x34" width="27"
+          height="34" alt="Логотип HTML-academy"></a>
     </div>
   </footer>
 </body>
