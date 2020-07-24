@@ -14,7 +14,7 @@
   <button class="main-nav__toggle" type="button">
     <span class="visually-hidden">Открыть меню</span>
   </button>
-  <nav class="main-nav">
+  <nav class="main-nav main-nav-show">
     <ul class="main-nav__list user-list">
       <li class="user-list__item">
         <a class="user-list__link" href="#">О сервисе</a>
@@ -150,13 +150,19 @@
         <div class="companion__wrapper">
           <ul class="companions__wish-list wish-list">
             <li class="wish-list__item">
-              <a href=#><span class="visually-hidden">Шри Ланка</span></a>
+              <a class="wish-list__link" href=#>
+                <span class="visually-hidden">Шри Ланка</span>
+                <span class="wish-list__country-icon"></span></a>
             </li>
             <li class="wish-list__item">
-              <a href=#><span class="visually-hidden">Таиланд</span></a>
+              <a class="wish-list__link" href=#>
+                <span class="visually-hidden">Таиланд</span>
+                <span class="wish-list__country-icon"></span></a>
             </li>
             <li class="wish-list__item">
-              <a href=#><span class="visually-hidden">Сейшелы</span></a>
+              <a class="wish-list__link" href=#>
+                <span class="visually-hidden">Сейшелы</span>
+                <span class="wish-list__country-icon"></span></a>
             </li>
           </ul>
           <a href="#" class="companion__title companion__title--offline">
@@ -194,13 +200,19 @@
         <div class="companion__wrapper">
           <ul class="companions__wish-list wish-list">
             <li class="wish-list__item">
-              <a href=#><span class="visually-hidden">Бельгия</span></a>
+              <a class="wish-list__link" href=#>
+                <span class="visually-hidden">Бельгия</span>
+                <span class="wish-list__country-icon"></span>
+              </a>
             </li>
             <li class="wish-list__item">
-              <a href=#><span class="visually-hidden">Чехия</span></a>
+              <a class="wish-list__link" href=#>
+                <span class="visually-hidden">Чехия</span>
+                <span class="wish-list__country-icon"></span>
+              </a>
             </li>
           </ul>
-          <a class="companion__title companion__title--online">
+          <a class="companion__title companion__title--online" href="#">
             Петя Демин
           </a>
           <p class="companion__hashtags"> #бургер #бар #футбол #концерт #крафт</p>
@@ -250,7 +262,8 @@
   <section class="promotion">
     <h2 class="promotion__title">Заинтересовались?</h2>
     <p class="promotion__description">
-      Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>
+      Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+      <a class="promotion__description-link" href="#">авторизуйтесь</a>
     </p>
     <form class="promotion__form">
       <input class="promotion__form-field" type="email" id="email-field" name="email" placeholder="E-mail" required>
@@ -259,12 +272,13 @@
     </form>
     <ul class="promotion__list contacts-list">
       <li class="contacts-list__item">
-        <a href="tel:88005558628">
+        <a class="contacts-list__link" href="tel:88005558628">
           <span class="contacts-list__number">8 800 555-86-28</span>
         </a>
       </li>
       <li class="contacts-list__item">
-        <a href="email:mail@htmlacademy.ru"><span class="contacts-list__mail">mail@htmlacademy.ru</span>
+        <a class="contacts-list__link" href="email:mail@htmlacademy.ru">
+          <span class="contacts-list__mail">mail@htmlacademy.ru</span>
         </a>
       </li>
     </ul>
