@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
 </head>
 
-<body class="page-body">
+<body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
+    <a class="page-header__logo logo" href="index.html">
       <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
     <nav class="main-nav">
@@ -18,224 +18,260 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1>Попутчики</h1>
-    <section class="companions">
-      <h2 class="companions__title">Попутчики</h2>
-      <ul class="companions__list">
-        <li class="companions__item">
+    <header class="page-main-header">
+      <h1 class="page-main-header__title">Попутчики</h1>
+    </header>
+    <section class="travellers">
+      <h2 class="travellers__title">Попутчики</h2>
+      <ul class="travellers__list traveller">
+        <li class="traveller__item">
           <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Аватар Таня Фирсова">
-          <div class="companions__item__wrapper">
-            <h3 class="companions__item__title">
+          <div class="traveller__wrapper">
+            <h3 class="traveller__title">
               Таня Фирсова
             </h3>
-            <span class="companions__item__likes">1,5 м</span>
-            <p class="companions__item__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <fieldset class="companions__countries">
-              <legend class="companioins__countries__title">хочет посетить:</legend>
-              <ul class="companions__item__list wish-list">
+            <span class="traveller__likes">1,5 м</span>
+            <p class="traveller__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <div class="traveller__countries country">
+              <span class="country__title">хочет посетить:</span>
+              <ul class="traveller__list wish-list">
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Шри Ланка</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Шри Ланка</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Таиланд</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Таиланд</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Сейшелы</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Сейшелы</span>
+                    <span class="wish-list__country-icon"></span></a>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__transport">
-              <legend class="companions__item__title">транспорт:</legend>
-              <ul class="companions__list-prefer">
+            </div>
+            <div class="traveller__transport transport">
+              <span class="transport__title">транспорт:</span>
+              <ul class="transport__list-prefer list-prefer">
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Самолет</span></a>
+                  <img src="" width="35" height="25" alt="Самолет">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Автобус</span></a>
+                  <img src="" width="35" height="25" alt="Автобус">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Велосипед</span></a>
+                  <img src="" width="35" height="25" alt="Велосипед">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Пешком</span></a>
+                  <img src="" width="35" height="25" alt="Пешком">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__item__level">
-              <legend>левел:</legend>
-              <span>99</span>
-            </fieldset>
-            <button type="button">Позвать!</button>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">99</span>
+            </div>
+            <a class="travellers__button btn" href="#">Позвать!</a>
           </div>
         </li>
-        <li class="companions__item">
+        <li class="traveller__item">
           <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Аватар Петя Демин">
-          <div class="companions__item__wrapper">
-            <h3 class="companions__item__title">
+          <div class="traveller__wrapper">
+            <h3 class="traveller__title">
               Петя Демин
             </h3>
-            <span class="companions__item__likes">1500</span>
-            <p class="companions__item__hashtags">#бургер #бар #футбол #концерт #крафт</p>
-            <fieldset class="companions__countries">
-              <legend class="companioins__countries__title">хочет посетить:</legend>
-              <ul class="companions__item__list wish-list">
+            <span class="traveller__likes">1500</span>
+            <p class="traveller__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+            <div class="traveller__countries country">
+              <span class="country__title">хочет посетить:</span>
+              <ul class="traveller__list wish-list">
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Бельгия</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Бельгия</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Чехия</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Чехия</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Сейшелы</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Сейшелы</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__transport">
-              <legend class="companions__item__title">транспорт:</legend>
-              <ul class="companions__list-prefer">
+            </div>
+            <div class="traveller__transport transport">
+              <span class="transport__title">транспорт:</span>
+              <ul class="traveller__list-prefer list-prefer">
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Самолет</span></a>
+                  <img src="" width="35" height="25" alt="Самолет">
 
                 </li>
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Автобус</span></a>
+                  <img src="" width="35" height="25" alt="Автобус">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Велосипед</span></a>
+                  <img src="" width="35" height="25" alt="Велосипед">
 
                 </li>
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Пешком</span></a>
+                  <img src="" width="35" height="25" alt="Пешком">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__item__level">
-              <legend>левел:</legend>
-              <span>80</span>
-            </fieldset>
-            <button type="button">Позвать!</button>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">80</span>
+            </div>
+            <a class="travellers__button btn" href="#">Позвать!</a>
           </div>
         </li>
-        <li class="companions__item">
+        <li class="traveller__item">
           <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Аватар Марк Смолов">
-          <div class="companions__item__wrapper">
-            <h3 class="companions__item__title">
+          <div class="traveller__wrapper">
+            <h3 class="traveller__title">
               Марк Смолов
             </h3>
-            <span class="companions__item__likes">170</span>
-            <p class="companions__item__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <fieldset class="companions__countries">
-              <legend class="companioins__countries__title">хочет посетить:</legend>
-              <ul class="companions__item__list wish-list">
+            <span class="traveller__likes">170</span>
+            <p class="traveller__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <div class="traveller__countries country">
+              <span class="country__title">хочет посетить:</span>
+              <ul class="traveller__list wish-list">
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">США</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">США</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Австралия</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Австралия</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Доминикана</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Доминикана</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__transport">
-              <legend class="companions__item__title">транспорт:</legend>
-              <ul class="companions__list-prefer">
+            </div>
+            <div class="traveller__transport transport">
+              <span class="transport__title">транспорт:</span>
+              <ul class="traveller__list-prefer list-prefer">
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Самолет</span></a>
+                  <img src="" width="35" height="25" alt="Самолет">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Автобус</span></a>
+                  <img src="" width="35" height="25" alt="Автобус">
 
                 </li>
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Велосипед</span></a>
+                  <img src="" width="35" height="25" alt="Велосипед">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Пешком</span></a>
+                  <img src="" width="35" height="25" alt="Пешком">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__item__level">
-              <legend>левел:</legend>
-              <span>25</span>
-            </fieldset>
-            <button type="button">Позвать!</button>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">25</span>
+            </div>
+            <a class="travellers__button btn" href="#">Позвать!</a>
           </div>
         </li>
-        <li class="companions__item">
-          <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Аватар Лариса Роговая">
-          <div class="companions__item__wrapper">
-            <h3 class="companions__item__title">
+        <li class="traveller__item">
+          <img src="https://via.placeholder.com/50x50" width="70" height="70" alt="Аватар Лариса Роговая">
+          <div class="traveller__wrapper">
+            <h3 class="traveller__title">
               Лариса Роговая
             </h3>
-            <span class="companions__item__likes">23</span>
-            <p class="companions__item__hashtags">#образование #карьера #учеба #линкедин</p>
-            <fieldset class="companions__countries">
-              <legend class="companioins__countries__title">хочет посетить:</legend>
-              <ul class="companions__item__list wish-list">
+            <span class="traveller__likes">23</span>
+            <p class="traveller__hashtags">#образование #карьера #учеба #линкедин</p>
+            <div class="travellers__countries country">
+              <span class="country__title">хочет посетить:</span>
+              <ul class="traveller__list wish-list">
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Великобритания</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Великобритания</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
                 <li class="wish-list__item">
-                  <a href=#><span class="visually-hidden">Германия</span></a>
+                  <a class="wish-list__link" href=#>
+                    <span class="wish-list__country-name">Германия</span>
+                    <span class="wish-list__country-icon"></span>
+                  </a>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__transport">
-              <legend class="companions__item__title">транспорт:</legend>
-              <ul class="companions__list-prefer">
+            </div>
+            <div class="traveller__transport transport">
+              <span class="transport__title">транспорт:</span>
+              <ul class="traveller__list-prefer">
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Самолет</span></a>
+                  <img src="" width="35" height="25" alt="Самолет">
 
                 </li>
                 <li class="list-prefer__item list-prefer__item--current">
-                  <a href="#"><span class="visually-hidden">Автобус</span></a>
+                  <img src="" width="35" height="25" alt="Автобус">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Велосипед</span></a>
+                  <img src="" width="35" height="25" alt="Велосипед">
 
                 </li>
                 <li class="list-prefer__item">
-                  <a href="#"><span class="visually-hidden">Пешком</span></a>
+                  <img src="" width="35" height="25" alt="Пешком">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="companions__item__level">
-              <legend>левел:</legend>
-              <span>50</span>
-            </fieldset>
-            <button type="button">Позвать!</button>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">50</span>
+            </div>
+            <a class="travellers__button btn" href="#">Позвать!</a>
           </div>
         </li>
       </ul>
-      <a class="companions__show-more" href="#">Показать еще</a>
-      <ul class="pagination__list">
-        <li class="pagination__list__item"><a><span class="visually-hidden">назад</span></a></li>
-        <li class="pagination__list__item"><a><span class="visually-hidden">вперед</span></a></li>
+      <a class="travellers__show-more" href="#">Показать еще</a>
+      <ul class="travellers__pagination-list">
+        <li class="travellers__pagination-list-item"><a class="pagination-list__link" href="#"><span
+              class="visually-hidden">назад</span></a></li>
+        <li class="travellers__pagination-list-item"><a class="pagination-list__link" href="#"><span
+              class="visually-hidden">вперед</span></a></li>
       </ul>
     </section>
   </main>
-  <footer class="main-footer">
-    <a class="page-header__logo" href="#">
+  <footer class="page-footer">
+    <a class="page-footer__logo logo" href="#">
       <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
-    <ul class="main-footer__social-list">
-      <li class="social-list__item"><a href="#"><span class="visually-hidden">Facebook</span></a></li>
-      <li class="social-list__item"><a href="#"><span class="visually-hidden">VKontakte</span></a></li>
-      <li class="social-list__item"><a href="#"><span class="visually-hidden">Instagram</span></a></li>
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-list-item"><a href="#"><span class="visually-hidden">Facebook</span></a></li>
+      <li class="page-footer__social-list-item"><a href="#"><span class="visually-hidden">VKontakte</span></a></li>
+      <li class="page-footer__social-list-item"><a href="#"><span class="visually-hidden">Instagram</span></a></li>
     </ul>
-    <div class="main-footer__copyright">
-      <span class="copyright__desription"></span>
-      <a href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/27x34" width="27"
-          height="34" alt="Логотип HTML-academy"></a>
+    <div class="page-footer__copyright">
+      <span class="page-footer__copyright-desсription">Разработано</span>
+      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><img
+          src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML-academy"></a>
     </div>
   </footer>
 </body>
