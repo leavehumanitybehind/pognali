@@ -11,11 +11,31 @@
     <a class="page-header__logo logo" href="index.html">
       <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
-    <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <nav class="main-nav main-nav-show">
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link" href="index.html">О сервисе</a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link" href="#">Направления</a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link" href="catalog.html">Попутчики</a>
+        </li>
+      </ul>
+      <ul class="main-nav__social-list social-list">
+        <li class="social-list__item"><a href="#"><span class="visually-hidden">Facebook</span></a></li>
+        <li class="social-list__item"><a href="#"><span class="visually-hidden">VKontakte</span></a></li>
+        <li class="social-list__item"><a href="#"><span class="visually-hidden">Instagram</span></a></li>
+      </ul>
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Закрыть меню</span>
       </button>
     </nav>
+  </header>
   </header>
   <main class="page-main">
     <header class="page-main-header">
