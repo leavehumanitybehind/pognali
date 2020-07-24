@@ -12,7 +12,7 @@
   </a>
 
   <button class="main-nav__toggle" type="button">
-    <span class="visually-hidden">Закрыть</span>
+    <span class="visually-hidden">Открыть меню</span>
   </button>
   <nav class="main-nav">
     <ul class="main-nav__list user-list">
@@ -20,7 +20,7 @@
         <a class="user-list__link" href="#">О сервисе</a>
       </li>
       <li class="user-list__item">
-        <a class="user-list__link" href="#">Направления</a>
+        <a class="user-list__link" href="form.html">Направления</a>
       </li>
       <li class="user-list__item">
         <a class="user-list__link" href="catalog.html">Попутчики</a>
@@ -31,11 +31,14 @@
       <li class="social-list__item"><a href="#"><span class="visually-hidden">VKontakte</span></a></li>
       <li class="social-list__item"><a href="#"><span class="visually-hidden">Instagram</span></a></li>
     </ul>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Закрыть меню</span>
+    </button>
   </nav>
 </header>
 <main class="main-page">
-  <h1 class="main-page__title">В путешествие с крутыми попутчиками!</h1>
   <section class="main-intro">
+    <h1 class="main-intro__title">В путешествие с крутыми попутчиками!</h1>
     <div class="main-intro__wrapper">
       <a class="main-intro__authorize btn" href="#">Авторизация</a>
     </div>
@@ -51,7 +54,6 @@
         </a>
       </li>
     </ul>
-
   </section>
   <blockquote class="recommendation">
     <p class="recommendation__description">Лучшее приложение, что я видел в жизни!</p>
@@ -122,7 +124,7 @@
         </div>
       </li>
     </ul>
-    <a class="directions__to-all" href="form.html">Показать все</a>
+    <a class="directions__to-all btn" href="form.html">Показать все</a>
   </section>
   <section class="companions">
     <h2 class="companions__title">Попутчики</h2>
@@ -139,11 +141,12 @@
 
     <ul class="companions__list">
       <li class="companions__item companion">
-        <div class="companion__level">
-          <span>99</span>
-          <span>level</span>
+        <div class="companion__property companion-property-level">
+          <div class="companion__property-title">99</div>
+          <span class="companion__property__value">level</span>
         </div>
-        <img src="https://via.placeholder.com/270x270" width="270" height="270" alt="Аватар Таня Фирсова">
+        <a class="companion__link" href=#><img src="https://via.placeholder.com/270x270" width="270" height="270"
+            alt="Аватар Таня Фирсова"></a>
         <div class="companion__wrapper">
           <ul class="companions__wish-list wish-list">
             <li class="wish-list__item">
@@ -156,25 +159,25 @@
               <a href=#><span class="visually-hidden">Сейшелы</span></a>
             </li>
           </ul>
-          <h3 class="companion__title">
+          <a href="#" class="companion__title companion__title--offline">
             Таня Фирсова
-          </h3>
+          </a>
           <p class="companion__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
           <ul class="companion__list-prefer list-prefer">
             <li class="list-prefer__item list-prefer__item--current">
-              <img src="" width="35" height="25" alt="Самолет">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Самолет">
 
             </li>
             <li class="list-prefer__item">
-              <img src="" width="35" height="25" alt="Автобус">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Автобус">
 
             </li>
             <li class="list-prefer__item">
-              <img src="" width="35" height="25" alt="Велосипед">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Велосипед">
 
             </li>
             <li class="list-prefer__item">
-              <img src="" width="35" height="25" alt="Пешком">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Пешком">
             </li>
           </ul>
         </div>
@@ -182,11 +185,12 @@
 
 
       <li class="companions__item companion">
-        <div class="companion__level">
-          <span>80</span>
-          <span>level</span>
+        <div class="companion__property companion-property-level">
+          <span class="companion__property-title">80</span>
+          <span class="companion__property-level__value">level</span>
         </div>
-        <img src="https://via.placeholder.com/270x270" width="270" height="270" alt="Аватар Петя Демин">
+        <a class="companion__link" href="#"><img src="https://via.placeholder.com/270x270" width="270" height="270"
+            alt="Аватар Петя Демин"></a>
         <div class="companion__wrapper">
           <ul class="companions__wish-list wish-list">
             <li class="wish-list__item">
@@ -196,30 +200,30 @@
               <a href=#><span class="visually-hidden">Чехия</span></a>
             </li>
           </ul>
-          <h3 class="companion__title">
+          <a class="companion__title companion__title--online">
             Петя Демин
-          </h3>
+          </a>
           <p class="companion__hashtags"> #бургер #бар #футбол #концерт #крафт</p>
           <ul class="companion__list-prefer list-prefer">
             <li class="list-prefer__item list-prefer__item--current">
-              <img src="" width="35" height="25" alt="Самолет">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Самолет">
 
             </li>
             <li class="list-prefer__item list-prefer__item--current">
-              <img src="" width="35" height="25" alt="Автобус">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Автобус">
 
             </li>
             <li class="list-prefer__item">
-              <img src="" width="35" height="25" alt="Велосипед">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Велосипед">
             </li>
             <li class="list-prefer__item list-prefer__item--current">
-              <img src="" width="35" height="25" alt="Пешком">
+              <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Пешком">
             </li>
           </ul>
         </div>
       </li>
     </ul>
-    <a class="companions__to-all" href="catalog.html">Показать всех</a>
+    <a class="companions__to-all btn" href="catalog.html">Показать всех</a>
   </section>
   <section class="business-offer">
     <h2 class="business-offer__title">Бизнес-тарифы</h2>
