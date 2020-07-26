@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo logo" href="#">
+      <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сайта поиска попутчиков">
+    </a>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <nav class="main-nav main-nav-show">
+      <ul class="main-nav__list nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="index.html">
+            <span class="nav-list__text">О сервисе</span>
+          </a>
+        </li>
+        <li class="navr-list__item">
+          <a class="nav-list__link" href="form.html">
+            <span class="nav-list__text">Направления</span>
+          </a>
+        </li>
+        <li class="nav-list__item nav-list__item--active">
+          <a class="nav-list__link" href="#">
+            <span class="nav-list__text">Попутчики</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="main-nav__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">VKontakte</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Закрыть меню</span>
+      </button>
+    </nav>
+  </header>
+  <main class="page-main">
+    <header class="page-main-header">
+      <h1 class="page-main-header__title">Попутчики</h1>
+    </header>
+    <div class="travellers">
+      <ul class="travellers__list">
+        <li class="travellers__list-item traveller">
+          <a class="traveller__link" href="#">
+            <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Аватар Таня Фирсова">
+          </a>
+          <div class="traveller__wrapper">
+            <a class="traveller__title traveller__title--offline" href="#">
+              Таня Фирсова
+            </a>
+            <span class="traveller__likes">1,5 м</span>
+            <p class="traveller__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <div class="traveller__property traveller-property-country">
+              <span class="traveller__property-title">хочет посетить:</span>
+              <ul class="traveller-property-country__list wish-list">
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Шри Ланка</span>
+                  </a>
+                </li>
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Таиланд</span>
+                  </a>
+                </li>
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Сейшелы</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-transport">
+              <div class="traveller__property-title">транспорт:</div>
+              <ul class="traveller-property-transport__list list-prefer">
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Самолет">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Автобус">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Велосипед">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Пешком">
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">99</span>
+            </div>
+            <a class="traveller_btn btn" href="#">Позвать!</a>
+          </div>
+        </li>
+        <li class="travellers__list-item traveller">
+          <a class="traveller__link" href="#">
+            <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Аватар Петя Демин">
+          </a>
+          <div class="traveller__wrapper">
+            <a class="traveller__title traveller__title--offline" href="#">
+              Петя Демин
+            </a>
+            <span class="traveller__likes">1500</span>
+            <p class="traveller__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+            <div class="traveller__property traveller-property-country">
+              <span class="traveller__property-title">хочет посетить:</span>
+              <ul class="traveller-property-country__list wish-list">
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Бельгия</span>
+                  </a>
+                </li>
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Чехия</span>
+                  </a>
+                </li>
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Сейшелы</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-transport">
+              <div class="traveller__property-title">транспорт:</div>
+              <ul class="traveller-property-transport__list list-prefer">
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Самолет">
+                </li>
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Автобус">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Велосипед">
+                </li>
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Пешком">
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">80</span>
+            </div>
+            <a class="traveller_btn btn" href="#">Позвать!</a>
+          </div>
+        </li>
+        <li class="travellers__list-item traveller">
+          <a class="traveller__link" href="#">
+            <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Аватар Марк Смолов">
+          </a>
+          <div class="traveller__wrapper">
+            <a href="#" class="traveller__title traveller__title--offline">
+              Марк Смолов
+            </a>
+            <span class="traveller__likes">170</span>
+            <p class="traveller__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <div class="traveller__property traveller-property-country">
+              <span class="traveller__property-title">хочет посетить:</span>
+              <ul class="traveller-property-country__list wish-list">
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">США</span>
+                  </a>
+                </li>
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Австралия</span>
+                  </a>
+                </li>
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Доминикана</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-transport">
+              <div class="traveller__property-title">транспорт:</div>
+              <ul class="traveller-property-transport__list list-prefer">
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Самолет">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Автобус">
+                </li>
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Велосипед">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Пешком">
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">25</span>
+            </div>
+            <a class="traveller_btn btn" href="#">Позвать!</a>
+          </div>
+        </li>
+        <li class="travellers__list-item traveller">
+          <a class="traveller__link" href="#">
+            <img src="https://via.placeholder.com/50x50" width="70" height="70" alt="Аватар Лариса Роговая">
+          </a>
+          <div class="traveller__wrapper">
+            <a href="#" class="traveller__title traveller__title--online">
+              Лариса Роговая
+            </a>
+            <span class="traveller__likes">23</span>
+            <p class="traveller__hashtags">#образование #карьера #учеба #линкедин</p>
+            <div class="traveller__property traveller-property-country">
+              <span class="traveller__property-title">хочет посетить:</span>
+              <ul class="traveller-property-country__list wish-list">
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Великобритания</span>
+                  </a>
+                </li>
+                <li class="wish-list__item">
+                  <a class="wish-list__link" href="#">
+                    <span class="wish-list__country-icon"></span>
+                    <span class="wish-list__country-name">Германия</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-transport">
+              <div class="traveller__property-title">транспорт:</div>
+              <ul class="traveller-property-transport__list list-prefer">
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Самолет">
+                </li>
+                <li class="list-prefer__item list-prefer__item--current">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Автобус">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Велосипед">
+                </li>
+                <li class="list-prefer__item">
+                  <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Пешком">
+                </li>
+              </ul>
+            </div>
+            <div class="traveller__property traveller-property-level">
+              <div class="traveller__property-title">левел:</div>
+              <span class="traveller-property-level__value">50</span>
+            </div>
+            <a class="traveller_btn btn" href="#">Позвать!</a>
+          </div>
+        </li>
+      </ul>
+      <a class="travellers__show-more" href="#">Показать еще</a>
+      <ul class="travellers__pagination-list pagination-list">
+        <li class="pagination-list__item"><a class="pagination-list__link" href="#"><span
+              class="visually-hidden">назад</span></a></li>
+        <li class="pagination-list__item"><a class="pagination-list__link" href="#"><span
+              class="visually-hidden">вперед</span></a></li>
+      </ul>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <a class="page-footer__logo logo" href="#">
+      <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сайта поиска попутчиков">
+    </a>
+    <ul class="page-footer__social-list social-list social-list--with-bg">
+      <li class="page-footer__social-list-item">
+        <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+      <li class="page-footer__social-list-item">
+        <a class="social-list__link" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden">VKontakte</span>
+        </a>
+      </li>
+      <li class="page-footer__social-list-item">
+        <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
+    <div class="page-footer__copyright">
+      <span class="page-footer__copyright-desсription">Разработано</span>
+      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML-academy">
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
