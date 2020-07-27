@@ -2,29 +2,34 @@
   counter-reset: myCounter;
   background: #182044;
 }
+
 .instruction__list {
   margin: 0;
 }
+
 .instruction__list-item {
   list-style: none;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   color: #161c35;
-
-  &--choose {
+    &--choose {
   background: #ff8d30;
   }
-  &--learn {
+
+    &--learn {
   background: #ffa530;
   }
-  &--find {
+
+    &--find {
   background: #ffbd30;
   }
-  &--enjoy {
+
+    &--enjoy {
   background: #ffd74b;
   }
 }
+
 .instruction__list-item::after {
   counter-increment: myCounter;
   content: counter(myCounter);
