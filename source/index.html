@@ -4,13 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали </title>
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo logo" href="#">
-      <img src="img/logo-mobile-blue@1x.png" width="96" height="15" alt="Логотип сайта поиска попутчиков">
+      <img src="img/logo-mobile-white@1x.png" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
     <button class="main-nav__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
@@ -62,14 +66,14 @@
         <a class="main-intro__authorize btn" href="#">Авторизация</a>
       </div>
       <ul class="main-intro__list site-list">
-        <li class="site-list__item">
+        <li class="site-list__item site-list__item--phone">
           <a class="site-list__link" href="tel:88005558628">
-            <span class="site-list__number">8 800 555-86-28</span>
+            <span class="visually-hidden">8 800 555-86-28</span>
           </a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="email:mail@htmlacademy.ru"><span
-              class="site-list__mail">mail@htmlacademy.ru</span>
+        <li class="site-list__item  site-list__item--mail">
+          <a class="site-list__link" href="email:mail@htmlacademy.ru">
+            <span class="visually-hidden">mail@htmlacademy.ru</span>
           </a>
         </li>
       </ul>
@@ -81,16 +85,16 @@
     <section class="instruction">
       <h2 class="visually-hidden">Инструкция, как пользоваться сервисом</h2>
       <ol class="instruction__list">
-        <li class="instruction__list-item">
+        <li class="instruction__list-item instruction__list-item--choose">
           Выберите направление
         </li>
-        <li class="instruction__list-item">
+        <li class="instruction__list-item instruction__list-item--learn">
           Изучите идеи путешественников
         </li>
-        <li class="instruction__list-item">
+        <li class="instruction__list-item instruction__list-item--find">
           Находите тех,кто похож на вас
         </li>
-        <li class="instruction__list-item">
+        <li class="instruction__list-item instruction__list-item--enjoy">
           Путешествуйте вместе!
         </li>
       </ol>
@@ -156,7 +160,7 @@
         <li class="companions__item companion">
           <div class="companion__property companion-property-level">
             <div class="companion__property-title">99</div>
-            <span class="companion__property__value">level</span>
+            <span class="companion-property-level__value">level</span>
           </div>
           <a class="companion__link" href="#">
             <img src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Аватар Таня Фирсова">
@@ -204,7 +208,7 @@
         <li class="companions__item companion">
           <div class="companion__property companion-property-level">
             <span class="companion__property-title">80</span>
-            <span class="companion__property-level__value">level</span>
+            <span class="companion-property-level__value">level</span>
           </div>
           <a class="companion__link" href="#">
             <img src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Аватар Петя Демин">
@@ -248,26 +252,22 @@
       <a class="companions__to-all btn" href="catalog.html">Показать всех</a>
     </section>
     <section class="business-offer">
-      <h2 class="business-offer__title section-title">Бизнес-тарифы</h2>
+      <h2 class="business-offer__title section-title"> Добавьте в свой профиль</h2>
       <ol class="business-offer__list">
         <li class="business-offer__list-item">
-          <div class="bussiness-offer__service">Реклама у блоггера </div>
-          <div class="bussiness-offer__price">300 000 руб./пост</div>
+          <div class="business-offer__service">Базовое размещение </div>
+          <div class="business-offer__price">Бесплатно</div>
         </li>
         <li class="business-offer__list-item">
-          <div class="bussiness-offer__service">Накрутка подписчиков </div>
-          <div class="bussiness-offer__price">от 1 руб./шт.</div>
+          <div class="business-offer__service">Вывод на первых позициях </div>
+          <div class="business-offer__price">99 руб./мес</div>
         </li>
         <li class="business-offer__list-item">
-          <div class="bussiness-offer__service">Лайки от ботов </div>
-          <div class="bussiness-offer__price">от 20 коп./лайк</div>
-        </li>
-        <li class="business-offer__list-item">
-          <div class="bussiness-offer__service">Ваш продакт-плейсмент </div>
-          <div class="bussiness-offer__price">Индивидуально</div>
+          <div class="business-offer__service">Кастомный цвет карточки</div>
+          <div class="business-offer__price">59 руб./мес</div>
         </li>
       </ol>
-      <a class="bussiness-offer__link" href="#">Показать тарифы для бизнеса</a>
+      <a class="business-offer__link" href="#">Показать тарифы для бизнеса</a>
     </section>
     <section class="promotion">
       <h2 class="promotion__title section-title">Заинтересовались?</h2>
@@ -280,11 +280,15 @@
         <label class="visually-hidden" for="email-field">Электронная почта</label>
         <button class="promotion__button" type="submit"><span class="visually-hidden">Отправить</span></button>
       </form>
+      <p class="promotion__description">
+        Остались вопросы? Мы с радостью на них ответим!
+      </p>
       <ul class="promotion__list contacts-list">
         <li class="contacts-list__item">
           <a class="contacts-list__link" href="tel:88005558628">
             <span class="contacts-list__number">8 800 555-86-28</span>
           </a>
+
         </li>
         <li class="contacts-list__item">
           <a class="contacts-list__link" href="email:mail@htmlacademy.ru">
@@ -293,6 +297,7 @@
         </li>
       </ul>
     </section>
+
     <section class="map">
       <h2 class="visually-hidden">Адрес офиса</h2>
       <span class="map__address">
@@ -306,7 +311,7 @@
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo logo" href="#">
-      <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сайта поиска попутчиков">
+      <img src="img/logo-mobile-blue@1x.png" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
     <ul class="page-footer__social-list social-list social-list--with-bg">
       <li class="page-footer__social-list-item">

@@ -1,4 +1,29 @@
 // Начните писать стили здесь
-body {
-	background: white;
-}
+@import "./fonts.scss";
+@import "global.scss";
+@import "blocks/header";
+@import "blocks/about-service";
+@import "blocks/btn";
+@import "blocks/business-offer";
+@import "blocks/companion";
+@import "blocks/companions";
+@import "blocks/contacts-list";
+@import "blocks/country";
+@import "blocks/directions";
+@import "blocks/footer";
+@import "blocks/instruction";
+@import "blocks/list-prefer";
+@import "blocks/main-intro";
+@import "blocks/main-nav";
+@import "blocks/map";
+@import "blocks/nav-list";
+@import "blocks/page-main-header";
+@import "blocks/pagination-list";
+@import "blocks/promotion";
+@import "blocks/recommendation";
+@import "blocks/section-title";
+@import "blocks/site-list";
+@import "blocks/social-list";
+@import "blocks/traveller";
+@import "blocks/travellers";
+@import "blocks/wish-list";

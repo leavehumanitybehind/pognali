@@ -1,14 +1,19 @@
 .directions{
+  padding-top:70px;
   background: #EDEFF6;
 }
 
-.direcections-description{
+.directions-description{
   font-weight: 300;
 font-size: 16px;
 line-height: 22px;
 color: #444444;
 }
-
+.directions__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .directions__show-all-btn{
   font-weight: bold;
 font-size: 18px;

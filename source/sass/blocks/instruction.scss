@@ -1,11 +1,37 @@
-.instruction__list{
-  list-style: none;
-  margin:0;
-  padding:0;
+.instruction {
+  counter-reset: myCounter;
+  background: #182044;
 }
-.instruction__list-item{
-font-weight: bold;
-font-size: 18px;
-line-height: 18px;
-color: #161C35;
+.instruction__list {
+  margin: 0;
+}
+.instruction__list-item {
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #161c35;
+
+  &--choose {
+  background: #ff8d30;
+  }
+  &--learn {
+    background: #ffa530;
+  }
+  &--find {
+    background: #ffbd30;
+  }
+  &--enjoy {
+    background: #ffd74b;
+  }
+}
+.instruction__list-item::after {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+  color: white;
+  display: inline-block;
+  text-align: center;
+  line-height: normal;
+  height: auto;
+  width: auto;
 }

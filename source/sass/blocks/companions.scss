@@ -1,4 +1,5 @@
 .companions{
+  padding-top: 100px;
   background:#192144;
 }
 
@@ -8,4 +9,10 @@
 font-size: 16px;
 line-height: 22px;
 color: #FFFFFF;
+}
+
+.companions__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
