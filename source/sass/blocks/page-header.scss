@@ -1,0 +1,13 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background: $basic-blue;
+}
+@media (min-width: $tablet-width) {
+.page-header {
+  background-color: $basic-white;
+  height:200px;
+}
+}
