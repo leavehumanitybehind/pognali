@@ -3,14 +3,14 @@
 }
 
 .travellers__list {
-  list-style: none;
+  @include no-list;
 }
 
 .travellers__show-more {
   font-weight: bold;
   font-size: 17px;
-  line-height: 30px;
+  line-height: (30 / 17);
   text-transform: uppercase;
   text-decoration: none;
-  color: #1d2e5b;
+  color: $basic-blue-lightb;
 }

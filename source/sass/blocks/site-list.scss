@@ -1,7 +1,5 @@
 .site-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include no-list;
 }
 
 .site-list__link {

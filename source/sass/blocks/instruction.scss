@@ -4,18 +4,18 @@
 }
 
 .instruction__list {
-  margin: 0;
+  @include no-list;
 }
 
 .instruction__list-item {
   list-style: none;
   font-weight: bold;
   font-size: 18px;
-  line-height: 18px;
-  color: #161c35;
+  line-height: 1;
+  color: $basic-blue;
 
   &--choose {
-    background: #ff8d30;
+    background: $special-orange;
   }
 
   &--learn {
@@ -23,21 +23,22 @@
   }
 
   &--find {
-    background: #ffbd30;
+    background: $special-yellow-dark;
   }
 
   &--enjoy {
-    background: #ffd74b;
+    background: $basic-yellow;
   }
-}
 
-.instruction__list-item::after {
-  counter-increment: myCounter;
-  content: counter(myCounter);
-  color: white;
-  display: inline-block;
-  text-align: center;
-  line-height: normal;
-  height: auto;
-  width: auto;
+  &::after {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $basic-white;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: normal;
+    height: auto;
+    width: auto;
+  }
 }

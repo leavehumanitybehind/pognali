@@ -6,12 +6,10 @@
 .companions__description {
   font-weight: 300;
   font-size: 16px;
-  line-height: 22px;
-  color: #ffffff;
+  line-height: (22 / 16);
+  color: $basic-white;
 }
 
 .companions__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include no-list;
 }

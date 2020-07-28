@@ -1,13 +1,3 @@
 .list-prefer {
-  list-style: none;
-}
-
-.map__way-to {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  color: #1d2e5b;
-  border: 3px solid #192144;
-  box-sizing: border-box;
-  border-radius: 10px;
+  @include no-list;
 }

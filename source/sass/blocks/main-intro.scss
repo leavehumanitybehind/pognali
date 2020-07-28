@@ -10,16 +10,16 @@
   margin-bottom: 245px;
   font-weight: bold;
   font-size: 36px;
-  line-height: 40px;
+  line-height: (40 / 36);
   text-align: center;
-  color: #ffffff;
+  color: $basic-white;
 }
 
 .main-intro__authorize {
   font-weight: bold;
   font-size: 17px;
-  line-height: 20px;
+  line-height:(20 / 17);
   text-align: center;
   text-transform: uppercase;
-  color: #161c35;
+  color: $basic-blue;
 }
