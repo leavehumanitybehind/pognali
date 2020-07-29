@@ -23,3 +23,19 @@
   text-transform: uppercase;
   color: $basic-blue;
 }
+
+@media (min-width: $tablet-width) {
+  .main-intro{
+    background-color: #161c36;
+  }
+  .main-intro__authorize{
+    display:none;
+  }
+  .main-intro__title {
+    width: 400px;
+    margin: 0 auto;
+    padding-bottom: 86px;
+    font-size: 60px;
+  line-height: (70 / 60);
+  }
+}

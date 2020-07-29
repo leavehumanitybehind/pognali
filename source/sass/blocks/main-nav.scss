@@ -1,8 +1,47 @@
 .main-nav {
   display: none;
-  background: $basic-white;
 }
 
 .main-nav__list {
   @include no-list;
 }
+.main-nav__auth{
+  @include no-list;
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav{
+    display:flex;
+    justify-content: center;
+  }
+  .main-nav__list,
+  .main-nav__social-list,
+  .main-nav__site-list {
+    display:none;
+  }
+  .main-nav__auth{
+    display: flex;
+    font-weight: bold;
+font-size: 20px;
+line-height: 1;
+text-align: center;
+text-transform: uppercase;
+color: $basic-blue;
+  }
+}
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: $basic-blue;
+    width: 100%;
+      }
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav__toggle{
+    display: none;
+  }
+  }

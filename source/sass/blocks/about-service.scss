@@ -9,3 +9,14 @@
   line-height: (22 / 16);
   color: $basic-white;
 }
+
+@media(min-width:$tablet-width){
+  .about-service{
+    background: #192144 url("../img/about-tablet@1x.png") no-repeat center right;
+  }
+  .about-service__description{
+    width: 309px;
+    font-size: 28px;
+    line-height: (33 /28);
+  }
+}

@@ -36,9 +36,21 @@
     color: $basic-white;
     display: inline-block;
     vertical-align: top;
-    text-align: center;
+    text-align: right;
     line-height: normal;
     height: auto;
     width: auto;
   }
+}
+
+@media (min-width:$tablet-width) {
+.instruction__list{
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 96px;
+}
+.instruction__list-item{
+  width: 364px;
+  padding: 31px 0 45px 31px;
+}
 }

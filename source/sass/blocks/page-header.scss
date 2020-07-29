@@ -1,13 +1,26 @@
 .page-header {
   display: flex;
   justify-content: space-between;
-  padding-top: 27px;
-  padding-bottom: 27px;
   background: $basic-blue;
 }
+
 @media (min-width: $tablet-width) {
 .page-header {
-  background-color: $basic-white;
-  height:200px;
+  display: flex;
+  justify-content: space-between;
+  padding:45px 0px 41px;
+  margin-bottom: 72px;
 }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+display: flex;
+justify-content: space-between;
+padding-top: 42px;
+margin-bottom: 0;
+  }
+  .page-header__logo{
+    margin-right:145px;
+  }
 }
