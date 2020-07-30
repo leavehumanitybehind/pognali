@@ -1,5 +1,14 @@
+.companion{
+  background-color:$basic-white;
+  width:285px;
+  margin-bottom: 9px;
+  border-radius: 25px;
+}
+
 .companion__wrapper {
   background-color: $basic-white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .companion__property-title {

@@ -13,3 +13,27 @@
 .companions__list {
   @include no-list;
 }
+
+@media(min-width:$tablet-width){
+  .companions__text-wrapper{
+    width: 430px;
+    margin-bottom: 60px;
+  }
+
+  .companions__list{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    gap: 50px;
+  }
+}
+
+@media(min-width:$desktop-width){
+  .companions__container{
+    display: flex;
+    padding-left: 72px;
+    padding-right: 0;
+  }
+
+
+}

@@ -1,5 +1,5 @@
-.business__offer {
-  background: #e6e8f1;
+.business-offer {
+  background-color: #e6e8f1;
 }
 
 .business-offer__title {
@@ -7,6 +7,7 @@
 }
 
 .business-offer__list-item {
+  padding: 20px;
   font-weight: 300;
   font-size: 16px;
   line-height: 1;
@@ -19,4 +20,24 @@
   line-height: 1;
   color: #132576;
   text-decoration: none;
+}
+
+@media(min-width:$tablet-width) {
+  .business-offer{
+    background: #EDEFF6;
+  }
+  .business-offer__list{
+    margin-bottom: 58px;
+  }
+  .business-offer__list-item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    line-height: 1;
+  }
+  .business-offer__link{
+    margin-bottom: 85px;
+    font-size: 20px;
+    line-height: 1;
+}
 }
