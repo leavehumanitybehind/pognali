@@ -1,0 +1,15 @@
+.companions {
+  padding-top: 100px;
+  background: $basic-medium-blue;
+}
+
+.companions__description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: (22 / 16);
+  color: $basic-white;
+}
+
+.companions__list {
+  @include no-list;
+}

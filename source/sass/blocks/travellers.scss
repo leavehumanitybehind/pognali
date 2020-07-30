@@ -1,0 +1,16 @@
+.travellers {
+  background: #e5e5e5;
+}
+
+.travellers__list {
+  @include no-list;
+}
+
+.travellers__show-more {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: (30 / 17);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-blue-lightb;
+}

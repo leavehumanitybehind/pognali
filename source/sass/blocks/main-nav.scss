@@ -1,0 +1,8 @@
+.main-nav {
+  display: none;
+  background: $basic-white;
+}
+
+.main-nav__list {
+  @include no-list;
+}

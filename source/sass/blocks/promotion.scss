@@ -1,0 +1,21 @@
+.promotion {
+  padding-top: 100px;
+  background: $basic-medium-blue;
+}
+
+.promotion__description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: (22 / 16);
+  text-align: center;
+  color: $basic-white;
+}
+
+.promotion__description-link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: (22 / 16);
+  text-align: center;
+  color: $basic-white;
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.about-service {
+  padding-top: 37px;
+  background: $basic-medium-blue url("../img/about-mobile@1x.png") no-repeat;
+}
+
+.about-service__description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: (22 / 16);
+  color: $basic-white;
+}

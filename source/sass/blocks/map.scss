@@ -1,0 +1,22 @@
+.map {
+  padding: 45px 0;
+  background: $basic-yellow;
+}
+
+.map__address {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: (22 / 16);
+  text-transform: uppercase;
+  color: $basic-blue-light;
+}
+
+.map__way-to {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  color: $basic-blue-light;
+  border: 3px solid $basic-medium-blue;
+  box-sizing: border-box;
+  border-radius: 10px;
+}

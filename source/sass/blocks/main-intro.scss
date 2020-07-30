@@ -1,0 +1,25 @@
+.main-intro {
+  padding-top: 12px;
+  background-color: #161c36;
+  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, left top;
+}
+
+.main-intro__title {
+  margin-bottom: 245px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: (40 / 36);
+  text-align: center;
+  color: $basic-white;
+}
+
+.main-intro__authorize {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: (20 / 17);
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-blue;
+}

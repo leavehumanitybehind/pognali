@@ -1,0 +1,7 @@
+.site-list {
+  @include no-list;
+}
+
+.site-list__link {
+  text-decoration: none;
+}

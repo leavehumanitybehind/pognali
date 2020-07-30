@@ -1,0 +1,43 @@
+.instruction {
+  counter-reset: myCounter;
+  background: #182044;
+}
+
+.instruction__list {
+  @include no-list;
+}
+
+.instruction__list-item {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  color: $basic-blue;
+
+  &--choose {
+    background: $special-orange;
+  }
+
+  &--learn {
+    background: #ffa530;
+  }
+
+  &--find {
+    background: $special-yellow-dark;
+  }
+
+  &--enjoy {
+    background: $basic-yellow;
+  }
+
+  &::after {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $basic-white;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: normal;
+    height: auto;
+    width: auto;
+  }
+}

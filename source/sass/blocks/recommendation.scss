@@ -1,0 +1,23 @@
+.recommendation {
+  padding: 28px 0;
+  margin: 0;
+  background: $basic-blue;
+}
+
+.recommendation__description {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: (22 / 16);
+  color: $basic-white;
+}
+
+.recommendation__author {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: (22 / 16);
+  color: $basic-white;
+}
