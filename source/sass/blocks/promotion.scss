@@ -19,31 +19,31 @@
   color: $basic-white;
   text-decoration: none;
 }
-.promotion__form-field{
-  width:220px;
-  padding:22px ;
+.promotion__form-field {
+  width: 220px;
+  padding: 22px;
 }
 
-@media(min-width:$tablet-width){
-
-  .promotion__description,.promotion__description-link{
+@media (min-width: $tablet-width) {
+  .promotion__description,
+  .promotion__description-link {
     font-size: 28px;
-line-height: (28 / 32);
+    line-height: (28 / 32);
   }
-  .promotion__form-field{
-    width:536px;
-    padding:28px ;
+  .promotion__form-field {
+    width: 536px;
+    padding: 28px;
   }
 }
 
-@media(min-width:$desktop-width){
-
-  .promotion__description,.promotion__description-link{
+@media (min-width: $desktop-width) {
+  .promotion__description,
+  .promotion__description-link {
     font-size: 28px;
-line-height: (28 / 31);
+    line-height: (28 / 31);
   }
-  .promotion__form-field{
-    width:800px;
-    padding:28px ;
+  .promotion__form-field {
+    width: 800px;
+    padding: 28px;
   }
 }

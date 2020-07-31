@@ -2,8 +2,8 @@
   @include no-list;
 }
 
-@media(min-width:$desktop-width){
-  .list-prefer{
+@media (min-width: $desktop-width) {
+  .list-prefer {
     display: flex;
   }
 }

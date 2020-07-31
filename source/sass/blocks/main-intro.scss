@@ -13,8 +13,8 @@
   text-align: center;
   color: $basic-white;
 }
-.main-intro__wrapper{
-  margin:0 auto;
+.main-intro__wrapper {
+  margin: 0 auto;
 }
 
 .main-intro__authorize {
@@ -27,31 +27,31 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-intro{
+  .main-intro {
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
   }
-  .main-intro__authorize{
-    display:none;
+  .main-intro__authorize {
+    display: none;
   }
   .main-intro__title {
     width: 400px;
     margin: 0 auto;
     padding-bottom: 86px;
     font-size: 60px;
-  line-height: (70 / 60);
+    line-height: (70 / 60);
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-intro{
+  .main-intro {
     background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
   }
-  .main-intro__container{
+  .main-intro__container {
     padding-top: 110px;
     display: flex;
     justify-content: space-between;
   }
-  .main-intro__authorize{
-    display:none;
+  .main-intro__authorize {
+    display: none;
   }
 }

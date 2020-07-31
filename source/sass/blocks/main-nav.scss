@@ -5,29 +5,29 @@
 .main-nav__list {
   @include no-list;
 }
-.main-nav__auth{
+.main-nav__auth {
   @include no-list;
   display: none;
 }
 
 @media (min-width: $tablet-width) {
-  .main-nav{
+  .main-nav {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
   }
   .main-nav__list,
   .main-nav__social-list,
   .main-nav__site-list {
-    display:none;
+    display: none;
   }
-  .main-nav__auth{
+  .main-nav__auth {
     display: flex;
     font-weight: bold;
-font-size: 20px;
-line-height: 1;
-text-align: center;
-text-transform: uppercase;
-color: $basic-blue;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: $basic-blue;
   }
 }
 
@@ -35,13 +35,13 @@ color: $basic-blue;
   .main-nav-show {
     display: flex;
     width: 700px;
-      }
+  }
   .main-nav__list {
     display: flex;
     justify-content: space-between;
     width: 390px;
   }
-  .main-nav__toggle{
+  .main-nav__toggle {
     display: none;
   }
-  }
+}

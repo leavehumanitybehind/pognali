@@ -14,8 +14,8 @@
   color: $special-grey;
 }
 
-@media(min-width:$tablet-width){
-  .page-footer__container{
+@media (min-width: $tablet-width) {
+  .page-footer__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

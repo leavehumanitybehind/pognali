@@ -11,8 +11,8 @@
   color: $basic-blue-light;
 }
 
-@media(min-width:$desktop-width){
-  .wish-list{
+@media (min-width: $desktop-width) {
+  .wish-list {
     display: flex;
   }
 }

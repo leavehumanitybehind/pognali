@@ -10,17 +10,17 @@
   text-decoration: none;
 }
 
-@media(min-width:$tablet-width){
+@media (min-width: $tablet-width) {
   .contacts-list__link {
     @include tablet-text;
   }
-  .contacts-list__number{
-margin-bottom: 39px;
+  .contacts-list__number {
+    margin-bottom: 39px;
   }
 }
 
-@media(min-width:$desktop-width){
-  .contacts-list{
+@media (min-width: $desktop-width) {
+  .contacts-list {
     display: flex;
     justify-content: space-between;
   }

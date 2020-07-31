@@ -15,12 +15,12 @@
   color: $basic-blue-light;
 }
 
-@media(min-width:$desktop-width){
-  .travellers__wrapper{
+@media (min-width: $desktop-width) {
+  .travellers__wrapper {
     display: flex;
   }
-  .travellers__filter{
-    width:200px;
-    order:2;
+  .travellers__filter {
+    width: 200px;
+    order: 2;
   }
 }

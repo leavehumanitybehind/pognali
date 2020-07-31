@@ -1,6 +1,6 @@
 .traveller {
-    width:285px;
-    border-radius: 25px;
+  width: 285px;
+  border-radius: 25px;
   margin-bottom: 11px;
   background-color: $basic-white;
 }
@@ -44,42 +44,42 @@
   color: $basic-blue-light;
 }
 
-@media(min-width:$tablet-width){
-  .traveller{
+@media (min-width: $tablet-width) {
+  .traveller {
     display: flex;
     width: 600px;
   }
-  .traveller__wrapper{
+  .traveller__wrapper {
     padding: 35px 0 0 35px;
   }
-  .traveller__title{
-    font-size:30px;
-    line-height:1;
+  .traveller__title {
+    font-size: 30px;
+    line-height: 1;
   }
-  .traveller__hashtags{
+  .traveller__hashtags {
     font-size: 20px;
-line-height: (23 / 20);
+    line-height: (23 / 20);
   }
-  .traveller_btn{
+  .traveller_btn {
     @include tablet-text;
   }
-  .traveller__property{
+  .traveller__property {
     font-size: 15px;
     line-height: (16 / 15);
   }
 }
 
-@media(min-width:$desktop-width){
-  .traveller{
+@media (min-width: $desktop-width) {
+  .traveller {
     display: flex;
     width: 950px;
   }
-  .traveller__wrapper{
+  .traveller__wrapper {
     display: flex;
     flex-wrap: wrap;
     padding: 35px 0 0 35px;
   }
-  .traveller-property-transport{
+  .traveller-property-transport {
     display: flex;
   }
 }

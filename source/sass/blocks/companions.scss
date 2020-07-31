@@ -14,8 +14,8 @@
   @include no-list;
 }
 
-@media(min-width:$tablet-width){
-  .companions__text-wrapper{
+@media (min-width: $tablet-width) {
+  .companions__text-wrapper {
     width: 430px;
     margin-bottom: 60px;
   }
@@ -23,20 +23,18 @@
     font-size: 28px;
     line-height: (34 / 28);
   }
-  .companions__list{
-    display:grid;
+  .companions__list {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     gap: 50px;
   }
 }
 
-@media(min-width:$desktop-width){
-  .companions__container{
+@media (min-width: $desktop-width) {
+  .companions__container {
     display: flex;
     padding-left: 72px;
     padding-right: 0;
   }
-
-
 }

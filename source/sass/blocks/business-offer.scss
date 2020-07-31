@@ -22,22 +22,22 @@
   text-decoration: none;
 }
 
-@media(min-width:$tablet-width) {
-  .business-offer{
-    background: #EDEFF6;
+@media (min-width: $tablet-width) {
+  .business-offer {
+    background: #edeff6;
   }
-  .business-offer__list{
+  .business-offer__list {
     margin-bottom: 58px;
   }
-  .business-offer__list-item{
+  .business-offer__list-item {
     display: flex;
     justify-content: space-between;
     font-size: 28px;
     line-height: 1;
   }
-  .business-offer__link{
+  .business-offer__link {
     margin-bottom: 85px;
     font-size: 20px;
     line-height: 1;
-}
+  }
 }
