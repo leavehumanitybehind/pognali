@@ -1,22 +1,23 @@
-.nav-list{
+.nav-list {
   display: none;
   flex-direction: column;
 }
-.nav-list__item{
-  font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height:1;
-text-transform: uppercase;
 
+.nav-list__item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
 }
-.nav-list__link{
+
+.nav-list__link {
   text-decoration: none;
   color: $basic-white;
 }
 
-@media(min-width:$desktop-width) {
-  .nav-list{
+@media (min-width: $desktop-width) {
+  .nav-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

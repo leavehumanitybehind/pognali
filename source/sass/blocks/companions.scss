@@ -19,10 +19,12 @@
     width: 430px;
     margin-bottom: 60px;
   }
+
   .companions__description {
     font-size: 28px;
     line-height: (34 / 28);
   }
+
   .companions__list {
     display: grid;
     grid-template-columns: 1fr 1fr;

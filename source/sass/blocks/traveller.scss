@@ -49,20 +49,25 @@
     display: flex;
     width: 600px;
   }
+
   .traveller__wrapper {
     padding: 35px 0 0 35px;
   }
+
   .traveller__title {
     font-size: 30px;
     line-height: 1;
   }
+
   .traveller__hashtags {
     font-size: 20px;
     line-height: (23 / 20);
   }
+
   .traveller_btn {
     @include tablet-text;
   }
+
   .traveller__property {
     font-size: 15px;
     line-height: (16 / 15);
@@ -74,11 +79,13 @@
     display: flex;
     width: 950px;
   }
+
   .traveller__wrapper {
     display: flex;
     flex-wrap: wrap;
     padding: 35px 0 0 35px;
   }
+
   .traveller-property-transport {
     display: flex;
   }

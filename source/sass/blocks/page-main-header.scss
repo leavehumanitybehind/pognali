@@ -12,7 +12,6 @@
   line-height: 1;
   color: $basic-white;
   text-decoration: none;
-
   text-transform: uppercase;
 }
 
@@ -22,6 +21,7 @@
     justify-content: space-between;
     align-items: baseline;
   }
+
   .page-main-header__link {
     display: flex;
   }

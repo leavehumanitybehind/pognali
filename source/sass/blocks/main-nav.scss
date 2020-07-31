@@ -5,6 +5,7 @@
 .main-nav__list {
   @include no-list;
 }
+
 .main-nav__auth {
   @include no-list;
   display: none;
@@ -15,11 +16,13 @@
     display: flex;
     justify-content: space-between;
   }
+
   .main-nav__list,
   .main-nav__social-list,
   .main-nav__site-list {
     display: none;
   }
+
   .main-nav__auth {
     display: flex;
     font-weight: bold;
@@ -36,11 +39,13 @@
     display: flex;
     width: 700px;
   }
+
   .main-nav__list {
     display: flex;
     justify-content: space-between;
     width: 390px;
   }
+
   .main-nav__toggle {
     display: none;
   }

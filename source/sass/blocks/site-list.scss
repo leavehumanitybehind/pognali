@@ -1,6 +1,7 @@
 .site-list {
-  align-items: flex-end;
   @include no-list;
+
+  align-items: flex-end;
   margin-bottom: 100px;
 }
 
