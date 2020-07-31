@@ -10,3 +10,9 @@
   text-decoration: none;
   color: $basic-blue-light;
 }
+
+@media(min-width:$desktop-width){
+  .wish-list{
+    display: flex;
+  }
+}

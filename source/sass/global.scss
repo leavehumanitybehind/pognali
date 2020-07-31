@@ -1,7 +1,21 @@
 body {
+  min-width:320px;
+  padding: 0;
   margin: 0;
   font-family: "BloggerSans", "Arial", sans-serif;
   background-color: $basic-blue;
+}
+@media(min-width:$tablet-width){
+  body{
+    background-color: #141B3B;
+  }
+
+}
+@media(min-width:$desktop-width){
+body {
+    background: #192144;
+  }
+
 }
 .container{
   width:320px;
@@ -11,14 +25,14 @@ body {
 
 @media(min-width:$tablet-width){
   .container{
-    width:768px;
+    width:668px;
     padding:0 40px;
     margin:0 auto;
   }
 }
 @media(min-width:$desktop-width){
   .container{
-    width:1024px;
+    width: 1146px;
     padding:0 60px;
     margin:0 auto;
   }

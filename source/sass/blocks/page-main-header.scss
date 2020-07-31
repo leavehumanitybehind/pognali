@@ -1,10 +1,34 @@
-.page-main-header {
-  background: #182044;
-}
 
 .page-main-header__title {
   font-weight: bold;
   font-size: 36px;
   line-height: 1;
   color: $basic-white;
+}
+
+.page-main-header__link{
+  display: none;
+  font-weight: bold;
+font-size: 20px;
+line-height:1;
+color:$basic-white;
+text-decoration: none;
+
+text-transform: uppercase;
+}
+
+@media(min-width:$tablet-width){
+  .page-main-header{
+    display:flex;
+    justify-content:space-between;
+    align-items: baseline;
+  }
+  .page-main-header__link{
+    display: flex;
+  }
+
+}
+
+@media(min-width:$desktop-width){
+
 }

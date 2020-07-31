@@ -13,7 +13,8 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header container">
+    <div class="page-header__container">
     <a class="page-header__logo logo" href="#">
       <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
@@ -38,6 +39,11 @@
           </a>
         </li>
       </ul>
+      <ul class="main-nav__auth user-list">
+        <li class="user-list__item">
+          <a class="user-list__link btn">Авторизация</a>
+        </li>
+      </ul>
       <ul class="main-nav__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
@@ -59,13 +65,16 @@
         <span class="visually-hidden">Закрыть меню</span>
       </button>
     </nav>
+  </div>
   </header>
   <main class="page-main">
-    <header class="page-main-header">
+    <header class="page-main-header container">
       <h1 class="page-main-header__title">Направления</h1>
+      <a class="page-main-header__link" href="index.html">На главную</a>
     </header>
   </main>
   <footer class="page-footer">
+    <div class="page-footer__container container">
     <a class="page-footer__logo logo" href="#">
       <img src="img/logo-mobile-blue@1x.png" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
@@ -92,6 +101,7 @@
         <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-academy">
       </a>
     </div>
+  </div>
   </footer>
 </body>
 

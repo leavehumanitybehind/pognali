@@ -1,3 +1,26 @@
 .pagination-list {
   @include no-list;
+  display: flex;
+  flex-wrap: wrap;
+  background-color:$basic-white;
+}
+
+.pagination-list__item{
+  display:none;
+}
+
+.pagination-list__link{
+  display:flex;
+  font-weight: bold;
+  font-size:20px;
+  line-height: 1;
+text-transform: uppercase;
+color:$basic-blue-light;
+text-decoration:none;
+}
+
+@media(min-width:$tablet-width){
+  .pagination-list__item{
+    display: flex;
+  }
 }

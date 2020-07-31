@@ -1,6 +1,6 @@
 .about-service {
   padding-top: 37px;
-  background: $basic-medium-blue url("../img/about-mobile@1x.png") no-repeat;
+  background: url("../img/about-mobile@1x.png") no-repeat;
 }
 
 .about-service__description {
@@ -12,7 +12,7 @@
 
 @media(min-width:$tablet-width){
   .about-service{
-    background: #192144 url("../img/about-tablet@1x.png") no-repeat center right;
+    background:url("../img/about-tablet@1x.png") no-repeat center right;
   }
   .about-service__description{
     width: 309px;

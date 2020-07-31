@@ -1,0 +1,82 @@
+.travellers__filter{
+  background-color:$basic-yellow;
+}
+.traveller-filter__title{
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
+  color: $basic-blue-light;
+}
+
+.traveller-filter-list{
+  @include no-list;
+}
+.traveller-filter-list__title{
+  font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: (18 / 16);
+text-transform: uppercase;
+color:$basic-blue-light;
+}
+.traveller-filter__preferences{
+  @include no-list;
+}
+
+.traveller-filter__option{
+  margin: 0;
+  padding: 0;
+  border:none;
+  display: none;
+}
+.traveller-filter__label{
+  font-size: 15px;
+line-height:(20 / 15);
+}
+
+@media(min-width:$tablet-width){
+  .traveller-filter_list{
+    display: flex;
+  }
+  .traveller-filter__title{
+    font-size:30px;
+    line-height: 1;
+  }
+
+  .traveller-filter-list__item{
+display: flex;
+  }
+  .traveller-filter-list__title{
+  font-size: 20px;
+  line-height:1;
+  }
+
+  .traveller-filter__option{
+    display: flex;
+  }
+
+  .traveller-filter__label{
+    font-size:20;
+  line-height:1;
+  }
+
+  .traveller-filter__preferences{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media(min-width:$desktop-width){
+  .traveller-filter_list{
+    display:block;
+  }
+  .traveller-filter-list__item{
+display:block;
+  }
+  .traveller-filter__option{
+    display:block;
+  }
+  .traveller-filter__preferences{
+    display:block;
+  }
+}

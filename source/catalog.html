@@ -13,8 +13,8 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__container container">
+  <header class="page-header container">
+    <div class="page-header__container">
     <a class="page-header__logo logo" href="#">
       <img src="img/logo-mobile-white@1x.png" width="96" height="15" alt="Логотип сайта поиска попутчиков">
     </a>
@@ -39,6 +39,11 @@
           </a>
         </li>
       </ul>
+      <ul class="main-nav__auth user-list">
+        <li class="user-list__item">
+          <a class="user-list__link btn">Авторизация</a>
+        </li>
+      </ul>
       <ul class="main-nav__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
@@ -56,18 +61,158 @@
           </a>
         </li>
       </ul>
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Закрыть меню</span>
-      </button>
     </nav>
   </div>
   </header>
   <main class="page-main">
-    <header class="page-main-header">
+    <header class="page-main-header container">
       <h1 class="page-main-header__title">Попутчики</h1>
+      <a class="page-main-header__link" href="index.html">На главную</a>
     </header>
     <div class="travellers">
       <div class="travellers__container container">
+        <div class="travellers__wrapper">
+          <section class="travellers__filter traveller-filter">
+              <h2 class="traveller-filter__title">
+                Подберите идеального попутчика</h2>
+              <form action="https://echo.htmlacademy.ru" method="post" class="traveller-filter__form">
+                <ul class="traveller-filter__list traveller-filter-list">
+                  <li class="traveller-filter-list__item">
+                    <h3 class="traveller-filter-list__title">
+                      Хобби
+                    </h3>
+                    <fieldset class="traveller-filter__option">
+                      <ul class="traveller-filter__preferences traveller-filter__preferences--checked">
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="fitness" name="hobby" type="checkbox" checked>
+                          <label class="traveller-filter__label" for="fitness">
+                            Спортзал
+                          </label>
+                        </li>
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="hookah" name="hobby" type="checkbox">
+                          <label class="traveller-filter__label" for="hookah">
+                            Кальян
+                          </label>
+                        </li>
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="sofa" name="hobby" type="checkbox">
+                          <label class="traveller-filter__label" for="sofa">
+                            Диван
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </li>
+                  <li class="traveller-filter-list__item">
+                    <h3 class="traveller-filter-list__title">
+                      Mузыка
+                    </h3>
+                    <fieldset class="traveller-filter__option">
+                      <ul class="traveller-filter__preferences">
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="hard-rock" name="music" type="checkbox" checked>
+                          <label class="traveller-filter__label" for="hard-rock">
+                            Тяжелый рок
+                          </label>
+                        </li>
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="russian-rap" name="music" type="checkbox">
+                          <label class="traveller-filter__label" for="russian-rap">
+                            Русский рэп
+                          </label>
+                        </li>
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="eurodance" name="music" type="checkbox">
+                          <label class="traveller-filter__label" for="eurodance">
+                            Евроденс
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </li>
+                  <li class="traveller-filter-list__item">
+                    <h3 class="traveller-filter-list__title">
+                      Еда
+                    </h3>
+                    <fieldset class="traveller-filter__option">
+                      <ul class="traveller-filter__preferences traveller-filter__preferences--checked">
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="meat" name="food" type="checkbox" checked>
+                          <label class="traveller-filter__label" for="meat">
+                            Мясоед
+                          </label>
+                        </li>
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="healthy-food" name="food" type="checkbox">
+                          <label class="traveller-filter__label" for="healthy-food">
+                            Сидит на ПП
+                          </label>
+                        </li>
+                        <li class="traveller-filter__preferences-item">
+                          <input class="traveller-filter__checkbox visually-hidden" id="vegan" name="food" type="checkbox">
+                          <label class="traveller-filter__label" for="vegan">
+                            Веган-сыроед
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </li>
+                  <li class="traveller-filter-list__item">
+                    <h3 class="traveller-filter-list__title">
+                      Транспорт
+                    </h3>
+                    <fieldset class="traveller-filter__option">
+                      <ul class="traveller-filter__transport transport">
+                        <li class="transport__item">
+                          <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-plane" checked>
+                          <label class="transport__label transport__label--plane" for="checkbox-plane"></label>
+                        </li>
+                        <li class="transport__item">
+                          <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bus">
+                          <label class="transport__label transport__label--bus" for="checkbox-bus"></label>
+                        </li>
+                        <li class="transport__item">
+                          <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bicycle">
+                          <label class="transport__label transport__label--bicycle" for="checkbox-bicycle"></label>
+                        </li>
+                        <li class="transport__item">
+                          <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-walk">
+                          <label class="transport__label transport__label--walk" for="checkbox-walk"></label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </li>
+                  <li class="traveller-filter-list__item">
+                    <h3 class="traveller-filter-list__title">
+                      Левел
+                    </h3>
+                    <fieldset class="traveller-filter__option range">
+                      <div class="range__wrap">
+                        <div class="range__output">
+                          <div class="range__output-value range__output-value--left">
+                            <input class="range__input range__input--left" type="text" placeholder="30">
+                          </div>
+                          <div class="range__output-value range__output-value--right">
+                            <input class="range__input range__input--right" type="text" placeholder="100">
+                          </div>
+                        </div>
+                        <div class="range__controls">
+                          <div class="range__scale">
+                            <div class="range__bar"></div>
+                            <div class="range__toggle range__toggle--min"></div>
+                            <div class="range__toggle range__toggle--max"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </li>
+                </ul>
+                <button type="submit" class="traveller-filter__btn btn">
+                  Показать
+                </button>
+              </form>
+          </section>
       <ul class="travellers__list">
         <li class="travellers__list-item traveller">
           <a class="traveller__link" href="#">
@@ -292,14 +437,36 @@
           </div>
         </li>
       </ul>
-      <a class="travellers__show-more" href="#">Показать еще</a>
-      <ul class="travellers__pagination-list pagination-list">
-        <li class="pagination-list__item"><a class="pagination-list__link" href="#"><span
-              class="visually-hidden">назад</span></a></li>
-        <li class="pagination-list__item"><a class="pagination-list__link" href="#"><span
-              class="visually-hidden">вперед</span></a></li>
-      </ul>
     </div>
+      <a class="travellers__show-more" href="#">Показать еще</a>
+
+      <div class="travellers__pagination">
+      <ul class="travellers__pagination-list pagination-list">
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">1</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">2</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">3</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">4</a>
+        </li>
+        <li class="pagination-list__item pagination-list__item-back">
+          <a class="pagination-list__link" href="#">
+            <span class="visually-hidden">назад</span>
+          </a>
+        </li>
+        <li class="pagination-list__item pagination-list__item-next">
+          <a class="pagination-list__link" href="#">
+            <span class="visually-hidden">вперед</span>
+          </a>
+        </li>
+      </ul>
+      </div>
+  </div>
   </div>
   </main>
   <footer class="page-footer">

@@ -1,6 +1,5 @@
 .instruction {
   counter-reset: myCounter;
-  background: #182044;
 }
 
 .instruction__list {
@@ -11,7 +10,6 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 1;
-  color: $basic-blue;
 
   &--choose {
     background: $special-orange;
@@ -49,7 +47,15 @@ flex-wrap: wrap;
 margin-bottom: 96px;
 }
 .instruction__list-item{
-  width: 364px;
-  padding: 31px 0 45px 31px;
+  width: 360px;
+  font-size: 24px;
+  line-height: 1;
 }
+}
+
+@media (min-width:$desktop-width) {
+  .instruction__list{
+  display: flex;
+  flex-wrap: nowrap;
+  }
 }

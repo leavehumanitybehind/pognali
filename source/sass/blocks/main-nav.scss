@@ -12,8 +12,8 @@
 
 @media (min-width: $tablet-width) {
   .main-nav{
-    display:flex;
-    justify-content: center;
+    display: flex;
+    justify-content:space-between ;
   }
   .main-nav__list,
   .main-nav__social-list,
@@ -30,16 +30,16 @@ text-transform: uppercase;
 color: $basic-blue;
   }
 }
+
 @media (min-width: $desktop-width) {
-  .main-nav {
+  .main-nav-show {
     display: flex;
-    justify-content: space-between;
-    background-color: $basic-blue;
-    width: 100%;
+    width: 700px;
       }
   .main-nav__list {
     display: flex;
     justify-content: space-between;
+    width: 390px;
   }
   .main-nav__toggle{
     display: none;

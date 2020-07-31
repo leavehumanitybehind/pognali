@@ -14,3 +14,13 @@
   text-decoration: none;
   color: $basic-blue-light;
 }
+
+@media(min-width:$desktop-width){
+  .travellers__wrapper{
+    display: flex;
+  }
+  .travellers__filter{
+    width:200px;
+    order:2;
+  }
+}

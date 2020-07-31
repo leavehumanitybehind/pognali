@@ -1,20 +1,24 @@
+
+.page-header{
+  padding-top: 27px;
+  padding-bottom: 31px;
+}
 .page-header__container{
   display: flex;
-  align-items: center;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  background-color: $basic-blue;
+  flex-wrap: wrap;
+  justify-content:space-between;
 }
 
 @media(min-width:$tablet-width){
   .page-header__container{
     display: flex;
+    justify-content: space-between;
   }
 }
 @media(min-width:$desktop-width){
   .page-header__container{
 display: flex;
-    align-items: center;
+justify-content: space-between;
     flex-wrap: wrap;
   }
 
