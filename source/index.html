@@ -9,6 +9,7 @@
   <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
   <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
   <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -95,12 +96,13 @@
             </a>
           </li>
         </ul>
+      </div>
         <div class="main-intro__reccomendation recommendation">
           <blockquote class="recommendation__wrapper">
-            <p class="recommendation__description">Лучшее приложение, что я видел в жизни!</p>
-            <cite class="recommendation__author">Мурат Эльтазин главный редактор газеты "гаджетлайф"</cite>
+            <p class="recommendation__description">«Лучшее приложение, что я видел в жизни!»</p>
+            <cite class="recommendation__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
           </blockquote>
-        </div>
+
       </div>
     </section>
 
@@ -109,16 +111,28 @@
         <h2 class="visually-hidden">Инструкция, как пользоваться сервисом</h2>
         <ol class="instruction__list">
           <li class="instruction__list-item instruction__list-item--choose">
-            Выберите направление
+            <p class="instruction__list-text">Выберите направление</p>
+            <span class="instruction__list-number">
+              1
+            </span>
           </li>
           <li class="instruction__list-item instruction__list-item--learn">
-            Изучите идеи путешественников
+            <p class="instruction__list-text">Изучите идеи путешественников</p>
+            <span class="instruction__list-number">
+              2
+            </span>
           </li>
           <li class="instruction__list-item instruction__list-item--find">
-            Находите тех,кто похож на вас
+            <p class="instruction__list-text">Находите тех,кто похож на вас</p>
+            <span class="instruction__list-number">
+              3
+            </span>
           </li>
           <li class="instruction__list-item instruction__list-item--enjoy">
-            Путешествуйте вместе!
+            <p class="instruction__list-text">Путешествуйте вместе!</p>
+            <span class="instruction__list-number">
+              4
+            </span>
           </li>
         </ol>
       </div>
@@ -127,9 +141,8 @@
       <div class="about-service__container container">
         <h2 class="about-service__title section-title">О сервисе</h2>
         <div class="about-service__description">
-          <p>Любое путешествие веселее с попутчиками,которые на одной волне с тобой! Делитесь своими идеями путешествий
-            и
-            черпайте вдохновение в чужих.
+          <p>Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте
+          вдохновение в чужих.
           </p>
           <p>
             <strong>А если найдете кого-то близкого по духу - скорее зовите в совместный трип!</strong>
@@ -182,7 +195,7 @@
           <h2 class="companions__title section-title">Попутчики</h2>
           <div class="companions__description">
             <p>
-              Все мы индивидуальныи у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
+              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
               маршрут
               для хайкинга.
             </p>
@@ -288,7 +301,6 @@
       </div>
     </section>
     <section class="business-offer">
-      <div class="business-offer__container container">
         <h2 class="business-offer__title section-title"> Добавьте в свой профиль</h2>
         <ol class="business-offer__list">
           <li class="business-offer__list-item">
@@ -305,7 +317,6 @@
           </li>
         </ol>
         <a class="business-offer__link" href="#">Показать тарифы для бизнеса</a>
-      </div>
     </section>
     <section class="promotion">
       <div class="promotion__container container">
@@ -320,7 +331,7 @@
           <button class="promotion__button" type="submit"><span class="visually-hidden">Отправить</span></button>
         </form>
         <p class="promotion__description">
-          Остались вопросы? Мы с радостью на них ответим!
+          Остались вопросы?<br> Мы с радостью на них ответим!
         </p>
         <ul class="promotion__list contacts-list">
           <li class="contacts-list__item">
@@ -347,7 +358,6 @@
       <a class="map__way-to"
         href="https://www.google.ru/maps/dir/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80.,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3/@59.935311,30.320383,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x4696310fca145cc1:0x42b32648d8238007!2m2!1d30.3230474!2d59.9387165!1m5!1m1!1s0x469631a5e66d51c5:0x6f00589ac258db97!2m2!1d30.3497868!2d59.9325367">Проложить
         маршрут</a>
-      <img src="https://via.placeholder.com/250x100" width="250" height="100" alt="Изображение карты">
     </section>
   </main>
   <footer class="page-footer">

@@ -1,25 +1,18 @@
 .page-header {
-  padding-top: 27px;
-  padding-bottom: 31px;
+  padding-top: 37px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width:100%;
+    background-color:$basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color:inherit;
+}
 }
 
 .page-header__container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-}
-
-@media (min-width: $tablet-width) {
-  .page-header__container {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-header__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
 }

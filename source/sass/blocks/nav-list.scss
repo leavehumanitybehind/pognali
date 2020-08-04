@@ -1,6 +1,13 @@
 .nav-list {
   display: none;
   flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 }
 
 .nav-list__item {
@@ -16,10 +23,3 @@
   color: $basic-white;
 }
 
-@media (min-width: $desktop-width) {
-  .nav-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}

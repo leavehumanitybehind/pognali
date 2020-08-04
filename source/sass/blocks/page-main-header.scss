@@ -1,3 +1,8 @@
+.page-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
 .page-main-header__title {
   font-weight: bold;
   font-size: 36px;
@@ -13,16 +18,9 @@
   color: $basic-white;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
-
-@media (min-width: $tablet-width) {
-  .page-main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  .page-main-header__link {
-    display: flex;
-  }
 }

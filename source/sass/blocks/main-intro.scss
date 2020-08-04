@@ -1,17 +1,38 @@
-.main-intro {
-  padding-top: 12px;
+.main-intro__container {
   background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: center center, left top;
+  background-position: 78px 130px, center -122px;
+  background-size: auto, cover;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 110px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .main-intro__title {
-  margin-bottom: 245px;
+  margin-left: 1px;
+  margin-bottom: 258px;
   font-weight: bold;
   font-size: 36px;
   line-height: (40 / 36);
   text-align: center;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding-bottom: 86px;
+    font-size: 60px;
+    line-height: (70 / 60);
+  }
 }
 
 .main-intro__wrapper {
@@ -19,44 +40,31 @@
 }
 
 .main-intro__authorize {
+  margin-left: 82px;
+  padding: 9px 29px;
   font-weight: bold;
-  font-size: 17px;
-  line-height: (20 / 17);
+  font-size: 20px;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: $basic-blue;
+  border-radius: 25px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .main-intro {
+.main-intro {
+  @media (min-width: $tablet-width) {
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 70% 240px, left 0px;
+    background-size: auto, cover;
   }
 
-  .main-intro__authorize {
-    display: none;
-  }
-
-  .main-intro__title {
-    width: 400px;
-    margin: 0 auto;
-    padding-bottom: 86px;
-    font-size: 60px;
-    line-height: (70 / 60);
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-intro {
+  @media (min-width: $desktop-width) {
     background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
-  }
-
-  .main-intro__container {
-    padding-top: 110px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .main-intro__authorize {
-    display: none;
+    background-repeat: no-repeat, no-repeat;
   }
 }

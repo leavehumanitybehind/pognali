@@ -1,44 +1,64 @@
-.country__wrapper {
-  background: $basic-white;
+
+.country img {
   border-radius: 10px;
 }
 
+.country__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:25px;
+  margin-top:-15px;
+  margin-bottom: 13px;
+  background: $basic-white;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+  }
+
+}
 .country__name {
+  order: 1;
   margin: 0;
   padding: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 1;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 1;
+  }
 }
 
 .country__description {
+  order: 3;
+  margin: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: (18 / 16);
   color: $special-grey;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+}
+
 }
 
 .country__followers {
+  order: 2;
+  margin-left:auto;
   line-height: (20 / 16);
   color: $basic-blue;
   opacity: 0.3;
-}
 
-@media (min-width: $tablet-width) {
-  .country__wrapper {
-    width: 400px;
-  }
-
-  .country__name {
-    font-size: 24px;
-    line-height: 1;
-  }
-
-  .country__description,
-  .country__followers {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
-  }
+}
 }

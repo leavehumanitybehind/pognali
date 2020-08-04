@@ -1,23 +1,29 @@
 .about-service {
-  padding-top: 37px;
+  @include section-border-radius;
+
+  padding-top: 12px;
   background: url("../img/about-mobile@1x.png") no-repeat;
+  background-position: top 84px;
+
+  @media (min-width: $tablet-width) {
+    background: url("../img/about-tablet@1x.png") no-repeat;;
+    background-position:100% -210%;
+  }
 }
 
 .about-service__description {
+  margin-left: 24px;
+  margin-bottom: 90px;
+  width:210px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
   color: $basic-white;
-}
 
-@media (min-width: $tablet-width) {
-  .about-service {
-    background: url("../img/about-tablet@1x.png") no-repeat center right;
-  }
-
-  .about-service__description {
+  @media (min-width: $tablet-width) {
     width: 309px;
     font-size: 28px;
     line-height: (33 /28);
-  }
 }
+}
+

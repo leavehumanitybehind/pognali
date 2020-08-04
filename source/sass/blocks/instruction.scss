@@ -1,62 +1,78 @@
-.instruction {
-  counter-reset: myCounter;
-}
 
 .instruction__list {
   @include no-list;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 }
 
 .instruction__list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 24px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 
   &--choose {
     background: $special-orange;
   }
 
   &--learn {
+    margin-top: -16px;
     background: #ffa530;
   }
 
   &--find {
+    margin-top: -16px;
     background: $special-yellow-dark;
   }
 
   &--enjoy {
+    margin-top: -16px;
     background: $basic-yellow;
   }
 
-  &::after {
-    counter-increment: myCounter;
-    content: counter(myCounter);
-    color: $basic-white;
-    display: inline-block;
-    vertical-align: top;
-    text-align: right;
-    line-height: normal;
-    height: auto;
-    width: auto;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .instruction__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 96px;
-  }
-
-  .instruction__list-item {
-    width: 360px;
+  @media (min-width: $tablet-width) {
+    width: 284px;
+    margin: 0;
+    padding: 27px 33px 65px;
     font-size: 24px;
     line-height: 1;
+
+    &--learn {
+    margin-left: -26px;
+  }
+
+    &--enjoy {
+      margin-left: -26px;
+    margin-top: -16px;
+    }
+
+    &--find {
+    margin-top: -16px;
+    }
   }
 }
 
-@media (min-width: $desktop-width) {
-  .instruction__list {
-    display: flex;
-    flex-wrap: nowrap;
-  }
+.instruction__list-text {
+  margin: 0;
+  width:152px;
+}
+
+.instruction__list-number {
+  color:$basic-white;
 }

@@ -1,14 +1,20 @@
 .companion {
   background-color: $basic-white;
-  width: 285px;
+  width: 270px;
   margin-bottom: 9px;
-  border-radius: 25px;
+  border-radius: 0 25px;
+}
+.companion img{
+  border-radius:10px;
 }
 
 .companion__wrapper {
+  padding: 0 45px;
   background-color: $basic-white;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+}
+
+.companion__property{
+  position: absolute;
 }
 
 .companion__property-title {
@@ -27,10 +33,11 @@
 }
 
 .companion__title {
+  margin-left: 23px;
+  text-align: center;
   font-weight: bold;
   font-size: 21px;
   line-height: 1;
-  text-align: center;
   color: $basic-blue-light;
   text-decoration: none;
 }

@@ -1,9 +1,16 @@
 .business-offer {
+  @include section-border-radius;
+  padding: 37px 0;
   background-color: #e6e8f1;
+
+  @media (min-width: $tablet-width) {
+    background: #edeff6;
+  }
 }
 
 .business-offer__title {
-  padding-top: 60px;
+  margin: 0;
+  padding-top: 40px;
 }
 
 .business-offer__list-item {
@@ -20,13 +27,15 @@
   line-height: 1;
   color: #132576;
   text-decoration: none;
+
+  @media (min-width: $tablet-width){
+    margin-bottom: 85px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .business-offer {
-    background: #edeff6;
-  }
-
   .business-offer__list {
     margin-bottom: 58px;
   }
@@ -38,9 +47,4 @@
     line-height: 1;
   }
 
-  .business-offer__link {
-    margin-bottom: 85px;
-    font-size: 20px;
-    line-height: 1;
-  }
 }

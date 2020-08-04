@@ -3,6 +3,14 @@
   border-radius: 25px;
   margin-bottom: 11px;
   background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    width: 600px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 950px;
+  }
 }
 
 .traveller__title {
@@ -12,6 +20,11 @@
   text-align: center;
   color: $basic-blue-light;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 1;
+  }
 }
 
 .traveller__likes {
@@ -28,6 +41,11 @@
   line-height: (18 / 16);
   text-align: center;
   color: $special-grey;
+
+  @media(min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: (23 / 20);
+  }
 }
 
 .traveller__property-title {
@@ -45,26 +63,19 @@
 }
 
 @media (min-width: $tablet-width) {
-  .traveller {
-    display: flex;
-    width: 600px;
-  }
-
   .traveller__wrapper {
+    @media (min-width: $tablet-width) {
     padding: 35px 0 0 35px;
   }
 
-  .traveller__title {
-    font-size: 30px;
-    line-height: 1;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px 0 0 35px;
   }
+}
 
-  .traveller__hashtags {
-    font-size: 20px;
-    line-height: (23 / 20);
-  }
-
-  .traveller_btn {
+  .traveller__btn {
     @include tablet-text;
   }
 
@@ -75,17 +86,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .traveller {
-    display: flex;
-    width: 950px;
-  }
-
-  .traveller__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 35px 0 0 35px;
-  }
-
   .traveller-property-transport {
     display: flex;
   }

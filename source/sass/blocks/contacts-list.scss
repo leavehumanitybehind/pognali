@@ -1,5 +1,12 @@
 .contacts-list {
   @include no-list;
+
+  padding-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+}
 }
 
 .contacts-list__link {
@@ -8,21 +15,20 @@
   line-height: (22 / 16);
   color: $basic-yellow;
   text-decoration: none;
-}
 
-@media (min-width: $tablet-width) {
-  .contacts-list__link {
+  @media (min-width: $tablet-width)  {
     @include tablet-text;
   }
+}
 
+.contacts-list__item {
+  text-align: center;
+    margin-bottom: 23px;
+  }
+
+@media (min-width: $tablet-width)  {
   .contacts-list__number {
     margin-bottom: 39px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .contacts-list {
-    display: flex;
-    justify-content: space-between;
-  }
-}

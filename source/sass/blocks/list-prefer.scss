@@ -1,9 +1,8 @@
 .list-prefer {
   @include no-list;
+
+  display: flex;
+  justify-content: center;
+  padding-bottom: 13px;
 }
 
-@media (min-width: $desktop-width) {
-  .list-prefer {
-    display: flex;
-  }
-}

@@ -1,5 +1,10 @@
 .wish-list {
   @include no-list;
+
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 17px;
 }
 
 .wish-list__link {
@@ -11,8 +16,3 @@
   color: $basic-blue-light;
 }
 
-@media (min-width: $desktop-width) {
-  .wish-list {
-    display: flex;
-  }
-}
