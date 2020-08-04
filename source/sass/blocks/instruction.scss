@@ -1,7 +1,6 @@
-
 .instruction__list {
   @include no-list;
-  margin-bottom: 42px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     margin-top: -50px;
@@ -13,66 +12,95 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: nowrap;
-}
-
+  }
 }
 
 .instruction__list-item {
   display: flex;
   justify-content: space-between;
-  padding: 22px 24px;
+  padding: 22px 24px 37px 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 1;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
-  &--choose {
-    background: $special-orange;
-  }
-
-  &--learn {
-    margin-top: -16px;
-    background: #ffa530;
-  }
-
-  &--find {
-    margin-top: -16px;
-    background: $special-yellow-dark;
-  }
-
-  &--enjoy {
-    margin-top: -16px;
-    background: $basic-yellow;
-  }
-
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
     width: 284px;
     margin: 0;
-    padding: 27px 33px 65px;
+    padding: 27px 33px;
     font-size: 24px;
     line-height: 1;
 
-    &--learn {
-    margin-left: -26px;
-  }
+    &--choose {
+      background: $special-orange;
+    }
 
-    &--enjoy {
-      margin-left: -26px;
-    margin-top: -16px;
+    &--learn {
+      margin-top: -16px;
+      background: #ffa530;
+
+      @media (min-width: $tablet-width) {
+        margin-left: -26px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 0;
+      }
     }
 
     &--find {
-    margin-top: -16px;
+      margin-top: -16px;
+      background: $special-yellow-dark;
+
+      @media (min-width: $tablet-width) {
+        @include section-border-radius;
+
+        margin-top: -16px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 0;
+      }
+    }
+
+    &--enjoy {
+      margin-top: -16px;
+      background: $basic-yellow;
+
+      @media (min-width: $tablet-width) {
+        @include section-border-radius;
+
+        margin-left: -26px;
+        margin-top: -16px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 0;
+      }
     }
   }
 }
 
 .instruction__list-text {
   margin: 0;
-  width:152px;
+  width: 152px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .instruction__list-number {
-  color:$basic-white;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }

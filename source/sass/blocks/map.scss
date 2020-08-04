@@ -1,20 +1,19 @@
 .map {
   @include section-border-radius;
 
-  padding: 80px 25px 34px;
+  padding: 40px 25px 34px;
   position: relative;
   background: $basic-yellow;
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-}
+  }
 }
 
 .map__address {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 52px;
   width: 143px;
   font-weight: bold;
   font-size: 16px;
@@ -28,7 +27,7 @@
 }
 
 .map__way-to {
-  margin-left: 75px;
+  width: 340px;
   padding: 19px;
   text-align: center;
   font-weight: bold;
@@ -40,5 +39,5 @@
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
-}
+  }
 }

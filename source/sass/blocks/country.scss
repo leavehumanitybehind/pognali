@@ -1,15 +1,10 @@
-
-.country img {
-  border-radius: 10px;
-}
-
 .country__wrapper {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding:25px;
-  margin-top:-15px;
+  padding: 25px;
+  margin-top: -15px;
   margin-bottom: 13px;
   background: $basic-white;
   border-radius: 10px;
@@ -17,8 +12,12 @@
   @media (min-width: $tablet-width) {
     width: 400px;
   }
-
 }
+
+.country img {
+  border-radius: 10px;
+}
+
 .country__name {
   order: 1;
   margin: 0;
@@ -46,13 +45,12 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
-}
-
+  }
 }
 
 .country__followers {
   order: 2;
-  margin-left:auto;
+  margin-left: auto;
   line-height: (20 / 16);
   color: $basic-blue;
   opacity: 0.3;
@@ -60,5 +58,5 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
-}
+  }
 }

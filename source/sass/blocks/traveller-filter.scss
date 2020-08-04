@@ -17,7 +17,7 @@
 .traveller-filter-list {
   @include no-list;
 
-  @media(min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     display: flex;
   }
 }
@@ -33,13 +33,13 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
-}
+  }
 }
 
 .traveller-filter__preferences {
   @include no-list;
 
-  @media(min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
   }
@@ -60,15 +60,14 @@
   font-size: 15px;
   line-height: (20 / 15);
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     font-size: 20;
     line-height: 1;
   }
 }
 
-  .traveller-filter-list__item {
-
-    @media (min-width: $tablet-width) {
+.traveller-filter-list__item {
+  @media (min-width: $tablet-width) {
     display: flex;
   }
 }

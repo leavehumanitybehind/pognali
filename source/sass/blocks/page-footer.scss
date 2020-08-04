@@ -16,10 +16,12 @@
     justify-content: space-between;
   }
 }
+
 .page-footer__logo {
   margin: 0 auto 38px;
 }
-.page-footer__copyright{
+
+.page-footer__copyright {
   display: flex;
   justify-content: space-between;
 }
@@ -33,5 +35,4 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
   }
-
 }

@@ -4,6 +4,7 @@
   margin-top: -30px;
   background: $basic-medium-blue;
 }
+
 .companions__container {
   padding-bottom: 65px;
 
@@ -13,10 +14,11 @@
     padding-right: 0;
   }
 }
+
 .companions__description {
   width: 217px;
   margin-left: 26px;
-  margin-bottom: 50px;
+  margin-bottom: 65px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
@@ -50,5 +52,4 @@
     width: 430px;
     margin-bottom: 60px;
   }
-
 }

@@ -1,19 +1,20 @@
 .companion {
   background-color: $basic-white;
   width: 270px;
-  margin-bottom: 9px;
+  margin-bottom: 15px;
   border-radius: 0 25px;
 }
-.companion img{
-  border-radius:10px;
+
+.companion img {
+  border-radius: 10px;
 }
 
 .companion__wrapper {
-  padding: 0 45px;
+  padding: 0 40px;
   background-color: $basic-white;
 }
 
-.companion__property{
+.companion__property {
   position: absolute;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .companion__title {
-  margin-left: 23px;
+  margin-left: 30px;
   text-align: center;
   font-weight: bold;
   font-size: 21px;

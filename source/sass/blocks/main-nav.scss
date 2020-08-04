@@ -6,10 +6,9 @@
     justify-content: space-between;
   }
 }
+
 .main-nav__toggle {
   position: absolute;
-  top: 0;
-  right: 70px;
   z-index: 2;
   display: block;
   width: 40px;
@@ -18,19 +17,30 @@
   cursor: pointer;
   border: none;
 
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 40px;
-    left: 60px;
+    top: 0;
+    right: 70px;
+    z-index: 2;
     width: 24px;
     height: 3px;
     background-color: #ffffff;
     box-shadow: 0 8px 0 0 #ffffff;
-  }
 
-  @media (min-width: $desktop-width){
-    display: none;
+    @media (min-width: $tablet-width) {
+      background-color: #000000;
+      box-shadow: 0 8px 0 0 #000000;
+    }
   }
 }
 

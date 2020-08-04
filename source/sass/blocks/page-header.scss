@@ -3,13 +3,13 @@
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    width:100%;
-    background-color:$basic-white;
+    width: 100%;
+    background-color: $basic-white;
   }
 
   @media (min-width: $desktop-width) {
-    background-color:inherit;
-}
+    background-color: inherit;
+  }
 }
 
 .page-header__container {

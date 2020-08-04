@@ -1,6 +1,7 @@
 .business-offer {
   @include section-border-radius;
-  padding: 37px 0;
+
+  padding-bottom: 107px;
   background-color: #e6e8f1;
 
   @media (min-width: $tablet-width) {
@@ -10,11 +11,17 @@
 
 .business-offer__title {
   margin: 0;
-  padding-top: 40px;
+  margin-bottom: 35px;
+  width: 100px;
+  padding-top: 30px;
+}
+
+.business-offer__list {
+  @include no-list;
 }
 
 .business-offer__list-item {
-  padding: 20px;
+  padding: 20px 0;
   font-weight: 300;
   font-size: 16px;
   line-height: 1;
@@ -28,7 +35,7 @@
   color: #132576;
   text-decoration: none;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     margin-bottom: 85px;
     font-size: 20px;
     line-height: 1;
@@ -46,5 +53,4 @@
     font-size: 28px;
     line-height: 1;
   }
-
 }

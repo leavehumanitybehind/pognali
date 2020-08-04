@@ -42,7 +42,7 @@
   text-align: center;
   color: $special-grey;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: (23 / 20);
   }
@@ -65,15 +65,15 @@
 @media (min-width: $tablet-width) {
   .traveller__wrapper {
     @media (min-width: $tablet-width) {
-    padding: 35px 0 0 35px;
-  }
+      padding: 35px 0 0 35px;
+    }
 
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 35px 0 0 35px;
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 35px 0 0 35px;
+    }
   }
-}
 
   .traveller__btn {
     @include tablet-text;

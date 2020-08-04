@@ -2,12 +2,12 @@
   @include section-border-radius;
 
   padding-top: 48px;
-  padding-bottom: 58px;
-  background: #EDEFF6;
+  padding-bottom: 32px;
+  background: #edeff6;
 }
 
 .directions__description {
-  width:201px;
+  width: 201px;
   margin-left: 24px;
   margin-bottom: 62px;
   font-weight: 300;
@@ -20,7 +20,7 @@
   @include no-list;
   margin-bottom: 44px;
 
-  @media (min-width: $desktop-width){
+  @media (min-width: $desktop-width) {
     margin-right: 20px;
     order: -1;
   }
@@ -28,7 +28,7 @@
 
 .directions__show-all-btn {
   margin-bottom: 80px;
-  padding:22px;
+  padding: 22px;
   padding-right: 140px;
   color: $basic-blue-light;
 }

@@ -6,15 +6,15 @@
   background-position: top 84px;
 
   @media (min-width: $tablet-width) {
-    background: url("../img/about-tablet@1x.png") no-repeat;;
-    background-position:100% -210%;
+    background: url("../img/about-tablet@1x.png") no-repeat;
+    background-position: 100% -210%;
   }
 }
 
 .about-service__description {
   margin-left: 24px;
   margin-bottom: 90px;
-  width:210px;
+  width: 210px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
@@ -24,6 +24,5 @@
     width: 309px;
     font-size: 28px;
     line-height: (33 /28);
+  }
 }
-}
-
