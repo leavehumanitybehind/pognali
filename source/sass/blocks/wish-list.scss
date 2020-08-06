@@ -2,9 +2,28 @@
   @include no-list;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: -10px;
-  margin-bottom: 30px;
+  margin-bottom:10px ;
+  padding-top: 10px;
+
+  @media(min-width: $tablet-width) {
+    flex-direction: row;
+    order: 3;
+  }
+
+  @media(min-width: $desktop-width) {
+    flex-direction: column;
+    order: 3;
+  }
+}
+
+.wish-list__item {
+  padding:10px;
+
+  @media(min-width: $tablet-width) {
+    margin-right: 29px;
+}
 }
 
 .wish-list__link {
@@ -15,3 +34,4 @@
   text-decoration: none;
   color: $basic-blue-light;
 }
+

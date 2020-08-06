@@ -1,5 +1,7 @@
 .about-service {
   @include section-border-radius;
+  position: relative;
+  z-index: 6;
 
   padding-top: 12px;
   background: url("../img/about-mobile@1x.png") no-repeat;
@@ -8,6 +10,19 @@
   @media (min-width: $tablet-width) {
     background: url("../img/about-tablet@1x.png") no-repeat;
     background-position: 100% -210%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0px;
+    padding-bottom: 190px;
+    background: url("../img/about-desktop@1x.png") no-repeat;
+    background-position: 92.7% 1px;
+  }
+}
+
+.about-service__title {
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
@@ -24,5 +39,35 @@
     width: 309px;
     font-size: 28px;
     line-height: (33 /28);
+  }
+}
+
+.about-service__description--thesis {
+  @media (min-width: $desktop-width) {
+    width: 619px;
+    font-size: 28px;
+    line-height: (34 /28);
+  }
+}
+
+.about-service__description--tagline {
+  @media (min-width: $desktop-width) {
+    width: 425px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: (24 / 21);
+  }
+}
+
+.about-service__link {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 167px;
+    padding: 29px;
   }
 }

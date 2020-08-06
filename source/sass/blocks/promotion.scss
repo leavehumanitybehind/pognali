@@ -1,7 +1,15 @@
 .promotion {
   @include section-border-radius;
+  z-index: 2;
+  position: relative;
   padding-top: 85px;
   background: $basic-medium-blue;
+}
+
+.promotion__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+  }
 }
 
 .promotion__description {
@@ -15,6 +23,26 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
+    width: auto;
+    margin-bottom: 65px;
+    font-size: 28px;
+    line-height: (28 / 32);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 616px;
+  }
+}
+
+.promotion__description--questions {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: (22 / 16);
+  text-align: center;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
     font-size: 28px;
     line-height: (28 / 32);
   }
@@ -25,8 +53,7 @@
   font-size: 16px;
   line-height: (22 / 16);
   text-align: center;
-  color: $basic-white;
-  text-decoration: none;
+  color: $basic-yellow;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -35,16 +62,33 @@
 }
 
 .promotion__form-field {
-  width: 220px;
+  position: relative;
+  width: 210px;
   padding: 22px;
   margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    width: 536px;
+    width: 516px;
     padding: 28px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
     width: 800px;
+  }
+}
+
+.promotion__button {
+  position: absolute;
+  padding: 32px;
+  background-color: $basic-yellow;
+
+  @media (min-width: $tablet-width) {
+    padding: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width:330px;
+    padding: 38px;
   }
 }

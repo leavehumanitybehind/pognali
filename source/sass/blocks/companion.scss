@@ -3,6 +3,10 @@
   width: 270px;
   margin-bottom: 15px;
   border-radius: 0 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .companion img {

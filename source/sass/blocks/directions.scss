@@ -1,9 +1,30 @@
 .directions {
   @include section-border-radius;
 
+  position: relative;
+  z-index: 5;
+
   padding-top: 48px;
   padding-bottom: 32px;
   background: #edeff6;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding-top: 166px;
+    background:#edeff6 url(../img/flags-back@1x.png) no-repeat 94.8% 88px;
+  }
+}
+
+.directions__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
 }
 
 .directions__description {
@@ -14,6 +35,12 @@
   font-size: 16px;
   line-height: (22 / 16);
   color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 371px;
+    font-size: 28px;
+    line-height: (28 / 33);
+  }
 }
 
 .directions__list {
@@ -21,7 +48,7 @@
   margin-bottom: 44px;
 
   @media (min-width: $desktop-width) {
-    margin-right: 20px;
+    margin-right: 120px;
     order: -1;
   }
 }
@@ -31,20 +58,13 @@
   padding: 22px;
   padding-right: 140px;
   color: $basic-blue-light;
-}
 
-@media (min-width: $desktop-width) {
-  .directions__container {
-    display: flex;
-    justify-content: space-between;
+  @media (min-width: $tablet-width) {
+    padding-right: 444px;
   }
 
-  .directions__list-item {
-    display: flex;
-    margin-bottom: 10px;
-  }
-
-  .directions__list-item img {
-    order: 2;
+  @media (min-width: $desktop-width) {
+    padding-right: 75px;
+    margin-left: 68%;
   }
 }

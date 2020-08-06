@@ -1,5 +1,6 @@
 .travellers__filter {
   background-color: $basic-yellow;
+  border-radius: 20px;
 }
 
 .traveller-filter__title {
@@ -17,9 +18,6 @@
 .traveller-filter-list {
   @include no-list;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
 }
 
 .traveller-filter-list__title {
@@ -29,6 +27,7 @@
   line-height: (18 / 16);
   text-transform: uppercase;
   color: $basic-blue-light;
+  border-top: 1px solid #F3C72B;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -41,7 +40,6 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -70,4 +68,9 @@
   @media (min-width: $tablet-width) {
     display: flex;
   }
+}
+
+.traveller-filter__transport {
+  @include no-list;
+  display: flex;
 }

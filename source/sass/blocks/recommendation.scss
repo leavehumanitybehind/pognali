@@ -2,6 +2,11 @@
   margin-top: -64px;
   margin-left: 13px;
   margin-bottom: 31px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+    order: 2;
+  }
 }
 
 .recommendation__wrapper {
@@ -16,6 +21,7 @@
   @media (min-width: $desktop-width) {
     width: 264px;
     padding: 0;
+    padding-left: 20px;
     margin: 0;
   }
 }
@@ -35,7 +41,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 20px;
+    margin-bottom:55px;
   }
 }
 

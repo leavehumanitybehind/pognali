@@ -10,6 +10,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: -30px;
+    margin-top: -60px;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -18,10 +20,11 @@
 .instruction__list-item {
   display: flex;
   justify-content: space-between;
-  padding: 22px 24px 37px 0;
+  padding: 22px 24px 37px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1;
+  color: $basic-blue;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
@@ -33,57 +36,69 @@
     padding: 27px 33px;
     font-size: 24px;
     line-height: 1;
+  }
 
-    &--choose {
-      background: $special-orange;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    width: 405px;
+    padding: 27px 35px 32px;
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+  }
+
+  &--choose {
+    background: $special-orange;
+  }
+
+  &--learn {
+    margin-top: -16px;
+    background: #ffa530;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      margin-left: -26px;
+
     }
 
-    &--learn {
-      margin-top: -16px;
-      background: #ffa530;
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      border-radius: 20px 0 0 20px;
+    }
+  }
 
-      @media (min-width: $tablet-width) {
-        margin-left: -26px;
-      }
+  &--find {
+    margin-top: -16px;
+    background: $special-yellow-dark;
 
-      @media (min-width: $desktop-width) {
-        margin-top: 0;
-      }
+    @media (min-width: $tablet-width) {
+      @include section-border-radius;
+
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
 
-    &--find {
-      margin-top: -16px;
-      background: $special-yellow-dark;
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      margin-left:-20px;
+      border-radius: 20px 0 0 20px;
+    }
+  }
 
-      @media (min-width: $tablet-width) {
-        @include section-border-radius;
+  &--enjoy {
+    margin-top: -16px;
+    background: $basic-yellow;
 
-        margin-top: -16px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
+    @media (min-width: $tablet-width) {
+      @include section-border-radius;
 
-      @media (min-width: $desktop-width) {
-        margin-top: 0;
-      }
+      margin-left: -26px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
 
-    &--enjoy {
-      margin-top: -16px;
-      background: $basic-yellow;
-
-      @media (min-width: $tablet-width) {
-        @include section-border-radius;
-
-        margin-left: -26px;
-        margin-top: -16px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-
-      @media (min-width: $desktop-width) {
-        margin-top: 0;
-      }
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      border-radius: 20px;
     }
   }
 }
@@ -95,6 +110,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;
   }
+  @media (min-width: $desktop-width) {
+    width: 225px;
+    margin-right: 40px;
+  }
 }
 
 .instruction__list-number {
@@ -102,5 +121,8 @@
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
+  }
+   @media (min-width: $desktop-width) {
+    padding-right: 15px;
   }
 }

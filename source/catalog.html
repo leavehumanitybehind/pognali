@@ -228,10 +228,14 @@
           </section>
           <ul class="travellers__list">
             <li class="travellers__list-item traveller">
-              <a class="traveller__link" href="#">
-                <img src="img/firsova-mobile@1x.jpg" width="50" height="50" alt="Аватар Таня Фирсова">
-              </a>
-              <div class="traveller__wrapper">
+                <a class="traveller__link" href="#">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg">
+                    <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg">
+                    <img class="traveller__photo" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото Тани Фирсовой">
+                  </picture>
+                </a>
+
                 <a class="traveller__title traveller__title--offline" href="#">
                   Таня Фирсова
                 </a>
@@ -281,14 +285,16 @@
                   <div class="traveller__property-title">левел:</div>
                   <span class="traveller-property-level__value">99</span>
                 </div>
-                <a class="traveller_btn btn" href="#">Позвать!</a>
-              </div>
+                <a class="traveller__btn btn" href="#">Позвать!</a>
             </li>
             <li class="travellers__list-item traveller">
               <a class="traveller__link" href="#">
-                <img src="img/demin-mobile@1x.jpg" width="50" height="50" alt="Аватар Петя Демин">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
+                <img class="traveller__photo" src="img/demin-mobile@1x.jpg" width="50" height="50" alt="Аватар Петя Демин">
+                </picture>
               </a>
-              <div class="traveller__wrapper">
                 <a class="traveller__title traveller__title--offline" href="#">
                   Петя Демин
                 </a>
@@ -338,14 +344,17 @@
                   <div class="traveller__property-title">левел:</div>
                   <span class="traveller-property-level__value">80</span>
                 </div>
-                <a class="traveller_btn btn" href="#">Позвать!</a>
-              </div>
+                <a class="traveller__btn btn" href="#">Позвать!</a>
+
             </li>
             <li class="travellers__list-item traveller">
               <a class="traveller__link" href="#">
-                <img src="img/smolov-mobile@1x.jpg" width="50" height="50" alt="Аватар Марк Смолов">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg">
+                <img class="traveller__photo" src="img/smolov-mobile@1x.jpg" width="50" height="50" alt="Аватар Марк Смолов">
+                </picture>
               </a>
-              <div class="traveller__wrapper">
                 <a href="#" class="traveller__title traveller__title--offline">
                   Марк Смолов
                 </a>
@@ -395,14 +404,16 @@
                   <div class="traveller__property-title">левел:</div>
                   <span class="traveller-property-level__value">25</span>
                 </div>
-                <a class="traveller_btn btn" href="#">Позвать!</a>
-              </div>
+                <a class="traveller__btn btn" href="#">Позвать!</a>
             </li>
             <li class="travellers__list-item traveller">
               <a class="traveller__link" href="#">
-                <img src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Аватар Лариса Роговая">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg">
+                <img class= "traveller__photo" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Аватар Лариса Роговая">
+                </picture>
               </a>
-              <div class="traveller__wrapper">
                 <a href="#" class="traveller__title traveller__title--online">
                   Лариса Роговая
                 </a>
@@ -446,8 +457,7 @@
                   <div class="traveller__property-title">левел:</div>
                   <span class="traveller-property-level__value">50</span>
                 </div>
-                <a class="traveller_btn btn" href="#">Позвать!</a>
-              </div>
+                <a class="traveller__btn btn" href="#">Позвать!</a>
             </li>
           </ul>
         </div>

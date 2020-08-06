@@ -4,6 +4,7 @@
 
 .travellers__list {
   @include no-list;
+  width: 100%;
 }
 
 .travellers__show-more {

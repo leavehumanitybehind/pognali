@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: baseline;
 
+  @include section-border-radius;
+}
+
   .page-main-header__title {
     font-weight: bold;
     font-size: 36px;
@@ -23,4 +26,3 @@
       display: flex;
     }
   }
-}

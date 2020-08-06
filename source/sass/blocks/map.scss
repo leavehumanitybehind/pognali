@@ -1,19 +1,31 @@
 .map {
   @include section-border-radius;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   padding: 40px 25px 34px;
   position: relative;
   background: $basic-yellow;
 
+  @media (min-width: $tablet-width) {
+    margin-top: -49px;
+    padding: 80px 75px 104px;
+    position: relative;
+    z-index: 1;
+  }
+
   @media (min-width: $desktop-width) {
+    padding-top: 187px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 
 .map__address {
-  display: block;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
   width: 143px;
   font-weight: bold;
   font-size: 16px;
@@ -22,12 +34,16 @@
   color: $basic-blue-light;
 
   @media (min-width: $tablet-width) {
-    @include tablet-text;
+    width: auto;
+    margin-bottom: 62px;
+    text-align: center;
+
+    font-size: 28px;
+  line-height:1;
   }
 }
 
 .map__way-to {
-  width: 340px;
   padding: 19px;
   text-align: center;
   font-weight: bold;
@@ -39,5 +55,6 @@
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
+    padding-right: 358px;
   }
 }
