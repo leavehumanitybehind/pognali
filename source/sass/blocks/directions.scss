@@ -1,5 +1,5 @@
 .directions {
-  @include section-border-radius;
+  border-radius: 0 25px;
 
   padding-top: 48px;
   padding-bottom: 32px;
@@ -33,18 +33,22 @@
   color: $basic-blue-light;
 }
 
-@media (min-width: $desktop-width) {
-  .directions__container {
+.directions__container {
+  @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
   }
+}
 
-  .directions__list-item {
+.directions__list-item {
+  @media (min-width: $desktop-width) {
     display: flex;
     margin-bottom: 10px;
   }
+}
 
-  .directions__list-item img {
+.directions__list-item img {
+  @media (min-width: $desktop-width) {
     order: 2;
   }
 }

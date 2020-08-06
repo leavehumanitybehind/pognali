@@ -56,7 +56,7 @@
       background: $special-yellow-dark;
 
       @media (min-width: $tablet-width) {
-        @include section-border-radius;
+        border-radius: 0 25px;
 
         margin-top: -16px;
         border-top-left-radius: 0;
@@ -73,7 +73,7 @@
       background: $basic-yellow;
 
       @media (min-width: $tablet-width) {
-        @include section-border-radius;
+        border-radius: 0 25px;
 
         margin-left: -26px;
         margin-top: -16px;

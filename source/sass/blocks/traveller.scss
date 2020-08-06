@@ -64,10 +64,6 @@
 
 @media (min-width: $tablet-width) {
   .traveller__wrapper {
-    @media (min-width: $tablet-width) {
-      padding: 35px 0 0 35px;
-    }
-
     @media (min-width: $desktop-width) {
       display: flex;
       flex-wrap: wrap;
@@ -76,7 +72,8 @@
   }
 
   .traveller__btn {
-    @include tablet-text;
+    font-size: 28px;
+    line-height: 1;
   }
 
   .traveller__property {
@@ -85,8 +82,8 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .traveller-property-transport {
+.traveller-property-transport {
+  @media (min-width: $desktop-width) {
     display: flex;
   }
 }

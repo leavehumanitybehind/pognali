@@ -1,5 +1,5 @@
 .promotion {
-  @include section-border-radius;
+  border-radius: 0 25px;
   padding-top: 85px;
   background: $basic-medium-blue;
 }
