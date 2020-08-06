@@ -1,5 +1,18 @@
 .page-header {
-  padding-top: 27px;
-  padding-bottom: 27px;
-  background-color: $basic-blue;
+  padding-top: 37px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: inherit;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
 }

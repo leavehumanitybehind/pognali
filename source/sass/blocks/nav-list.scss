@@ -1,3 +1,23 @@
 .nav-list {
-  background-color: $basic-white;
+  display: none;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.nav-list__item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.nav-list__link {
+  text-decoration: none;
+  color: $basic-white;
 }

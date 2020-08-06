@@ -1,16 +1,41 @@
-.business__offer {
-  background: #e6e8f1;
+.business-offer {
+  border-radius: 0 25px;
+  padding-bottom: 107px;
+  background-color: #e6e8f1;
+
+  @media (min-width: $tablet-width) {
+    background: #edeff6;
+  }
 }
 
 .business-offer__title {
-  padding-top: 60px;
+  margin: 0;
+  margin-bottom: 35px;
+  width: 100px;
+  padding-top: 30px;
+}
+
+.business-offer__list {
+  @include no-list;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .business-offer__list-item {
+  padding: 20px 0;
   font-weight: 300;
   font-size: 16px;
   line-height: 1;
   color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    line-height: 1;
+  }
 }
 
 .business-offer__link {
@@ -19,4 +44,10 @@
   line-height: 1;
   color: #132576;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 85px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }

@@ -1,5 +1,10 @@
 .wish-list {
   @include no-list;
+
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 30px;
 }
 
 .wish-list__link {

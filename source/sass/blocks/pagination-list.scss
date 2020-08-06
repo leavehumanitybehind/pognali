@@ -1,3 +1,23 @@
 .pagination-list {
   @include no-list;
+  display: flex;
+  background-color: $basic-white;
+}
+
+.pagination-list__item {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.pagination-list__link {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $basic-blue-light;
+  text-decoration: none;
 }

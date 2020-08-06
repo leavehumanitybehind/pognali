@@ -1,0 +1,73 @@
+.travellers__filter {
+  background-color: $basic-yellow;
+}
+
+.traveller-filter__title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
+  color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 1;
+  }
+}
+
+.traveller-filter-list {
+  @include no-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.traveller-filter-list__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: (18 / 16);
+  text-transform: uppercase;
+  color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.traveller-filter__preferences {
+  @include no-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.traveller-filter__option {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.traveller-filter__label {
+  font-size: 15px;
+  line-height: (20 / 15);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20;
+    line-height: 1;
+  }
+}
+
+.traveller-filter-list__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}

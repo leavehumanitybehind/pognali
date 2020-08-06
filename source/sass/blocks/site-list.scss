@@ -1,5 +1,8 @@
 .site-list {
   @include no-list;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 100px;
 }
 
 .site-list__link {

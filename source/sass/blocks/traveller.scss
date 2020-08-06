@@ -1,6 +1,16 @@
 .traveller {
+  width: 285px;
+  border-radius: 25px;
   margin-bottom: 11px;
   background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    width: 600px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 950px;
+  }
 }
 
 .traveller__title {
@@ -10,6 +20,11 @@
   text-align: center;
   color: $basic-blue-light;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 1;
+  }
 }
 
 .traveller__likes {
@@ -26,6 +41,11 @@
   line-height: (18 / 16);
   text-align: center;
   color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: (23 / 20);
+  }
 }
 
 .traveller__property-title {
@@ -40,4 +60,30 @@
   font-size: 24px;
   line-height: 1;
   color: $basic-blue-light;
+}
+
+@media (min-width: $tablet-width) {
+  .traveller__wrapper {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 35px 0 0 35px;
+    }
+  }
+
+  .traveller__btn {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .traveller__property {
+    font-size: 15px;
+    line-height: (16 / 15);
+  }
+}
+
+.traveller-property-transport {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }

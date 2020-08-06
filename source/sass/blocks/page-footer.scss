@@ -1,7 +1,29 @@
 .page-footer {
-  padding-top: 38px;
-  padding-bottom: 14px;
+  margin-top: -25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   background-color: $basic-white;
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  padding: 38px 25px 13px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__logo {
+  margin: 0 auto 38px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
 }
 
 .page-footer__copyright-desсription {
@@ -9,4 +31,8 @@
   font-size: 16px;
   line-height: 1;
   color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }

@@ -1,8 +1,93 @@
 .main-nav {
   display: none;
-  background: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 40px;
+  height: 50px;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 70px;
+    z-index: 2;
+    width: 24px;
+    height: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 0 0 #ffffff;
+
+    @media (min-width: $tablet-width) {
+      background-color: #000000;
+      box-shadow: 0 8px 0 0 #000000;
+    }
+  }
 }
 
 .main-nav__list {
   @include no-list;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+  }
+}
+
+.main-nav__auth {
+  @include no-list;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: $basic-blue;
+  }
+}
+
+.main-nav__social-list {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__site-list {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav-show {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 70%;
+  }
 }

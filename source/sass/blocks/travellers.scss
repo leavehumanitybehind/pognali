@@ -12,5 +12,18 @@
   line-height: (30 / 17);
   text-transform: uppercase;
   text-decoration: none;
-  color: $basic-blue-lightb;
+  color: $basic-blue-light;
+}
+
+.travellers__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.travellers__filter {
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    order: 2;
+  }
 }
