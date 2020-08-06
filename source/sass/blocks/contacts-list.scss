@@ -17,7 +17,8 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
-    @include tablet-text;
+    font-size: 28px;
+    line-height: 1;
   }
 }
 
@@ -26,8 +27,8 @@
   margin-bottom: 23px;
 }
 
-@media (min-width: $tablet-width) {
-  .contacts-list__number {
+.contacts-list__number {
+  @media (min-width: $tablet-width) {
     margin-bottom: 39px;
   }
 }

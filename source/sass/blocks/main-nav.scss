@@ -73,15 +73,20 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .main-nav__social-list,
-  .main-nav__site-list {
+.main-nav__social-list {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .main-nav-show {
+.main-nav__site-list {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav-show {
+  @media (min-width: $desktop-width) {
     display: flex;
     width: 70%;
   }

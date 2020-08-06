@@ -1,14 +1,13 @@
 .about-service {
-  @include section-border-radius;
   position: relative;
   z-index: 6;
+  border-radius: 0 25px;
 
   padding-top: 12px;
-  background: url("../img/about-mobile@1x.png") no-repeat;
-  background-position: top 84px;
+  background: url("../img/about-mobile@1x.png") no-repeat top 84px;
 
   @media (min-width: $tablet-width) {
-    background: url("../img/about-tablet@1x.png") no-repeat;
+    background-image: url("../img/about-tablet@1x.png");
     background-position: 100% -210%;
   }
 

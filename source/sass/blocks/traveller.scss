@@ -11,11 +11,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
     padding: 35px 25px 25px 35px;
-
   }
 
   @media (min-width: $desktop-width) {
-    padding:0;
+    padding: 0;
   }
 }
 .traveller__link {
@@ -23,24 +22,23 @@
 
   @media (min-width: $tablet-width) {
     order: 1;
-}
+  }
 }
 
 .traveller__photo {
   border-radius: 50px;
   overflow: hidden;
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 190px;
     height: 190px;
     border-radius: 20px;
-}
-@media (min-width: $desktop-width) {
+  }
+  @media (min-width: $desktop-width) {
     width: 285px;
     height: 285px;
     margin: 0;
-}
-
+  }
 }
 
 .traveller__title {
@@ -71,11 +69,10 @@
   text-transform: uppercase;
   color: $basic-blue;
 
-  @media(min-width: $tablet-width) {
-      order:6;
-      padding-left: 0px;
-    }
-
+  @media (min-width: $tablet-width) {
+    order: 6;
+    padding-left: 0px;
+  }
 }
 
 .traveller__hashtags {
@@ -95,41 +92,40 @@
     line-height: (23 / 20);
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     order: 4;
     top: 10%;
     left: 36.5%;
   }
-
 }
 .traveller-property-transport {
   position: absolute;
-    top: 25px;
-    right: 25px;
-    flex-direction: column;
-    align-items: flex-end;
-    width: auto;
-    margin: 0;
-    padding-left: 0;
+  top: 25px;
+  right: 25px;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+  margin: 0;
+  padding-left: 0;
 
-    @media(min-width: $tablet-width) {
-      order:3;
-    }
-    @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
+  @media (min-width: $desktop-width) {
     order: 7;
     position: relative;
-    }
+  }
 }
 
-.traveller-property-level{
+.traveller-property-level {
   position: absolute;
   right: 40px;
   bottom: 76px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     position: relative;
-      order:7;
-    }
+    order: 7;
+  }
 }
 
 .traveller__property-title {
@@ -138,7 +134,7 @@
   line-height: (16 / 14);
   color: $special-grey;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }
@@ -154,29 +150,33 @@
   order: 8;
 }
 
-  .traveller__btn {
-    @include tablet-text;
-
-    max-width: 230px;
+.traveller__btn {
+  max-width: 230px;
   width: 100%;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     order: 5;
-    margin-right:0;
+    margin-right: 0;
+    font-size: 28px;
+    line-height: 1;
   }
 
-   @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     order: 5;
-    max-width:none;
+    max-width: none;
     height: 80px;
-  width:100px;
+    width: 100px;
   }
 }
 
+.traveller__property {
+  font-size: 15px;
+  line-height: (16 / 15);
+}
 
-  .traveller__property {
-    font-size: 15px;
-    line-height: (16 / 15);
+.traveller-property-transport {
+  @media (min-width: $desktop-width) {
+    display: flex;
   }
-
+}

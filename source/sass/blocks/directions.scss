@@ -1,5 +1,5 @@
 .directions {
-  @include section-border-radius;
+  border-radius: 0 25px;
 
   position: relative;
   z-index: 5;

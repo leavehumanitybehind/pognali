@@ -1,8 +1,8 @@
 .map {
-  @include section-border-radius;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0 25px;
 
   padding: 40px 25px 34px;
   position: relative;
@@ -39,7 +39,7 @@
     text-align: center;
 
     font-size: 28px;
-  line-height:1;
+    line-height: 1;
   }
 }
 

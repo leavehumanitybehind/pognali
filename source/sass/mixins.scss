@@ -3,13 +3,3 @@
   margin: 0;
   padding: 0;
 }
-
-@mixin tablet-text {
-  font-size: 28px;
-  line-height: 1;
-}
-
-@mixin section-border-radius {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-}

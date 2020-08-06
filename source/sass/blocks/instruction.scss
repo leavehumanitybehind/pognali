@@ -70,9 +70,8 @@
     margin-top: -16px;
     background: $special-yellow-dark;
 
-    @media (min-width: $tablet-width) {
-      @include section-border-radius;
-
+      @media (min-width: $tablet-width) {
+        border-radius: 0 25px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
@@ -88,12 +87,10 @@
     margin-top: -16px;
     background: $basic-yellow;
 
-    @media (min-width: $tablet-width) {
-      @include section-border-radius;
+      @media (min-width: $tablet-width) {
+        border-radius: 0 25px;
 
       margin-left: -26px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
     }
 
     @media (min-width: $desktop-width) {
