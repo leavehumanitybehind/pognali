@@ -3,15 +3,15 @@
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    margin-top: -50px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 96px;
+    display: grid;
+    grid-template-columns: 365px 325px;
+    margin-bottom: 87px;
+    margin-left: -50px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: -30px;
-    margin-top: -60px;
+    margin-left: -50px;
+    margin-top: -245px;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -31,7 +31,6 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    width: 284px;
     margin: 0;
     padding: 27px 33px;
     font-size: 24px;
@@ -48,6 +47,7 @@
 
   &--choose {
     background: $special-orange;
+    border-radius: 20px 0 0 0;
   }
 
   &--learn {
@@ -56,8 +56,7 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
-      margin-left: -26px;
-
+      margin-left: -25px;
     }
 
     @media (min-width: $desktop-width) {
@@ -70,15 +69,15 @@
     margin-top: -16px;
     background: $special-yellow-dark;
 
-      @media (min-width: $tablet-width) {
-        border-radius: 0 25px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      padding: 22px 35px 27px;
+      border-radius: 0 0 0 20px;
     }
 
     @media (min-width: $desktop-width) {
       margin-top: 0;
-      margin-left:-20px;
+      margin-left: -20px;
       border-radius: 20px 0 0 20px;
     }
   }
@@ -87,10 +86,10 @@
     margin-top: -16px;
     background: $basic-yellow;
 
-      @media (min-width: $tablet-width) {
-        border-radius: 0 25px;
-
-      margin-left: -26px;
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      margin-left: -25px;
+      border-radius: 0 0 20px 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -102,11 +101,11 @@
 
 .instruction__list-text {
   margin: 0;
-  width: 152px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;
   }
+
   @media (min-width: $desktop-width) {
     width: 225px;
     margin-right: 40px;
@@ -119,7 +118,8 @@
   @media (min-width: $tablet-width) {
     font-size: 30px;
   }
-   @media (min-width: $desktop-width) {
+
+  @media (min-width: $desktop-width) {
     padding-right: 15px;
   }
 }

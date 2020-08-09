@@ -1,11 +1,16 @@
 .recommendation {
-  margin-top: -64px;
+  margin-top: -80px;
   margin-left: 13px;
   margin-bottom: 31px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: -215px;
+    margin-left: 10px;
+  }
+
   @media (min-width: $desktop-width) {
-    margin-top: 40px;
-    order: 2;
+    margin: 108px 0;
+    margin-right: 108px;
   }
 }
 
@@ -15,13 +20,12 @@
   @media (min-width: $tablet-width) {
     width: 40%;
     padding-left: 25px;
-    padding-bottom: 181px;
+    padding-bottom: 185px;
   }
 
   @media (min-width: $desktop-width) {
     width: 264px;
-    padding: 0;
-    padding-left: 20px;
+    padding-bottom: 0;
     margin: 0;
   }
 }
@@ -35,13 +39,14 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    width: 264px;
+    margin-bottom: 45px;
+    width: 294px;
     font-size: 28px;
     line-height: (32 / 28);
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom:55px;
+    margin-bottom: 50px;
   }
 }
 
@@ -52,7 +57,6 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    width: 264px;
     font-weight: bold;
     font-size: 21px;
     line-height: (25 / 21);

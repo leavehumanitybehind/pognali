@@ -2,29 +2,37 @@
   background: #e5e5e5;
 }
 
-.travellers__list {
-  @include no-list;
-  width: 100%;
-}
-
-.travellers__show-more {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: (30 / 17);
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $basic-blue-light;
-}
-
 .travellers__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
   }
 }
 
+.travellers__list {
+  @include no-list;
+  width: 100%;
+}
+
+.travellers__show-more {
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: (30 / 17);
+  text-decoration: none;
+  color: $basic-blue-light;
+}
+
 .travellers__filter {
   @media (min-width: $desktop-width) {
-    width: 200px;
+    width: 285px;
+    padding: 44px 43px 43px 47px;
+    margin: 0;
     order: 2;
+    align-self: flex-start;
   }
 }

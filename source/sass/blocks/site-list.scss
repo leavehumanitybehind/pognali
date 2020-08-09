@@ -1,10 +1,32 @@
 .site-list {
   @include no-list;
   display: flex;
-  align-items: flex-end;
   margin-bottom: 100px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -15px;
+    margin-bottom: 10px;
+  }
 }
 
 .site-list__link {
   text-decoration: none;
+  background-color: $basic-yellow;
+  width: 10px;
+  padding: 25px;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    margin-right: 10px;
+  }
 }

@@ -1,29 +1,25 @@
 .wish-list {
   @include no-list;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom:10px ;
   padding-top: 10px;
 
-  @media(min-width: $tablet-width) {
-    flex-direction: row;
-    order: 3;
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
+    padding-left: 50px;
+    display: flex;
     flex-direction: column;
-    order: 3;
   }
 }
 
 .wish-list__item {
-  padding:10px;
+  padding: 7px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-right: 29px;
-}
+  }
 }
 
 .wish-list__link {
@@ -33,5 +29,9 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $basic-blue-light;
-}
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+  }
+}

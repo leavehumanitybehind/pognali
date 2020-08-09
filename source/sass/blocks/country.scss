@@ -1,14 +1,13 @@
 .country {
-  @media(min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     display: flex;
-flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
 
-  @media(min-width: $desktop-width){
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
   }
-
 }
 
 .country__wrapper {
@@ -18,7 +17,7 @@ flex-direction: row-reverse;
   justify-content: space-between;
   padding: 25px;
   margin-bottom: 13px;
-  margin-top: -18px;
+  margin-top: -15px;
   background: $basic-white;
   border-radius: 10px;
 
@@ -26,13 +25,21 @@ flex-direction: row-reverse;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 400px;
-    margin-top:0;
+    width: 385px;
+    margin-top: 0;
+    padding: 25px 38px;
+    border-radius: 10px 0 0 10px;
   }
 }
 
 .country img {
   border-radius: 10px;
+
+  @media (min-width: $desktop-width) {
+    height: 140px;
+    width: 180px;
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .country__name {
@@ -47,6 +54,7 @@ flex-direction: row-reverse;
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 1;
+    margin-bottom: 5px;
   }
 }
 
@@ -62,6 +70,11 @@ flex-direction: row-reverse;
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
   }
 }
 

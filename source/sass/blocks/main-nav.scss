@@ -29,17 +29,17 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left:0;
-    z-index: 2;
+    top: 2px;
+    left: 13px;
     width: 24px;
     height: 3px;
     background-color: #ffffff;
     box-shadow: 0 8px 0 0 #ffffff;
 
     @media (min-width: $tablet-width) {
-      background-color: #000000;
-      box-shadow: 0 8px 0 0 #000000;
+      left: 45px;
+      background-color: #cccccc;
+      box-shadow: 0 8px 0 0 #cccccc;
     }
   }
 }
@@ -54,7 +54,15 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    margin-right: auto;
     width: 390px;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -70,6 +78,13 @@
     text-align: center;
     text-transform: uppercase;
     color: $basic-blue;
+  }
+}
+
+.user-list__link {
+  @media (min-width: $tablet-width) {
+    padding: 16px 28px;
+    border-radius: 25px;
   }
 }
 

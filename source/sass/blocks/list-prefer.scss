@@ -1,17 +1,19 @@
 .list-prefer {
   @include no-list;
-
-  display: flex;
-  justify-content: center;
   padding-bottom: 13px;
   padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     flex-direction: column;
-}
+  }
 
-@media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
     flex-direction: row;
-    align-items:flex-end;
-}
+    justify-content: center;
+  }
 }

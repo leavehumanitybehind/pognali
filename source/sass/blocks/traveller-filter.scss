@@ -1,9 +1,14 @@
 .travellers__filter {
   background-color: $basic-yellow;
   border-radius: 20px;
+  padding: 0 20px;
+  margin-bottom: 28px;
 }
 
 .traveller-filter__title {
+  width: 150px;
+  padding-top: 26px;
+  margin-bottom: 24px;
   font-weight: bold;
   font-size: 22px;
   line-height: 1;
@@ -13,11 +18,16 @@
     font-size: 30px;
     line-height: 1;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-bottom: 21px;
+  }
 }
 
 .traveller-filter-list {
   @include no-list;
-
+  margin-bottom: 10px;
 }
 
 .traveller-filter-list__title {
@@ -27,11 +37,15 @@
   line-height: (18 / 16);
   text-transform: uppercase;
   color: $basic-blue-light;
-  border-top: 1px solid #F3C72B;
+  border-top: 1px solid #f3c72b;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 120px;
   }
 }
 
@@ -41,13 +55,16 @@
   @media (min-width: $tablet-width) {
     display: flex;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .traveller-filter__option {
   margin: 0;
   padding: 0;
   border: none;
-  display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -55,8 +72,22 @@
 }
 
 .traveller-filter__label {
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
   font-size: 15px;
   line-height: (20 / 15);
+
+  &::before {
+    display: block;
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    background-color: $basic-white;
+    border-radius: 2px;
+    content: "";
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20;
@@ -67,10 +98,38 @@
 .traveller-filter-list__item {
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .traveller-filter__transport {
   @include no-list;
   display: flex;
+}
+
+.range__output {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.range__input {
+  width: 25%;
+}
+
+.traveller-filter__btn {
+  background-color: $basic-white;
+  border: none;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 13px 72px;
+  border-radius: 25px;
+  color: $basic-blue;
+  margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    padding: 17px 40px;
+  }
 }
