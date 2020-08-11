@@ -1,50 +1,193 @@
 .traveller {
-  width: 285px;
-  border-radius: 25px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 44% 56%;
+  grid-template-rows: 42px 38px 20% 35% 20% 10% 10%;
+  position: relative;
+  border-radius: 20px;
   margin-bottom: 11px;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    width: 600px;
+    height: 332px;
+    grid-template-columns: 1fr 1fr 20%;
+    grid-template-rows: 39px 61px 1fr 1fr 1fr;
+    margin-bottom: 40px;
+    padding: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 950px;
+    margin-right: 84px;
+    height: 285px;
+    grid-template-columns: 320px 1fr 1fr;
+    grid-template-rows: 70px 31px 1fr 1fr;
+    padding: 0;
   }
 }
 
+.traveller__photo {
+  margin-left: 10px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-radius: 50px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    height: 285px;
+    margin: 0;
+  }
+}
+
+.traveller__link {
+  margin-right: 20px;
+}
+
 .traveller__title {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  position: relative;
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
-  text-align: center;
+  line-height: 1;
   color: $basic-blue-light;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
     font-size: 30px;
     line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 35px;
   }
 }
 
 .traveller__likes {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
   font-weight: bold;
   font-size: 14px;
   line-height: (16 / 14);
   text-transform: uppercase;
   color: $basic-blue;
-}
-
-.traveller__hashtags {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: (18 / 16);
-  text-align: center;
-  color: $special-grey;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    line-height: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    padding-left: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-end: 2;
+    padding-left: 210px;
+  }
+}
+
+.traveller__hashtags {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: (18 / 16);
+  color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 20px;
     line-height: (23 / 20);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+}
+
+.traveller-property-country {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  @media (min-width: $tablet-width) {
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 35px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+}
+
+.traveller-property-transport {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    grid-row-start: 4;
+  }
+}
+
+.traveller-property-level {
+  padding-left: 60px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 5;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 5;
   }
 }
 
@@ -53,6 +196,10 @@
   font-size: 15px;
   line-height: (16 / 14);
   color: $special-grey;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .traveller-property-level__value {
@@ -62,28 +209,36 @@
   color: $basic-blue-light;
 }
 
-@media (min-width: $tablet-width) {
-  .traveller__wrapper {
-    @media (min-width: $desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 35px 0 0 35px;
-    }
-  }
+.traveller__btn {
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
 
-  .traveller__btn {
+  @media (min-width: $tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
     font-size: 28px;
     line-height: 1;
   }
 
-  .traveller__property {
-    font-size: 15px;
-    line-height: (16 / 15);
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
   }
 }
 
-.traveller-property-transport {
-  @media (min-width: $desktop-width) {
-    display: flex;
-  }
+.traveller__property {
+  font-size: 15px;
+  line-height: (16 / 15);
 }

@@ -2,25 +2,39 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
 
-  .page-main-header__title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1;
-    color: $basic-white;
+.page-main-header__title {
+  position: relative;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  color: $basic-white;
+
+  &::after {
+    height: 5px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -18px;
+    background-color: $special-orange;
+    border-radius: 2.4px;
+    content: "";
   }
+}
 
-  .page-main-header__link {
-    display: none;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1;
-    color: $basic-white;
-    text-decoration: none;
-    text-transform: uppercase;
+.page-main-header__link {
+  display: none;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  color: $basic-white;
+  text-decoration: none;
+  text-transform: uppercase;
 
-    @media (min-width: $tablet-width) {
-      display: flex;
-    }
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 }

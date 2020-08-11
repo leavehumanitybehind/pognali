@@ -3,13 +3,15 @@
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    margin-top: -50px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 96px;
+    display: grid;
+    grid-template-columns: 365px 325px;
+    margin-bottom: 87px;
+    margin-left: -50px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: -50px;
+    margin-top: -245px;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -18,82 +20,95 @@
 .instruction__list-item {
   display: flex;
   justify-content: space-between;
-  padding: 22px 24px 37px 0;
+  padding: 22px 24px 37px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1;
+  color: $basic-blue;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    width: 284px;
     margin: 0;
     padding: 27px 33px;
     font-size: 24px;
     line-height: 1;
+  }
 
-    &--choose {
-      background: $special-orange;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    width: 405px;
+    padding: 27px 35px 32px;
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+  }
+
+  &--choose {
+    background: $special-orange;
+    border-radius: 20px 0 0 0;
+  }
+
+  &--learn {
+    margin-top: -16px;
+    background: #ffa530;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      margin-left: -25px;
     }
 
-    &--learn {
-      margin-top: -16px;
-      background: #ffa530;
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      border-radius: 20px 0 0 20px;
+    }
+  }
 
-      @media (min-width: $tablet-width) {
-        margin-left: -26px;
-      }
+  &--find {
+    margin-top: -16px;
+    background: $special-yellow-dark;
 
-      @media (min-width: $desktop-width) {
-        margin-top: 0;
-      }
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      padding: 22px 35px 27px;
+      border-radius: 0 0 0 20px;
     }
 
-    &--find {
-      margin-top: -16px;
-      background: $special-yellow-dark;
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      margin-left: -20px;
+      border-radius: 20px 0 0 20px;
+    }
+  }
 
-      @media (min-width: $tablet-width) {
-        border-radius: 0 25px;
+  &--enjoy {
+    margin-top: -16px;
+    background: $basic-yellow;
 
-        margin-top: -16px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-
-      @media (min-width: $desktop-width) {
-        margin-top: 0;
-      }
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      margin-left: -25px;
+      border-radius: 0 0 20px 20px;
     }
 
-    &--enjoy {
-      margin-top: -16px;
-      background: $basic-yellow;
-
-      @media (min-width: $tablet-width) {
-        border-radius: 0 25px;
-
-        margin-left: -26px;
-        margin-top: -16px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-
-      @media (min-width: $desktop-width) {
-        margin-top: 0;
-      }
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      border-radius: 20px;
     }
   }
 }
 
 .instruction__list-text {
   margin: 0;
-  width: 152px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 225px;
+    margin-right: 40px;
   }
 }
 
@@ -102,5 +117,9 @@
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 15px;
   }
 }

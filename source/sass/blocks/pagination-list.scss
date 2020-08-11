@@ -2,6 +2,12 @@
   @include no-list;
   display: flex;
   background-color: $basic-white;
+  border-radius: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 200px;
+    padding: 42px;
+  }
 }
 
 .pagination-list__item {
@@ -9,6 +15,10 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 39px;
   }
 }
 

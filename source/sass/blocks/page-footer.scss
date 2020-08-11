@@ -1,8 +1,14 @@
 .page-footer {
-  margin-top: -25px;
+  position: relative;
+  margin-top: -35px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-color: $basic-white;
+  height: 300px;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+  }
 }
 
 .page-footer__container {
@@ -11,6 +17,7 @@
   padding: 38px 25px 13px;
 
   @media (min-width: $tablet-width) {
+    padding: 55px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
