@@ -18,6 +18,7 @@
 }
 
 .business-offer__title {
+  position: relative;
   margin: 0;
   margin-bottom: 43px;
   width: 100px;
@@ -28,15 +29,57 @@
     margin-bottom: 74px;
     padding-top: 104px;
   }
+
+  &::after {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: -122px;
+    top: 20px;
+    background: url(../img/rates@1x.png) no-repeat;
+    background-size: cover;
+    content: "";
+
+    @media (min-width: $tablet-width) {
+      top: 400px;
+      right: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 198px;
+      height: 198px;
+      top: 250px;
+      right: 42px;
+    }
+  }
 }
 
 .business-offer__list {
   @include no-list;
-
+position: relative;
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    width: 813px;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    content:"";
+    width: 446px;
+    height: 300px;
+    left: 650px;
+    top: 10px;
+    background: #e2e5f2;
+    border-radius: 20px;
   }
 }
 
@@ -60,12 +103,26 @@
 }
 
 .business-offer__link {
+  position: relative;
+  padding-left: 40px;
   margin-left: 24px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1;
   color: #132576;
   text-decoration: none;
+
+  &::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/user.svg) no-repeat;
+    background-size: cover;
+    content: "";
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 85px;

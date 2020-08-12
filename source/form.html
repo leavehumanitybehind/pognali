@@ -76,6 +76,205 @@
       <h1 class="page-main-header__title">Направления</h1>
       <a class="page-main-header__link" href="index.html">На главную</a>
     </header>
+    <section class="profile">
+      <div class="profile__container container">
+        <h2 class="visually-hidden">Профайл участника</h2>
+
+        <div class="profile__property profile-property-level">
+          <div class="profile__property-title">левел:</div>
+          <span class="profile-property-level__value">80</span>
+        </div>
+        <div class="profile__photo-wrap">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
+            <img class="profile__photo" src="img/demin-mobile@1x.jpg" width="100" height="100" alt="Аватар Петя Демин">
+          </picture>
+        </div>
+        <a class="profile__btn" href="#">
+          Сменить фото
+        </a>
+        <div class="profile__wrap profile__wrap--tags">
+          <label class="profile__label profile__label--tags" for="tags">
+            Тэги
+          </label>
+          <textarea class="profile__tags" name="tags" id="tags">#бургер #бар #футбол #концерт #крафт</textarea>
+        </div>
+        <div class="profile__wrap profile__wrap--transp">
+          <span class="profile__label profile__label--transport">
+            Транспорт
+          </span>
+          <ul class="profile__transport transport">
+            <li class="transport__item">
+              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-plane" checked>
+              <label class="transport__label transport__label--plane" for="checkbox-plane"></label>
+            </li>
+            <li class="transport__item">
+              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bus">
+              <label class="transport__label transport__label--bus" for="checkbox-bus"></label>
+            </li>
+            <li class="transport__item">
+              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bicycle">
+              <label class="transport__label transport__label--bicycle" for="checkbox-bicycle"></label>
+            </li>
+            <li class="transport__item">
+              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-walk">
+              <label class="transport__label transport__label--walk" for="checkbox-walk"></label>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <section class="plans">
+      <div class="plans__container container">
+        <h2 class="plans__title">Мои планы:</h2>
+        <ul class="plans__list">
+          <li class="plans__item">
+            <h3 class="plans__item-title">Франция, Италия</h3>
+            <div class="plans__text-wrapper">
+              <p class="plans__people-amount">3 попутчика</p>
+              <p class="plans__date">26 мар - 29 мар</p>
+              <a class="plans__link" href="#">Изменить</a>
+            </div>
+          </li>
+          <li class="plans__item">
+            <h3 class="plans__item-title">Таиланд, Индонезия</h3>
+            <div class="plans__text-wrapper">
+              <p class="plans__people-amount">1 попутчик</p>
+              <p class="plans__date">1 июл - 15 июл</p>
+              <a class="plans__link" href="#">Изменить</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="add-plan">
+      <div class="add-plan__container container">
+        <h2 class="add-plan__title">Мои планы:</h2>
+        <form class="add-plan__filters plan-filters" method="post" action="https://echo.htmlacademy.ru">
+          <div class="plan-filters__wrapper">
+            <h3 class="plan-filters__title">Шаг 1. Даты пребывания</h3>
+            <ul class="plan-filters__list">
+              <li class="plan-filters__list-item">Даты</li>
+              <li class="plan-filters__list-item">Маршрут</li>
+              <li class="plan-filters__list-item">Развлечения</li>
+            </ul>
+            <p class="plan-filters__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать
+              в поездку и ее предполагаемую длительность.</p>
+            <div class="plan-filters__input plan-filters__input--companions">
+              <label class="plan-filters__label" for="companions">ищу попутчиков:</label>
+              <button type="button" class="plan-filters__companions-btn"><span
+                  class="visually-hidden">-</span></button>
+              <input class="plan-filters__companions" name="companion" id="companions" type="text" value="2">
+              <button type="button" class="plan-filters__companions-btn"><span
+                  class="visually-hidden">+</span></button>
+              <p class="plan-filters__measure">Чел.</p>
+            </div>
+            <div class="plan-filters__input plan-filters__input--duration">
+              <label class="plan-filters__label" for="duration">длительность:</label>
+              <button type="button" class="plan-filters__duration-btn"><span class="visually-hidden">-</span></button>
+              <input class="plan-filters__duration" name="durations" id="duration" type="text" value="2">
+              <button type="button" class="plan-filters__duration-btn"><span class="visually-hidden">+</span></button>
+              <p class="plan-filters__measure">Дн.</p>
+            </div>
+            <label class="plan-filters__label-checkbox">
+              <input class="plan-filters__checkbox visually-hidden" name="options" type="checkbox" checked>
+              <span class="plan-filters__checkbox-indicator"></span>
+              Можно с детьми
+            </label>
+            <ul class="add-plan__calendar calendar">
+              <li class="calendar__item">
+                <button type="button" class="calendar__btn calendar__btn--back"><span class="visually-hidden">назад</span>
+                </button>
+              </li>
+              <li class="calendar__item">
+                <span class="calendar__name">Март 2019</span>
+              </li>
+              <li class="calendar__item">
+                <button type="button" class="calendar__btn calendar__btn--forward"><span class="visually-hidden">вперед</span>
+                </button>
+              </li>
+            </ul>
+            <a class="plan-filters__btn" href="#">Следующий шаг</a>
+                <div class="plan-filters__wrapper">
+                  <h3 class="plan-filters__title">Шаг 2. Маршрут</h3>
+                  <ul class="plan-filters__list">
+                    <li class="plan-filters__list-item">Даты</li>
+                    <li class="plan-filters__list-item">Маршрут</li>
+                    <li class="plan-filters__list-item">Развлечения</li>
+                  </ul>
+                  <p class="plan-filters__description">Укажите страны, которые вы хотели по посетить. Это может быть одна или
+                    сразу несколько</p>
+                  <div class="plan-filters__select-wrapper">
+                    <div class="plan-filters__select plan-filters__select--bosnia">
+                      <p class="plan-filters__country">Босния и герцеговина</p>
+                      <button type="button" class="plan-filters__button"><span class="visually-hidden">выбрать</span>
+                      </button>
+                    </div>
+                    <div class="plan-filters__select-flag plan-filter__select-flag--bosnia">
+                      <button type="button" class="plan-filters__select-btn"></button>
+                    </div>
+                  </div>
+                  <div class="plan-filters__select-wrapper">
+                    <div class="plan-filters__select">
+                      <p class="plan-filters__country">Чехословакия</p>
+                      <button type="button" class="plan-filters__button"><span class="visually-hidden">выбрать</span>
+                      </button>
+                    </div>
+                    <div class="plan-filters__select-flag plan-filters__select-flag--czech">
+                      <button type="button" class="plan-filters__select-btn"></button>
+                    </div>
+                  </div>
+                  <div class="plan-filters__select-wrapper plan-filter__select-wrapper--choice">
+                    <div class="plan-filters__select plan-filters__select--choice">
+                      <p class="plan-filters__value">Выберите страну</p>
+                    </div>
+                    <div class="plan-filters__select-flag plan-filter__select-flag--choice">
+                      <button type="button" class="plan-filters__button plan-filters__button--choice"><span
+                          class="visually-hidden">выбрать</span> </button>
+                      <button type="button" class="plan-filters__select-btn"></button>
+                    </div>
+                  </div>
+                  <div class="plan-filters__select-wrapper">
+                    <div class="plan-filters__select plan-filters__select--add">
+                      <p class="plan-filters__value plan-filters__value--add">Добавить страну</p>
+                    </div>
+                    <div class="plan-filters__select-flag plan-filters__select-flag--add">
+                      <button type="button" class="plan-filters__button"><span class="visually-hidden">выбрать</span>
+                      </button>
+                    </div>
+                  </div>
+                  <a class="plan-filters__btn button" href="#">Следующий шаг</a>
+                  <a class="plan-filters__btn plan-filters__btn--back button" href="#p">На шаг назад</a>
+                </div>
+                <div class="plan-filters__wrapper">
+                  <h3 class="plan-filters__title">Шаг 3. Развлечения</h3>
+                  <ul class="plan-filters__list">
+                    <li class="plan-filters__list-item">Даты</li>
+                    <li class="plan-filters__list-item">Маршрут</li>
+                    <li class="plan-filters__list-item">Развлечения</li>
+                  </ul>
+                  <p class="plan-filter__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной
+                    форме и ставить тэги.</p>
+                  <div class="plan-filters__comment-wrapper">
+                    <label class="plan-filters__comment-label" for="comment">
+                      Босния и герцеговина</label>
+                    <textarea class="plan-filters__comment" id="comment" name="comments" rows="8" placeholder="План действий"></textarea>
+                  </div>
+                  <div class="plan-filters__comment-wrapper">
+                    <label class="plan-filters__comment-label plan-filter__comment-label--czech" for="comment-czech">
+                      Чехословакия</label>
+                    <textarea class="plan-filters__comment plan-filter__comment--last" id="comment-czech" name="comment" rows="8"
+                      placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все." readonly></textarea>
+                  </div>
+                  <button class="plan-filters__btn" type="submit">Отправить</button>
+                  <a class="plan-filter__btn" href="#">На шаг назад</a>
+                </div>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__container container">
