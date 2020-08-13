@@ -1,37 +1,78 @@
 .page-header {
+  position: relative;
   padding-top: 37px;
   padding-bottom: 10px;
   background-color: $basic-blue;
 
   @media (min-width: $tablet-width) {
-    padding-top: 55px;
-    padding-bottom: 0;
-    width: 100%;
-    background-color: $basic-white;
+    padding-top: 132px;
   }
-
   @media (min-width: $desktop-width) {
-    padding-top: 68px;
-    background-color: inherit;
+    padding-top: 100px;
+  }
+}
+
+.page-header-mobile {
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+    margin: 0 auto;
   }
 }
 
 .page-header__container {
-  display: flex;
-  justify-content: space-between;
+  width: 320px;
+  min-height: 58px;
+  padding: 27px 25px 0;
+  position: absolute;
+  top: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    min-height: 132px;
+    padding: 40px 40px 0;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    min-height: 100px;
+    padding-top: 49px;
+  }
 }
 
-.page-header__logo {
-  @media (min-width: $tablet-width) {
-    .header__logo-image {
-      width: 166px;
-      height: 42px;
-    }
 
-    @media (min-width: $desktop-width) {
-      width: 200px;
-      height: 52px;
-      margin-right: 145px;
-    }
+.page-header__container--fixed {
+  position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.logo--blue {
+  display: none;
+}
+
+.page-header__container--fixed .logo--blue {
+  display: inline;
+}
+
+.page-header__container--fixed .logo--white {
+  display: none;
+}
+
+
+
+
+.page-header img {
+  width:96px;
+  height: 16px;
+  @media (min-width: $tablet-width) {
+    width: 166px;
+    height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    height: 52px;
+    margin-right: 35px;
   }
 }

@@ -84,6 +84,7 @@
 }
 
 .companions__to-all {
+  position: relative;
   padding: 22px;
   padding-right: 130px;
 
@@ -93,6 +94,16 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 75px;
+  }
+
+  &::after {
+    position: absolute;
+    content:"";
+    top:40%;
+    right:10%;
+    width:10px;
+    height: 10px;
+    background: url("../img/triangle-arrow-right.svg") no-repeat;
   }
 }
 

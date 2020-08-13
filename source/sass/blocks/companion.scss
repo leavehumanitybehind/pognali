@@ -14,6 +14,7 @@
 }
 
 .companion__wrapper {
+
   border-radius: 25px;
   padding: 0 40px;
   background-color: $basic-white;
@@ -21,16 +22,36 @@
 
 .companion__property {
   position: absolute;
+    margin: 0;
+    padding: 18px;
+    z-index: 2;
+
+    &::after {
+      position: absolute;
+      content:"";
+      top: 5px;
+      left: 1px;
+      height: 60px;
+    width: 60px;
+    background: rgba(0,0,0,.6);
+    border-radius: 50%;
+
+    }
 }
 
 .companion__property-title {
+  position: relative;
+  z-index: 1;
   font-weight: bold;
   font-size: 24px;
   line-height: 1;
   color: $basic-white;
+
 }
 
 .companion-property-level__value {
+  position: relative;
+  z-index: 1;
   font-weight: normal;
   font-size: 14px;
   line-height: 1;
@@ -41,10 +62,14 @@
 .companion__wish-list {
   @include no-list;
   display: flex;
+  justify-content: center;
   margin-top: -15px;
   margin-bottom: 32px;
 }
 
+.companion__wish-list-item{
+  margin-right: 10px;
+}
 .companion__title {
   margin-left: 30px;
   text-align: center;
@@ -69,6 +94,7 @@
   justify-content: center;
   padding-bottom: 16px;
 }
+
 
 .companion__list-prefer-item {
   margin-right: 10px;

@@ -27,6 +27,7 @@
 }
 
 .address__contacts {
+  position: relative;
   margin-bottom: 32px;
   width: 143px;
   font-weight: bold;
@@ -37,15 +38,29 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
+
     margin-bottom: 62px;
     text-align: center;
 
     font-size: 28px;
     line-height: 1;
   }
+
+  &::before {
+    position: absolute;
+    content:"";
+    top: -12px;
+    left: -60px;
+    width: 45px;
+    height: 45px;
+    background: #121936 url("../img/contacts-location.svg") center no-repeat;
+    background-size: 18px;
+    border-radius: 50%;
+  }
 }
 
 .address__way-to {
+  position: relative;
   padding: 19px 60px 19px 30px;
   font-weight: bold;
   font-size: 18px;
@@ -58,4 +73,14 @@
     font-size: 24px;
     padding-right: 358px;
   }
+
+  &::after {
+    position: absolute;
+    content:"";
+    top:40%;
+    right:10%;
+    width:10px;
+    height: 10px;
+    background: url("../img/triangle-arrow-right.svg") no-repeat;
+}
 }

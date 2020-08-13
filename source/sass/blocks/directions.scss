@@ -63,6 +63,7 @@
 }
 
 .directions__show-all-btn {
+  position: relative;
   margin-bottom: 80px;
   padding: 22px;
   padding-right: 140px;
@@ -76,5 +77,15 @@
     padding-right: 150px;
     margin-left: 63%;
     margin-top: -155px;
+  }
+
+  &::after {
+    position: absolute;
+    content:"";
+    top:40%;
+    right:10%;
+    width:10px;
+    height: 10px;
+    background: url("../img/triangle-arrow-right.svg") no-repeat;
   }
 }

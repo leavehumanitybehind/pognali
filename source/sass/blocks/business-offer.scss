@@ -57,7 +57,6 @@
 
 .business-offer__list {
   @include no-list;
-position: relative;
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
@@ -69,21 +68,12 @@ position: relative;
     width: 813px;
   }
 
-  &::after {
-    display: block;
-    position: absolute;
-    z-index: 0;
-    content:"";
-    width: 446px;
-    height: 300px;
-    left: 650px;
-    top: 10px;
-    background: #e2e5f2;
-    border-radius: 20px;
-  }
+
 }
 
+
 .business-offer__list-item {
+  position: relative;
   padding: 13px 20px;
   font-weight: 300;
   font-size: 16px;
@@ -96,6 +86,34 @@ position: relative;
     font-size: 28px;
     line-height: 1;
   }
+
+  &::before {
+    counter-increment: section;
+    content: "" counter(section);
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-color: #ffa530;
+    border-radius: 50%;
+    text-align: center;
+    right: -15px;
+    top: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 0.88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  &:nth-child(2)::before {
+    background-color: #ffbd30;
+  }
+
+  &:nth-child(3)::before {
+    background-color: #ffd74b;
+  }
 }
 
 .business-offer__service {
@@ -104,7 +122,7 @@ position: relative;
 
 .business-offer__link {
   position: relative;
-  padding-left: 40px;
+  padding-left: 10px;
   margin-left: 24px;
   font-weight: bold;
   font-size: 16px;
@@ -114,11 +132,11 @@ position: relative;
 
   &::before {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -10px;
+    top: 5px;
     background: url(../img/user.svg) no-repeat;
     background-size: cover;
     content: "";
