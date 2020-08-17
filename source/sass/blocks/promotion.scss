@@ -16,6 +16,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 59px;
   }
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin-bottom: 59px;
+  }
 }
 
 .promotion__description {
@@ -69,6 +73,12 @@
   }
 }
 
+.promotion__description--break-line {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .promotion__form-field {
   position: relative;
   width: 230px;
@@ -90,17 +100,20 @@
   border:none;
   border-radius: 20px;
   position: absolute;
-  padding: 33px;
+  padding: 34px;
   right: 30px;
   background-color: $basic-yellow;
 
   @media (min-width: $tablet-width) {
     padding: 38px;
+    right: 140px;
   }
 
   @media (min-width: $desktop-width) {
     width: 330px;
+    height: 81px;
     padding: 38px;
+    right: 220px;
   }
 
     &::after {
@@ -112,4 +125,22 @@
     height: 16px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
   }
+
+  @media(min-width: $desktop-width) {
+    &::before {
+    position: absolute;
+    left: 20px;
+    top:25px;
+    color: #1d2e5b;
+    font-size: 24px;
+    font-weight: 700;
+    content: "Регистрация";
+  }
+}
+}
+
+.promotion__list {
+   @media(min-width: $desktop-width) {
+     display: flex;
+   }
 }

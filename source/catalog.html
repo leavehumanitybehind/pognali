@@ -13,59 +13,96 @@
 </head>
 
 <body>
-  <header class="page-header container">
-    <div class="page-header__container page-header--fixed">
-      <a class="page-header__logo logo" href="#">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
-          <img src="img/logo-mobile-white@1x.png" width="96" height="15" alt="Логотип сайта поиска попутчиков">
-        </picture>
-      </a>
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="main-nav main-nav-show">
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="index.html">
-              <span class="nav-list__text">О сервисе</span>
-            </a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="form.html">
-              <span class="nav-list__text">Направления</span>
-            </a>
-          </li>
-          <li class="nav-list__item nav-list__item--active">
-            <a class="nav-list__link" href="#">
-              <span class="nav-list__text">Попутчики</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="main-nav__auth user-list">
-          <li class="user-list__item">
-            <a class="user-list__link btn">Авторизация</a>
-          </li>
-        </ul>
-        <ul class="main-nav__social-list social-list">
-          <li class="social-list__item">
-            <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Facebook</span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">VKontakte</span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
-              <span class="visually-hidden">Instagram</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+  <header class="page-header">
+    <div class="page-header__container">
+      <div class="page-header-wrapper">
+        <a class="page-header__logo logo" href="#">
+          <picture class="logo logo--white">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png">
+            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="15"
+              alt="Логотип сайта поиска попутчиков">
+          </picture>
+          <picture class="logo logo--blue">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="logo__img" src="img/logo-mobile-blue@1x.png"
+              srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
+              alt="Логотип сайта поиска попутчиков">
+          </picture>
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="main-nav nav">
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#">
+                <span class="nav-list__text">О сервисе</span>
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="form.html">
+                <span class="nav-list__text">Направления</span>
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="catalog.html">
+                <span class="nav-list__text">Попутчики</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="main-nav__user-list">
+          <a class="user-list__button user-list__button--tel" href="tel:88005558628">
+            <span class="visually-hidden">Телефон</span>
+          </a>
+          <a class="user-list__button user-list__button--email" href="mailto:mail@htmlacademy.ru">
+            <span class="visually-hidden">Почта</span>
+          </a>
+          <a class="user-list__login btn" href="login.html">
+            Авторизация
+          </a>
+        </div>
+        <div class="mobile-nav-popup">
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="#">
+                <span class="nav-list__text">О сервисе</span>
+              </a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="form.html">
+                <span class="nav-list__text">Направления</span>
+              </a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="catalog.html">
+                <span class="nav-list__text">Попутчики</span>
+              </a>
+            </li>
+            <li class="mobile-nav__item mobile-nav__item--auth">
+              <a class="mobile-nav__login btn" href="login.html">Авторизация</a>
+            </li>
+            <ul class="main-nav__social-list">
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">VKontakte</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
+                  <span class="visually-hidden">Instagram</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+      </div>
     </div>
   </header>
   <main class="page-main">
@@ -73,6 +110,348 @@
       <h1 class="page-main-header__title">Попутчики</h1>
       <a class="page-main-header__link" href="index.html">На главную</a>
     </header>
+
+    <section class="country-filter country-filter-popup container">
+      <div class="country-filter-popup__wrapper">
+        <h3 class="country-filter-popup__title">
+          <span class="country-filter-popup__mobile-title">Фильтрация по странам:</span>
+        </h3>
+        <button class="country-filter__toggle" type="button">
+          <span class="country-filter-popup__toggle-open">Показать все</span>
+          <span class="country-filter-popup__toggle-close">Свернуть</span>
+        </button>
+        <ul class="country-filter-popup__list">
+          <li class="country-filter-popup__item">
+            <a href="#" class="country-filter-popup__link">Европа</a>
+          </li>
+          <li class="country-filter-popup__item">
+            <a href="#" class="country-filter-popup__link">Азия</a>
+          </li>
+          <li class="country-filter-popup__item">
+            <a href="#" class="country-filter-popup__link">Америка</a>
+          </li>
+          <li class="country-filter-popup__item">
+            <a href="#" class="country-filter-popup__link">Острова</a>
+          </li>
+        </ul>
+      </div>
+      <div class="country-filter-popup__alphabet alphabet">
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">А</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/australia" class="alphabet__link">Австралия</a></li>
+            <li class="alphabet__item"><a href="/country/austria" class="alphabet__link">Австрия</a></li>
+            <li class="alphabet__item"><a href="/country/azerbaijan" class="alphabet__link">Азербайджан</a></li>
+            <li class="alphabet__item"><a href="/country/albania" class="alphabet__link">Албания</a></li>
+            <li class="alphabet__item"><a href="/country/algeria" class="alphabet__link">Алжир</a></li>
+            <li class="alphabet__item"><a href="/country/angola" class="alphabet__link">Ангола</a></li>
+            <li class="alphabet__item"><a href="/country/andorra" class="alphabet__link">Андорра</a></li>
+            <li class="alphabet__item"><a href="/country/antigua-and-barbuda" class="alphabet__link">Антигуа и Барбуда</a></li>
+            <li class="alphabet__item"><a href="/country/argentina" class="alphabet__link">Аргентина</a></li>
+            <li class="alphabet__item"><a href="/country/armenia" class="alphabet__link">Армения</a></li>
+            <li class="alphabet__item"><a href="/country/afghanistan" class="alphabet__link">Афганистан</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Б</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/bahamas" class="alphabet__link">Багамские Острова</a></li>
+            <li class="alphabet__item"><a href="/country/bangladesh" class="alphabet__link">Бангладеш</a></li>
+            <li class="alphabet__item"><a href="/country/barbados" class="alphabet__link">Барбадос</a></li>
+            <li class="alphabet__item"><a href="/country/bahrain" class="alphabet__link">Бахрейн</a></li>
+            <li class="alphabet__item"><a href="/country/belarus" class="alphabet__link">Белоруссия</a></li>
+            <li class="alphabet__item"><a href="/country/belize" class="alphabet__link">Белиз</a></li>
+            <li class="alphabet__item"><a href="/country/belgium" class="alphabet__link">Бельгия</a></li>
+            <li class="alphabet__item"><a href="/country/benin" class="alphabet__link">Бенин</a></li>
+            <li class="alphabet__item"><a href="/country/bulgaria" class="alphabet__link">Болгария</a></li>
+            <li class="alphabet__item"><a href="/country/bolivia" class="alphabet__link">Боливия</a></li>
+            <li class="alphabet__item"><a href="/country/bosnia-and-herzegovina" class="alphabet__link">Босния и Герцеговина</a>
+            </li>
+            <li class="alphabet__item"><a href="/country/botswana" class="alphabet__link">Ботсвана</a></li>
+            <li class="alphabet__item"><a href="/country/brazil" class="alphabet__link">Бразилия</a></li>
+            <li class="alphabet__item"><a href="/country/brunei" class="alphabet__link">Бруней</a></li>
+            <li class="alphabet__item"><a href="/country/burkina-faso" class="alphabet__link">Буркина-Фасо</a></li>
+            <li class="alphabet__item"><a href="/country/burundi" class="alphabet__link">Бурунди</a></li>
+            <li class="alphabet__item"><a href="/country/butane" class="alphabet__link">Бутан</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">В</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/vanuatu" class="alphabet__link">Вануату</a></li>
+            <li class="alphabet__item"><a href="/country/great-britain" class="alphabet__link">Великобритания</a></li>
+            <li class="alphabet__item"><a href="/country/hungary" class="alphabet__link">Венгрия</a></li>
+            <li class="alphabet__item"><a href="/country/venezuela" class="alphabet__link">Венесуэла</a></li>
+            <li class="alphabet__item"><a href="/country/east-timor" class="alphabet__link">Восточный Тимор</a></li>
+            <li class="alphabet__item"><a href="/country/vietnam" class="alphabet__link">Вьетнам</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Г</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/gabon" class="alphabet__link">Габон</a></li>
+            <li class="alphabet__item"><a href="/country/haiti" class="alphabet__link">Гаити</a></li>
+            <li class="alphabet__item"><a href="/country/guyana" class="alphabet__link">Гайана</a></li>
+            <li class="alphabet__item"><a href="/country/gambia" class="alphabet__link">Гамбия</a></li>
+            <li class="alphabet__item"><a href="/country/ghana" class="alphabet__link">Гана</a></li>
+            <li class="alphabet__item"><a href="/country/guatemala" class="alphabet__link">Гватемала</a></li>
+            <li class="alphabet__item"><a href="/country/guinea" class="alphabet__link">Гвинея</a></li>
+            <li class="alphabet__item"><a href="/country/guinea-bissau" class="alphabet__link">Гвинея-Бисау</a></li>
+            <li class="alphabet__item"><a href="/country/germany" class="alphabet__link">Германия</a></li>
+            <li class="alphabet__item"><a href="/country/honduras" class="alphabet__link">Гондурас</a></li>
+            <li class="alphabet__item"><a href="/country/grenada" class="alphabet__link">Гренада</a></li>
+            <li class="alphabet__item"><a href="/country/greece" class="alphabet__link">Греция</a></li>
+            <li class="alphabet__item"><a href="/country/georgia" class="alphabet__link">Грузия</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Д</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/denmark" class="alphabet__link">Дания</a>
+            <li class="alphabet__item"><a href="/country/djibouti" class="alphabet__link">Джибути</a></li>
+            <li class="alphabet__item"><a href="/country/dominica" class="alphabet__link">Доминика</a></li>
+            <li class="alphabet__item"><a href="/country/dominican-republic" class="alphabet__link">Доминикана</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Е</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/egypt" class="alphabet__link">Египет</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">З</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/Zambia" class="alphabet__link">Замбия</a></li>
+            <li class="alphabet__item"><a href="/country/Zimbabwe" class="alphabet__link">Зимбабве</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">И</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/israel" class="alphabet__link">Израиль</a></li>
+            <li class="alphabet__item"><a href="/country/india" class="alphabet__link">Индия</a></li>
+            <li class="alphabet__item"><a href="/country/indonesia" class="alphabet__link">Индонезия</a></li>
+            <li class="alphabet__item"><a href="/country/jordan" class="alphabet__link">Иордания</a></li>
+            <li class="alphabet__item"><a href="/country/iraq" class="alphabet__link">Ирак</a></li>
+            <li class="alphabet__item"><a href="/country/iran" class="alphabet__link">Иран</a></li>
+            <li class="alphabet__item"><a href="/country/ireland" class="alphabet__link">Ирландия</a></li>
+            <li class="alphabet__item"><a href="/country/iceland" class="alphabet__link">Исландия</a></li>
+            <li class="alphabet__item"><a href="/country/spain" class="alphabet__link">Испания</a></li>
+            <li class="alphabet__item"><a href="/country/italy" class="alphabet__link">Италия</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper"><a class="alphabet__title"
+            href="#">Й</a></div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">К</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/cape-verde" class="alphabet__link">Кабо-Верде</a></li>
+            <li class="alphabet__item"><a href="/country/kazakhstan" class="alphabet__link">Казахстан</a></li>
+            <li class="alphabet__item"><a href="/country/cambodia" class="alphabet__link">Камбоджа</a></li>
+            <li class="alphabet__item"><a href="/country/cameroon" class="alphabet__link">Камерун</a></li>
+            <li class="alphabet__item"><a href="/country/canada" class="alphabet__link">Канада</a></li>
+            <li class="alphabet__item"><a href="/country/qatar" class="alphabet__link">Катар</a></li>
+            <li class="alphabet__item"><a href="/country/kenya" class="alphabet__link">Кения</a></li>
+            <li class="alphabet__item"><a href="/country/cyprus" class="alphabet__link">Кипр</a></li>
+            <li class="alphabet__item"><a href="/country/kyrgyzstan" class="alphabet__link">Киргизия</a></li>
+            <li class="alphabet__item"><a href="/country/kiribati" class="alphabet__link">Кирибати</a></li>
+            <li class="alphabet__item"><a href="/country/china" class="alphabet__link">Китай</a></li>
+            <li class="alphabet__item"><a href="/country/colombia" class="alphabet__link">Колумбия</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Л</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/laos" class="alphabet__link">Лаос</a></li>
+            <li class="alphabet__item"><a href="/country/latvia" class="alphabet__link">Латвия</a></li>
+            <li class="alphabet__item"><a href="/country/lesotho" class="alphabet__link">Лесото</a></li>
+            <li class="alphabet__item"><a href="/country/liberia" class="alphabet__link">Либерия</a></li>
+            <li class="alphabet__item"><a href="/country/lebanon" class="alphabet__link">Ливан</a></li>
+            <li class="alphabet__item"><a href="/country/libya" class="alphabet__link">Ливия</a></li>
+            <li class="alphabet__item"><a href="/country/lithuania" class="alphabet__link">Литва</a></li>
+            <li class="alphabet__item"><a href="/country/liechtenstein" class="alphabet__link">Лихтенштейн</a></li>
+            <li class="alphabet__item"><a href="/country/luxembourg" class="alphabet__link">Люксембург</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">М</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/mauritius" class="alphabet__link">Маврикий</a></li>
+            <li class="alphabet__item"><a href="/country/mauritania" class="alphabet__link">Мавритания</a></li>
+            <li class="alphabet__item"><a href="/country/madagascar" class="alphabet__link">Мадагаскар</a></li>
+            <li class="alphabet__item"><a href="/country/malawi" class="alphabet__link">Малави</a></li>
+            <li class="alphabet__item"><a href="/country/malaysia" class="alphabet__link">Малайзия</a></li>
+            <li class="alphabet__item"><a href="/country/mali" class="alphabet__link">Мали</a></li>
+            <li class="alphabet__item"><a href="/country/maldives" class="alphabet__link">Мальдивы</a></li>
+            <li class="alphabet__item"><a href="/country/malta" class="alphabet__link">Мальта</a></li>
+            <li class="alphabet__item"><a href="/country/morocco" class="alphabet__link">Марокко</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Н</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/namibia" class="alphabet__link">Намибия</a></li>
+            <li class="alphabet__item"><a href="/country/nauru" class="alphabet__link">Науру</a></li>
+            <li class="alphabet__item"><a href="/country/nepal" class="alphabet__link">Непал</a></li>
+            <li class="alphabet__item"><a href="/country/niger" class="alphabet__link">Нигер</a></li>
+            <li class="alphabet__item"><a href="/country/nigeria" class="alphabet__link">Нигерия</a></li>
+            <li class="alphabet__item"><a href="/country/netherlands" class="alphabet__link">Нидерланды</a></li>
+            <li class="alphabet__item"><a href="/country/nicaragua" class="alphabet__link">Никарагуа</a></li>
+            <li class="alphabet__item"><a href="/country/new-zealand" class="alphabet__link">Новая Зеландия</a></li>
+            <li class="alphabet__item"><a href="/country/norway" class="alphabet__link">Норвегия</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">О</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/uae" class="alphabet__link">ОАЭ</a></li>
+            <li class="alphabet__item"><a href="/country/oman" class="alphabet__link">Оман</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">П</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/pakistan" class="alphabet__link">Пакистан</a></li>
+            <li class="alphabet__item"><a href="/country/palau" class="alphabet__link">Палау</a></li>
+            <li class="alphabet__item"><a href="/country/panama" class="alphabet__link">Панама</a></li>
+            <li class="alphabet__item"><a href="/country/papua-new-guinea" class="alphabet__link">Папуа — Новая Гвинея</a></li>
+            <li class="alphabet__item"><a href="/country/paraguay" class="alphabet__link">Парагвай</a></li>
+            <li class="alphabet__item"><a href="/country/peru" class="alphabet__link">Перу</a></li>
+            <li class="alphabet__item"><a href="/country/poland" class="alphabet__link">Польша</a></li>
+            <li class="alphabet__item"><a href="/country/portugal" class="alphabet__link">Португалия</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">С</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/salvador" class="alphabet__link">Сальвадор</a></li>
+            <li class="alphabet__item"><a href="/country/samoa" class="alphabet__link">Самоа</a></li>
+            <li class="alphabet__item"><a href="/country/san-marino" class="alphabet__link">Сан-Марино</a></li>
+            <li class="alphabet__item"><a href="/country/saudi-arabia" class="alphabet__link">Саудовская Аравия</a></li>
+            <li class="alphabet__item"><a href="/country/seychelles" class="alphabet__link">Сейшелы</a></li>
+            <li class="alphabet__item"><a href="/country/senegal" class="alphabet__link">Сенегая</a></li>
+            <li class="alphabet__item"><a href="/country/serbia" class="alphabet__link">Сербия</a></li>
+            <li class="alphabet__item"><a href="/country/singapore" class="alphabet__link">Сингапур</a></li>
+            <li class="alphabet__item"><a href="/country/syria" class="alphabet__link">Сирия</a></li>
+            <li class="alphabet__item"><a href="/country/slovakia" class="alphabet__link">Словакия</a></li>
+            <li class="alphabet__item"><a href="/country/slovenia" class="alphabet__link">Словения</a></li>
+            <li class="alphabet__item"><a href="/country/usa" class="alphabet__link">США</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Т</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/tajikistan" class="alphabet__link">Таджикистан</a></li>
+            <li class="alphabet__item"><a href="/country/thailand" class="alphabet__link">Таиланд</a></li>
+            <li class="alphabet__item"><a href="/country/tanzania" class="alphabet__link">Танзания</a></li>
+            <li class="alphabet__item"><a href="/country/togo" class="alphabet__link">Того</a></li>
+            <li class="alphabet__item"><a href="/country/tonga" class="alphabet__link">Тонга</a></li>
+            <li class="alphabet__item"><a href="/country/trinidad-and-tobago" class="alphabet__link">Тринидад и Тобаго</a></li>
+            <li class="alphabet__item"><a href="/country/tuvalu" class="alphabet__link">Тувалу</a></li>
+            <li class="alphabet__item"><a href="/country/tunisia" class="alphabet__link">Тунис</a></li>
+            <li class="alphabet__item"><a href="/country/turkmenistan" class="alphabet__link">Туркмения</a></li>
+            <li class="alphabet__item"><a href="/country/turkey" class="alphabet__link">Турция</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">У</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/uganda" class="alphabet__link">Уганда</a></li>
+            <li class="alphabet__item"><a href="/country/uzbekistan" class="alphabet__link">Узбекистан</a></li>
+            <li class="alphabet__item"><a href="/country/ukraine" class="alphabet__link">Украина</a></li>
+            <li class="alphabet__item"><a href="/country/uruguay" class="alphabet__link">Уругвай</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Ф</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/fiji" class="alphabet__link">Фиджи</a></li>
+            <li class="alphabet__item"><a href="/country/philippines" class="alphabet__link">Филиппины</a></li>
+            <li class="alphabet__item"><a href="/country/finland" class="alphabet__link">Финляндия</a></li>
+            <li class="alphabet__item"><a href="/country/france" class="alphabet__link">Франция</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Х</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/croatia" class="alphabet__link">Хорватия</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Ч</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/chad" class="alphabet__link">Чад</a></li>
+            <li class="alphabet__item"><a href="/country/montenegro" class="alphabet__link">Черногория</a></li>
+            <li class="alphabet__item"><a href="/country/czech" class="alphabet__link">Чехия</a></li>
+            <li class="alphabet__item"><a href="/country/chile" class="alphabet__link">Чили</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Ш</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/switzerland" class="alphabet__link">Швейцария</a></li>
+            <li class="alphabet__item"><a href="/country/sweden" class="alphabet__link">Швеция</a></li>
+            <li class="alphabet__item"><a href="/country/sri-lanka" class="alphabet__link">Шри-Ланка</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Э</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/ecuador" class="alphabet__link">Эквадор</a></li>
+            <li class="alphabet__item"><a href="/country/eritrea" class="alphabet__link">Эритрея</a></li>
+            <li class="alphabet__item"><a href="/country/esvatini" class="alphabet__link">Эсватини</a></li>
+            <li class="alphabet__item"><a href="/country/estonia" class="alphabet__link">Эстония</a></li>
+            <li class="alphabet__item"><a href="/country/ethiopia" class="alphabet__link">Эфиопия</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Ю</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/south-africa" class="alphabet__link">ЮАР</a></li>
+            <li class="alphabet__item"><a href="/country/south-sudan" class="alphabet__link">Южный Судан</a></li>
+          </ul>
+        </div>
+        <div class="alphabet__wrapper">
+          <a class="alphabet__title" href="#">Я</a>
+          <ul class="alphabet__list">
+            <li class="alphabet__item"><a href="/country/jamaica" class="alphabet__link">Ямайка</a></li>
+            <li class="alphabet__item"><a href="/country/japan" class="alphabet__link">Япония</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="country-filter-popup__country-list">
+        <li class="country-filter-popup__country-item">
+          <a href="/country/afghanistan" class="country-filter-popup__country-name">Афганистан</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/albania" class="country-filter-popup__country-name">Албания</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/algeria" class="country-filter-popup__country-name">Алгерия</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/andorra" class="country-filter-popup__country-name">Андорра</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/argentina" class="country-filter-popup__country-name">Аргентина</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/armenia" class="country-filter-popup__country-name">Армения</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/australia" class="country-filter-popup__country-name">Австралия</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/austria" class="country-filter-popup__country-name">Австрия</a>
+        </li>
+        <li class="country-filter-popup__country-item">
+          <a href="/country/azerbaijan" class="country-filter-popup__country-name">Азербайджан</a>
+        </li>
+      </ul>
+      <button type="button" class="country-filter-popup__close button"><span
+          class="country-filter-popup__close-text">Свернуть</span></button>
+    </section>
     <div class="travellers">
       <div class="travellers__container container">
         <div class="travellers__wrapper">
@@ -503,24 +882,25 @@
     <div class="page-footer__container container">
       <a class="page-footer__logo logo" href="#">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-          <img src="img/logo-mobile-blue@1x.png" width="96" height="15" alt="Логотип сайта поиска попутчиков">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15"
+            alt="Логотип сайта поиска попутчиков">
         </picture>
       </a>
       <ul class="page-footer__social-list social-list social-list--with-bg">
         <li class="page-footer__social-list-item">
-          <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
+          <a class="social-list__link social-list__link--fb" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
         <li class="page-footer__social-list-item">
-          <a class="social-list__link" href="https://vk.com/htmlacademy">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">VKontakte</span>
           </a>
         </li>
         <li class="page-footer__social-list-item">
-          <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
+          <a class="social-list__link social-list__link--ig" href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
@@ -528,6 +908,7 @@
       <div class="page-footer__copyright">
         <span class="page-footer__copyright-desсription">Разработано</span>
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-academy">
         </a>
       </div>
     </div>

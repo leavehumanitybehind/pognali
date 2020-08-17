@@ -7,8 +7,11 @@
   padding-bottom: 30px;
 
   @media (min-width: $desktop-width) {
-
+flex-direction: row;
     justify-content: space-between;
+    max-width: 865px;
+    margin: auto;
+
   }
 }
 
@@ -40,6 +43,10 @@
     margin-bottom: 39px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-left: 105px;
+  }
+
   &::before {
     position: absolute;
     content:"";
@@ -50,6 +57,12 @@
     background: #121936 url("../img/contacts-phone.svg") center no-repeat;
     background-size: 18px;
     border-radius: 50%;
+
+    @media(min-width: $desktop-width) {
+      width:90px;
+    height: 90px;
+    top: -22px;
+    }
   }
 }
 
@@ -58,6 +71,9 @@
   position: relative;
   @media (min-width: $tablet-width) {
     margin-bottom: 39px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-left: 105px;
   }
 
   &::before {
@@ -70,5 +86,14 @@
     background: #121936 url("../img/contacts-mail.svg") center no-repeat;
     background-size: 18px;
     border-radius: 50%;
+
+      @media(min-width: $desktop-width) {
+      width:90px;
+    height: 90px;
+    top: -22px;
+
+
+
+    }
   }
 }

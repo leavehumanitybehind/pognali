@@ -4,6 +4,7 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-color: $basic-white;
+
   @media (min-width: $tablet-width) {
     height: auto;
   }
@@ -19,10 +20,18 @@
     display: flex;
     flex-direction: row;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .page-footer__logo {
   margin: 0 auto 38px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .page-footer img {
@@ -34,7 +43,6 @@
   @media (min-width: $desktop-width) {
     width: 200px;
     height: 52px;
-    margin-right: 145px;
   }
 }
 

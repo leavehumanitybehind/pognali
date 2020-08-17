@@ -68,6 +68,7 @@
 }
 
 .about-service__link {
+  position: relative;
   display: none;
   font-size: 24px;
   line-height: 1;
@@ -88,5 +89,15 @@
     width: 294px;
     padding: 29px;
     margin-left: 14px;
+  }
+
+    &::after {
+    position: absolute;
+    content:"";
+    top:40%;
+    right:10%;
+    width:10px;
+    height: 10px;
+    background: url("../img/triangle-arrow-right.svg") no-repeat;
   }
 }

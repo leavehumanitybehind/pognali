@@ -6,16 +6,6 @@
   }
 }
 
-.mobile-nav-popup {
-  display: none;
-}
-
-.mobile-nav-popup-open {
-  display: block;
-  padding-bottom: 52px;
-}
-
-
 .main-nav__toggle {
   padding: 0;
   position: relative;
@@ -35,7 +25,7 @@
   }
 
   &::before {
-        margin-top: -11px;
+    margin-top: -11px;
     margin-bottom: 5px;
     content: "";
     display: block;
@@ -53,72 +43,18 @@
   &--close {
     &::before {
       display: block;
-    width: 25px;
-    height: 20px;
-    background: url("../img/close.svg") no-repeat;
-    border-radius: 1px;
-    content: "";
+      width: 25px;
+      height: 20px;
+      background: url("../img/close.svg") no-repeat;
+      border-radius: 1px;
+      content: "";
     }
   }
 }
+
 .main-nav__list {
   display: none;
 }
-
-.main-nav__user-list {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    align-items: center;
-  }
-}
-
-.user-list__login {
-  display: block;
-  width: 189px;
-  border: 0;
-  border-radius: 25px;
-  text-transform: uppercase;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 50px;
-  text-align: center;
-  height: 40px;
-}
-
-.user-list__button {
-  display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
-  &--email {
-    display: none;
-
-     @media (min-width: $desktop-width) {
-    display: block;
-    background: #ffbd30 url(../img/topmenu-mail.svg) center/18px no-repeat;
-}
-  }
-
- &--tel {
-    display: none;
-
-     @media (min-width: $desktop-width) {
-    display: block;
-    background-color: $basic-yellow;
-    background: #ff8d30 url(../img/topmenu-phone.svg) center/18px no-repeat;
-  }
-}
-}
-
 
 .main-nav__social-list {
   @include no-list;

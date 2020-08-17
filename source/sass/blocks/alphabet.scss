@@ -1,0 +1,28 @@
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 70px;
+}
+.alphabet__wrapper {
+  margin-right:70px;
+}
+
+.alphabet__list {
+  @include no-list;
+}
+.alphabet__title {
+font-weight: bold;
+font-size: 60px;
+line-height: 1;
+text-transform: uppercase;
+text-decoration: none;
+color:$basic-blue;
+margin-bottom: 30px;
+}
+
+.alphabet__link {
+  font-size: 20px;
+line-height: (30 / 20);
+color: #444444;
+  text-decoration: none;
+}
