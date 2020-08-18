@@ -191,7 +191,7 @@
 
     <section class="add-plan">
       <div class="add-plan__container container">
-        <h2 class="add-plan__title">Мои планы:</h2>
+        <h2 class="add-plan__title">Добавить план:</h2>
         <form class="add-plan__filters plan-filters" method="post" action="https://echo.htmlacademy.ru">
           <div class="plan-filters__wrapper">
             <h3 class="plan-filters__title">Шаг 1. Даты пребывания</h3>
@@ -207,8 +207,10 @@
               <label class="plan-filters__label" for="companions">ищу попутчиков:</label>
               <span class="plan-filters__measure">Чел.</span>
               <input class="plan-filters__input" name="companion" id="companions" type="text" value="2">
-              <button type="button" class="plan-filters__toggle plan-filters__toggle--plus"><span class="visually-hidden">+</span></button>
-              <button type="button" class="plan-filters__toggle plan-filters__toggle--minus"><span class="visually-hidden">-</span></button>
+              <button type="button" class="plan-filters__toggle plan-filters__toggle--plus"><span
+                  class="visually-hidden">+</span></button>
+              <button type="button" class="plan-filters__toggle plan-filters__toggle--minus"><span
+                  class="visually-hidden">-</span></button>
 
             </div>
             <div class="plan-filters__form plan-filters__form--duration">
@@ -239,7 +241,7 @@
                 </button>
               </li>
             </ul>
-            <a class="plan-filters__btn" href="#">Следующий шаг</a>
+            <a class="plan-filters__btn btn" href="#">Следующий шаг</a>
           </div>
           <div class="plan-filters__wrapper">
             <h3 class="plan-filters__title">Шаг 2. Маршрут</h3>
@@ -251,75 +253,86 @@
             <p class="plan-filters__description">Укажите страны, которые вы хотели по посетить. Это может быть одна или
               сразу несколько</p>
             <div class="plan-filters__select-wrapper">
-              <div class="plan-filters__select plan-filters__select--bosnia">
-                <p class="plan-filters__country">Босния и герцеговина</p>
+              <div class="plan-filters__select">
+                <p class="plan-filters__head">Босния и герцеговина</p>
                 <button type="button" class="plan-filters__button"><span class="visually-hidden">выбрать</span>
                 </button>
-              </div>
-              <div class="plan-filters__select-flag plan-filter__select-flag--bosnia">
-                <button type="button" class="plan-filters__select-btn"></button>
+
+                <div class="plan-filters__select-flag">
+                  <img class="plan-filters__flag" src="img/flag-bosnia.svg" alt="Флаг Боснии и герцеговина" width="35"
+                    height="24">
+                </div>
+                <button type="button" class="plan-filters__select-btn-close"></button>
               </div>
             </div>
             <div class="plan-filters__select-wrapper">
               <div class="plan-filters__select">
-                <p class="plan-filters__country">Чехословакия</p>
-                <button type="button" class="plan-filters__button"><span class="visually-hidden">выбрать</span>
+                <p class="plan-filters__head">Чехословакия</p>
+                <button type="button" class="plan-filters__button">
+                  <span class="visually-hidden">
+                    выбрать
+                  </span>
                 </button>
-              </div>
-              <div class="plan-filters__select-flag plan-filters__select-flag--czech">
-                <button type="button" class="plan-filters__select-btn"></button>
-              </div>
-            </div>
-            <div class="plan-filters__select-wrapper plan-filter__select-wrapper--choice">
-              <div class="plan-filters__select plan-filters__select--choice">
-                <p class="plan-filters__value">Выберите страну</p>
-              </div>
-              <div class="plan-filters__select-flag plan-filter__select-flag--choice">
-                <button type="button" class="plan-filters__button plan-filters__button--choice"><span
-                    class="visually-hidden">выбрать</span> </button>
-                <button type="button" class="plan-filters__select-btn"></button>
+                <div class="plan-filters__select-flag">
+                  <img class="plan-filters__flag" src="img/flag-czech.svg" alt="Флаг Чехии" width="35"
+                    height="24">
+                  <button type="button" class="plan-filters__select-btn-close"></button>
+                </div>
               </div>
             </div>
-            <div class="plan-filters__select-wrapper">
-              <div class="plan-filters__select plan-filters__select--add">
-                <p class="plan-filters__value plan-filters__value--add">Добавить страну</p>
-              </div>
-              <div class="plan-filters__select-flag plan-filters__select-flag--add">
-                <button type="button" class="plan-filters__button"><span class="visually-hidden">выбрать</span>
+              <div class="plan-filters__select-wrapper">
+                <div class="plan-filters__select">
+                  <p class="plan-filters__head">Выберите страну</p>
+                  <button type="button" class="plan-filters__button">
+                  <span class="visually-hidden">выбрать</span>
                 </button>
+                <button type="button" class="plan-filters__select-btn-close"></button>
+                </div>
+
               </div>
+              <div class="plan-filters__select-wrapper">
+                <div class="plan-filters__select plan-filters__select--add">
+                  <p class="plan-filters__head plan-filters__head--add">Добавить страну</p>
+                  <button type="button" class="plan-filters__button"><span class="visually-hidden">выбрать</span>
+                </button>
+                </div>
+
+              </div>
+               <a class="plan-filters__btn btn" href="#">Следующий шаг</a>
+              <a class="plan-filters__btn plan-filters__btn btn-back" href="#p">На шаг назад</a>
             </div>
-            <a class="plan-filters__btn button" href="#">Следующий шаг</a>
-            <a class="plan-filters__btn plan-filters__btn--back button" href="#p">На шаг назад</a>
+
+
+            <div class="plan-filters__wrapper">
+              <h3 class="plan-filters__title">Шаг 3. Развлечения</h3>
+              <ul class="plan-filters__list">
+                <li class="plan-filters__list-item">Даты</li>
+                <li class="plan-filters__list-item">Маршрут</li>
+                <li class="plan-filters__list-item">Развлечения</li>
+              </ul>
+              <p class="plan-filter__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
+                свободной
+                форме и ставить тэги.</p>
+              <div class="plan-filters__comment-wrapper">
+                <label class="plan-filters__comment-label" for="comment">
+                  Босния и герцеговина</label>
+                  <img class="plan-filters__flag" src="img/flag-bosnia.svg" alt="Флаг Боснии и герцеговина" width="35" height="24">
+                <textarea class="plan-filters__comment" id="comment" name="comments" rows="8"
+                  placeholder="План действий"></textarea>
+              </div>
+              <div class="plan-filters__comment-wrapper">
+                <label class="plan-filters__comment-label plan-filter__comment-label--czech" for="comment-czech">
+                  Чехословакия</label>
+                  <img class="plan-filters__flag" src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="24">
+                <textarea class="plan-filters__comment--last" id="comment-czech" name="comment"
+                  rows="8" placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все."
+                  readonly></textarea>
+              </div>
+              <button class="plan-filters__btn-submit btn" type="submit">Отправить</button>
+              <a class="plan-filters__btn btn-back" href="#">На шаг назад</a>
+            </div>
           </div>
-          <div class="plan-filters__wrapper">
-            <h3 class="plan-filters__title">Шаг 3. Развлечения</h3>
-            <ul class="plan-filters__list">
-              <li class="plan-filters__list-item">Даты</li>
-              <li class="plan-filters__list-item">Маршрут</li>
-              <li class="plan-filters__list-item">Развлечения</li>
-            </ul>
-            <p class="plan-filter__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
-              свободной
-              форме и ставить тэги.</p>
-            <div class="plan-filters__comment-wrapper">
-              <label class="plan-filters__comment-label" for="comment">
-                Босния и герцеговина</label>
-              <textarea class="plan-filters__comment" id="comment" name="comments" rows="8"
-                placeholder="План действий"></textarea>
-            </div>
-            <div class="plan-filters__comment-wrapper">
-              <label class="plan-filters__comment-label plan-filter__comment-label--czech" for="comment-czech">
-                Чехословакия</label>
-              <textarea class="plan-filters__comment plan-filter__comment--last" id="comment-czech" name="comment"
-                rows="8" placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все."
-                readonly></textarea>
-            </div>
-            <button class="plan-filters__btn" type="submit">Отправить</button>
-            <a class="plan-filter__btn" href="#">На шаг назад</a>
-          </div>
-      </div>
-      </form>
+        </form>
       </div>
     </section>
   </main>
