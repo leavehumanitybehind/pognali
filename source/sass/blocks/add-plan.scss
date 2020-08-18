@@ -1,0 +1,45 @@
+.add-plan {
+  background-color: rgb(223, 227, 240);
+  color: $basic-blue;
+}
+
+.plan-filters__wrapper {
+  background-color: $basic-white;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  border-radius:25px;
+}
+
+.plan-filters__form {
+  display: flex;
+  flex-wrap:wrap ;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.plan-filters__list {
+  display: none;
+}
+
+
+.plans-filters__input {
+  position: relative;
+  width:100%;
+}
+
+
+.plans-filter__toggle {
+  position: absolute;
+}
+
+.plan-filters__checkbox .plan-filters__checkbox-indicator {
+  background:$basic-white;
+  width:10px;
+  height:10px;
+}
+
+.plan-filters__checkbox:checked .plan-filters__checkbox-indicator {
+  background: url("../img/tick.svg") no-repeat;
+  width:10px;
+  height:10px;
+}

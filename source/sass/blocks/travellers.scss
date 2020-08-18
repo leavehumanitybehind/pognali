@@ -25,6 +25,16 @@
   line-height: (30 / 17);
   text-decoration: none;
   color: $basic-blue-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 26x;
+    height: 26px;
+    background: url("../img/qty-plus.svg") no-repeat;
+  }
 }
 
 .travellers__filter {

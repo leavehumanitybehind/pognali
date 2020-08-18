@@ -109,11 +109,34 @@
 
 .range__output {
   display: flex;
-  margin-bottom: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 190px;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.range__input::placeholder {
+  height: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.9;
+  color: #1d2e5b;
+  text-align: center;
+  vertical-align: middle;
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+  }
 }
 
 .range__input {
-  width: 25%;
+  width:90px;
+  border-radius:5px;
+  padding: 10px;
+  border:none;
+  border-top: 1px solid $special-grey;
+  border-bottom: 1px solid $special-grey;
 }
 
 .traveller-filter__btn {
@@ -132,4 +155,51 @@
   @media (min-width: $desktop-width) {
     padding: 17px 40px;
   }
+}
+
+.range__controls {
+  position: relative;
+
+  width: 100%;
+  height: 2px;
+  margin-bottom: 26px;
+
+  background-color: rgba(29, 46, 91, 0.2);
+}
+
+.range__toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  padding: 0;
+
+  background-color: $basic-blue;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.range__toggle--min {
+  right: 145px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 144px;
+    height: 2px;
+    background-color: $basic-blue;
+  }
+
+}
+
+.traveller-filter__btn {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }

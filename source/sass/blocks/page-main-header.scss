@@ -1,9 +1,12 @@
 .page-main-header {
+  background-color: $basic-blue;
+  margin-bottom: 30px;
+}
+.page-main-header__container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  border-radius: 25px;
-  margin-bottom: 30px;
+  border-radius:0 60px;
 }
 
 .page-main-header__title {
