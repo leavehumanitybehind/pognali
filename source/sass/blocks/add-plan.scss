@@ -11,35 +11,100 @@
 }
 
 .plan-filters__form {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   text-transform: uppercase;
+  color: $basic-blue-light;
 }
 
 .plan-filters__list {
   display: none;
 }
 
-.plans-filters__input {
-  position: relative;
+.plan-filters__label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.09em;
+}
+
+.plan-filters__measure {
+  opacity: 0.3;
+}
+
+.plan-filters__input {
   width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: $basic-blue-light;
+  font-weight: 500;
+  font-size: 14.86px;
+  line-height: 14px;
+  margin-top: 9px;
+  margin-bottom: 21px;
 }
 
-.plans-filter__toggle {
+.plan-filters__toggle {
   position: absolute;
+  top: 40px;
+  opacity: .3;
+
+  &--plus {
+    background: url("../img/qty-plus-mobile.svg");
+    width: 15px;
+    height: 15px;
+    border: none;
+    left: 20px;
+
+  }
+
+  &--minus {
+    background: url("../img/qty-minus-mobile.svg") no-repeat;
+    width: 14px;
+    height: 10px;
+    border: none;
+    right: 20px;
+    top:50px;
+  }
 }
 
-.plan-filters__checkbox .plan-filters__checkbox-indicator {
-  background: $basic-white;
-  width: 10px;
-  height: 10px;
+.add-plan__calendar {
+  @include no-list;
 }
 
-.plan-filters__checkbox:checked .plan-filters__checkbox-indicator {
-  background: url("../img/tick.svg") no-repeat;
-  width: 10px;
-  height: 10px;
+.plan-filters__label-checkbox {
+  font-size: 15px;
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("../img/checkbox-off.svg");
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background-size: 22px;
+  }
+}
+
+.plan-filters__checkbox {
+  position: absolute;
+  appearance: none;
+
+  &:checked + .plan-filters__label-checkbox::before {
+    background: url("../img/checkbox-on.svg");
+
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    content: "";
+    background-size: 22px;
+  }
 }
 
 .plan-filters__select {
@@ -47,9 +112,16 @@
   flex-wrap: nowrap;
   position: relative;
   margin-bottom: 20px;
+
+  &--add {
+    position: relative;
+    background-color: #edeff6;
+  }
 }
 
-.plan-filters__head {
+.plan-filters__title {
+  font-size: 14px;
+  border-radius: 4px;
   border: 1px solid #e5e5e5;
   padding: 10px;
   margin: 0;
@@ -60,12 +132,8 @@
   color: $basic-blue;
 }
 
-.plan-filters__head--add {
-  position: relative;
-}
-
 .plan-filters__button {
-  display: inline-block;
+  display: flex;
   position: absolute;
   width: 16px;
   height: 12px;
@@ -75,12 +143,29 @@
   border: none;
   right: 61px;
   top: 30%;
+
+  &--choose {
+    right: 21px;
+  }
+
+  &--add {
+    display: flex;
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    opacity: 0.3;
+    border: none;
+    right: 21px;
+    top: 30%;
+    background: url("../img/qty-plus-mobile.svg") no-repeat;
+  }
 }
 
 .plan-filters__select-flag {
   position: relative;
   border: 1px solid #e5e5e5;
   padding: 10px;
+  border-radius: 4px;
 }
 
 .plan-filters__select-btn-close {
@@ -102,13 +187,14 @@
 .plan-filters__btn {
   display: block;
   margin-bottom: 10px;
+  margin: 0 auto;
 }
 
 .plan-filters__comment-label {
   font-weight: 500;
-font-size: 18px;
-line-height: 1;
-color: $basic-blue-light;
+  font-size: 18px;
+  line-height: 1;
+  color: $basic-blue-light;
 }
 
 .plan-filters__comment {
@@ -135,7 +221,7 @@ color: $basic-blue-light;
   }
 }
 .plan-filters__btn-submit {
-  border:none;
+  border: none;
   font-weight: bold;
 }
 
@@ -144,6 +230,10 @@ color: $basic-blue-light;
   text-transform: uppercase;
   color: $basic-blue;
   font-size: 17px;
-line-height: (30 / 17) ;
-text-align: center;
+  line-height: (30 / 17);
+  text-align: center;
+}
+
+.add-plan-popup {
+  display: none;
 }
