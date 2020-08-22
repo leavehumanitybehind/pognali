@@ -111,7 +111,6 @@
     <header class="page-main-header">
       <div class="page-main-header__container container">
         <h1 class="page-main-header__title">Направления</h1>
-        <a class="page-main-header__link" href="index.html">На главную</a>
       </div>
     </header>
     <section class="profile">
@@ -143,20 +142,20 @@
           </span>
           <ul class="profile__transport transport">
             <li class="transport__item">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-plane"
+              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-plane"
                 checked>
               <label class="transport__label transport__label--plane" for="checkbox-plane"></label>
             </li>
             <li class="transport__item">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bus">
+              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-bus">
               <label class="transport__label transport__label--bus" for="checkbox-bus"></label>
             </li>
             <li class="transport__item">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bicycle">
+              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-bicycle">
               <label class="transport__label transport__label--bicycle" for="checkbox-bicycle"></label>
             </li>
             <li class="transport__item">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-walk">
+              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-walk">
               <label class="transport__label transport__label--walk" for="checkbox-walk"></label>
             </li>
           </ul>
@@ -193,11 +192,11 @@
         <h2 class="add-plan__title">Добавить план:</h2>
         <form class="add-plan__filters plan-filters" method="post" action="https://echo.htmlacademy.ru">
           <div class="plan-filters__wrapper">
-            <h3 class="plan-filters__head">Шаг 1. Даты пребывания</h3>
-            <ul class="plan-filters__list">
-              <li class="plan-filters__list-item">Даты</li>
-              <li class="plan-filters__list-item">Маршрут</li>
-              <li class="plan-filters__list-item">Развлечения</li>
+            <h3 class="plan-filters__head">Шаг 1.<br> Даты пребывания</h3>
+            <ul class="plan-filters__list plan-filters__list--current">
+              <li class="plan-filters__list-item plan-filters__list-item--date"><span>Даты</span></li>
+              <li class="plan-filters__list-item plan-filters__list-item--way"><span>Маршрут</span></li>
+              <li class="plan-filters__list-item plan-filters__list-item--entertainment"><span>Развлечения</span></li>
             </ul>
             <p class="plan-filters__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
               позвать
@@ -220,9 +219,8 @@
                   class="visually-hidden">+</span></button>
               <button type="button" class="plan-filters__toggle plan-filters__toggle--minus"><span
                   class="visually-hidden">-</span></button>
-
             </div>
-            <input class="plan-filters__checkbox" name="options" type="checkbox">
+            <input class="plan-filters__checkbox" name="options" type="checkbox checked">
             <label class="plan-filters__label-checkbox">Можно с детьми</label>
 
             <ul class="add-plan__calendar calendar">
@@ -311,7 +309,7 @@
             <a class="plan-filters__btn btn" href="#">Следующий шаг</a>
           </div>
           <div class="plan-filters__wrapper">
-            <h3 class="plan-filters__head">Шаг 2. Маршрут</h3>
+            <h3 class="plan-filters__head">Шаг 2.<br> Маршрут</h3>
             <ul class="plan-filters__list">
               <li class="plan-filters__list-item">Даты</li>
               <li class="plan-filters__list-item">Маршрут</li>
@@ -366,12 +364,12 @@
 
             </div>
             <a class="plan-filters__btn btn" href="#">Следующий шаг</a>
-            <a class="plan-filters__btn plan-filters__btn btn-back" href="#p">На шаг назад</a>
+            <a class="plan-filters__btn plan-filters__btn--back btn-back" href="#p">На шаг назад</a>
           </div>
 
 
           <div class="plan-filters__wrapper">
-            <h3 class="plan-filters__head">Шаг 3. Развлечения</h3>
+            <h3 class="plan-filters__head">Шаг 3.<br> Развлечения</h3>
             <ul class="plan-filters__list">
               <li class="plan-filters__list-item">Даты</li>
               <li class="plan-filters__list-item">Маршрут</li>
@@ -397,7 +395,7 @@
                 readonly></textarea>
             </div>
             <button class="plan-filters__btn-submit btn" type="submit">Отправить</button>
-            <a class="plan-filters__btn btn-back" href="#">На шаг назад</a>
+            <a class="plan-filters__btn plan-filters__btn--back btn-back" href="#">На шаг назад</a>
           </div>
       </div>
       </form>

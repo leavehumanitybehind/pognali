@@ -53,6 +53,11 @@ color:#FF5C23;
   padding: 0;
   text-align: center;
 
+    @media(min-width: $tablet-width) {
+    width: 77px;
+  height: 69px;
+  }
+
   &--fill {
     color: $basic-white;
     background-color: $basic-blue-light;

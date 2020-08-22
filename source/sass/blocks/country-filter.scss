@@ -1,5 +1,5 @@
 .country-filter {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .country-filter-popup__wrapper {
@@ -11,7 +11,6 @@
   @include no-list;
   display: flex;
   justify-content: space-between;
-
 }
 
 .country-filter__toggle {
@@ -19,24 +18,25 @@
 }
 
 .country-filter-popup__country-list {
-  @media(min-width: $desktop-width) {
+  @include no-list;
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }
 
 .country-filter-popup__close-btn {
   border: none;
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #192144;
-    text-transform: uppercase;
-    border-radius: 20px;
-    margin-bottom: 30px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #192144;
+  text-transform: uppercase;
+  border-radius: 20px;
+  margin-bottom: 30px;
 
-    @media(min-width: $desktop-width) {
-      width:100%;
-      padding:20px 0px;
-    }
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 20px 0px;
+  }
 }

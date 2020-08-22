@@ -14,16 +14,23 @@
 }
 
 .user-list__login {
-  display: block;
   width: 189px;
   border: 0;
   border-radius: 25px;
   text-transform: uppercase;
   font-size: 17px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 40px;
   text-align: center;
   height: 50px;
+
+  &:hover {
+    background-color: $special-yellow-dark;
+  }
+
+   @media (min-width: $tablet-width) {
+    order: 3;
+  }
 }
 
 .user-list__button {
@@ -32,22 +39,40 @@
   height: 50px;
   border-radius: 50%;
 
+
   &--email {
     display: none;
+    background: #ffbd30 url(../img/topmenu-mail.svg) center/18px no-repeat;
+
+    &:hover{
+    background-color: $special-orange;
+  }
+   &:active {
+    opacity: .6;
+  }
 
     @media (min-width: $desktop-width) {
       display: block;
-      background: #ffbd30 url(../img/topmenu-mail.svg) center/18px no-repeat;
+
     }
   }
 
   &--tel {
     display: none;
+    background-color: $basic-yellow;
+      background: #ff8d30 url(../img/topmenu-phone.svg) center/18px no-repeat;
+
+      &:hover{
+    background-color:#F26926;
+  }
+
+  &:active {
+    opacity: .6;
+  }
 
     @media (min-width: $desktop-width) {
       display: block;
-      background-color: $basic-yellow;
-      background: #ff8d30 url(../img/topmenu-phone.svg) center/18px no-repeat;
+
     }
   }
 }

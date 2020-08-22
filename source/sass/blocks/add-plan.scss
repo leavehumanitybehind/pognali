@@ -1,6 +1,10 @@
 .add-plan {
   background-color: rgb(223, 227, 240);
   color: $basic-blue;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 30px 30px 0 0;
+  }
 }
 
 .plan-filters__wrapper {
@@ -17,10 +21,70 @@
   justify-content: space-between;
   text-transform: uppercase;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    border-top: 1px solid #e1e3e9;
+  }
+}
+
+.plan-filters__head br {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .plan-filters__list {
+  @include no-list;
   display: none;
+
+  &--current {
+    display: flex;
+  }
+}
+
+.plan-filters__list-item span {
+  display: none;
+}
+
+.plan-filters__list-item {
+  position: relative;
+  margin-right: 10px;
+
+  &--date::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: $basic-blue;
+    top: -120px;
+    right: -180px;
+    border-radius: 50%;
+  }
+
+  &--way::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: $basic-blue;
+    opacity: 0.3;
+    top: -120px;
+    right: -180px;
+    border-radius: 50%;
+  }
+
+  &--entertainment::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: $basic-blue;
+    top: -120px;
+    right: -180px;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
 }
 
 .plan-filters__label {
@@ -49,7 +113,7 @@
 .plan-filters__toggle {
   position: absolute;
   top: 40px;
-  opacity: .3;
+  opacity: 0.3;
 
   &--plus {
     background: url("../img/qty-plus-mobile.svg");
@@ -57,7 +121,6 @@
     height: 15px;
     border: none;
     left: 20px;
-
   }
 
   &--minus {
@@ -66,12 +129,18 @@
     height: 10px;
     border: none;
     right: 20px;
-    top:50px;
+    top: 50px;
   }
 }
 
 .add-plan__calendar {
   @include no-list;
+}
+
+.plan-filters__checkbox {
+  display: none;
+  position: absolute;
+  appearance: none;
 }
 
 .plan-filters__label-checkbox {
@@ -81,30 +150,17 @@
 
   &::before {
     position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #cbced9;
+    border-radius: 4px;
     content: "";
-    background: url("../img/checkbox-off.svg");
     left: 0;
-    width: 26px;
-    height: 26px;
-    background-size: 22px;
   }
 }
 
-.plan-filters__checkbox {
-  position: absolute;
-  appearance: none;
-
-  &:checked + .plan-filters__label-checkbox::before {
-    background: url("../img/checkbox-on.svg");
-
-    position: absolute;
-    left: 0;
-    width: 26px;
-    height: 26px;
-    position: absolute;
-    content: "";
-    background-size: 22px;
-  }
+.plan-filters__checkbox:checked + .plan-filters__label-checkbox::before {
+  background: url("../img/tick.svg") center/9px 9px no-repeat;
 }
 
 .plan-filters__select {
@@ -115,7 +171,6 @@
 
   &--add {
     position: relative;
-    background-color: #edeff6;
   }
 }
 
@@ -130,6 +185,17 @@
   white-space: nowrap;
   overflow: hidden;
   color: $basic-blue;
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    flex-grow: 0;
+
+    &--add {
+      width: 369px;
+      background-color: #edeff6;
+      flex-grow: 0;
+    }
+  }
 }
 
 .plan-filters__button {
@@ -144,8 +210,17 @@
   right: 61px;
   top: 30%;
 
+  @media (min-width: $tablet-width) {
+    right: 201px;
+    top: 32%;
+  }
+
   &--choose {
     right: 21px;
+
+    @media (min-width: $tablet-width) {
+      right: 201px;
+    }
   }
 
   &--add {
@@ -158,6 +233,11 @@
     right: 21px;
     top: 30%;
     background: url("../img/qty-plus-mobile.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      right: 201px;
+      top: 32%;
+    }
   }
 }
 
@@ -166,6 +246,10 @@
   border: 1px solid #e5e5e5;
   padding: 10px;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .plan-filters__select-btn-close {
@@ -182,12 +266,30 @@
   background-size: 6px;
   background-position: 50%;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 15px;
+    right: 102px;
+    opacity: 0.3;
+    border-radius: 0%;
+    width: 11px;
+    height: 11px;
+    background: url("../img/small-cross.svg") no-repeat;
+  }
 }
 
 .plan-filters__btn {
   display: block;
   margin-bottom: 10px;
   margin: 0 auto;
+
+  @media(min-width: $tablet-width) {
+    display: inline-block;
+
+    &--back {
+      float: right;
+    }
+  }
 }
 
 .plan-filters__comment-label {

@@ -1,27 +1,128 @@
-.mobile-nav-popup {
-  display: none;
+.mobile-popup--closed .mobile-nav-popup__nav {
+  display:none;
 }
 
-.mobile-nav-popup-open {
+
+.main-nav__toggle {
+  position: relative;
+  top: -2px;
+  right: 4px;
+  z-index: 2;
   display: block;
-  width: 320px;
-    margin: 0 auto;
-    padding: 0 25px;
+  width: 50px;
+  height: 30px;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+
+  @media(min-width: $tablet-width) {
+    order: 2;
+  }
+
+   @media(min-width: $desktop-width) {
+    display: none;
+  }
+
+  &::before {
+  margin-top: -10px;
+  margin-bottom: 5px;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: $basic-white;
 }
+
+&::after {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: $basic-white;
+}
+}
+
+.mobile-popup--open {
+  display: block;
+}
+
+
+.mobile-nav-popup__nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: -10px;
+  z-index: 20;
+  background-color: $basic-white;
+  width: 100%;
+
+  @media(min-width: $tablet-width) {
+    top: 100px;
+    left: -30px;
+  }
+}
+
+.mobile-popup--open .mobile-nav-popup__nav {
+  display: block;
+
+}
+
 
 .mobile-nav__list {
   @include no-list;
   padding-top: 52px;
-  width: 100%;
-    margin: 0 0 50px;
+    margin: 0 auto;
   flex-direction: column;
   align-items: center;
+  display: none;
+}
+.mobile-popup--open .mobile-nav__list {
+  display: flex;
+
+  @media(min-width: $tablet-width) {
+    width: 768px;
+  }
+}
+
+.mobile-popup--open .main-nav__toggle {
+ position: relative;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 30px;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.mobile-popup--open .main-nav__toggle::before,
+.mobile-popup--open .main-nav__toggle::after {
+  position: absolute;
+  top:20px;
+  right: 25px;
+  background-color: $basic-white;
+  z-index: 10;
+  width: 24px;
+  height: 3px;
+}
+.mobile-popup--open .main-nav__toggle::before {
+  transform: rotate(45deg);
+}
+.mobile-popup--open .main-nav__toggle::after {
+  transform: rotate(-45deg);
+  top:10px;
+
 }
 
 .mobile-nav__item--auth {
   padding-top: 80px;
 }
-
 .mobile-nav__item {
   font-size: 30px;
   font-weight: 500;

@@ -1,62 +1,27 @@
 .main-nav {
   display: none;
+  position: relative;
+  width: auto;
+  min-height: 51px;
 
   @media (min-width: $desktop-width) {
     display: flex;
   }
 }
 
-.main-nav__toggle {
-  padding: 0;
-  position: relative;
-  font-family: inherit;
-  font-size: 0;
-  background: 0 0;
-  border: 0;
-
-  @media (min-width: $tablet-width) {
-    width: 25px;
-    height: 11px;
-    margin: auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-
-  &::before {
-    margin-top: -11px;
-    margin-bottom: 5px;
-    content: "";
-    display: block;
-    width: 24px;
-    height: 3px;
-    background-color: $basic-white;
-    box-shadow: 0 8px 0 0 $basic-white;
-
-    @media (min-width: $tablet-width) {
-      background-color: #cccccc;
-      box-shadow: 0 8px 0 0 #cccccc;
-    }
-  }
-
-  &--close {
-    &::before {
-      display: block;
-      width: 25px;
-      height: 20px;
-      background: url("../img/close.svg") no-repeat;
-      border-radius: 1px;
-      content: "";
-    }
-  }
-}
-
 .main-nav__list {
-  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main-nav__social-list {
   @include no-list;
   display: flex;
+}
+
+.main-nav__user-list {
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
 }

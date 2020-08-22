@@ -39,7 +39,7 @@
 .companions__description {
   width: 217px;
   margin-left: 26px;
-  margin-bottom: 65px;
+  margin-bottom: 62px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
@@ -85,8 +85,10 @@
 
 .companions__to-all {
   position: relative;
-  padding: 22px;
-  padding-right: 130px;
+  padding:22px 130px 22px 22px;
+  border-radius: 10px;
+  text-transform: none;
+
 
   @media (min-width: $tablet-width) {
     padding-right: 444px;

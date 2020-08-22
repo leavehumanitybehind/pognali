@@ -54,6 +54,7 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
+    width: 614px;
     margin-bottom: 64px;
     font-size: 28px;
     line-height: (28 / 32);
@@ -74,7 +75,7 @@
 }
 
 .promotion__description--break-line {
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -97,16 +98,16 @@
 }
 
 .promotion__button {
-  border:none;
+  border: none;
   border-radius: 20px;
   position: absolute;
   padding: 34px;
-  right: 30px;
+  right: 220px;
   background-color: $basic-yellow;
 
   @media (min-width: $tablet-width) {
-    padding: 38px;
-    right: 140px;
+    padding: 40px;
+    right: 150px;
   }
 
   @media (min-width: $desktop-width) {
@@ -116,31 +117,31 @@
     right: 220px;
   }
 
-    &::after {
+  &::after {
     position: absolute;
-    content:"";
-    top:40%;
-    right:35%;
-    width:14px;
+    content: "";
+    top: 40%;
+    right: 35%;
+    width: 14px;
     height: 16px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     &::before {
-    position: absolute;
-    left: 20px;
-    top:25px;
-    color: #1d2e5b;
-    font-size: 24px;
-    font-weight: 700;
-    content: "Регистрация";
+      position: absolute;
+      left: 20px;
+      top: 25px;
+      color: #1d2e5b;
+      font-size: 24px;
+      font-weight: 700;
+      content: "Регистрация";
+    }
   }
-}
 }
 
 .promotion__list {
-   @media(min-width: $desktop-width) {
-     display: flex;
-   }
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }

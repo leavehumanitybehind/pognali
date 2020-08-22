@@ -1,28 +1,52 @@
 .alphabet {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 70px;
+  padding: 0 30px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 70px;
+  }
 }
+
 .alphabet__wrapper {
-  margin-right:70px;
+  margin-bottom: 28px;
+  @media (min-width: $desktop-width) {
+    margin-right: 70px;
+  }
+
+  &--empty {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .alphabet__list {
   @include no-list;
+  display: none;
 }
 .alphabet__title {
-font-weight: bold;
-font-size: 60px;
-line-height: 1;
-text-transform: uppercase;
-text-decoration: none;
-color:$basic-blue;
-margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-blue;
+  background-color: $basic-white;
+  padding: 15px;
+  border: 1px solid #e5e5e5;
+
+  @media (min-width: $desktop-width) {
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
 }
 
 .alphabet__link {
   font-size: 20px;
-line-height: (30 / 20);
-color: #444444;
+  line-height: (30 / 20);
+  color: #444444;
   text-decoration: none;
 }

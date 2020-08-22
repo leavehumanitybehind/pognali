@@ -14,8 +14,8 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
-    <div class="page-header__container">
+  <header class="page-header container">
+    <div class="page-header__container" >
       <div class="page-header-wrapper">
         <a class="page-header__logo logo" href="#">
           <picture class="logo logo--white">
@@ -25,18 +25,7 @@
             <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="15"
               alt="Логотип сайта поиска попутчиков">
           </picture>
-          <picture class="logo logo--blue">
-            <source media="(min-width: 1440px)"
-              srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="logo__img" src="img/logo-mobile-blue@1x.png"
-              srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
-              alt="Логотип сайта поиска попутчиков">
-          </picture>
         </a>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
         <nav class="main-nav nav">
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item">
@@ -67,7 +56,12 @@
             Авторизация
           </a>
         </div>
-        <div class="mobile-nav-popup">
+
+        <div class="mobile-popup mobile-popup--open">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <nav class="mobile-nav-popup__nav ">
           <ul class="mobile-nav__list">
             <li class="mobile-nav__item">
               <a class="mobile-nav__link" href="#">
@@ -106,6 +100,7 @@
             </ul>
         </div>
       </div>
+      </div>
     </div>
   </header>
   <main class="main-page">
@@ -113,7 +108,7 @@
       <div class="main-intro__container container">
         <h1 class="main-intro__title">В путешествие с крутыми попутчиками!</h1>
         <div class="main-intro__wrapper">
-          <a class="main-intro__link  main-intro__link--auth btn" href="#">Авторизация</a>
+          <a class="main-intro__link  main-intro__link--auth" href="#">Авторизация</a>
           <a class="main-intro__link main-intro__link--phone" href="tel:88005558628">
             <span class="visually-hidden">8 800 555-86-28</span>
           </a>
@@ -124,7 +119,7 @@
         </div>
 
       </div>
-      <div class="main-intro__reccomendation recommendation">
+      <div class="main-intro__reccomendation recommendation container">
         <blockquote class="recommendation__wrapper">
           <p class="recommendation__description">«Лучшее приложение, что я видел в жизни!»</p>
           <cite class="recommendation__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
@@ -421,7 +416,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15"
+          <img class="logo__img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15"
             alt="Логотип сайта поиска попутчиков">
         </picture>
       </a>

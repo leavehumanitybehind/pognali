@@ -1,6 +1,11 @@
 .plans {
   background-color: rgb(223, 227, 240);
   color: $basic-blue;
+  border-radius:20px 20px 0 0;
+
+  @media(min-width: $tablet-width) {
+    border-radius:30px 30px 0 0;
+  }
 }
 
 .plans__list {
@@ -14,6 +19,12 @@
   background-color: $basic-white;
 }
 
+.plans__item-title {
+  @media(min-width: $tablet-width) {
+    margin-bottom: 50px;
+}
+}
+
 .plans__text-wrapper {
   color: #1D2E5B;
   text-transform: uppercase;
@@ -21,6 +32,13 @@
 font-size: 14px;
 line-height: 1;
 letter-spacing: 0.06em;
+
+@media(min-width: $tablet-width) {
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+  border-top: 1px solid #e5e5e5;
+}
 }
 
 .plans__link {

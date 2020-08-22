@@ -1,8 +1,4 @@
-.recommendation {
-  margin-top: -80px;
-  margin-left: 13px;
-  margin-bottom: 31px;
-
+.main-intro__recommendation {
   @media (min-width: $tablet-width) {
     margin-top: -215px;
     margin-left: 10px;
@@ -15,7 +11,9 @@
 }
 
 .recommendation__wrapper {
-  width: 53%;
+  width: 165px;
+  margin-left: 27px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     width: 40%;

@@ -10,6 +10,16 @@
   background: $basic-yellow;
   border-radius: 20px;
   text-transform: uppercase;
+
+  &:hover {
+
+    background: #FFBD30;
+  }
+
+  &:active {
+    background-color: $special-yellow-dark;
+color:rgba($basic-blue-light, $alpha: 0.3);
+  }
 }
 
 .btn-back {

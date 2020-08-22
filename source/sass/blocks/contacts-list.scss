@@ -7,15 +7,12 @@
   padding-bottom: 30px;
 
   @media (min-width: $desktop-width) {
-flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 865px;
     margin: auto;
-
   }
 }
-
-
 
 .contacts-list__link {
   font-weight: bold;
@@ -34,13 +31,17 @@ flex-direction: row;
 .contacts-list__item {
   margin-bottom: 23px;
 
+   @media (min-width: $tablet-width) {
+    margin-bottom: 63px;
+  }
 }
 
 .contacts-list__number {
   padding-left: 55px;
   position: relative;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 39px;
+    padding-left: 75px;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,8 +50,8 @@ flex-direction: row;
 
   &::before {
     position: absolute;
-    content:"";
-    top: -12px;
+    content: "";
+    top: -10px;
     left: 0;
     width: 45px;
     height: 45px;
@@ -58,19 +59,25 @@ flex-direction: row;
     background-size: 18px;
     border-radius: 50%;
 
-    @media(min-width: $desktop-width) {
-      width:90px;
-    height: 90px;
-    top: -22px;
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      top: -22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+      top: -22px;
     }
   }
 }
 
 .contacts-list__mail {
- padding-left:55px;
+  padding-left: 55px;
   position: relative;
   @media (min-width: $tablet-width) {
-    margin-bottom: 39px;
+    padding-left: 75px;
   }
   @media (min-width: $desktop-width) {
     padding-left: 105px;
@@ -78,8 +85,8 @@ flex-direction: row;
 
   &::before {
     position: absolute;
-    content:"";
-    top: -12px;
+    content: "";
+    top: -10px;
     left: 0;
     width: 45px;
     height: 45px;
@@ -87,13 +94,16 @@ flex-direction: row;
     background-size: 18px;
     border-radius: 50%;
 
-      @media(min-width: $desktop-width) {
-      width:90px;
-    height: 90px;
-    top: -22px;
+        @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      top: -22px;
+    }
 
-
-
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+      top: -22px;
     }
   }
 }
