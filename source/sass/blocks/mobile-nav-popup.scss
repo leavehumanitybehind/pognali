@@ -48,6 +48,10 @@
 
 .mobile-popup--open {
   display: block;
+
+   @media(min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 
@@ -55,7 +59,7 @@
   display: none;
   position: absolute;
   top: 60px;
-  left: -10px;
+  left: 0;
   z-index: 20;
   background-color: $basic-white;
   width: 100%;
@@ -87,6 +91,12 @@
     width: 768px;
   }
 }
+
+.page-header__container--fixed .main-nav__toggle::after,
+.page-header__container--fixed .main-nav__toggle::before {
+  background-color: $special-grey;
+}
+
 
 .mobile-popup--open .main-nav__toggle {
  position: relative;

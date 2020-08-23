@@ -1,6 +1,6 @@
 .directions {
   margin-top: -30px;
-  border-bottom:0 25px;
+  border-bottom: 0 25px;
 
   position: relative;
   z-index: 5;
@@ -11,6 +11,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 112px;
+    background: #edeff6 url("../img/flags-back@1x.png") no-repeat 78% 158px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,6 +29,12 @@
   }
 }
 
+.directions img {
+  @media (min-width: $tablet-width) {
+    width: 185px;
+    height: 140px;
+  }
+}
 .directions__title {
   @media (min-width: $tablet-width) {
     margin-bottom: 63px;
@@ -54,6 +61,38 @@
 .directions__list {
   @include no-list;
   margin-bottom: 48px;
+  position: relative;
+
+
+    &::after {
+      @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      bottom: 1px;
+      left: 0;
+      width: 617px;
+      height: 121px;
+      box-shadow: inset 0 -74px 38px -17px #edeff6;
+    }
+  }
+
+    &::before {
+      @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      height: 141px;
+      width: 141px;
+      top: -38px;
+      left: -10px;
+      background: #E2E5F2;
+      border-radius: 20px;
+      }
+
+       @media (min-width: $desktop-width) {
+         left: -60px;
+         top: -71px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     margin-right: 150px;
@@ -65,28 +104,28 @@
 .directions__show-all-btn {
   position: relative;
   margin-bottom: 80px;
-      padding: 24px 142px 22px 22px;
+  padding: 24px 142px 22px 22px;
   text-transform: none;
   font-weight: bold;
   border-radius: 10px;
 
-
   @media (min-width: $tablet-width) {
-    padding-right: 444px;
+  width:616px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 150px;
-    margin-left: 63%;
-    margin-top: -155px;
+    position: absolute;
+    bottom:100px;
+    right: 350px;
+    width:275px;
   }
 
   &::after {
     position: absolute;
-    content:"";
-    top:40%;
-    right:10%;
-    width:10px;
+    content: "";
+    top: 40%;
+    right: 10%;
+    width: 10px;
     height: 10px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
   }

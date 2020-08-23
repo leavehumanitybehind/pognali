@@ -1,26 +1,25 @@
 .page-header {
   position: relative;
-  padding-top: 37px;
-  padding-bottom: 10px;
-  background-color: $basic-blue;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 132px;
-  }
-  @media (min-width: $desktop-width) {
-    padding-top: 100px;
-  }
+  color: $basic-blue;
 }
 
-.page-header-wrapper{
+.page-header__container--fixed .page-header {
+  margin-bottom: 97px;
+}
+
+.page-header-wrapper {
+  position: relative;
+  z-index: 11;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  margin: 0 auto;
+  padding: 0;
 
-   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-   }
-
+  @media (min-width: $tablet-width) {
+    width: 668px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 1320px;
@@ -29,11 +28,7 @@
 }
 
 .page-header__container {
-  width: 320px;
-  min-height: 58px;
-  padding: 27px 25px 0;
-  position: absolute;
-  top: 0;
+  padding: 27px 0 40px 0;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -49,15 +44,18 @@
 
 .page-header__container--fixed {
   position: fixed;
-    top: 0;
-    z-index: 10;
-    background-color: $basic-white;
+  top: 0;
+  z-index: 10;
+  background-color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .page-header img {
-  width:106px;
+  width: 106px;
   height: 16px;
-  margin-left:-20px;
   @media (min-width: $tablet-width) {
     width: 166px;
     height: 42px;

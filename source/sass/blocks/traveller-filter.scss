@@ -31,6 +31,7 @@
 }
 
 .traveller-filter-list__title {
+  position: relative;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -38,6 +39,17 @@
   text-transform: uppercase;
   color: $basic-blue-light;
   border-top: 1px solid #f3c72b;
+padding-top: 10px;
+
+&::after {
+  content: '>';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0;
+  right: 0;
+}
+
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -65,11 +77,26 @@
   margin: 0;
   padding: 0;
   border: none;
+  display: none;
 
+  &--active {
+    display: flex;
+  }
+  
   @media (min-width: $tablet-width) {
     display: flex;
   }
 }
+
+.traveller-filter__option--open  .traveller-filter-list__title::after {
+  content: '!';
+}
+
+.traveller-filter__option--open {
+  display:flex;
+}
+
+
 
 .traveller-filter__label {
   margin-bottom: 16px;

@@ -31,7 +31,7 @@
 .contacts-list__item {
   margin-bottom: 23px;
 
-   @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 63px;
   }
 }
@@ -63,12 +63,14 @@
       width: 68px;
       height: 68px;
       top: -22px;
+      background-size: 23px;
     }
 
     @media (min-width: $desktop-width) {
       width: 90px;
       height: 90px;
       top: -22px;
+      background-size: 29px 31px;
     }
   }
 }
@@ -94,16 +96,18 @@
     background-size: 18px;
     border-radius: 50%;
 
-        @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       width: 68px;
       height: 68px;
       top: -22px;
+      background-size: 23px;
     }
 
     @media (min-width: $desktop-width) {
       width: 90px;
       height: 90px;
       top: -22px;
+      background-size: 29px 31px;
     }
   }
 }

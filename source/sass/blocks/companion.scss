@@ -1,4 +1,5 @@
 .companion {
+  position: relative;
   background-color: $basic-white;
   width: 270px;
   margin-bottom: 15px;
@@ -8,10 +9,18 @@
     margin-bottom: 80px;
   }
 }
+.companion:hover .companion__photo {
+   transform: scale(1.05) translateY(-7px);
+}
+
+.companion__link {
+  overflow: hidden;
+}
 
 .companion__photo {
   border-radius: 10px;
 }
+
 
 .companion__wrapper {
   border-radius: 25px;
@@ -24,12 +33,14 @@
     margin: 0;
     padding: 18px;
     z-index: 2;
+    top: 10px;
+    left: 18px;
 
     &::after {
       position: absolute;
       content:"";
-      top: 10px;
-      left: 15px;
+      top: 5px;
+      left: 1px;
       height: 60px;
     width: 60px;
     background: rgba(0,0,0,.6);
@@ -59,6 +70,7 @@
 }
 
 .companion__wish-list {
+  position: relative;
   @include no-list;
   display: flex;
   justify-content: center;
@@ -77,6 +89,14 @@
   line-height: 1;
   color: $basic-blue-light;
   text-decoration: none;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .3;
+  }
 }
 
 .companion__hashtags {
@@ -85,7 +105,7 @@
   line-height: (18 / 16);
   text-align: center;
   color: $special-grey;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .companion__list-prefer {
@@ -93,9 +113,46 @@
   display: flex;
   justify-content: center;
   padding-bottom: 16px;
+  margin-left: 30px;
 }
 
 
 .companion__list-prefer-item {
-  margin-right: 15px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.companion__list-prefer-icon {
+
+  fill: $basic-blue;
+}
+
+.companion__list-prefer-hint {
+  display: none;
+  position: absolute;
+  bottom: -60px;
+  z-index: 100;
+
+  transform: translate(-30%, 0);
+
+  white-space: nowrap;
+}
+
+.companion__list-prefer-item:hover .companion__list-prefer-hint {
+  display: table;
+  margin: 0;
+  padding: 15px 20px;
+  height: 57px;
+
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  text-align: center;
+  color: $basic-white;
+
+  border-radius: 4px;
+  background-color: $basic-blue-light;
+
 }

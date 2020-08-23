@@ -25,16 +25,22 @@
     padding-top: 115px;
     padding-bottom: 110px;
     background: url("../img/about-desktop@1x.png") no-repeat;
-    background-position: 100% 140px;
+    background-position: 100% 50px;
 
           @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/about-desktope@2x.png");
+        background-image: url("../img/about-desktop@2x.png");
+        background-size: 630px 665px;
 
       }
   }
 }
 
 .about-service__title {
+   @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+    padding-left: 25px;
+   }
+
   @media (min-width: $desktop-width) {
     text-align: left;
     margin-bottom: 60px;
@@ -52,7 +58,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
-    margin-left: 10px;
+    margin-left: 52px;
     width: 309px;
     font-size: 28px;
     line-height: (33 /28);
@@ -100,9 +106,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 294px;
-    padding: 29px;
+    padding: 22px 130px 22px 22px;
+    border-radius: 10px;
     margin-left: 14px;
+    text-transform: none;
   }
 
     &::after {

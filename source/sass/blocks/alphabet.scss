@@ -9,7 +9,11 @@
 }
 
 .alphabet__wrapper {
-  margin-bottom: 28px;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  background-color: $basic-white;
   @media (min-width: $desktop-width) {
     margin-right: 70px;
   }
@@ -25,17 +29,15 @@
   @include no-list;
   display: none;
 }
+
 .alphabet__title {
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: $basic-blue;
-  background-color: $basic-white;
-  padding: 15px;
-  border: 1px solid #e5e5e5;
+
 
   @media (min-width: $desktop-width) {
     font-weight: bold;

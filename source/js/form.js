@@ -1,4 +1,3 @@
-
 //open main-nav
 
 var mainnav = document.querySelector('.mobile-popup');
@@ -29,19 +28,24 @@ function fixHeader() {
 }
 window.addEventListener("scroll", fixHeader);
 
-//modal popup bussiness-offer
 
-var tariffes = document.querySelector('.tariffes');
-var closeButton = document.querySelector('.tariffes__button');
-var link = document.querySelector('.business-offer__link');
+//counter
 
+const btns = document.querySelectorAll('.plan-filters__toggle');
+btns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    const direction = this.dataset.direction;
+    const input = this.parentElement.querySelector('.plan-filters__input');
+    const currentValue = +input.value;
+    let newValue;
 
-link.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  tariffes.classList.add('tariffes--open');
-});
+    if (direction === 'plus') {
+      newValue = currentValue + 1;
+    } else {
+      newValue = currentValue - 1 > 0 ?
+      currentValue - 1 : 0;
+    }
 
-closeButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  tariffes.classList.remove('tariffes--open');
-});
+    input.value = newValue;
+  })
+})
