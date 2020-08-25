@@ -20,7 +20,7 @@
           <picture class="logo logo--white">
             <source media="(min-width: 1440px)"
               srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
             <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="15"
               alt="Логотип сайта поиска попутчиков">
           </picture>
@@ -60,7 +60,7 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <nav class="mobile-nav-popup__nav ">
+          <div class="mobile-nav-popup__nav ">
             <ul class="mobile-nav__list">
               <li class="mobile-nav__item">
                 <a class="mobile-nav__link" href="index.html">
@@ -80,26 +80,27 @@
               <li class="mobile-nav__item mobile-nav__item--auth">
                 <a class="mobile-nav__login btn" href="login.html">Авторизация</a>
               </li>
-              <ul class="main-nav__social-list">
-                <li class="social-list__item">
-                  <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
-                    <span class="visually-hidden">Facebook</span>
-                  </a>
-                </li>
-                <li class="social-list__item">
-                  <a class="social-list__link" href="https://vk.com/htmlacademy">
-                    <span class="visually-hidden">VKontakte</span>
-                  </a>
-                </li>
-                <li class="social-list__item">
-                  <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
-                    <span class="visually-hidden">Instagram</span>
-                  </a>
-                </li>
-              </ul>
+            </ul>
+            <ul class="main-nav__social-list">
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">VKontakte</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
+                  <span class="visually-hidden">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </header>
   <main class="page-main">
@@ -642,19 +643,19 @@
                   <ul class="traveller-property-country__list wish-list">
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-sri-lanka.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-sri-lanka.svg" width="35" height="24" alt="Флаг Шри-Ланка">
                         <span class="wish-list__country-name">Шри Ланка</span>
                       </a>
                     </li>
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-thailand.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланд">
                         <span class="wish-list__country-name">Таиланд</span>
                       </a><span class="wish-list__country-icon"></span>
                     </li>
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-seychelles.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-seychelles.svg" width="35" height="24" alt="Флаг Сейшелы">
                         <span class="wish-list__country-name">Сейшелы</span>
                       </a>
                     </li>
@@ -702,19 +703,19 @@
                   <ul class="traveller-property-country__list wish-list">
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-belgium.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-belgium.svg" width="35" height="24" alt="Флаг Бельгия">
                         <span class="wish-list__country-name">Бельгия</span>
                       </a>
                     </li>
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-czech.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехия">
                         <span class="wish-list__country-name">Чехия</span>
                       </a>
                     </li>
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-seychelles.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-seychelles.svg" width="35" height="24" alt="Флаг Сейшелы">
                         <span class="wish-list__country-name">Сейшелы</span>
                       </a>
                     </li>
@@ -764,19 +765,19 @@
                   <ul class="traveller-property-country__list wish-list">
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-usa.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-usa.svg" width="35" height="24" alt="Флаг США">
                         <span class="wish-list__country-name">США</span>
                       </a>
                     </li>
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-australia.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-australia.svg" width="35" height="24" alt="Флаг Австралия">
                         <span class="wish-list__country-name">Австралия</span>
                       </a>
                     </li>
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-dominica.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-dominica.svg" width="35" height="24" alt="Флаг Доминикана">
                         <span class="wish-list__country-name">Доминикана</span>
                       </a>
                     </li>
@@ -826,13 +827,13 @@
                   <ul class="traveller-property-country__list wish-list">
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-united-kingdom.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-united-kingdom.svg" width="35" height="24" alt="Флаг Великобритания" >
                         <span class="wish-list__country-name">Великобритания</span>
                       </a>
                     </li>
                     <li class="wish-list__item">
                       <a class="wish-list__link" href="#">
-                        <img class="wish-list__country-icon" src="img/flag-germany.svg" width="35" height="24">
+                        <img class="wish-list__country-icon" src="img/flag-germany.svg" width="35" height="24" alt="Флаг Германия">
                         <span class="wish-list__country-name">Германия</span>
                       </a>
                     </li>
