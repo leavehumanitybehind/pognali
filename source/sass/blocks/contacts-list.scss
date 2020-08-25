@@ -78,9 +78,11 @@
 .contacts-list__mail {
   padding-left: 55px;
   position: relative;
+
   @media (min-width: $tablet-width) {
     padding-left: 75px;
   }
+
   @media (min-width: $desktop-width) {
     padding-left: 105px;
   }

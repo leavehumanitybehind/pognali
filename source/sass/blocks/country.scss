@@ -1,10 +1,7 @@
 .country {
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row-reverse;
-
-
   }
 
   @media (min-width: $desktop-width) {
@@ -36,7 +33,7 @@
       width: 70px;
       height: 47px;
       top: 25px;
-    left: 343px;
+      left: 343px;
     }
   }
 

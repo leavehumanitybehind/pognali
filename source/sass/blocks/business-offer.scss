@@ -60,16 +60,16 @@
     position: absolute;
     right: -122px;
     top: 20px;
-    background: url(../img/rates@1x.png) no-repeat;
+    background: url("../img/rates@1x.png") no-repeat;
     background-size: cover;
     content: "";
 
     @media (min-width: $desktop-width) {
       width: 198px;
-    height: 198px;
-    position: absolute;
-    right: 52px;
-    top: 220px;
+      height: 198px;
+      position: absolute;
+      right: 52px;
+      top: 220px;
     }
   }
 }
@@ -145,9 +145,6 @@
 
 .business-offer__service {
   margin-bottom: 9px;
-
-  @media (min-width: $desktop-width) {
-  }
 }
 
 .business-offer__price {
@@ -194,7 +191,7 @@
     position: absolute;
     left: -10px;
     top: 5px;
-    background: url(../img/user.svg) no-repeat;
+    background: url("../img/user.svg") no-repeat;
     background-size: cover;
     content: "";
 
@@ -203,7 +200,7 @@
       height: 68px;
       left: 10px;
       top: -25px;
-      background: #e2e5f2 url(../img/user.svg) no-repeat center;
+      background: #e2e5f2 url("../img/user.svg") no-repeat center;
       background-size: 20px 20px;
       content: "";
       border-radius: 50%;

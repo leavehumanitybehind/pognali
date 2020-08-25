@@ -14,6 +14,7 @@
   height: 40px;
   border: 1px solid #e5e5e5;
   background-color: $basic-white;
+
   @media (min-width: $desktop-width) {
     margin-right: 70px;
   }
@@ -37,7 +38,6 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $basic-blue;
-
 
   @media (min-width: $desktop-width) {
     font-weight: bold;

@@ -89,14 +89,13 @@
 }
 
 .main-intro__link {
-    border-radius: 25px;
+  border-radius: 25px;
   font-weight: bold;
   font-size: 20px;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: $basic-blue;
-  border-radius: 25px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -108,18 +107,15 @@
     padding: 8px 28px;
   }
 
-
   &--phone {
     width: 40px;
     height: 40px;
-    background-color: $basic-yellow;
-    background: #ff8d30 url(../img/topmenu-phone.svg) center/18px no-repeat;
+    background: $special-orange url("../img/topmenu-phone.svg") center/18px no-repeat;
   }
 
   &--mail {
     width: 40px;
     height: 40px;
-    background-color: $special-orange;
-    background: #ffbd30 url(../img/topmenu-mail.svg) center/18px no-repeat;
+    background: $special-yellow-dark url("../img/topmenu-mail.svg") center/18px no-repeat;
   }
 }

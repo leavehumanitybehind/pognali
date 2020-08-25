@@ -35,6 +35,7 @@
     min-height: 132px;
     padding: 40px 40px 0;
   }
+
   @media (min-width: $desktop-width) {
     width: 1440px;
     min-height: 100px;
@@ -56,6 +57,7 @@
 .page-header img {
   width: 106px;
   height: 16px;
+
   @media (min-width: $tablet-width) {
     width: 166px;
     height: 42px;

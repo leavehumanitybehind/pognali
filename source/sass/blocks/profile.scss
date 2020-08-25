@@ -8,7 +8,7 @@
     justify-content: space-between;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     flex-wrap: nowrap;
   }
 }
@@ -20,11 +20,11 @@
     order: 3;
   }
 
-  @media(min-width: $desktop-width) {
-position: absolute;
-top: 190px;
-right: 200px;
-z-index: 2;
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 190px;
+    right: 200px;
+    z-index: 2;
   }
 }
 
@@ -36,10 +36,10 @@ z-index: 2;
   border-radius: 50%;
   margin-bottom: 30px;
 
-  @media(min-width: $desktop-width) {
-border-radius: 0%;
-width: 190px;
-  height: 190px;
+  @media (min-width: $desktop-width) {
+    border-radius: 0%;
+    width: 190px;
+    height: 190px;
   }
 }
 
@@ -55,9 +55,9 @@ width: 190px;
     flex-direction: column-reverse;
   }
 
-  @media(min-width: $desktop-width) {
-order: 1;
-width: 732px;
+  @media (min-width: $desktop-width) {
+    order: 1;
+    width: 732px;
   }
 }
 
@@ -71,7 +71,6 @@ width: 732px;
   padding: 22px 30px 15px 25px;
   border-radius: 10px;
   border: 1px solid rgb(203, 206, 217);
-
 }
 
 .profile__label {
@@ -84,14 +83,13 @@ width: 732px;
   line-height: 1.13;
   color: $basic-blue;
   background-color: #e5e5e5;
-  padding: 0px 15px;
+  padding: 0 15px;
   z-index: 1;
 
   @media (min-width: $tablet-width) {
     top: 80px;
     left: 45%;
   }
-
 }
 
 .profile__wrapper--transport {
@@ -106,9 +104,9 @@ width: 732px;
     width: auto;
   }
 
-  @media(min-width: $desktop-width) {
-order: 2;
-width: 384px;
+  @media (min-width: $desktop-width) {
+    order: 2;
+    width: 384px;
   }
 }
 
@@ -132,11 +130,11 @@ width: 384px;
     order: 1;
   }
 
-  @media(min-width: $desktop-width) {
-position: absolute;
-top:260px;
-right: 380px;
-z-index: 2;
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 260px;
+    right: 380px;
+    z-index: 2;
   }
 }
 
@@ -145,8 +143,8 @@ z-index: 2;
   font-weight: 700;
   color: $basic-blue;
 
-    @media(min-width: $desktop-width) {
-color: $basic-white;
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
   }
 }
 
@@ -156,12 +154,12 @@ color: $basic-white;
   font-weight: 400;
   text-align: center;
   color: rgb(68, 68, 68);
-  margin: 0px;
-  padding: 2px 2px 0px;
+  margin: 0;
+  padding: 2px 2px 0;
   border-top: 1px solid rgba(68, 68, 68, 0.4);
 
-    @media(min-width: $desktop-width) {
-color: $basic-white;
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
   }
 }
 
@@ -183,7 +181,7 @@ color: $basic-white;
     order: 4;
   }
 
-  @media(min-width: $desktop-width) {
-display: none;
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }

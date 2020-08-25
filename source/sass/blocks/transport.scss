@@ -21,14 +21,13 @@
 }
 
 .transport__checkbox {
-display: none;
-position: absolute;
-appearance: none;
+  display: none;
+  position: absolute;
+  appearance: none;
 }
 
 .transport__checkbox:checked + .transport__label {
-  opacity: .5;
-
+  opacity: 0.5;
 }
 
 .transport__label {

@@ -25,7 +25,6 @@
   }
 }
 
-
 .address__contacts {
   position: relative;
   margin-bottom: 32px;
@@ -47,8 +46,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right:20px;
-
+    margin-right: 20px;
   }
 
   &::before {
@@ -62,13 +60,13 @@
     background-size: 18px;
     border-radius: 50%;
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       width: 90px;
-    height: 90px;
-    margin-right: 31px;
-    background-size: 28px;
-     left: -110px;
-     top: -20px;
+      height: 90px;
+      margin-right: 31px;
+      background-size: 28px;
+      left: -110px;
+      top: -20px;
     }
   }
 }

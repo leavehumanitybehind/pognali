@@ -56,6 +56,5 @@ var filterItem = document.querySelectorAll('.traveller-filter-list__item');
 var option = document.querySelectorAll(".traveller-filter__option");
 
 filterItem.addEventListener('click', function () {
-    option.classList.toggle('traveller-filter__option--open');
+  option.classList.toggle('traveller-filter__option--open');
 });
-

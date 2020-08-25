@@ -15,7 +15,7 @@
     content: "";
     width: 15px;
     height: 10px;
-    background: url(../img/filter.svg) no-repeat;
+    background: url("../img/filter.svg") no-repeat;
     background-position: center;
     top: 3px;
     left: 0;
@@ -59,7 +59,7 @@
     content: "";
     width: 20px;
     height: 20px;
-    background: url(../img/dots.svg) no-repeat;
+    background: url("../img/dots.svg") no-repeat;
     background-position: center;
     top: 0;
     left: 0;
@@ -69,6 +69,7 @@
 .country-filter-popup__alphabet-wrapper--closed {
   display: none;
 }
+
 .country-filter-popup__alphabet-wrapper--open {
   display: block;
 }
@@ -100,10 +101,10 @@
   text-transform: uppercase;
   border-radius: 20px;
   margin-bottom: 30px;
-  background-color: #D6DAED;
+  background-color: #d6daed;
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    padding: 20px 0px;
+    padding: 20px 0;
   }
 }

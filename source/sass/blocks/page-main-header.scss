@@ -2,8 +2,9 @@
   position: relative;
   background-color: $basic-blue;
   margin-bottom: 30px;
-  border-radius:0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
 }
+
 .page-main-header__container {
   display: flex;
   justify-content: space-between;
@@ -17,9 +18,9 @@
   line-height: 1;
   color: $basic-white;
 
-    @media(min-width: $desktop-width) {
-padding-top: 130px;
-font-size: 60px;
+  @media (min-width: $desktop-width) {
+    padding-top: 130px;
+    font-size: 60px;
   }
 
   &::after {

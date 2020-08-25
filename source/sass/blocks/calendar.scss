@@ -20,11 +20,11 @@
   width: 18px;
   height: 9px;
   border: none;
-  background: url(../img/month-arrow-left.svg) no-repeat;
-  opacity: .3;
+  background: url("../img/month-arrow-left.svg") no-repeat;
+  opacity: 0.3;
 
   &--next {
-    background: url(../img/month-arrow-right.svg) no-repeat;
+    background: url("../img/month-arrow-right.svg") no-repeat;
   }
 }
 
@@ -42,7 +42,7 @@
   font-weight: 300;
 
   &--end {
-color:#FF5C23;
+    color: #ff5c23;
   }
 }
 
@@ -53,9 +53,9 @@ color:#FF5C23;
   padding: 0;
   text-align: center;
 
-    @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 77px;
-  height: 69px;
+    height: 69px;
   }
 
   &--fill {
@@ -63,13 +63,13 @@ color:#FF5C23;
     background-color: $basic-blue-light;
 
     &:hover {
-      border: 1px solid #FF5C23;
-box-sizing: border-box;
+      border: 1px solid #ff5c23;
+      box-sizing: border-box;
     }
   }
 
   &--active {
-    background: #EDEFF6;
+    background: #edeff6;
   }
 }
 
@@ -83,10 +83,10 @@ box-sizing: border-box;
   text-decoration: none;
   color: $basic-blue-light;
 
-&--disabled {
-
+  &--disabled {
     color: #e5e5e5;
   }
+
   &--fill {
     color: $basic-white;
   }

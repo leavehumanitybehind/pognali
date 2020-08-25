@@ -1,6 +1,6 @@
 .btn {
-  width:230px;
-  padding:8px;
+  width: 230px;
+  padding: 8px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -12,13 +12,12 @@
   text-transform: uppercase;
 
   &:hover {
-
-    background: #FFBD30;
+    background: #ffbd30;
   }
 
   &:active {
     background-color: $special-yellow-dark;
-color:rgba($basic-blue-light, $alpha: 0.3);
+    color: rgba($basic-blue-light, $alpha: 0.3);
   }
 }
 
@@ -28,6 +27,6 @@ color:rgba($basic-blue-light, $alpha: 0.3);
   color: $basic-blue;
   font-size: 17px;
   font-weight: bold;
-line-height: (30 / 17) ;
-text-align: center;
+  line-height: (30 / 17);
+  text-align: center;
 }

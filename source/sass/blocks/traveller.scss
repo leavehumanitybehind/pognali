@@ -102,7 +102,7 @@
   @media (min-width: $desktop-width) {
     grid-column-end: 2;
     padding-left: 210px;
-    margin-top: 15px
+    margin-top: 15px;
   }
 }
 
@@ -226,10 +226,10 @@
   &::after {
     position: absolute;
     content: "";
-    width:50px;
-    height:50px;
-   right: -50px;
-    background: url(../img/heart.svg) no-repeat;
+    width: 50px;
+    height: 50px;
+    right: -50px;
+    background: url("../img/heart.svg") no-repeat;
   }
 
   @media (min-width: $tablet-width) {

@@ -1,44 +1,40 @@
 .tariffes {
-display: none;
+  display: none;
   background-color: $basic-white;
-
 }
 
 .tariffes--open {
-  display:block;
-      position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   z-index: 30;
   width: 270px;
-    height: 443px;
-    border-radius: 20px;
+  height: 443px;
+  border-radius: 20px;
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 688px;
     height: 526px;
     border-radius: 30px;
-    }
+  }
 
-    @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 750px;
   }
 }
 
-.t
-
-.tariffes__list {
+.t .tariffes__list {
   @include no-list;
-padding:0 60px ;
-margin: 30px;
-
+  padding: 0 60px;
+  margin: 30px;
 }
 
 .tariffes__item {
- display: flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid rgba(#000000, 0.05);
@@ -53,6 +49,6 @@ margin: 30px;
   width: 100%;
   padding: 41px;
   text-align: center;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 24px;
 }

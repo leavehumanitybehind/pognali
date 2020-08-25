@@ -9,8 +9,9 @@
     margin-bottom: 80px;
   }
 }
+
 .companion:hover .companion__photo {
-   transform: scale(1.05) translateY(-7px);
+  transform: scale(1.05) translateY(-7px);
 }
 
 .companion__link {
@@ -21,7 +22,6 @@
   border-radius: 10px;
 }
 
-
 .companion__wrapper {
   border-radius: 25px;
   padding: 0 40px;
@@ -30,23 +30,22 @@
 
 .companion__property {
   position: absolute;
-    margin: 0;
-    padding: 18px;
-    z-index: 2;
-    top: 10px;
-    left: 18px;
+  margin: 0;
+  padding: 18px;
+  z-index: 2;
+  top: 10px;
+  left: 18px;
 
-    &::after {
-      position: absolute;
-      content:"";
-      top: 5px;
-      left: 1px;
-      height: 60px;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 1px;
+    height: 60px;
     width: 60px;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
-
-    }
+  }
 }
 
 .companion__property-title {
@@ -56,7 +55,6 @@
   font-size: 24px;
   line-height: 1;
   color: $basic-white;
-
 }
 
 .companion-property-level__value {
@@ -70,17 +68,19 @@
 }
 
 .companion__wish-list {
-  position: relative;
   @include no-list;
+
+  position: relative;
   display: flex;
   justify-content: center;
   margin-top: -15px;
   margin-bottom: 7px;
 }
 
-.companion__wish-list-item{
+.companion__wish-list-item {
   margin-right: 14px;
 }
+
 .companion__title {
   margin-left: 30px;
   text-align: center;
@@ -91,11 +91,11 @@
   text-decoration: none;
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
@@ -116,14 +116,12 @@
   margin-left: 30px;
 }
 
-
 .companion__list-prefer-item {
   position: relative;
   margin-right: 20px;
 }
 
 .companion__list-prefer-icon {
-
   fill: $basic-blue;
 }
 
@@ -154,5 +152,4 @@
 
   border-radius: 4px;
   background-color: $basic-blue-light;
-
 }

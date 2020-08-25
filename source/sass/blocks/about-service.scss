@@ -2,23 +2,23 @@
   position: relative;
   z-index: 6;
   border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+  border-bottom-left-radius: 25px;
   padding: 10px 25px;
   background: url("../img/about-mobile@1x.png") no-repeat top 84px;
 
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background: url("../img/about-mobile@2x.png") no-repeat top 84px;
-        background-size: 292px 352px;
-      }
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/about-mobile@2x.png") no-repeat top 84px;
+    background-size: 292px 352px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 4px;
     background: url("../img/about-tablet@1x.png") no-repeat;
     background-position: 97% 73%;
 
-          @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/about-tablet@2x.png");
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -27,19 +27,18 @@
     background: url("../img/about-desktop@1x.png") no-repeat;
     background-position: 100% 50px;
 
-          @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/about-desktop@2x.png");
-        background-size: 630px 665px;
-
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+      background-size: 630px 665px;
+    }
   }
 }
 
 .about-service__title {
-   @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 45px;
     padding-left: 25px;
-   }
+  }
 
   @media (min-width: $desktop-width) {
     text-align: left;
@@ -112,12 +111,12 @@
     text-transform: none;
   }
 
-    &::after {
+  &::after {
     position: absolute;
-    content:"";
-    top:40%;
-    right:10%;
-    width:10px;
+    content: "";
+    top: 40%;
+    right: 10%;
+    width: 10px;
     height: 10px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
   }
