@@ -58,14 +58,13 @@
     height: 69px;
   }
 
+  &:hover {
+    border: 2px solid #ff5c23;
+  }
+
   &--fill {
     color: $basic-white;
     background-color: $basic-blue-light;
-
-    &:hover {
-      border: 1px solid #ff5c23;
-      box-sizing: border-box;
-    }
   }
 
   &--active {
@@ -84,7 +83,7 @@
   color: $basic-blue-light;
 
   &--disabled {
-    color: #e5e5e5;
+    opacity: 0.5;
   }
 
   &--fill {

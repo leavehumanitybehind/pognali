@@ -1,3 +1,9 @@
+.profile {
+  background-color: #E5E5E5;
+  margin-top: -30px;
+  padding-top:30px;
+}
+
 .profile__container {
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +77,7 @@
   padding: 22px 30px 15px 25px;
   border-radius: 10px;
   border: 1px solid rgb(203, 206, 217);
+  margin-bottom: 30px;
 }
 
 .profile__label {
@@ -110,9 +117,28 @@
   }
 }
 
+.profile__transport {
+  @include no-list;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(203, 206, 217);
+  padding: 22px 30px 15px 25px;
+  border-radius: 10px;
+}
+
+.profile-transport__item {
+  position: relative;
+  background-color: $basic-white;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+
 .profile__label--transport {
   position: absolute;
-  top: 10px;
+  top: -10px;
   left: 30%;
 
   @media (min-width: $tablet-width) {
@@ -123,8 +149,7 @@
 
 .profile__property {
   order: 1;
-  margin-right: 80px;
-  padding-left: 20px;
+  margin-right: 50px;
 
   @media (min-width: $tablet-width) {
     order: 1;
@@ -138,10 +163,19 @@
   }
 }
 
+.profile-property-level {
+  background-color: inherit;
+  border: 3px solid $special-orange;
+  border-radius:50%;
+  width: 90px;
+  height: 90px;
+}
+
 .profile-property-level__value {
   font-size: 38px;
   font-weight: 700;
   color: $basic-blue;
+  margin-left: 20px;
 
   @media (min-width: $desktop-width) {
     color: $basic-white;
@@ -149,12 +183,12 @@
 }
 
 .profile-property-level__lvl {
-  display: block;
+  display: inline-block;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: rgb(68, 68, 68);
-  margin: 0;
+  margin-left:25px;
   padding: 2px 2px 0;
   border-top: 1px solid rgba(68, 68, 68, 0.4);
 

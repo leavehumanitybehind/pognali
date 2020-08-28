@@ -1,7 +1,8 @@
 .page-main-header {
   position: relative;
+  z-index: 1;
   background-color: $basic-blue;
-  margin-bottom: 30px;
+  padding-bottom: 10px;
   border-radius: 0 0 20px 20px;
 }
 
@@ -19,7 +20,7 @@
   color: $basic-white;
 
   @media (min-width: $desktop-width) {
-    padding-top: 130px;
+    padding-top: 60px;
     font-size: 60px;
   }
 
@@ -28,7 +29,7 @@
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -24px;
+    bottom: -34px;
     background-color: $special-orange;
     border-radius: 2.4px;
     content: "";
@@ -36,6 +37,8 @@
 }
 
 .page-main-header__link {
+  position: relative;
+  padding-left: 30px;
   display: none;
   font-weight: bold;
   font-size: 20px;
@@ -44,6 +47,15 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  &::before {
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../img/return.svg") no-repeat;
+  }
   @media (min-width: $tablet-width) {
     display: flex;
   }

@@ -3,7 +3,6 @@
   padding-bottom: 13px;
   padding-top: 10px;
   display: flex;
-  justify-content: space-around;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
@@ -14,10 +13,7 @@
     line-height: 1;
     font-weight: 500;
     flex-direction: row;
-    justify-content: center;
+    margin-left: 60px;
   }
 }
 
-.list-prefer__item {
-  margin-right: 8px;
-}

@@ -2,18 +2,19 @@
   @include no-list;
   position: relative;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  margin-bottom: 12px;
-  padding: 22px 30px 15px 25px;
-  border-radius: 10px;
-  border: 1px solid rgb(203, 206, 217);
+
+  @media(min-width: $tablet-width) {
+    margin-left: 25px;
+  }
+
+   @media(min-width: $desktop-width) {
+    margin:0 auto;
+  }
+
 }
 
 .transport__item {
   position: relative;
-  margin-right: 10px;
   background-color: $basic-white;
   width: 33px;
   height: 33px;

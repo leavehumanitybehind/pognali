@@ -48,13 +48,32 @@ openButton.addEventListener('click', function (evt) {
 closeWrapButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   wrapper.classList.remove('country-filter-popup__alphabet-wrapper--open');
+  wrapper.classList.add('country-filter-popup__alphabet-wrapper--closed');
 });
 
 //accordeon
 
-var filterItem = document.querySelectorAll('.traveller-filter-list__item');
-var option = document.querySelectorAll(".traveller-filter__option");
+var filterItem = document.querySelectorAll('.traveller-filter-list__item').forEach(item =>
+  item.addEventListener('click', () => {
+    var options = document.querySelectorAll('.traveller-filter__option').forEach(option => {
+      if (option.classList.contains('traveller-filter__option--active')) {
+      option.classList.remove('traveller-filter__option--active');
+    } else {
+      option.classList.toggle('traveller-filter__option--open');
+    }
+    })
+  }))
 
-filterItem.addEventListener('click', function () {
-  option.classList.toggle('traveller-filter__option--open');
-});
+
+
+const alphabetWrapper = document.querySelectorAll('.alphabet__wrapper');
+alphabetWrapper.forEach(wrapper => {
+  wrapper.addEventListener('click', function () {
+    if (wrapper.classList.contains('alphabet__wrapper--current')) {
+      wrapper.classList.remove('alphabet__wrapper--current');
+    } else {
+      wrapper.classList.add('alphabet__wrapper--current');
+    }
+
+  })
+})

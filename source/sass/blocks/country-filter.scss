@@ -1,6 +1,17 @@
 .country-filter {
-  background-color: #e5e5e5;
+  background-color: #e2e5f2;
   color: $basic-blue;
+  position: relative;
+  z-index: 4;
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 0 0 30px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .country-filter-popup__mobile-title {
@@ -9,6 +20,14 @@
   font-size: 16px;
   line-height: (16 / 18);
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 
   &::before {
     position: absolute;
@@ -28,22 +47,42 @@
   justify-content: space-between;
   align-items: center;
   background: #e2e5f2;
-  border-radius: 0 0 20px 20px;
+  padding-bottom: 30px;
 }
 
 .country-filter-popup__list {
   @include no-list;
-
   display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
   }
 }
 
 .country-filter-popup__alphabet-wrapper--open .country-filter-popup__list {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.country-filter-popup__item {
+  margin-bottom: 9px;
+}
+
+.country-filter-popup__link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: (18 / 16);
+  text-transform: uppercase;
+  color: #192144;
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
 }
 
 .country-filter__toggle {
@@ -78,7 +117,7 @@
   @include no-list;
   margin-bottom: 28px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }

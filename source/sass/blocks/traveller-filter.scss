@@ -17,6 +17,7 @@
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 1;
+    width: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,9 +26,20 @@
   }
 }
 
-.traveller-filter-list {
+.traveller-filter__list {
   @include no-list;
   margin-bottom: 10px;
+}
+
+.traveller-filter-list__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .traveller-filter-list__title {
@@ -42,12 +54,22 @@
   padding-top: 10px;
 
   &::after {
-    content: ">";
+    content: "";
+    background: url("../img/triangle-arrow-right.svg") no-repeat;
     position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    right: 0;
+    width: 10px;
+    height: 6px;
+    transform: rotate(90deg);
+    top: 20px;
+    right: 20px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+     @media (min-width: $desktop-width) {
+      display: block;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -64,18 +86,27 @@
   @include no-list;
 
   @media (min-width: $tablet-width) {
+    width: 520px;
     display: flex;
+    margin-top: 38px;
+    font-size: 20px;
+    margin-left: auto;
   }
 
   @media (min-width: $desktop-width) {
+    width: auto;
+    margin: 0;
     flex-direction: column;
   }
 }
 
+.traveller-filter__preferences-item {
+  @media (min-width: $tablet-width) {
+    margin-right: 30px;
+  }
+}
+
 .traveller-filter__option {
-  margin: 0;
-  padding: 0;
-  border: none;
   display: none;
 
   &--active {
@@ -84,27 +115,32 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
   }
-}
 
-.traveller-filter__option--open .traveller-filter-list__title::after {
-  content: "!";
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .traveller-filter__option--open {
   display: flex;
 }
 
+.traveller-filter__option--open .traveller-filter-list__title::after,
+.traveller-filter__option--active .traveller-filter-list__title::after {
+  transform: rotate(-90deg);
+}
+
 .traveller-filter__label {
   margin-bottom: 16px;
   position: relative;
-  display: flex;
-  align-items: center;
   font-size: 15px;
   line-height: (20 / 15);
 
   &::before {
-    display: block;
+    display: inline-block;
     margin-right: 12px;
     width: 18px;
     height: 18px;
@@ -114,15 +150,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 20;
+    font-size: 20px;
     line-height: 1;
-  }
-}
-
-.traveller-filter-list__item {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
@@ -131,13 +160,42 @@
   display: flex;
 }
 
+.range__wrap {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom:30px;
+  }
+}
+
 .range__output {
+  position: relative;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  width: 190px;
   margin-left: 0;
   margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: $basic-white url("../img/qty-minus-mobile.svg") no-repeat;
+    background-size: 30px 2px;
+    background-position: 50%;
+    width: 20px;
+    height: 8px;
+    top: 15px;
+    right: 46%;
+  }
 }
 
 .range__input::placeholder {
@@ -155,12 +213,22 @@
 }
 
 .range__input {
-  width: 90px;
-  border-radius: 5px;
+  width: 110px;
+
   padding: 10px;
-  border: none;
-  border-top: 1px solid $special-grey;
-  border-bottom: 1px solid $special-grey;
+  border: 1px solid #cbced9;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+
+  &--left {
+    border-radius: 5px 0 0 5px;
+  }
+
+  &--right {
+    border-radius: 0 5px 5px 0;
+  }
 }
 
 .traveller-filter__btn {
@@ -175,10 +243,14 @@
   border-radius: 25px;
   color: $basic-blue;
   margin-bottom: 10px;
-  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 
   @media (min-width: $desktop-width) {
     padding: 17px 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -190,6 +262,17 @@
   margin-bottom: 26px;
 
   background-color: rgba(29, 46, 91, 0.2);
+
+  @media (min-width: $tablet-width) {
+    width: 40%;
+    margin-left: 50px;
+    margin-right: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width:auto;
+    margin:0;
+  }
 }
 
 .range__toggle {
@@ -202,7 +285,7 @@
   margin-top: -5px;
   padding: 0;
 
-  background-color: $basic-blue;
+  background-color: $basic-blue-light;
   border: none;
   border-radius: 50%;
 
@@ -215,10 +298,10 @@
   &::before {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 4px;
     width: 144px;
-    height: 2px;
-    background-color: $basic-blue;
+    height: 3px;
+    background-color: $basic-blue-light;
   }
 }

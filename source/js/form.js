@@ -49,3 +49,19 @@ btns.forEach(btn => {
     input.value = newValue;
   })
 })
+
+
+//calendar popup
+var button = document.querySelector('.plan-filters__button--choose');
+var addPlanModal = document.querySelector('.add-plan-popup');
+var closeButton = document.querySelector('.add-plan-popup__close');
+
+button.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  addPlanModal.classList.add('add-plan-popup--open');
+});
+
+closeButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  addPlanModal.classList.remove('add-plan-popup--open');
+});

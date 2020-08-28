@@ -133,7 +133,7 @@
 
 .traveller-property-country {
   grid-column-start: 1;
-  grid-column-end: 1;
+  grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
 
@@ -176,8 +176,8 @@
   padding-left: 60px;
   grid-column-start: 2;
   grid-column-end: 2;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
 
   @media (min-width: $tablet-width) {
     grid-column-start: 3;
@@ -186,9 +186,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-end: 5;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
   }
 }
 
@@ -223,15 +223,6 @@
   grid-row-start: 6;
   grid-row-end: 7;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 50px;
-    right: -50px;
-    background: url("../img/heart.svg") no-repeat;
-  }
-
   @media (min-width: $tablet-width) {
     grid-column-start: 2;
     grid-column-end: 2;
@@ -247,9 +238,41 @@
     height: 50px;
     line-height: 50px;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 31px;
+    left: 50px;
+    top: -330px;
+    background: url("../img/heart.svg") no-repeat;
+    background-size: 31px 31px;
+
+    @media (min-width: $desktop-width) {
+      left: 158px;
+      top: 0px;
+      width: 50px;
+      height: 50px;
+      background-size: 51px 51px;
+    }
+  }
 }
 
 .traveller__property {
   font-size: 15px;
   line-height: (16 / 15);
+}
+
+.traveller__list-prefer-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #edeff6;
+  padding: 6px;
+  fill: rgba(#161c35, 0.15);
+
+  &--current {
+    fill: #161c35;
+  }
 }
