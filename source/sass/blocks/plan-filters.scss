@@ -41,8 +41,10 @@
     padding-bottom: 33px;
     border-bottom: 1px solid #e1e3e9;
   }
+
   &--way {
     position: relative;
+    
     &::after {
       @media (min-width: $tablet-width) {
         content: "";
