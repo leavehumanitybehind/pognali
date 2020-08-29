@@ -44,7 +44,7 @@
 
   &--way {
     position: relative;
-    
+
     &::after {
       @media (min-width: $tablet-width) {
         content: "";
