@@ -14,14 +14,37 @@
   font-size: 20px;
   line-height: 1;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+  }
+}
+
+.calendar__item {
+  position: relative;
 }
 
 .calendar__btn {
-  width: 18px;
-  height: 9px;
+  position: absolute;
+  top: 5px;
+  width: 9px;
+  height: 17px;
   border: none;
   background: url("../img/month-arrow-left.svg") no-repeat;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 34px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 
   &--next {
     background: url("../img/month-arrow-right.svg") no-repeat;
@@ -76,11 +99,15 @@
   display: none;
 }
 
-.calendar-table__link {
+.calendar-title {
   font-size: 14px;
   line-height: (18 / 14);
   text-decoration: none;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 
   &--disabled {
     opacity: 0.5;

@@ -1,0 +1,49 @@
+.alphabet-table {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 70%;
+  }
+}
+
+.alphabet__table-item {
+  display: flex;
+  width: 44px;
+  height: 42px;
+  border: 1px solid #e5e5e5;
+  background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    width: 55px;
+    height: 70px;
+  }
+
+  &--active {
+    background-color: $basic-blue-light;
+    border: none;
+  }
+
+  &:hover {
+    border: 1px solid $special_grey;
+  }
+}
+
+.alphabet__table-item--active .alphabet__table-link {
+  color: $basic-white;
+}
+
+.alphabet__table-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: $basic-blue-light;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+  }
+}

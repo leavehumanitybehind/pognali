@@ -3,11 +3,7 @@
   color: $basic-blue;
 }
 
-.page-header__container--fixed .page-header {
-  margin-bottom: 97px;
-}
-
-.page-header-wrapper {
+.page-header__wrapper {
   position: relative;
   z-index: 11;
   display: flex;

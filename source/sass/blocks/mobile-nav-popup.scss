@@ -2,49 +2,6 @@
   display: none;
 }
 
-.main-nav__toggle {
-  position: relative;
-  top: -2px;
-  right: 4px;
-  z-index: 2;
-  display: block;
-  width: 50px;
-  height: 30px;
-  background-color: inherit;
-  cursor: pointer;
-  border: none;
-
-  @media (min-width: $tablet-width) {
-    order: 2;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-
-  &::before {
-    margin-top: -10px;
-    margin-bottom: 5px;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    background-color: $basic-white;
-  }
-
-  &::after {
-    margin-top: 0;
-    margin-bottom: 5px;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    background-color: $basic-white;
-  }
-}
-
 .mobile-popup--open {
   display: block;
 
@@ -113,18 +70,16 @@
   z-index: 10;
   width: 24px;
   height: 3px;
-  transition: transform .3s,margin .1s;
+  transition: transform 0.3s, margin 0.1s;
 }
 
 .mobile-popup--open .main-nav__toggle::before {
   transform: rotate(45deg);
-
 }
 
 .mobile-popup--open .main-nav__toggle::after {
   transform: rotate(-45deg);
   top: 10px;
-
 }
 
 .page-header__container--fixed .main-nav__toggle::after,
@@ -149,12 +104,10 @@
   text-transform: uppercase;
 }
 
-
 .mobile-nav__link {
   text-decoration: none;
   color: $basic-blue;
   text-align: center;
-
 }
 
 .mobile-nav__buttons {
@@ -167,22 +120,21 @@
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-    padding-left: 60px;
-    font-size: 16px;
-    line-height: (18 / 16);
-    font-weight: bold;
-    color: #192144;
-    margin-bottom: 27px;
+  padding-left: 60px;
+  font-size: 16px;
+  line-height: (18 / 16);
+  font-weight: bold;
+  color: #192144;
+  margin-bottom: 27px;
 
-    &::before {
-      content: '';
-      position: absolute;
-  top: -8px;
-  left: 5px;
-  background-color: $basic-blue;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 5px;
+    background-color: $basic-blue;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
 }
-

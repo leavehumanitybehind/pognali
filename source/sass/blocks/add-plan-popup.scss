@@ -1,0 +1,71 @@
+.add-plan-popup {
+  display: none;
+  background-color: $basic-white;
+}
+
+.add-plan-popup__table-wrap {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding: 0 10px;
+  }
+}
+
+.add-plan-popup--open {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+}
+
+
+.add-plan-popup__close {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  z-index: 1;
+  width: 5px;
+  height: 10px;
+  border: 0;
+  background: url("../img/menu-close.svg") no-repeat;
+  cursor: pointer;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.add-plan-popup__country-list {
+  @include no-list;
+}
+
+.add-plan-popup__country-item {
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+  }
+}
+
+.add-plan-popup__country-name {
+  text-decoration: none;
+  color: $special_grey;
+
+  &:hover {
+    color: $basic-blue-light;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding: 10px;
+  }
+}

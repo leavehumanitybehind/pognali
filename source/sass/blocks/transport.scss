@@ -3,14 +3,13 @@
   position: relative;
   display: flex;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-left: 25px;
   }
 
-   @media(min-width: $desktop-width) {
-    margin:0 auto;
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
   }
-
 }
 
 .transport__item {
@@ -41,8 +40,6 @@
 
   &--plane {
     background: url("../img/plane.svg") no-repeat;
-    background-size: 16px 16px;
-    background-position: center;
   }
 
   &--bicycle {

@@ -132,7 +132,6 @@
     justify-content: center;
     color: $basic-white;
 
-
     @media (min-width: $tablet-width) {
       position: absolute;
       width: 68px;
@@ -155,8 +154,8 @@
   margin-bottom: 9px;
 
   @media (min-width: $tablet-width) {
-      padding-left:70px;
-    }
+    padding-left: 70px;
+  }
 }
 
 .business-offer__price {

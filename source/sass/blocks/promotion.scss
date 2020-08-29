@@ -137,17 +137,17 @@
     height: 16px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
   }
+}
+
+.promotion__button-text {
+  display: none;
+  color: $basic-blue-light;
+  font-size: 24px;
+  font-weight: 700;
 
   @media (min-width: $desktop-width) {
-    &::before {
-      position: absolute;
-      left: 20px;
-      top: 25px;
-      color: #1d2e5b;
-      font-size: 24px;
-      font-weight: 700;
-      content: "Регистрация";
-    }
+    display: flex;
+    line-height: 10px;
   }
 }
 

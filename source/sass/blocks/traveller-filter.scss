@@ -67,7 +67,7 @@
       display: none;
     }
 
-     @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       display: block;
     }
   }
@@ -169,7 +169,7 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-    margin-bottom:30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -270,8 +270,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width:auto;
-    margin:0;
+    width: auto;
+    margin: 0;
   }
 }
 

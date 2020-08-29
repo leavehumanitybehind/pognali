@@ -47,14 +47,14 @@
   &:active {
     opacity: 0.3;
   }
-}
 
-.nav-list__link::before {
-  position: absolute;
-  top: 100%;
-  content: attr(data-hover);
-  color: #ffd74b;
-  transform: translate3d(0, 0, 0);
+  &::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    color: #ffd74b;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .page-header__container--fixed .nav-list__link {

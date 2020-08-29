@@ -2,7 +2,7 @@
   @media (min-width: $tablet-width) {
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 70% 240px, left 0;
+    background-position: bottom 10% right 140px, top 0 left 0;
     background-size: auto, cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -20,7 +20,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/traveller-illustration-desktop@2x.png"), url("../img/globe-back-desktop@2x.jpg");
-      background-size: 431px 640px, cover;
+      background-size: 100% auto, cover;
     }
   }
 }
@@ -28,12 +28,12 @@
 .main-intro__container {
   background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 78px 130px, center -122px;
+  background-position: bottom 10% right 10%, top 80% left 0;
   background-size: auto, cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/traveller-illustration-mobile@2x.png"), url("../img/globe-back-mobile@2x.jpg");
-    background-size: 192px 255px, cover;
+    background-size: 100% auto, cover;
   }
 
   @media (min-width: $tablet-width) {

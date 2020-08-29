@@ -3,17 +3,17 @@
   z-index: 6;
   border-radius: 0 0 20px 20px;
   padding: 10px 25px;
-  background: url("../img/about-mobile@1x.png") no-repeat top 84px;
+  background: url("../img/about-mobile@1x.png") no-repeat bottom 50px left 4px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/about-mobile@2x.png") no-repeat top 84px;
-    background-size: 292px 352px;
+    background: url("../img/about-mobile@2x.png");
+    background-size: 100% auto;
   }
 
   @media (min-width: $tablet-width) {
     padding-top: 4px;
     background: url("../img/about-tablet@1x.png") no-repeat;
-    background-position: 97% 73%;
+    background-position: bottom 100px right 10px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-tablet@2x.png");
@@ -24,11 +24,11 @@
     padding-top: 115px;
     padding-bottom: 110px;
     background: url("../img/about-desktop@1x.png") no-repeat;
-    background-position: 100% 50px;
+    background-position: bottom 50px right 40px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-desktop@2x.png");
-      background-size: 630px 665px;
+      background-size: 100% auto;
     }
   }
 }

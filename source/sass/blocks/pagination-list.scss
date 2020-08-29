@@ -5,7 +5,7 @@
   background-color: $basic-white;
   border-radius: 20px;
 
-&::before {
+  &::before {
     content: "";
     position: absolute;
     top: 55px;
@@ -13,9 +13,9 @@
     width: 26px;
     height: 26px;
     background: url("../img/triangle-arrow-left.svg") no-repeat;
-}
+  }
 
-    &::after {
+  &::after {
     content: "";
     position: absolute;
     top: 55px;
@@ -23,7 +23,7 @@
     width: 26px;
     height: 26px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
-    }
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 70px;
@@ -35,13 +35,10 @@
 .pagination-list__item {
   display: none;
 
-
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
   }
 
   @media (min-width: $desktop-width) {
@@ -52,7 +49,7 @@
 .pagination-list__link {
   display: flex;
   align-items: center;
-    justify-content: center;
+  justify-content: center;
   font-weight: bold;
   font-size: 20px;
   line-height: 1;
@@ -64,6 +61,6 @@
     background-color: $basic-yellow;
     height: 50px;
     width: 50px;
-    border-radius:50%;
+    border-radius: 50%;
   }
 }

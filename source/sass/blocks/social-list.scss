@@ -5,9 +5,8 @@
   justify-content: center;
 }
 
-
 .social-list__link {
-align-items: center;
+  align-items: center;
   display: block;
   width: 45px;
   height: 45px;
@@ -24,10 +23,9 @@ align-items: center;
   }
 }
 
-  .social-icon {
-    fill: $basic-blue;
-
-  }
+.social-icon {
+  fill: $basic-blue;
+}
 
 .mobile-nav__social-list .social-list__link {
   background-color: $basic-white;
