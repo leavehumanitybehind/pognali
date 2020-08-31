@@ -27,17 +27,15 @@
   }
 }
 
-.t .tariffes__list {
+.tariffes__list {
   @include no-list;
-  padding: 0 60px;
-  margin: 30px;
+  padding: 0 20px;
+  margin: 20px;
 }
 
 .tariffes__item {
-  display: flex;
-  justify-content: space-around;
+  display: block;
   align-items: center;
-  border-bottom: 1px solid rgba(#000000, 0.05);
   border-top: 1px solid rgba(#000000, 0.05);
   padding: 8px;
 }

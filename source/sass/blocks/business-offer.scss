@@ -1,15 +1,17 @@
 .business-offer {
-  margin-top: -50px;
+  margin-top: -30px;
   position: relative;
   z-index: 3;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 25px 25px;
   padding-bottom: 40px;
-  padding-top: 78px;
+  padding-top: 48px;
   background-color: #e6e8f1;
 
   @media (min-width: $tablet-width) {
     background: #edeff6;
     margin-top: -40px;
+    padding-bottom: 90px;
+    border-radius: 0 0 55px 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,7 +28,7 @@
       content: "";
       width: 198px;
       height: 285px;
-      top: 252px;
+      top: 192px;
       right: 107px;
 
       transform: translateX(33%);
@@ -50,8 +52,9 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
-    margin-bottom: 74px;
-    padding-top: 104px;
+    margin-bottom: 84px;
+    padding-top: 60px;
+    text-align: center;
   }
 
   &::after {
@@ -59,15 +62,15 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    right: -122px;
+    right: -145px;
     top: 20px;
     background: url("../img/rates@1x.png") no-repeat;
     background-size: cover;
     content: "";
 
     @media (min-width: $tablet-width) {
-      right: 35px;
-      top: 430px;
+      right: 45px;
+      top: 400px;
     }
 
     @media (min-width: $desktop-width) {
@@ -82,7 +85,7 @@
 
 .business-offer__list {
   @include no-list;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   counter-reset: myCounter;
 
   @media (min-width: $tablet-width) {
@@ -92,18 +95,23 @@
 
 .business-offer__list-item {
   position: relative;
-  padding: 13px 20px;
+  padding: 13px 25px;
   font-weight: 300;
   font-size: 16px;
   line-height: 1;
   color: $special-grey;
+  border-top: 1px solid #E1E3E9;
+
+  &:last-child {
+border-bottom: 1px solid #E1E3E9;
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     font-size: 28px;
     line-height: 1;
-    margin-bottom: 17px;
+    margin-bottom: 4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -122,8 +130,8 @@
     background-color: #ffa530;
     border-radius: 50%;
     text-align: center;
-    right: -15px;
-    top: 0;
+    right: 0px;
+    top: 5px;
     font-size: 16px;
     font-weight: normal;
     line-height: 0.88;
@@ -137,7 +145,8 @@
       width: 68px;
       height: 68px;
       top: -10px;
-      left: 10px;
+      left: 0px;
+      font-size: 21px;
     }
 
     &:nth-child(2)::before {
@@ -151,15 +160,19 @@
 }
 
 .business-offer__service {
-  margin-bottom: 9px;
+  margin-bottom: 6px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 70px;
+    padding-left: 64px;
   }
 }
 
 .business-offer__price {
   position: relative;
+
+    @media (min-width: $tablet-width) {
+    padding-left: 64px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-left: auto;
@@ -169,7 +182,7 @@
 
 .business-offer__link {
   position: relative;
-  padding-left: 10px;
+  padding-left: 3px;
   margin-left: 24px;
   font-weight: bold;
   font-size: 16px;
@@ -178,14 +191,17 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 85px;
+    margin-bottom: 15px;
+    padding-left: 63px;
     font-size: 20px;
     line-height: 1;
+  }
+
 
     @media (min-width: $desktop-width) {
       padding-left: 95px;
     }
-  }
+
 
   &:hover {
     opacity: 0.7;
@@ -206,10 +222,10 @@
     background-size: cover;
     content: "";
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       width: 68px;
       height: 68px;
-      left: 10px;
+      left: -22px;
       top: -25px;
       background: #e2e5f2 url("../img/user.svg") no-repeat center;
       background-size: 20px 20px;

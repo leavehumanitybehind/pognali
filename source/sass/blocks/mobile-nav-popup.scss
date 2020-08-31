@@ -2,6 +2,8 @@
   display: none;
 }
 
+
+
 .mobile-popup--open {
   display: block;
 
@@ -13,12 +15,13 @@
 .mobile-nav-popup__nav {
   display: none;
   position: fixed;
-  top: 50px;
+  top: 70px;
   left: 0;
   right: 0;
-  z-index: 20;
+  z-index: 30;
   background-color: $basic-white;
   width: 320px;
+  height: 568px;
 
   @media (min-width: $tablet-width) {
     top: 100px;
@@ -30,6 +33,7 @@
   display: block;
   margin: 0 auto;
 }
+
 
 .mobile-nav__list {
   @include no-list;

@@ -1,35 +1,22 @@
 .page-header {
-  position: relative;
+  position: fixed;
+  top: 0;
   color: $basic-blue;
-}
-
-.page-header__wrapper {
-  position: relative;
-  z-index: 11;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 270px;
-  margin: 0 auto;
-  padding: 0;
 
   @media (min-width: $tablet-width) {
-    width: 668px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1320px;
-    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
 }
 
 .page-header__container {
-  padding: 27px 0 40px 0;
+  width: 320px;
+  padding: 32px 25px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    min-height: 132px;
-    padding: 40px 40px 0;
+    padding: 44px 40px 0;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -40,26 +27,35 @@
 }
 
 .page-header__container--fixed {
-  position: fixed;
-  width: 320px;
-  top: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 20;
   background-color: $basic-white;
-
-  @media (min-width: $tablet-width) {
-    width: 768px;
-    margin-left: 0;
-  }
 
   @media (min-width: $desktop-width) {
     width: 100%;
     margin-left: 0;
   }
 }
+.page-header__wrapper {
+  position: relative;
+  z-index: 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+
 
 .page-header img {
-  width: 106px;
-  height: 16px;
+  width: 100px;
+  height: 20px;
 
   @media (min-width: $tablet-width) {
     width: 166px;

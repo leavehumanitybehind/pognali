@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
 
-  padding-bottom: 30px;
+  padding-bottom: 18px;
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
@@ -32,23 +32,23 @@
   margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 63px;
+    margin-bottom: 40px;
   }
 }
 
 .contacts-list__number {
-  padding-left: 55px;
+  padding-left: 63px;
   position: relative;
 
 
   @media (min-width: $tablet-width) {
-    padding-left: 105px;
+    padding-left: 124px;
   }
 
   &::before {
     position: absolute;
     content: "";
-    top: -10px;
+    top: -12px;
     left: 0;
     width: 45px;
     height: 45px;
@@ -59,8 +59,8 @@
     @media (min-width: $tablet-width) {
       width: 68px;
       height: 68px;
-      top: -22px;
-      left: 25px;
+      top: -18px;
+      left: 34px;
       background-size: 23px;
     }
 
@@ -75,17 +75,17 @@
 }
 
 .contacts-list__mail {
-  padding-left: 55px;
+  padding-left: 61px;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding-left: 105px;
+    padding-left: 124px;
   }
 
   &::before {
     position: absolute;
     content: "";
-    top: -10px;
+    top: -12px;
     left: 0;
     width: 45px;
     height: 45px;
@@ -96,8 +96,8 @@
     @media (min-width: $tablet-width) {
       width: 68px;
       height: 68px;
-      top: -22px;
-      left: 25px;
+      top: -18px;
+      left: 34px;
       background-size: 23px;
     }
 

@@ -1,23 +1,40 @@
 .directions {
-  margin-top: -30px;
+  margin-top: -20px;
   border-radius: 0 0 20px 20px;
 
   position: relative;
   z-index: 5;
 
   padding-top: 68px;
-  padding-bottom: 48px;
+  padding-bottom: 51px;
   background: #edeff6;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 112px;
-    background: #edeff6 url("../img/flags-back@1x.png") no-repeat 78% 158px;
+    border-radius: 0 0 55px 55px;
+    margin-top: -50px;
+    padding-top: 82px;
+    padding-bottom: 82px;
+    padding-left: 10px;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom 78% right 45px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+      background-position: top 50% right 37%, top 32% left 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 100px;
+    padding-top: 170px;
     padding-bottom: 80px;
-    background: #edeff6 url("../img/flags-back@1x.png") no-repeat 94% 88px;
+    padding-left: 55px;
+    background-position: top 95% right 88px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+      background-position: top 56% right 37%, top 32% left 0;
+    }
   }
 }
 
@@ -38,7 +55,7 @@
 
 .directions__title {
   @media (min-width: $tablet-width) {
-    margin-bottom: 63px;
+    margin-bottom: 62px;
   }
 }
 
@@ -52,10 +69,10 @@
   color: $special-grey;
 
   @media (min-width: $tablet-width) {
-    width: 371px;
-    margin-bottom: 152px;
+    width: 288px;
+    margin-bottom: 70px;
     font-size: 28px;
-    line-height: (28 / 33);
+    line-height: (33 / 28);
   }
 }
 
@@ -63,6 +80,10 @@
   @include no-list;
   margin-bottom: 48px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
 
   &::after {
     @media (min-width: $tablet-width) {
@@ -95,7 +116,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 150px;
+    margin-right: 107px;
     order: -1;
     margin-top: 30px;
   }
@@ -103,20 +124,26 @@
 
 .directions__show-all-btn {
   position: relative;
-  margin-bottom: 80px;
-  padding: 24px 142px 22px 22px;
+  padding: 21px 141px 20px 24px;
   text-transform: none;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 0.6;
   border-radius: 10px;
 
   @media (min-width: $tablet-width) {
+    display: block;
     width: 616px;
+    margin-left: 25px;
+    padding: 28px 29px;
+    font-size: 24px;
+    line-height: 1;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    bottom: 100px;
-    right: 350px;
+    bottom: 130px;
+    right: 300px;
     width: 275px;
   }
 
@@ -124,9 +151,15 @@
     position: absolute;
     content: "";
     top: 40%;
-    right: 10%;
+    right: 8%;
     width: 10px;
     height: 10px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 14px;
+      height: 14px;
+      right: 5%;
+    }
   }
 }

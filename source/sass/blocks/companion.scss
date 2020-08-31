@@ -1,9 +1,9 @@
 .companion {
   position: relative;
   background-color: $basic-white;
-  width: 270px;
-  margin-bottom: 15px;
-  border-radius: 25px;
+  width: 285px;
+  margin-bottom: 8px;
+  border-radius: 10px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
@@ -20,11 +20,15 @@
 
 .companion__photo {
   border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    width:100%;
+  }
 }
 
 .companion__wrapper {
   border-radius: 25px;
-  padding: 0 40px;
+  padding: 0 30px;
   background-color: $basic-white;
 }
 
@@ -75,21 +79,36 @@
   display: flex;
   justify-content: center;
   margin-top: -15px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+  margin-left: 32px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 13px;
+        margin-bottom: 12px;
+      }
 }
 
 .companion__wish-list-item {
-  margin-right: 14px;
+  margin-right: 28px;
+
+    @media (min-width: $tablet-width) {
+    margin-right: 14px;
+  }
 }
 
 .companion__title {
-  margin-left: 30px;
+  margin-left: 40px;
   text-align: center;
   font-weight: bold;
   font-size: 21px;
   line-height: 1;
   color: $basic-blue-light;
   text-decoration: none;
+
+    @media (min-width: $tablet-width) {
+    font-size: 24px;
+line-height: (22/ 24);
+    }
 
   &:hover {
     opacity: 0.7;
@@ -107,19 +126,31 @@
   text-align: center;
   color: $special-grey;
   margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+
+  font-size: 20px;
+line-height: (23 /20);
+margin-bottom: 30px;
+  }
 }
 
 .companion__list-prefer {
   @include no-list;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 16px;
-  margin-left: 30px;
+  padding-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .companion__list-prefer-item {
   position: relative;
-  margin-right: 20px;
+  width: 33px;
+  height: 33px;
 }
 
 .companion__list-prefer-icon {

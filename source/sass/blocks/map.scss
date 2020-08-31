@@ -1,15 +1,23 @@
 .map {
   position: relative;
-  z-index: 0;
   margin-top: -20px;
-  height: 320px;
+  height: 299px;
   width: 100%;
 
-  @media (min-width: $tablet-width) {
-    height: 562px;
+   @media (min-width: $tablet-width) {
+height: 514px;
+  }
+}
+
+.map__img {
+  width: 100%;
+  height: 289px;
+
+    @media (min-width: $tablet-width) {
+height: 581px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 498px;
+    height: 400px;
   }
 }

@@ -1,27 +1,30 @@
 .companions {
   position: relative;
   z-index: 4;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-radius: 0 0 25px 25px;
   padding-top: 80px;
   margin-top: -30px;
-  background: $basic-medium-blue;
+  background-color: $basic-medium-blue;
 
   @media (min-width: $tablet-width) {
-    padding-top: 130px;
+    border-radius: 0 0 55px 55px;
+    margin-top: -50px;
+    padding-top: 147px;
+    padding-bottom: 70px;
     background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
     background-repeat: no-repeat, no-repeat;
-    background-position: 409px 100px, 40px 420px;
+    background-position: top 15% right 15%, top 47% left 6%;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 100px;
+    padding-top: 152px;
     background-position: 309px 400px, 450px 170px;
   }
 }
 
 .companions__title {
   position: relative;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
@@ -43,7 +46,7 @@
 }
 
 .companions__container {
-  padding-bottom: 65px;
+  padding-bottom: 48px;
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -57,6 +60,7 @@
   @media (min-width: $tablet-width) {
     width: 430px;
     margin-bottom: 60px;
+    padding-left: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -67,7 +71,7 @@
 .companions__description {
   width: 217px;
   margin-left: 26px;
-  margin-bottom: 62px;
+  margin-bottom: 56px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
@@ -75,21 +79,24 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
+    margin-bottom: 50px;
     font-size: 28px;
     line-height: (34 / 28);
   }
 }
 
 .companions__description--thesis {
+  margin-bottom: 21px;
   @media (min-width: $tablet-width) {
     width: 427px;
-    margin-bottom: 49px;
+    margin-bottom: 40px;
   }
 }
 
 .companions__description--tagline {
+  font-weight: bold;
+
   @media (min-width: $tablet-width) {
-    font-weight: bold;
     font-size: 21px;
     line-height: (24 / 21);
   }
@@ -101,9 +108,10 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
+    grid-template-columns: 285px 285px;
+    padding: 0 34px;
     gap: 50px;
+    margin-bottom: 27px;
   }
 
   @media (min-width: $desktop-width) {
@@ -118,7 +126,9 @@
   text-transform: none;
 
   @media (min-width: $tablet-width) {
-    padding-right: 444px;
+    padding:23px 444px 22px 23px;
+    font-size: 24px;
+    margin-left: 34px;
   }
 
   @media (min-width: $desktop-width) {

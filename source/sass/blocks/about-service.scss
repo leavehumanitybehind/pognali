@@ -1,53 +1,69 @@
 .about-service {
   position: relative;
   z-index: 6;
-  border-radius: 0 0 20px 20px;
-  padding: 10px 25px;
-  background: url("../img/about-mobile@1x.png") no-repeat bottom 50px left 4px;
+  padding: 18px 1px;
+  border-radius: 30px;
+  background-color: #192144;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  background-position: bottom 30px left 18px;
+  padding-bottom: 20px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/about-mobile@2x.png");
-    background-size: 100% auto;
+    background-image: url("../img/about-mobile@2x.png");
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 4px;
-    background: url("../img/about-tablet@1x.png") no-repeat;
-    background-position: bottom 100px right 10px;
+    border-radius: 55px;
+    padding: 4px ;
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom 63% right 0px;
+    background-size: 50% 80%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-tablet@2x.png");
+      background-size: 50% 90%;
+      background-position: bottom 10px right 80px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 115px;
-    padding-bottom: 110px;
-    background: url("../img/about-desktop@1x.png") no-repeat;
-    background-position: bottom 50px right 40px;
+    padding-bottom: 87px;
+    background-image: url("../img/about-desktop@1x.png");
+    background-size: 40% 90%;
+    background-position: bottom 0px right 105px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-desktop@2x.png");
-      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-size: 50% 90%;
+      background-position: bottom 30px right 40px;
     }
   }
+
 }
 
 .about-service__title {
+text-align: left;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
-    padding-left: 25px;
+    margin-bottom: 42px;
+    padding-left: 6px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
+    padding-left: 38px;
     margin-bottom: 60px;
   }
 }
 
 .about-service__description {
   margin-left: 24px;
-  margin-bottom: 90px;
+  margin-bottom: 65px;
   width: 210px;
   font-weight: 300;
   font-size: 16px;
@@ -55,33 +71,45 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-    margin-left: 52px;
-    width: 309px;
-    font-size: 28px;
-    line-height: (33 /28);
+    margin-bottom: 32px;
+    margin-left: 30px;
+
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 90px;
+    padding-left: 38px;
   }
 }
 
 .about-service__description--thesis {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    font-size: 28px;
+    line-height: (33 /28);
+    margin-bottom: 32px;
+  }
   @media (min-width: $desktop-width) {
     width: 619px;
-    margin-bottom: 40px;
+    margin-bottom: 44px;
     font-size: 28px;
     line-height: (34 /28);
   }
 }
 
 .about-service__description--tagline {
-  @media (min-width: $desktop-width) {
-    width: 425px;
+font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
     font-size: 21px;
-    font-weight: bold;
     line-height: (24 / 21);
+  }
+
+  @media (min-width: $desktop-width) {
+    width:450px;
   }
 }
 
@@ -99,14 +127,16 @@
     display: block;
     padding: 29px 32px;
     width: 276px;
+    margin-left: 26px;
     border-radius: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 85px;
+    text-transform: none;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 22px 130px 22px 22px;
-    border-radius: 10px;
-    margin-left: 14px;
+    padding: 23px 130px 28px 22px;
+    border-radius: 20px;
+    margin-left: 68px;
     text-transform: none;
   }
 

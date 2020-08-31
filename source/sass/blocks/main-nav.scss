@@ -15,18 +15,20 @@
 
 .main-nav__toggle {
   position: relative;
-  top: -2px;
-  right: 4px;
+  top: 0;
+  right: 0;
   z-index: 2;
   display: block;
-  width: 50px;
-  height: 30px;
+  width: 30px;
+  height: 20px;
   background-color: inherit;
   cursor: pointer;
   border: none;
 
   @media (min-width: $tablet-width) {
     order: 2;
+    top: 2px;
+  right: -10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,6 +44,7 @@
     width: 24px;
     height: 3px;
     background-color: $basic-white;
+    border-radius: 2px;
   }
 
   &::after {
@@ -53,6 +56,7 @@
     width: 24px;
     height: 3px;
     background-color: $basic-white;
+    border-radius: 2px;
   }
 }
 
