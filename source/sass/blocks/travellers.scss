@@ -1,12 +1,17 @@
 .travellers {
   position: relative;
-  z-index: 3;
-  background: #e5e5e5;
-  margin-top: -80px;
-  padding-top: 180px;
+  z-index: 0;
+  margin: -40px auto 0;
+  background: #edeff6;
 }
 
 .travellers__wrapper {
+      padding:  40px 2px 7px;
+
+      @media (min-width: $tablet-width) {
+    padding:  50px 2px 7px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
   }
@@ -24,6 +29,7 @@
   display: block;
   position: relative;
   padding-left: 30px;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 17px;
   line-height: (30 / 17);
@@ -38,9 +44,9 @@
     content: "";
     position: absolute;
     top: 5px;
-    left: 0;
-    width: 26px;
-    height: 26px;
+    left: 58px;
+    width: 17px;
+    height: 17px;
     background: url("../img/qty-plus.svg") no-repeat;
 
     @media (min-width: $desktop-width) {
@@ -58,4 +64,8 @@
     order: 2;
     align-self: flex-start;
   }
+}
+
+.travellers__pagination {
+    padding-bottom: 75px;
 }

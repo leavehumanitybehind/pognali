@@ -18,7 +18,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 117px 300px 80px;
+    padding: 100px 140px 30px 398px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -112,7 +112,8 @@ border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 27px 42px 28px 20px;
+    width: auto;
+    padding: 27px 65px 28px 20px;
   }
 
   &::after {

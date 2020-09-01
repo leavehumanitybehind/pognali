@@ -1,5 +1,4 @@
 .page-header {
-  position: fixed;
   top: 0;
   color: $basic-blue;
 
@@ -11,7 +10,8 @@
 
 .page-header__container {
   width: 320px;
-  padding: 32px 25px;
+  padding:32px 25px 14px 25px;
+
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -24,6 +24,15 @@
     min-height: 100px;
     padding-top: 49px;
   }
+}
+
+.page-header__container--catalog {
+    padding:18px 25px 27px 25px;
+
+     @media (min-width: $tablet-width) {
+       padding:48px 44px 27px 35px;
+     }
+
 }
 
 .page-header__container--fixed {

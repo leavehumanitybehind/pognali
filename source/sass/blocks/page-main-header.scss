@@ -1,27 +1,36 @@
 .page-main-header {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   background-color: $basic-blue;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 0 0 55px 55px;
+  }
 }
 
 .page-main-header__container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-top: 22px;
+  padding-bottom: 15px;
 }
 
 .page-main-header__title {
+  margin: 0;
   position: relative;
   font-weight: bold;
   font-size: 36px;
   line-height: 1;
   color: $basic-white;
 
-  @media (min-width: $desktop-width) {
-    padding-top: 60px;
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
     font-size: 60px;
+    padding-left: 28px;
+    padding-bottom: 60px;
   }
 
   &::after {
@@ -29,7 +38,7 @@
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -34px;
+    bottom: -16px;
     background-color: $special-orange;
     border-radius: 2.4px;
     content: "";
@@ -38,7 +47,8 @@
 
 .page-main-header__link {
   position: relative;
-  padding-left: 30px;
+  padding-right: 100px;
+  padding-top: 10px;
   display: none;
   font-weight: bold;
   font-size: 20px;
@@ -47,11 +57,11 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &::before {
+  &::after {
     position: absolute;
     content: "";
     top: 30%;
-    left: 0;
+    right: 0;
     width: 20px;
     height: 20px;
     background: url("../img/return.svg") no-repeat;

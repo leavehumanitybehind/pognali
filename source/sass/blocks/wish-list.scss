@@ -1,7 +1,8 @@
 .wish-list {
   @include no-list;
 
-  padding-top: 10px;
+  padding-top: 13px;
+    padding-left: 16px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -15,7 +16,6 @@
 }
 
 .wish-list__item {
-  padding: 7px;
 
   @media (min-width: $tablet-width) {
     margin-right: 29px;

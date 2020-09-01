@@ -7,6 +7,10 @@
    @media (min-width: $tablet-width) {
 height: 514px;
   }
+
+   @media (min-width: $desktop-width) {
+    height: 444px;
+  }
 }
 
 .map__img {
@@ -18,6 +22,6 @@ height: 581px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 400px;
+    height: 464px;
   }
 }

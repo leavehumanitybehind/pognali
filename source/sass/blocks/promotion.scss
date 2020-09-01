@@ -12,10 +12,16 @@
     padding-top: 80px;
     padding-bottom: 28px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 115px;
+    padding-bottom: 75px;
+
+  }
 }
 
 .promotion__title {
-padding: 0 7px;
+  padding: 0 7px;
   @media (min-width: $tablet-width) {
     margin-bottom: 61px;
     text-align: center;
@@ -23,7 +29,7 @@ padding: 0 7px;
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    margin-bottom: 49px;
+    margin-bottom: 55px;
   }
 }
 
@@ -46,7 +52,7 @@ padding: 0 7px;
 
   @media (min-width: $desktop-width) {
     width: 616px;
-    margin-bottom: 75px;
+    margin-bottom: 63px;
   }
 }
 
@@ -66,6 +72,7 @@ padding: 0 7px;
 
   @media (min-width: $desktop-width) {
     width: auto;
+    margin-bottom: 80px;
   }
 }
 
@@ -107,8 +114,18 @@ padding: 0 7px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 800px;
-    margin-left: 132px;
+    width: 880px;
+    margin-left: 72px;
+    margin-bottom: 40px;
+  }
+
+  &::placeholder {
+    @media (min-width: $desktop-width) {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 1;
+      color: rgba($special-grey, 0.3);
+    }
   }
 }
 
@@ -117,21 +134,22 @@ padding: 0 7px;
   border-radius: 10px;
   position: absolute;
   padding: 32px;
-  top:2px;
+  top: 2px;
   right: 0;
   background-color: $basic-yellow;
 
   @media (min-width: $tablet-width) {
     padding: 40px;
     right: 42px;
-    border-radius:0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 330px;
-    height: 78px;
+    height: 81px;
     padding: 36px;
-    right: 220px;
+    right: 70px;
+    top: 0;
   }
 
   &::after {
@@ -142,6 +160,11 @@ padding: 0 7px;
     width: 14px;
     height: 16px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
+
+    @media (min-width: $desktop-width) {
+      top: 40%;
+      right: 12%;
+    }
   }
 }
 

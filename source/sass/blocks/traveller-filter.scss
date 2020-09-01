@@ -15,6 +15,8 @@
   color: $basic-blue-light;
 
   @media (min-width: $tablet-width) {
+        margin-top: 38px;
+        margin-bottom: 34px;
     font-size: 30px;
     line-height: 1;
     width: auto;
@@ -32,6 +34,7 @@
 }
 
 .traveller-filter-list__item {
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: baseline;
@@ -43,6 +46,9 @@
 }
 
 .traveller-filter-list__title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-left: 5px;
   position: relative;
   font-style: normal;
   font-weight: bold;
@@ -83,7 +89,11 @@
 }
 
 .traveller-filter__preferences {
+
   @include no-list;
+
+      padding-top: 3px;
+      padding-bottom: 11px;
 
   @media (min-width: $tablet-width) {
     width: 520px;
@@ -101,6 +111,7 @@
 }
 
 .traveller-filter__preferences-item {
+  margin-bottom: 7px;
   @media (min-width: $tablet-width) {
     margin-right: 30px;
   }
@@ -141,7 +152,7 @@
 
   &::before {
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 9px;
     width: 18px;
     height: 18px;
     background-color: $basic-white;
@@ -177,7 +188,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   margin-left: 0;
   margin-top: 10px;
 
@@ -239,10 +250,10 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  padding: 13px 72px;
+  padding: 13px 70px;
   border-radius: 25px;
   color: $basic-blue;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -259,7 +270,7 @@
 
   width: 100%;
   height: 2px;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 
   background-color: rgba(29, 46, 91, 0.2);
 

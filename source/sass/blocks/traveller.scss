@@ -1,8 +1,8 @@
 .traveller {
-  padding: 22px;
+  padding: 14px 20px 19px 6px;
   display: grid;
   grid-template-columns: 44% 56%;
-  grid-template-rows: 42px 38px 20% 35% 20% 10% 10%;
+  grid-template-rows: 42px 38px 14% 30% 20% 10% 10%;
   position: relative;
   border-radius: 20px;
   margin-bottom: 11px;
@@ -56,6 +56,7 @@
 }
 
 .traveller__title {
+  margin-left: -9px;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -80,6 +81,8 @@
 }
 
 .traveller__likes {
+  padding-top: 5px;
+    margin-left: -9px;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -107,6 +110,9 @@
 }
 
 .traveller__hashtags {
+  margin: 0;
+  padding-left: 18px;
+    padding-top: 2px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -173,7 +179,7 @@
 }
 
 .traveller-property-level {
-  padding-left: 60px;
+  padding-left: 75px;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 5;
@@ -193,6 +199,8 @@
 }
 
 .traveller__property-title {
+  padding-left: 18px;
+    padding-top: 7px;
   font-weight: normal;
   font-size: 15px;
   line-height: (16 / 14);
@@ -204,6 +212,7 @@
 }
 
 .traveller-property-level__value {
+  padding-left: 20px;
   font-weight: bold;
   font-size: 24px;
   line-height: 1;
@@ -215,7 +224,11 @@
   font-size: 20px;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-top: 5px;
+    margin-left: 9px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
   border-radius: 25px;
   text-align: center;
   grid-column-start: 1;

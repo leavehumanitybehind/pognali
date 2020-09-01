@@ -8,8 +8,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 55px;
-    right: 80px;
+    top: 15px;
+    right: 180px;
     width: 26px;
     height: 26px;
     background: url("../img/triangle-arrow-left.svg") no-repeat;
@@ -18,8 +18,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 55px;
-    right: 30px;
+    top: 15px;
+    right: 50px;
     width: 26px;
     height: 26px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
@@ -33,7 +33,12 @@
 }
 
 .pagination-list__item {
-  display: none;
+  display: block;
+  height: 50px;
+  border-radius: 20px;
+  width: 50%;
+  background-color: $basic-white;
+
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -47,15 +52,19 @@
 }
 
 .pagination-list__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: $basic-blue-light;
-  text-decoration: none;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $basic-blue-light;
+    text-decoration: none;
+  }
 
   &--current {
     background-color: $basic-yellow;
