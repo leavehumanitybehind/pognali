@@ -14,7 +14,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding-top: 212px;
+    padding-top: 171px;
   }
 }
 
@@ -75,6 +75,6 @@
   padding-bottom: 75px;
 
   @media (min-width: $tablet-width) {
-  padding-bottom: 90px;
-}
+    padding-bottom: 90px;
+  }
 }

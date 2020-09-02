@@ -1,6 +1,6 @@
 .page-footer {
   position: relative;
-  z-index: 1;
+  z-index: 4;
   margin-top: -28px;
   border-radius: 25px 25px 0 0;
   background-color: $basic-white;
@@ -25,7 +25,7 @@
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
-    padding:40px 55px;
+    padding: 40px 55px;
   }
 }
 
@@ -33,7 +33,7 @@
   margin: 0 auto 34px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 ;
+    margin: 0;
   }
 }
 
@@ -52,9 +52,9 @@
 .page-footer__copyright {
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   padding-top: 13px;
-  border-top: 1px solid #F2F2F2;
+  border-top: 1px solid #f2f2f2;
 
   @media (min-width: $tablet-width) {
     border: none;

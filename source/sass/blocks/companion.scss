@@ -1,7 +1,6 @@
 .companion {
   position: relative;
   background-color: $basic-white;
-  width: 285px;
   margin-bottom: 8px;
   border-radius: 10px;
 
@@ -9,8 +8,6 @@
     margin-bottom: 10px;
     border-radius: 20px;
   }
-
-
 }
 
 .companion:hover .companion__photo {
@@ -25,7 +22,7 @@
   border-radius: 10px;
 
   @media (min-width: $tablet-width) {
-    width:100%;
+    width: 100%;
     border-radius: 20px;
   }
 }
@@ -86,16 +83,16 @@
   margin-bottom: 10px;
   margin-left: 32px;
 
-      @media (min-width: $tablet-width) {
-        margin-left: 13px;
-        margin-bottom: 12px;
-      }
+  @media (min-width: $tablet-width) {
+    margin-left: 13px;
+    margin-bottom: 12px;
+  }
 }
 
 .companion__wish-list-item {
   margin-right: 28px;
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-right: 14px;
   }
 }
@@ -109,10 +106,10 @@
   color: $basic-blue-light;
   text-decoration: none;
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 24px;
-line-height: (22/ 24);
-    }
+    line-height: (22/ 24);
+  }
 
   &:hover {
     opacity: 0.7;
@@ -132,10 +129,9 @@ line-height: (22/ 24);
   margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-
-  font-size: 20px;
-line-height: (23 /20);
-margin-bottom: 30px;
+    font-size: 20px;
+    line-height: (23 /20);
+    margin-bottom: 30px;
   }
 }
 

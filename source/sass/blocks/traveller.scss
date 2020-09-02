@@ -13,11 +13,12 @@
     grid-template-columns: 1fr 1fr 20%;
     grid-template-rows: 39px 61px 1fr 1fr 1fr;
     margin-bottom: 40px;
-    padding: 33px 20px
+    padding: 33px 20px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 84px;
+    margin-bottom: 35px;
     height: 285px;
     grid-template-columns: 320px 1fr 1fr;
     grid-template-rows: 70px 31px 1fr 1fr;
@@ -69,7 +70,7 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
-        margin-left: -26px;
+    margin-left: -26px;
     grid-column-start: 2;
     grid-column-end: 3;
     font-size: 30px;
@@ -84,7 +85,7 @@
 
 .traveller__likes {
   padding-top: 5px;
-    margin-left: -9px;
+  margin-left: -9px;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -96,7 +97,7 @@
   color: $basic-blue;
 
   @media (min-width: $tablet-width) {
-        margin-left: 12px;
+    margin-left: 12px;
     font-size: 20px;
     line-height: 1;
     grid-column-end: 3;
@@ -115,7 +116,7 @@
 .traveller__hashtags {
   margin: 0;
   padding-left: 18px;
-    padding-top: 2px;
+  padding-top: 2px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -126,8 +127,8 @@
   color: $special-grey;
 
   @media (min-width: $tablet-width) {
-  padding-left: 0;
-  margin-left: -24px;
+    padding-left: 0;
+    margin-left: -24px;
     padding-top: 11px;
     grid-column-start: 2;
     grid-column-end: 2;
@@ -200,8 +201,8 @@
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 4;
-        margin-top: -8px;
-        padding-left: 55px;
+    margin-top: -8px;
+    padding-left: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -214,7 +215,7 @@
 
 .traveller__property-title {
   padding-left: 18px;
-    padding-top: 7px;
+  padding-top: 7px;
   font-weight: normal;
   font-size: 15px;
   line-height: (16 / 14);
@@ -226,11 +227,10 @@
     }
   }
 
-    &--level {
+  &--level {
     @media (min-width: $tablet-width) {
       display: none;
     }
-
   }
 
   @media (min-width: $desktop-width) {
@@ -252,10 +252,10 @@
   line-height: 1;
   text-transform: uppercase;
   margin-top: 5px;
-    margin-left: 9px;
-    margin-bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 30px;
+  margin-left: 9px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
   border-radius: 25px;
   text-align: center;
   grid-column-start: 1;
@@ -278,7 +278,6 @@
   @media (min-width: $desktop-width) {
     width: 150px;
     height: 50px;
-    line-height: 50px;
     margin-left: 29px;
   }
 
@@ -291,7 +290,6 @@
     top: -330px;
     background: url("../img/heart.svg") no-repeat;
     background-size: 31px 31px;
-
 
     @media (min-width: $tablet-width) {
       left: 148px;

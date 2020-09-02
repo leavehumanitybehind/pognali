@@ -15,10 +15,10 @@
     background: url("../img/triangle-arrow-left.svg") no-repeat;
 
     @media (min-width: $tablet-width) {
-    width: 10px;
-    height: 20px;
-    top: 45px;
-    right: 90px;
+      width: 10px;
+      height: 20px;
+      top: 45px;
+      right: 90px;
     }
   }
 
@@ -31,21 +31,20 @@
     height: 26px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
 
-     @media (min-width: $tablet-width) {
-    width: 10px;
-    height: 20px;
-    top: 45px;
-    right: 45px;
+    @media (min-width: $tablet-width) {
+      width: 10px;
+      height: 20px;
+      top: 45px;
+      right: 45px;
     }
   }
+
   @media (min-width: $tablet-width) {
     padding: 24px 22px 24px 29px;
-
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
-    padding: 42px;
+    margin-bottom: 0;
     width: 75%;
   }
 }
@@ -60,9 +59,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-       justify-content: center;
+    justify-content: center;
     width: 50px;
-
   }
 
   @media (min-width: $desktop-width) {

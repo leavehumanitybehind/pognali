@@ -106,10 +106,10 @@
   font-size: 16px;
   line-height: 1;
   color: $special-grey;
-  border-top: 1px solid #E1E3E9;
+  border-top: 1px solid #e1e3e9;
 
   &:last-child {
-border-bottom: 1px solid #E1E3E9;
+    border-bottom: 1px solid #e1e3e9;
   }
 
   @media (min-width: $tablet-width) {
@@ -136,7 +136,7 @@ border-bottom: 1px solid #E1E3E9;
     background-color: #ffa530;
     border-radius: 50%;
     text-align: center;
-    right: 0px;
+    right: 0;
     top: 5px;
     font-size: 16px;
     font-weight: normal;
@@ -151,7 +151,7 @@ border-bottom: 1px solid #E1E3E9;
       width: 68px;
       height: 68px;
       top: -10px;
-      left: 0px;
+      left: 0;
       font-size: 21px;
     }
 
@@ -180,7 +180,7 @@ border-bottom: 1px solid #E1E3E9;
 .business-offer__price {
   position: relative;
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-left: 64px;
   }
 
@@ -207,11 +207,9 @@ border-bottom: 1px solid #E1E3E9;
     line-height: 1;
   }
 
-
-    @media (min-width: $desktop-width) {
-      padding-left: 135px;
-    }
-
+  @media (min-width: $desktop-width) {
+    padding-left: 135px;
+  }
 
   &:hover {
     opacity: 0.7;

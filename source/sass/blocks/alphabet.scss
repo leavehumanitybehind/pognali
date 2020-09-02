@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0px 20px 0px 40px;
+    padding: 0 20px 0 40px;
     width: auto;
   }
 }
@@ -22,7 +22,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     margin-right: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 29px;
     width: 210px;
   }
 
@@ -91,12 +91,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin:0 ;
+    margin: 0;
     margin-left: -19px;
     font-weight: bold;
     font-size: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     opacity: 1;
+    margin-top: 25px;
   }
 }
 

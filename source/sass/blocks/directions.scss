@@ -21,7 +21,8 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/flags-back@2x.png");
-      background-position: top 50% right 37%, top 32% left 0;
+      background-size: 40% 60%;
+      background-position: top 26% right 7%, top 32% left 0;
     }
   }
 
@@ -33,7 +34,8 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/flags-back@2x.png");
-      background-position: top 56% right 37%, top 32% left 0;
+      background-size: 30% 70%;
+      background-position: top 56% right 7%, top 32% left 0;
     }
   }
 }

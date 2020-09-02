@@ -2,8 +2,6 @@
   display: none;
 }
 
-
-
 .mobile-popup--open {
   display: block;
 
@@ -33,7 +31,6 @@
   display: block;
   margin: 0 auto;
 }
-
 
 .mobile-nav__list {
   @include no-list;

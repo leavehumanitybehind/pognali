@@ -2,9 +2,9 @@
   @include no-list;
   position: relative;
   display: flex;
-      padding-top: 9px;
-    padding-left: 0px;
-    padding-bottom: 16px;
+  padding-top: 9px;
+  padding-left: 0;
+  padding-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     margin-left: 25px;
@@ -41,8 +41,13 @@
   background-size: 50%;
   background-position: center;
 
+  @media (min-width: $tablet-width) {
+    background-size: 70%;
+    background-position: top 100% left 110%;
+  }
+
   &--plane {
-    background: url("../img/plane.svg") no-repeat;
+    background-image: url("../img/plane.svg");
   }
 
   &--bicycle {

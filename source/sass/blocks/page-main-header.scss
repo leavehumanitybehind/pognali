@@ -2,7 +2,7 @@
   position: relative;
   z-index: 10;
   background-color: $basic-blue;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   border-radius: 0 0 20px 20px;
 
   @media (min-width: $tablet-width) {
@@ -33,12 +33,11 @@
     padding-bottom: 60px;
   }
 
-@media (min-width: $desktop-width) {
-      padding-top: 70px;
-
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
     padding-bottom: 49px;
-    padding-left: 68px
-}
+    padding-left: 68px;
+  }
 
   &::after {
     height: 5px;
@@ -78,7 +77,7 @@
     display: flex;
   }
 
-@media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-right: 120px;
   }
 }

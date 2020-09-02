@@ -13,21 +13,27 @@
 }
 
 .plans__title {
-  padding: 20px;
+  padding: 24px 1px;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
+    padding: 49px 27px;
   }
 }
 
 .plans__list {
   @include no-list;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 28px;
+  }
 }
 
 .plans__item {
-  padding: 10px 20px;
-  margin-bottom: 30px;
-  border-radius: 25px;
+  padding: 7px 21px;
+  margin-bottom: 10px;
+  border-radius: 20px;
   background-color: $basic-white;
 
   @media (min-width: $desktop-width) {
@@ -39,8 +45,11 @@
 }
 
 .plans__item-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
     font-size: 24px;
   }
 }
@@ -52,6 +61,8 @@
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.06em;
+  padding-left: 3px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -60,17 +71,43 @@
     border-top: 1px solid #e5e5e5;
     font-size: 20px;
     letter-spacing: 0.1em;
+    margin-left: 13px;
+    padding-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {
+    justify-content: center;
+    align-self: baseline;
     font-size: 20px;
     border-top: none;
     letter-spacing: 0.09em;
+    width: 60%;
+  }
+}
+
+.plans__people-amount {
+  margin: 0;
+  margin-bottom: 8px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 32px;
+  }
+}
+
+.plans__date {
+  margin: 0;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 116px;
   }
 }
 
 .plans__link {
   text-decoration: none;
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(#000000, 0.3);
 }

@@ -1,11 +1,23 @@
 .plan-filters__wrapper {
   background-color: $basic-white;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding: 10px 20px;
   border-radius: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 38px 20px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 160px 105px;
+    margin-bottom: 45px;
+    border-radius: 60px;
+  }
 }
 
 .plan-filters__form {
+  margin-left: -9px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -17,12 +29,34 @@
     padding-top: 10px;
     border-top: 1px solid #e1e3e9;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    width: 485px;
+  }
+
+  &--duration {
+    @media (min-width: $tablet-width) {
+      padding-top: 78px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 0;
+    }
+  }
 }
 
 .plan-filters__head {
+  margin: 0;
+  padding-top: 10px;
+  margin-left: -8px;
+  margin-bottom: 15px;
+
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 1;
+    margin-bottom: 40px;
   }
 }
 
@@ -34,6 +68,10 @@
 
 .plan-filters__description {
   color: $special_grey;
+  margin-left: -9px;
+  font-size: 16px;
+  line-height: (22 / 16);
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -42,8 +80,19 @@
     border-bottom: 1px solid #e1e3e9;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-bottom: 53px;
+    padding-right: 405px;
+    margin-bottom: 53px;
+  }
+
   &--way {
     position: relative;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 110px;
+      margin-bottom: 35px;
+    }
 
     &::after {
       @media (min-width: $tablet-width) {
@@ -76,6 +125,10 @@
 
 .plan-filters__list-item span {
   display: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 
   @media (min-width: $desktop-width) {
     display: block;
@@ -85,6 +138,10 @@
 .plan-filters__list-item {
   position: relative;
   margin-right: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 27px;
+  }
 
   &::after {
     position: absolute;
@@ -129,6 +186,7 @@
 
   @media (min-width: $desktop-width) {
     order: 1;
+    font-size: 20px;
   }
 }
 
@@ -165,16 +223,25 @@
 .plan-filters__input-number-wrapper {
   position: relative;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
+    order: 2;
+    margin-bottom: 0;
+  }
 }
 
 .plan-filters__toggle {
   position: absolute;
-  top: 20px;
+  top: 9px;
   width: 42px;
   height: 42px;
   opacity: 0.3;
   font-size: 30px;
-
   background-color: inherit;
   border: none;
 
@@ -187,10 +254,6 @@
   }
 }
 
-.add-plan__calendar {
-  @include no-list;
-}
-
 .plan-filters__checkbox {
   display: none;
   position: absolute;
@@ -201,6 +264,22 @@
   font-size: 15px;
   position: relative;
   padding-left: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-left: 50px;
+    top: -155px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -325px;
+    left: 620px;
+  }
 
   &::before {
     position: absolute;
@@ -219,11 +298,11 @@
 
 .plan-filters__content-wrapper {
   @media (min-width: $tablet-width) {
-    padding: 0 43px;
+    padding: 50px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 159px;
+    padding: 50px 60px 133px;
   }
 }
 
@@ -310,6 +389,7 @@
   border: 1px solid #e5e5e5;
   padding: 10px;
   margin: 0;
+  margin-top: 4px;
   flex-grow: 1;
   text-transform: uppercase;
   white-space: nowrap;
@@ -474,7 +554,7 @@
   position: relative;
   display: block;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-decoration: none;
   text-transform: uppercase;
   color: $basic-blue;
@@ -487,6 +567,9 @@
     font-size: 24px;
     padding: 22px;
     text-transform: none;
+    margin-top: 30px;
+    margin-bottom: 28px;
+    width: 280px;
 
     &::after {
       content: "";
@@ -503,6 +586,7 @@
     position: relative;
     display: block;
     margin: 0 auto;
+    padding-bottom: 10px;
 
     @media (min-width: $tablet-width) {
       font-weight: bold;
@@ -515,6 +599,9 @@
 }
 
 .plan-filters__comment-label {
+  margin-top: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
@@ -533,12 +620,31 @@
   padding: 10px 14px;
   font-size: 16px;
 
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    height: 142px;
+    margin-top: 37px;
+  }
+
   &::placeholder {
     opacity: 0.3;
   }
 }
 
 .plan-filters__comment--last {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 14px;
+  height: 220px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 55px;
+    width: 90%;
+    height: 150px;
+    margin-bottom: 40px;
+  }
+
   &::placeholder {
     color: $special_grey;
   }
@@ -550,11 +656,19 @@
   display: block;
   margin: 0 auto;
 
+  &--back {
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-weight: bold;
     font-size: 24px;
     text-transform: none;
     padding: 29px;
+    width: 280px;
+    margin: 0;
   }
 }
 
