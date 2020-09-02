@@ -33,6 +33,13 @@
     padding-bottom: 60px;
   }
 
+@media (min-width: $desktop-width) {
+      padding-top: 70px;
+
+    padding-bottom: 49px;
+    padding-left: 68px
+}
+
   &::after {
     height: 5px;
     position: absolute;
@@ -69,5 +76,9 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+  }
+
+@media (min-width: $desktop-width) {
+    padding-right: 120px;
   }
 }

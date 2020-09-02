@@ -6,14 +6,15 @@
 }
 
 .travellers__wrapper {
-      padding:  40px 2px 7px;
+  padding: 40px 2px 7px;
 
-      @media (min-width: $tablet-width) {
-    padding:  50px 2px 7px;
+  @media (min-width: $tablet-width) {
+    padding: 50px 2px 7px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
+    padding-top: 212px;
   }
 }
 
@@ -35,6 +36,10 @@
   line-height: (30 / 17);
   text-decoration: none;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+  }
 
   @media (min-width: $desktop-width) {
     padding: 20px;
@@ -67,5 +72,9 @@
 }
 
 .travellers__pagination {
-    padding-bottom: 75px;
+  padding-bottom: 75px;
+
+  @media (min-width: $tablet-width) {
+  padding-bottom: 90px;
+}
 }

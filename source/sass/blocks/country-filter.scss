@@ -28,6 +28,10 @@
 @media (min-width: $tablet-width) {
   padding: 115px 75px 45px;
 }
+
+@media (min-width: $desktop-width) {
+    padding: 105px 75px 45px;
+}
 }
 
 .country-filter-popup__title{
@@ -48,6 +52,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    font-size: 20px;
   }
 
   &::before {
@@ -124,6 +129,12 @@
 .country-filter-popup__alphabet-wrapper--closed {
   display: none;
   height: 100px;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    height: auto;
+  }
+
 }
 
 .country-filter-popup__alphabet-wrapper--open {

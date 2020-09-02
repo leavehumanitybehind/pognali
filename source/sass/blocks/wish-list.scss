@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 50px;
+        padding-left: 40px;
     display: flex;
     flex-direction: column;
   }
@@ -19,6 +19,10 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
   }
 }
 

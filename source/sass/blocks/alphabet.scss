@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 70px;
+    padding: 0px 20px 0px 40px;
     width: auto;
   }
 }
@@ -21,8 +21,9 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-    margin-right: 70px;
+    margin-right: 40px;
     margin-bottom: 20px;
+    width: 210px;
   }
 
   &--empty {
@@ -90,6 +91,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin:0 ;
+    margin-left: -19px;
     font-weight: bold;
     font-size: 60px;
     margin-bottom: 30px;

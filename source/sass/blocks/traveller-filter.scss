@@ -3,6 +3,10 @@
   border-radius: 20px;
   padding: 0 20px;
   margin-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 42px;
+    }
 }
 
 .traveller-filter__title {
@@ -16,7 +20,7 @@
 
   @media (min-width: $tablet-width) {
         margin-top: 38px;
-        margin-bottom: 34px;
+        margin-bottom: 43px;
     font-size: 30px;
     line-height: 1;
     width: auto;
@@ -24,13 +28,19 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin-bottom: 21px;
+             margin-top: 48px;
+    margin-bottom: 36px;
   }
 }
 
 .traveller-filter__list {
   @include no-list;
   margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+
+      margin-bottom: 60px;
+    }
 }
 
 .traveller-filter-list__item {
@@ -38,6 +48,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: baseline;
+        margin-top: -10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -85,6 +96,7 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 120px;
+    margin-bottom: 18px;
   }
 }
 
@@ -101,11 +113,13 @@
     margin-top: 38px;
     font-size: 20px;
     margin-left: auto;
+    padding-bottom:0;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
     margin: 0;
+    padding: 15px 0;
     flex-direction: column;
   }
 }
@@ -257,6 +271,7 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
@@ -275,9 +290,9 @@
   background-color: rgba(29, 46, 91, 0.2);
 
   @media (min-width: $tablet-width) {
-    width: 40%;
-    margin-left: 50px;
-    margin-right: 80px;
+        width: 40%;
+    margin-left: 68px;
+    margin-right: 105px;
   }
 
   @media (min-width: $desktop-width) {
@@ -289,7 +304,8 @@
 .range__toggle {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -50px;
+
 
   width: 10px;
   height: 10px;
@@ -311,7 +327,7 @@
     position: absolute;
     top: 4px;
     left: 4px;
-    width: 144px;
+    width: 194px;
     height: 3px;
     background-color: $basic-blue-light;
   }
