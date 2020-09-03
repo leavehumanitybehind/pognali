@@ -288,12 +288,26 @@
     height: 31px;
     left: 50px;
     top: -330px;
-    background: url("../img/heart.svg") no-repeat;
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
     background-size: 31px 31px;
 
     @media (min-width: $tablet-width) {
       left: 148px;
       top: 0;
+      width: 50px;
+      height: 50px;
+      background-size: 51px 51px;
+    }
+  }
+
+  &--liked::after {
+    background-image: url("../img/heart-active.svg");
+    width: 31px;
+    height: 31px;
+    background-size: 31px 31px;
+
+    @media (min-width: $tablet-width) {
       width: 50px;
       height: 50px;
       background-size: 51px 51px;
@@ -312,9 +326,14 @@
   border-radius: 50%;
   background-color: #edeff6;
   padding: 6px;
-  fill: rgba(#161c35, 0.15);
+  fill: rgba($basic-blue, 0.15);
 
   &--current {
-    fill: #161c35;
+    fill: $basic-blue;
   }
+
+    @media (min-width: $tablet-width) {
+      background-color: inherit;
+      border-radius: 0;
+    }
 }

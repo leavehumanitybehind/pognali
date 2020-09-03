@@ -5,7 +5,12 @@
   border-top: 1px solid #d6d9e6;
   padding: 12px;
   margin-bottom: 18px;
-  margin-top: 24px;
+  margin-top: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 12px 12px 20px 12px;
+    margin-bottom: 38px;
+  }
 }
 
 .calendar__name {
@@ -48,6 +53,9 @@
 
   &--next {
     background: url("../img/month-arrow-right.svg") no-repeat;
+    @media (min-width: $tablet-width) {
+      right: 10px;
+    }
   }
 }
 
@@ -58,6 +66,21 @@
   margin-bottom: 22px;
   border-collapse: collapse;
 }
+
+.calendar-table__title-mobile {
+@media (min-width: $tablet-width) {
+display: none;
+}
+}
+
+.calendar-table__title-desktop {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 
 .calendar-table__week {
   text-decoration: none;
@@ -95,9 +118,6 @@
   }
 }
 
-.calendar-table__title-desktop {
-  display: none;
-}
 
 .calendar-title {
   font-size: 14px;

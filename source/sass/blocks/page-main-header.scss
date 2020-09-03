@@ -64,13 +64,15 @@
   text-transform: uppercase;
 
   &::after {
-    position: absolute;
     content: "";
-    top: 30%;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background: url("../img/return.svg") no-repeat;
+    position: absolute;
+    top: 60%;
+    right: 68px;
+    width: 32px;
+    height: 16px;
+    margin-top: -11px;
+    background-image: url(../img/return.svg);
+    background-repeat: no-repeat;
   }
 
   @media (min-width: $tablet-width) {
