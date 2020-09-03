@@ -21,6 +21,11 @@
   width: 33px;
   height: 33px;
   border-radius: 50%;
+
+  @media (min-width: $desktop-width) {
+      width: 43px;
+    height: 43px;
+}
 }
 
 .transport__checkbox {
@@ -41,13 +46,14 @@
   background-size: 50%;
   background-position: center;
 
-  @media (min-width: $tablet-width) {
-    background-size: 70%;
-    background-position: top 100% left 110%;
+  @media (min-width: $desktop-width) {
+      width: 43px;
+    height: 43px;
   }
 
   &--plane {
     background-image: url("../img/plane.svg");
+
   }
 
   &--bicycle {

@@ -141,14 +141,4 @@
     padding: 29px;
     border-radius: 20px;
   }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 40%;
-    right: 10%;
-    width: 10px;
-    height: 10px;
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
-  }
 }

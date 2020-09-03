@@ -25,6 +25,10 @@
 
   text-align: center;
 
+  &::after {
+    display: none;
+  }
+
   &:hover {
     background-color: $special-yellow-dark;
   }

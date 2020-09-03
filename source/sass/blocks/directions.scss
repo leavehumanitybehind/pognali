@@ -148,20 +148,4 @@
     right: 300px;
     width: 275px;
   }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 40%;
-    right: 8%;
-    width: 10px;
-    height: 10px;
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
-
-    @media (min-width: $tablet-width) {
-      width: 14px;
-      height: 14px;
-      right: 5%;
-    }
-  }
 }
