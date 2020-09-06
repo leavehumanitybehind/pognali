@@ -81,6 +81,72 @@
     padding-top: 35px;
     margin-left: 26px;
   }
+
+  &--offline {
+    position:relative;
+
+&::after {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+
+    background-color: #f97676;
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 8px;
+    right: 65px;
+    width: 11px;
+    height: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+      top: 45px;
+    right: 315px;
+    width: 11px;
+    height: 11px;
+  }
+}
+}
+
+&--online {
+    position:relative;
+
+&::after {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+
+    background-color: #81e31e;
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+     @media (min-width: $tablet-width) {
+      top: 8px;
+    right: 45px;
+    width: 11px;
+    height: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+      top: 45px;
+    right: 315px;
+    width: 11px;
+    height: 11px;
+  }
+  }
+}
 }
 
 .traveller__likes {
@@ -108,8 +174,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column-end: 2;
-    padding-left: 210px;
-    margin-top: 15px;
+    padding-left: 230px;
   }
 }
 
@@ -190,7 +255,8 @@
 }
 
 .traveller-property-level {
-  padding-left: 75px;
+  position: relative;
+  margin-left: 75px;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 5;
@@ -202,14 +268,32 @@
     grid-row-start: 4;
     grid-row-end: 4;
     margin-top: -8px;
-    padding-left: 55px;
+    margin-left: 75px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     bottom: 50px;
-
     right: 80px;
+  }
+}
+
+.traveller-property-level {
+  display: flex;
+  flex-direction: column;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+   @media (min-width: $tablet-width) {
+  width: 60px;
+    height: 60px;
+}
+}
+
+.traveller-property-level svg {
+  @media (min-width: $tablet-width) {
+  transform: scale(1.7) translate(12px,12px);
   }
 }
 
@@ -239,11 +323,55 @@
 }
 
 .traveller-property-level__value {
+  margin-top: 20px;
   padding-left: 20px;
   font-weight: bold;
   font-size: 24px;
   line-height: 1;
   color: $basic-blue-light;
+}
+
+.traveller-property-level__lvl {
+  width: 40px;
+  margin-left: 11px;
+  display: none;
+  font-weight: normal;
+  text-align: center;
+  font-size: 14px;
+  color: rgba($special-grey, 0.3);
+  border-top: 1px solid rgba($special-grey, 0.3);
+
+  @media (min-width: $tablet-width) {
+    display: block;
+}
+}
+
+.traveller__property-progress-bar {
+  position: absolute;
+  top: 35px;
+  left: 12px;
+  width: 60px;
+  height: 60px;
+
+@media (min-width: $tablet-width) {
+  top: 5px;
+  left: -4px;
+}
+
+  &--99 {
+    stroke-dasharray: 170, 170;
+  }
+
+  &--80 {
+    stroke-dasharray: 150, 150;
+  }
+
+  &--25 {
+    stroke-dasharray: 60, 120;
+  }
+  &--50 {
+    stroke-dasharray: 70, 120;
+  }
 }
 
 .traveller__btn {
@@ -299,7 +427,11 @@
       height: 50px;
       background-size: 51px 51px;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 158px;
   }
+}
 
   &--liked::after {
     background-image: url("../img/heart-active.svg");
@@ -332,8 +464,8 @@
     fill: $basic-blue;
   }
 
-    @media (min-width: $tablet-width) {
-      background-color: inherit;
-      border-radius: 0;
-    }
+  @media (min-width: $tablet-width) {
+    background-color: inherit;
+    border-radius: 0;
+  }
 }

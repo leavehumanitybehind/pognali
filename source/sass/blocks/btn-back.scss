@@ -7,15 +7,28 @@
   text-decoration: none;
   position: relative;
 
+  &:hover {
+    opacity: .7;
+  }
+
+
+  &:active {
+    opacity: .3;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 22px;
+    margin-left: 93px;
   }
+@media (min-width: $desktop-width) {
+  margin-left: 323px;
+}
 
   &::before {
     position: absolute;
     content: "";
-    top: 40%;
+    top: 30%;
     left: 10%;
     width: 10px;
     height: 10px;

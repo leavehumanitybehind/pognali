@@ -15,6 +15,13 @@ openButton.addEventListener('click', function (evt) {
   }
 });
 
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mainnav.classList.contains("mobile-popup--open")) {
+      mainnav.classList.remove("mobile-popup--open");
+    }
+  }
+});
 
 //fix-header
 var header = document.querySelector(".page-header");
@@ -44,4 +51,12 @@ link.addEventListener('click', function (evt) {
 closeButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   tariffes.classList.remove('tariffes--open');
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (tariffes.classList.contains("tariffes--open")) {
+      tariffes.classList.remove("tariffes--open");
+    }
+  }
 });

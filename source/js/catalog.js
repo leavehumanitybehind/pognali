@@ -14,6 +14,14 @@ openButton.addEventListener('click', function (evt) {
   }
 });
 
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mainnav.classList.contains("mobile-popup--open")) {
+      mainnav.classList.remove("mobile-popup--open");
+    }
+  }
+});
+
 
 //fix-header
 var header = document.querySelector(".page-header");
@@ -29,7 +37,7 @@ function fixHeader() {
 window.addEventListener("scroll", fixHeader);
 
 //modal popup catalog-filter
-
+var list = document.querySelector('.country-filter-popup__list');
 var wrapper = document.querySelector('.country-filter-popup__alphabet-wrapper');
 var openButton = document.querySelector('.country-filter__toggle');
 var closeWrapButton = document.querySelector('.country-filter-popup__close-btn');
@@ -39,9 +47,11 @@ openButton.addEventListener('click', function (evt) {
   if (wrapper.classList.contains('country-filter-popup__alphabet-wrapper--closed')) {
     wrapper.classList.remove('country-filter-popup__alphabet-wrapper--closed');
     wrapper.classList.add('country-filter-popup__alphabet-wrapper--open');
+    list.classList.remove('country-filter-popup__list--closed');
   } else {
     wrapper.classList.add('country-filter-popup__alphabet-wrapper--closed');
     wrapper.classList.remove('country-filter-popup__alphabet-wrapper--open');
+    list.classList.add('country-filter-popup__list--closed');
   }
 });
 
@@ -51,6 +61,14 @@ closeWrapButton.addEventListener('click', function (evt) {
   wrapper.classList.add('country-filter-popup__alphabet-wrapper--closed');
 });
 
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (wrapper.classList.contains("country-filter-popup__alphabet-wrapper--open")) {
+      wrapper.classList.remove("country-filter-popup__alphabet-wrapper--open");
+    }
+  }
+});
 //accordeon
 
 var filterItem = document.querySelectorAll('.traveller-filter-list__item').forEach(item =>

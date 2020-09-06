@@ -3,10 +3,12 @@
   z-index: 10;
   background-color: $basic-blue;
   padding-bottom: 0;
+  padding-top: 100px;
   border-radius: 0 0 20px 20px;
 
   @media (min-width: $tablet-width) {
     border-radius: 0 0 55px 55px;
+    padding-top: 130px;
   }
 }
 
@@ -48,6 +50,10 @@
     background-color: $special-orange;
     border-radius: 2.4px;
     content: "";
+
+ @media (min-width: $desktop-width) {
+        left: 60px;
+ }
   }
 }
 

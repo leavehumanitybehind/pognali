@@ -35,8 +35,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    z-index: 14;
-    top: -280px;
+    z-index: 20;
+    top: 145px;
     right: 95px;
   }
 }
@@ -97,6 +97,10 @@
     font-size: 20px;
     margin-bottom: 18px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
 }
 
 .profile__label {
@@ -117,14 +121,18 @@
     left: 43%;
     font-size: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    top: 98px;
+    left: 5%;
+  }
 }
 
 .profile__wrapper--transport {
   position: relative;
-  width: 100%;
+width: 100%;
   order: 5;
   display: flex;
-  flex-direction: column;
   margin-top: -5px;
 
   @media (min-width: $tablet-width) {
@@ -144,6 +152,7 @@
 .profile__transport {
   @include no-list;
   display: flex;
+  width: 100%;
   justify-content: center;
   border: 1px solid rgb(203, 206, 217);
   padding: 15px 30px 10px 25px;
@@ -175,7 +184,7 @@
   left: 30%;
 
   @media (min-width: $tablet-width) {
-        top: 70px;
+    top: 70px;
     left: 30%;
   }
 }
@@ -190,26 +199,31 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 260px;
-    right: 380px;
-    z-index: 2;
+    top: 200px;
+    right: 300px;
+    z-index: 20;
   }
 }
 
 .profile-property-level {
+  position: relative;
   margin-left: 18px;
   width: 100px;
   height: 100px;
   margin-top: 11px;
   padding-top: 8px;
-  background-color: inherit;
-  border: 3px solid #ff8d30;
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $tablet-width) {
-        margin-left: -6px;
-        margin-top: 6px;
+    margin-left: -6px;
+    margin-top: 6px;
   }
+}
+
+.profile-property-level svg {
+  transform: scale(2.5) translate(16px, 10px);
 }
 
 .profile-property-level__value {
@@ -229,13 +243,27 @@
   font-weight: 400;
   text-align: center;
   color: $special-grey;
-  margin-left: 25px;
-  padding: 2px 2px 0;
+  margin-left: 19px;
+  width: 40px;
   border-top: 1px solid rgba($special-grey, 0.4);
 
   @media (min-width: $desktop-width) {
     color: $basic-white;
+    margin-left: -12px;
   }
+}
+
+.profile__property-progress-bar {
+  position: absolute;
+  top: 5px;
+    left: -5px;
+  width: 60px;
+  height: 60px;
+
+  &--80 {
+    stroke-dasharray: 150, 150;
+  }
+
 }
 
 .profile__toggle {
@@ -262,6 +290,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: none;
+    display: flex;
+    position: absolute;
+    width: 190px;
+    height: 47px;
+    right: 92px;
+    top: 365px;
+    border-radius: 0 0 10px 10px;
   }
 }

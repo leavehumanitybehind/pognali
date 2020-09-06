@@ -8,6 +8,16 @@
   @media (min-width: $tablet-width) {
     border-radius: 55px 55px 0 0;
   }
+
+  &--catalog {
+    position: relative;
+    z-index: 6;
+
+@media (min-width: $tablet-width) {
+   z-index: 4;
+  margin-top: -85px;
+}
+  }
 }
 
 .page-footer__container {

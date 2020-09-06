@@ -14,6 +14,14 @@ openButton.addEventListener('click', function (evt) {
   }
 });
 
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mainnav.classList.contains("mobile-popup--open")) {
+      mainnav.classList.remove("mobile-popup--open");
+    }
+  }
+});
+
 
 //fix-header
 var header = document.querySelector(".page-header");
@@ -54,7 +62,7 @@ btns.forEach(btn => {
 //calendar popup
 var button = document.querySelector('.plan-filters__button--choose');
 var addPlanModal = document.querySelector('.add-plan-popup');
-var closeButton = document.querySelector('.add-plan-popup__close');
+var closeButton = document.querySelector('.add-plan-popup__button-close');
 
 button.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -64,4 +72,25 @@ button.addEventListener('click', function (evt) {
 closeButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   addPlanModal.classList.remove('add-plan-popup--open');
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (addPlanModal.classList.contains("add-plan-popup--open")) {
+      addPlanModal.classList.remove("add-plan-popup--open");
+    }
+  }
+});
+
+var form = document.querySelector(".plan-filters__comment");
+var textarea = document.querySelector("[name=comments]");
+var button = document.querySelector(".plan-filters__btn-submit");
+
+button.addEventListener("click", function (evt) {
+  if ( !textarea.value) {
+    evt.preventDefault();
+    form.classList.add("plan-filters__comment--error");
+  } else {
+      form.classList.remove("plan-filters__comment--error");
+    }
 });

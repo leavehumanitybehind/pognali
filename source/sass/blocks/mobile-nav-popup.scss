@@ -36,8 +36,8 @@
 .mobile-nav__list {
   @include no-list;
   padding-top: 52px;
-  margin: 0 auto;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   display: none;
 
@@ -95,7 +95,7 @@
 }
 
 .mobile-nav__item--auth {
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 .mobile-nav__login {
@@ -113,6 +113,7 @@
   font-weight: 500;
   line-height: (36 /50);
   text-transform: uppercase;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -130,7 +131,7 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  margin: 0 auto;
+  padding-left: 25px;
 }
 
 .mobile-nav__buttons-link {

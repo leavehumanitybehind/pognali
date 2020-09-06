@@ -5,6 +5,11 @@
   @media (min-width: $tablet-width) {
     width: 70%;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 65%;
+    margin-right: 65px
+  }
 }
 
 .alphabet__table-item {
@@ -17,6 +22,12 @@
   @media (min-width: $tablet-width) {
     width: 55px;
     height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 60px;
+    margin-right: 16px;
+    margin-bottom: 14px;
   }
 
   &--active {

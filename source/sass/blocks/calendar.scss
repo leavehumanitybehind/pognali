@@ -5,12 +5,16 @@
   border-top: 1px solid #d6d9e6;
   padding: 12px;
   margin-bottom: 18px;
-  margin-top: 0;
+  margin-top: 25px;
 
   @media (min-width: $tablet-width) {
     padding: 12px 12px 20px 12px;
     margin-bottom: 38px;
   }
+
+  @media (min-width: $desktop-width) {
+      padding: 18px 12px 24px 12px;
+}
 }
 
 .calendar__name {
@@ -65,6 +69,10 @@
   margin-left: 1px;
   margin-bottom: 22px;
   border-collapse: collapse;
+
+  @media (min-width: $desktop-width) {
+  font-size: 18px;
+}
 }
 
 .calendar-table__title-mobile {
@@ -73,11 +81,11 @@ display: none;
 }
 }
 
-.calendar-table__title-desktop {
+.calendar-table__title-tablet {
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display:flex;
   }
 }
 
@@ -93,6 +101,7 @@ display: none;
 }
 
 .calendar-table__day {
+  position: relative;
   width: 32px;
   height: 30px;
   border: 1px solid #d6d9e6;
@@ -104,26 +113,56 @@ display: none;
     height: 69px;
   }
 
-  &:hover {
-    border: 2px solid #ff5c23;
+
+
+  @media (min-width: $desktop-width) {
+    width:142px;
+    height: 71px;
+    text-align: left;
+    padding-left: 16px;
+
   }
 
   &--fill {
+    position: relative;
     color: $basic-white;
     background-color: $basic-blue-light;
+
+    &:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 30px;
+    border: 2px solid #ff5c23;
   }
+}
 
   &--active {
+    position: relative;
     background: #edeff6;
+
+      &:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 30px;
+    border: 2px solid #ff5c23;
+  }
   }
 }
 
 
 .calendar-title {
+
   font-size: 14px;
   line-height: (18 / 14);
   text-decoration: none;
   color: $basic-blue-light;
+
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -134,14 +173,28 @@ display: none;
   }
 
   &--fill {
+    position: relative;
     color: $basic-white;
+
   }
 }
 
 .calendar-table__day-desktop {
   display: none;
 
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+      opacity: .3;
+    }
+
+
   &--period {
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      opacity: 1;
+    }
   }
+
 }

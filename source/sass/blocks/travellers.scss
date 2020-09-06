@@ -3,6 +3,7 @@
   z-index: 0;
   margin: -40px auto 0;
   background: #edeff6;
+  padding-bottom: 30px;
 
     @media (min-width: $desktop-width) {
       margin: -50px auto 0;
@@ -58,11 +59,15 @@
     height: 17px;
     background: url("../img/qty-plus.svg") no-repeat;
 
-    @media (min-width: $desktop-width) {
-      top: 20px;
+    @media (min-width: $tablet-width) {
+      top: 5px;
       left: 40%;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 25px;
   }
+}
 }
 
 .travellers__filter {

@@ -18,26 +18,50 @@
 
   @media (min-width: $tablet-width) {
     width: 688px;
-    height: 526px;
+    height: auto;
     border-radius: 30px;
   }
 
   @media (min-width: $desktop-width) {
     width: 750px;
+    padding-bottom: 20px;
   }
 }
 
 .tariffes__list {
   @include no-list;
-  padding: 0 20px;
-  margin: 20px;
+  margin: 0 25px 36px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 90px 36px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0 60px 0px;
+  }
 }
 
 .tariffes__item {
   display: block;
   align-items: center;
   border-top: 1px solid rgba(#000000, 0.05);
-  padding: 8px;
+  padding: 10px 0;
+  font-size: 16px;
+    font-weight: 300;
+    line-height: (22 / 16);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 1.27;
+    padding: 20px 0 15px;
+  }
+}
+
+.tariffes__price,
+.tariffes__text {
+  margin: 0;
+  color: $special-grey;
 }
 
 .tariffes__button {
@@ -49,4 +73,5 @@
   text-align: center;
   font-weight: bold;
   font-size: 24px;
+  border-radius: 0 0 20px 20px;
 }

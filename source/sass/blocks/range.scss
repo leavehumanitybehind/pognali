@@ -171,9 +171,7 @@ color: $basic-blue-light;
     }
 
     @media (min-width: $desktop-width) {
-      &::before {
         width: 124px;
-      }
     }
   }
 }
