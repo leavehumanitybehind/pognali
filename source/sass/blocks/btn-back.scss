@@ -8,12 +8,11 @@
   position: relative;
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 
-
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
@@ -21,9 +20,10 @@
     line-height: 22px;
     margin-left: 93px;
   }
-@media (min-width: $desktop-width) {
-  margin-left: 323px;
-}
+
+  @media (min-width: $desktop-width) {
+    margin-left: 323px;
+  }
 
   &::before {
     position: absolute;

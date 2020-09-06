@@ -1,6 +1,3 @@
-
-//open main-nav
-
 var mainnav = document.querySelector('.mobile-popup');
 var openButton = document.querySelector('.main-nav__toggle');
 
@@ -23,7 +20,6 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-//fix-header
 var header = document.querySelector(".page-header");
 var headerCont = document.querySelector('.page-header__container');
 var topOfHeader = header.offsetTop;

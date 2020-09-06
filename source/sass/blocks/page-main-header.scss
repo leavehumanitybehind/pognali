@@ -51,9 +51,9 @@
     border-radius: 2.4px;
     content: "";
 
- @media (min-width: $desktop-width) {
-        left: 60px;
- }
+    @media (min-width: $desktop-width) {
+      left: 60px;
+    }
   }
 }
 
@@ -77,7 +77,7 @@
     width: 32px;
     height: 16px;
     margin-top: -11px;
-    background-image: url(../img/return.svg);
+    background-image: url("../img/return.svg");
     background-repeat: no-repeat;
   }
 

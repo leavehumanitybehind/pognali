@@ -38,14 +38,14 @@
     background: url("../img/dots-mobile.svg") no-repeat;
 
     @media (min-width: $tablet-width) {
-    width: 76px;
-    height: 6px;
-  }
+      width: 76px;
+      height: 6px;
+    }
 
-  @media (min-width: $desktop-width) {
-    display: none;
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
-}
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -60,6 +60,7 @@
 
 .add-plan__filters {
   padding: 0 15px 0 18px;
+
   @media (min-width: $tablet-width) {
     padding: 0 15px 0 18px;
   }

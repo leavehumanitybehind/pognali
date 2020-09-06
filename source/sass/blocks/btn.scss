@@ -12,7 +12,7 @@
   background: $basic-yellow;
   border-radius: 20px;
 
-    &::after {
+  &::after {
     position: absolute;
     content: "";
     top: 40%;
@@ -21,13 +21,12 @@
     height: 10px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
 
-        @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       width: 14px;
       height: 14px;
       right: 5%;
     }
   }
-
 
   &:hover {
     background: #ffbd30;

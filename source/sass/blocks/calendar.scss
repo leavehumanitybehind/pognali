@@ -13,8 +13,8 @@
   }
 
   @media (min-width: $desktop-width) {
-      padding: 18px 12px 24px 12px;
-}
+    padding: 18px 12px 24px 12px;
+  }
 }
 
 .calendar__name {
@@ -57,6 +57,7 @@
 
   &--next {
     background: url("../img/month-arrow-right.svg") no-repeat;
+
     @media (min-width: $tablet-width) {
       right: 10px;
     }
@@ -71,24 +72,23 @@
   border-collapse: collapse;
 
   @media (min-width: $desktop-width) {
-  font-size: 18px;
-}
+    font-size: 18px;
+  }
 }
 
 .calendar-table__title-mobile {
-@media (min-width: $tablet-width) {
-display: none;
-}
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .calendar-table__title-tablet {
   display: none;
 
   @media (min-width: $tablet-width) {
-    display:flex;
+    display: flex;
   }
 }
-
 
 .calendar-table__week {
   text-decoration: none;
@@ -113,14 +113,11 @@ display: none;
     height: 69px;
   }
 
-
-
   @media (min-width: $desktop-width) {
-    width:142px;
+    width: 142px;
     height: 71px;
     text-align: left;
     padding-left: 16px;
-
   }
 
   &--fill {
@@ -129,40 +126,37 @@ display: none;
     background-color: $basic-blue-light;
 
     &:hover::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 30px;
-    border: 2px solid #ff5c23;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 30px;
+      border: 2px solid #ff5c23;
+    }
   }
-}
 
   &--active {
     position: relative;
     background: #edeff6;
 
-      &:hover::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 30px;
-    border: 2px solid #ff5c23;
-  }
+    &:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 30px;
+      border: 2px solid #ff5c23;
+    }
   }
 }
 
-
 .calendar-title {
-
   font-size: 14px;
   line-height: (18 / 14);
   text-decoration: none;
   color: $basic-blue-light;
-
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -175,18 +169,16 @@ display: none;
   &--fill {
     position: relative;
     color: $basic-white;
-
   }
 }
 
 .calendar-table__day-desktop {
   display: none;
 
-    @media (min-width: $desktop-width) {
-      display: inline-block;
-      opacity: .3;
-    }
-
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    opacity: 0.3;
+  }
 
   &--period {
     display: none;
@@ -196,5 +188,4 @@ display: none;
       opacity: 1;
     }
   }
-
 }

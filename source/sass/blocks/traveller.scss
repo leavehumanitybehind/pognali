@@ -83,70 +83,70 @@
   }
 
   &--offline {
-    position:relative;
+    position: relative;
 
-&::after {
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
+    &::after {
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
 
-    background-color: #f97676;
-    content: "";
-    position: absolute;
-    top: 8px;
-    right: -5px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-
-    @media (min-width: $tablet-width) {
+      background-color: #f97676;
+      content: "";
+      position: absolute;
       top: 8px;
-    right: 65px;
-    width: 11px;
-    height: 11px;
+      right: -5px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        top: 8px;
+        right: 65px;
+        width: 11px;
+        height: 11px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 45px;
+        right: 315px;
+        width: 11px;
+        height: 11px;
+      }
+    }
   }
 
-  @media (min-width: $desktop-width) {
-      top: 45px;
-    right: 315px;
-    width: 11px;
-    height: 11px;
-  }
-}
-}
+  &--online {
+    position: relative;
 
-&--online {
-    position:relative;
+    &::after {
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
 
-&::after {
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
-
-    background-color: #81e31e;
-    content: "";
-    position: absolute;
-    top: 8px;
-    right: -5px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-
-     @media (min-width: $tablet-width) {
+      background-color: #81e31e;
+      content: "";
+      position: absolute;
       top: 8px;
-    right: 45px;
-    width: 11px;
-    height: 11px;
-  }
+      right: -5px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
 
-  @media (min-width: $desktop-width) {
-      top: 45px;
-    right: 315px;
-    width: 11px;
-    height: 11px;
+      @media (min-width: $tablet-width) {
+        top: 8px;
+        right: 45px;
+        width: 11px;
+        height: 11px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 45px;
+        right: 315px;
+        width: 11px;
+        height: 11px;
+      }
+    }
   }
-  }
-}
 }
 
 .traveller__likes {
@@ -257,6 +257,9 @@
 .traveller-property-level {
   position: relative;
   margin-left: 75px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 5;
@@ -269,6 +272,11 @@
     grid-row-end: 4;
     margin-top: -8px;
     margin-left: 75px;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -278,22 +286,9 @@
   }
 }
 
-.traveller-property-level {
-  display: flex;
-  flex-direction: column;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-
-   @media (min-width: $tablet-width) {
-  width: 60px;
-    height: 60px;
-}
-}
-
 .traveller-property-level svg {
   @media (min-width: $tablet-width) {
-  transform: scale(1.7) translate(12px,12px);
+    transform: scale(1.7) translate(12px, 12px);
   }
 }
 
@@ -343,7 +338,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-}
+  }
 }
 
 .traveller__property-progress-bar {
@@ -353,10 +348,10 @@
   width: 60px;
   height: 60px;
 
-@media (min-width: $tablet-width) {
-  top: 5px;
-  left: -4px;
-}
+  @media (min-width: $tablet-width) {
+    top: 5px;
+    left: -4px;
+  }
 
   &--99 {
     stroke-dasharray: 170, 170;
@@ -369,6 +364,7 @@
   &--25 {
     stroke-dasharray: 60, 120;
   }
+
   &--50 {
     stroke-dasharray: 70, 120;
   }
@@ -430,8 +426,8 @@
 
     @media (min-width: $desktop-width) {
       left: 158px;
+    }
   }
-}
 
   &--liked::after {
     background-image: url("../img/heart-active.svg");

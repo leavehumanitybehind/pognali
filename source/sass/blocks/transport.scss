@@ -24,9 +24,9 @@
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
-      width: 43px;
+    width: 43px;
     height: 43px;
-}
+  }
 }
 
 .transport__checkbox {
@@ -48,13 +48,12 @@
   background-position: center;
 
   @media (min-width: $tablet-width) {
-      width: 43px;
+    width: 43px;
     height: 43px;
   }
 
   &--plane {
     background-image: url("../img/plane.svg");
-
   }
 
   &--bicycle {

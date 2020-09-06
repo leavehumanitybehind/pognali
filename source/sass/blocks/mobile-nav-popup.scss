@@ -175,11 +175,11 @@
   }
 }
 
-    .mobile-nav__buttons-link--email {
-      position: relative;
+.mobile-nav__buttons-link--email {
+  position: relative;
 
-      &::before {
-         content: "";
+  &::before {
+    content: "";
     position: absolute;
     top: -8px;
     left: 5px;
@@ -187,6 +187,6 @@
     border-radius: 50%;
     width: 45px;
     height: 45px;
-        background-image: url("../img/yellow-mail.svg");
-      }
-    }
+    background-image: url("../img/yellow-mail.svg");
+  }
+}

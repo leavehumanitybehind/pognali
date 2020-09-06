@@ -37,7 +37,6 @@
   display: none;
   margin: 0;
 
-  
   @media (min-width: $desktop-width) {
     display: flex;
   }
@@ -134,7 +133,7 @@
 }
 
 .country-filter-toggle--hidden {
-  display:none;
+  display: none;
 }
 
 .country-filter__toggle {
@@ -151,7 +150,6 @@
   letter-spacing: normal;
   color: #192144;
   text-transform: uppercase;
-
 
   @media (min-width: $tablet-width) {
     display: inline-block;
@@ -174,8 +172,6 @@
   }
 }
 
-
-
 .country-filter-popup__alphabet-wrapper--closed {
   display: none;
   height: 100px;
@@ -184,8 +180,6 @@
     height: auto;
   }
 }
-
-
 
 .country-filter-popup__country-list {
   @include no-list;

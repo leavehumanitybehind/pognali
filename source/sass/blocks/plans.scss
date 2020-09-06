@@ -1,7 +1,7 @@
 .plans {
   position: relative;
   z-index: 3;
-  background-color: #DFE3F0;
+  background-color: #dfe3f0;
   font-weight: 500;
   color: $basic-blue-light;
   border-radius: 20px 20px 0 0;
@@ -9,7 +9,7 @@
   padding-bottom: 80px;
 
   @media (min-width: $tablet-width) {
-    border-radius: 0 0 30px 30px ;
+    border-radius: 0 0 30px 30px;
     padding-bottom: 105px;
   }
 }
@@ -48,7 +48,7 @@
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
-flex-direction: row;
+    flex-direction: row;
     padding: 20px 43px;
   }
 }
@@ -67,6 +67,7 @@ flex-direction: row;
 
 .plans__item-number {
   font-size: 16px;
+
   @media (min-width: $tablet-width) {
     font-size: 24px;
   }
@@ -79,7 +80,6 @@ flex-direction: row;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.06em;
-
 
   @media (min-width: $tablet-width) {
     display: flex;

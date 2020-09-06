@@ -46,16 +46,16 @@
 
 .range__input::placeholder {
   font-size: 14px;
-line-height: (13 / 14);
-letter-spacing: 0.06em;
-color: $basic-blue-light;
+  line-height: (13 / 14);
+  letter-spacing: 0.06em;
+  color: $basic-blue-light;
   font-weight: 500;
   text-align: center;
   vertical-align: middle;
 
-    @media (min-width: $tablet-width) {
-  font-size: 20px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 50px;
@@ -138,7 +138,6 @@ color: $basic-blue-light;
     margin-bottom: 0;
     width: 13px;
     height: 13px;
-    margin-top: -6.5px;
   }
 }
 
@@ -171,7 +170,7 @@ color: $basic-blue-light;
     }
 
     @media (min-width: $desktop-width) {
-        width: 124px;
+      width: 124px;
     }
   }
 }

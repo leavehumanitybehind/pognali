@@ -130,7 +130,7 @@
 
 .profile__wrapper--transport {
   position: relative;
-width: 100%;
+  width: 100%;
   order: 5;
   display: flex;
   margin-top: -5px;
@@ -256,14 +256,13 @@ width: 100%;
 .profile__property-progress-bar {
   position: absolute;
   top: 5px;
-    left: -5px;
+  left: -5px;
   width: 60px;
   height: 60px;
 
   &--80 {
     stroke-dasharray: 150, 150;
   }
-
 }
 
 .profile__toggle {

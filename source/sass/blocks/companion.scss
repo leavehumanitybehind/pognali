@@ -55,7 +55,7 @@
 }
 
 .companion-property-level svg {
-  transform: scale(1.7) translate(12px,12px);
+  transform: scale(1.7) translate(12px, 12px);
 }
 
 .companion__property-title {
@@ -92,7 +92,6 @@
     stroke-dasharray: 150, 150;
   }
 }
-
 
 .companion__wish-list {
   @include no-list;
