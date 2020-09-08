@@ -11,18 +11,19 @@
 .recommendation__wrapper {
   width: 165px;
   margin-left: 27px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    width: 294px;
+       width: 302px;
     padding-left: 5px;
-    padding-bottom: 315px;
+    padding-bottom: 336px;
+    margin-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
     width: 340px;
     margin-top: 216px;
-    padding-left: 84px;
+    padding-left: 93px;
     padding-bottom: 15px;
   }
 }
@@ -43,6 +44,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 50px;
+    width: 295px;
   }
 }
 

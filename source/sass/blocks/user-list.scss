@@ -29,7 +29,15 @@ border-radius: 30px;
 
   @media (min-width: $tablet-width) {
     order: 3;
+        margin-top: -5px;
   }
+}
+
+.user-list__login-text {
+  font-weight: bold;
+  font-size: 20px;
+    line-height: 1;
+    padding-left: 5px;
 }
 
 .user-list__button {

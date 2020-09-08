@@ -17,10 +17,11 @@
   @media (min-width: $tablet-width) {
     border-radius: 55px;
     padding: 4px;
+    padding-bottom: 86px;
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: bottom 63% right 0;
-    background-size: 50% 80%;
+    background-position: bottom 50% right 0;
+    background-size: 50% 94%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-tablet@2x.png");
@@ -30,11 +31,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 115px;
-    padding-bottom: 87px;
+    padding-top: 120px;
+    padding-bottom: 162px;
     background-image: url("../img/about-desktop@1x.png");
-    background-size: 40% 90%;
-    background-position: bottom 0 right 105px;
+    background-size: 43% 90%;
+    background-position: bottom -15px right 69px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-desktop@2x.png");
@@ -43,13 +44,35 @@
       background-position: bottom 30px right 40px;
     }
   }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      width: 688px;
+      height: 212px;
+      left: 40px;
+      top: 0px;
+      z-index: -1;
+
+      background: #141b3b;
+      border-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 212px;
+      height: 212px;
+      left: 44px;
+      top: 81px;
+    }
+  }
 }
 
 .about-service__title {
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 42px;
+    margin-bottom: 49px;
     padding-left: 6px;
   }
 
@@ -75,13 +98,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 90px;
+    margin-bottom: 83px;
     padding-left: 38px;
   }
 }
 
 .about-service__description--thesis {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     width: 300px;
@@ -118,8 +141,10 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    margin-left: 32px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 63px;
   }
 }

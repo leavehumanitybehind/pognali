@@ -1,8 +1,13 @@
 .social-list {
   @include no-list;
   display: flex;
-  margin-bottom: 44px;
+  margin-bottom: 33px;
   justify-content: center;
+
+    @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-left: -16px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-right: 34px;
@@ -17,9 +22,18 @@
   align-items: center;
   width: 45px;
   height: 45px;
-  background-color: #ffd74b;
+  background-color: $basic-yellow;
   background-repeat: no-repeat;
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $special-yellow-dark;
+  }
+
+  &:active {
+    opacity: .3;
+  }
 
   @media (min-width: $tablet-width) {
     width: 60px;

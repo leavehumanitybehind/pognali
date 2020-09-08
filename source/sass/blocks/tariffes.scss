@@ -11,14 +11,14 @@
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 30;
+  z-index: 60;
   width: 270px;
   height: 443px;
   border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     width: 688px;
-    height: auto;
+    height: 526px;
     border-radius: 30px;
   }
 
@@ -30,14 +30,14 @@
 
 .tariffes__list {
   @include no-list;
-  margin: 0 25px 36px;
+  margin: 0 25px 33px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 90px 36px;
+    margin: 0 90px 24px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 60px 0;
+    margin: 0 60px 17px;
   }
 }
 
@@ -54,7 +54,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 22px;
-    line-height: 1.27;
+    line-height: (28 / 22);
     padding: 20px 0 15px;
   }
 }
@@ -67,12 +67,30 @@
 
 .tariffes__button {
   color: $basic-blue-light;
-  background-color: rgb(223, 227, 240);
+  background-color: #f3f4f8;
   border: none;
   width: 100%;
-  padding: 41px;
+  padding: 21px;
   text-align: center;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: (24 / 16);
+
   border-radius: 0 0 20px 20px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    padding: 41px;
+    text-transform: none;
+  }
 }

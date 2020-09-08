@@ -7,7 +7,7 @@
   background: $basic-medium-blue;
 
   @media (min-width: $tablet-width) {
-    margin-top: -50px;
+    margin-top: -45px;
     border-radius: 0 0 55px 55px;
     padding-top: 80px;
     padding-bottom: 28px;
@@ -24,7 +24,9 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 61px;
+    margin-left: 6px;
     text-align: center;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -52,12 +54,12 @@
 
   @media (min-width: $desktop-width) {
     width: 616px;
-    margin-bottom: 63px;
+    margin-bottom: 57px;
   }
 }
 
 .promotion__description--questions {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
@@ -72,7 +74,7 @@
 
   @media (min-width: $desktop-width) {
     width: auto;
-    margin-bottom: 80px;
+    margin-bottom: 82px;
   }
 }
 
@@ -82,6 +84,15 @@
   line-height: (22 / 16);
   text-align: center;
   color: $basic-yellow;
+
+    &:hover,
+  &:focus {
+    color: $special-orange;
+  }
+
+  &:active {
+    opacity: .3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -105,7 +116,8 @@
   border-radius: 10px 0 0 10px;
   padding: 22px;
   margin-bottom: 10px;
-  height: 62px;
+  height: 66px;
+  font-size: 18px;
 
   @media (min-width: $tablet-width) {
     width: 556px;
@@ -114,6 +126,10 @@
     margin-bottom: 36px;
     margin-left: 35px;
     border-radius: 20px 0 0 20px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    color: $basic-white;
   }
 
   @media (min-width: $desktop-width) {
@@ -131,36 +147,55 @@
       color: rgba($special-grey, 0.3);
     }
   }
+
+  &:hover {
+    background-color: #edeff6;
+  }
+
+  &:hover::placeholder {
+    color: $special-grey;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $basic-blue-light;
+    outline-color: $basic-white;
+    color: $basic-white;
+  }
+
+  &--error {
+    color: #ff0000;
+    background-color: $basic-white
+  }
 }
 
 .promotion__button {
-width: 60px;
-height: 62px;
-margin-left: -5px;
+  width: 60px;
+  height: 66px;
+  margin-left: -13px;
 
-&::after {
-    top: 25px;
-    right: 17px;
+  &::after {
+    top: 27px;
+    right: 20px;
 
-      @media (min-width: $tablet-width) {
-width: 22px;
-height: 24px;
-top: 29px;
-    right: 23px;
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      top: 36px;
+      right: 23px;
+    }
   }
 
-}
-
   @media (min-width: $tablet-width) {
-width: 80px;
-height: 80px;
+    width: 80px;
+    height: 80px;
+    margin-left: -19px;
   }
 
   @media (min-width: $desktop-width) {
-width: 330px;
-height: 81px;
+    width: 330px;
+    height: 81px;
+    margin-left: -28px;
   }
-
 }
 
 .promotion__button-text {
@@ -182,6 +217,7 @@ height: 81px;
 }
 
 .promotion__popup-title {
+  margin-left: 0;
   padding-top: 24px;
   text-align: center;
 }

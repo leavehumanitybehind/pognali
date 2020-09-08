@@ -66,17 +66,18 @@
 }
 
 .alphabet__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
   color: $basic-blue;
   width: 43px;
   height: 40px;
-  margin: auto;
   border: 1px solid #e5e5e5;
   background-color: $basic-white;
 

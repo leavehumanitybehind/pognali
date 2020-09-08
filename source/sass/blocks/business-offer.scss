@@ -4,19 +4,19 @@
   z-index: 3;
   border-radius: 0 0 25px 25px;
   padding-bottom: 40px;
-  padding-top: 48px;
+  padding-top: 46px;
   background-color: #e6e8f1;
 
   @media (min-width: $tablet-width) {
     background: #edeff6;
-    margin-top: -40px;
-    padding-bottom: 90px;
+    margin-top: -37px;
+    padding-bottom: 88px;
     border-radius: 0 0 55px 55px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: -50px;
-    padding-top: 98px;
+    padding-top: 93px;
     padding-bottom: 195px;
   }
 
@@ -47,19 +47,21 @@
 .business-offer__title {
   position: relative;
   margin: 0;
-  margin-bottom: 43px;
+  margin-left: 25px;
+  margin-bottom: 30px;
   width: 100px;
   padding-top: 35px;
 
   @media (min-width: $tablet-width) {
     width: auto;
-    margin-bottom: 84px;
+    margin-bottom: 61px;
+        margin-left: 6px;
     padding-top: 60px;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 140px;
+    margin-bottom: 120px;
   }
 
   &::after {
@@ -90,34 +92,34 @@
 
 .business-offer__list {
   @include no-list;
-  margin-bottom: 30px;
+  margin-bottom: 44px;
   counter-reset: myCounter;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 58px;
-    padding: 0 74px;
+    margin-bottom: 64px;
+    padding: 0 10px 0 2px
   }
+
+  @media (min-width: $desktop-width) {
+  padding: 0 76px 0 71px;
+}
 }
 
 .business-offer__list-item {
   position: relative;
-  padding: 13px 25px;
+   padding: 13px 25px 0 25px;
   font-weight: 300;
   font-size: 16px;
   line-height: 1;
   color: $special-grey;
-  border-top: 1px solid #e1e3e9;
-
-  &:last-child {
-    border-bottom: 1px solid #e1e3e9;
-  }
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     font-size: 28px;
     line-height: 1;
-    margin-bottom: 4px;
+    margin-bottom: 0;
+
   }
 
   @media (min-width: $desktop-width) {
@@ -137,7 +139,7 @@
     border-radius: 50%;
     text-align: center;
     right: 0;
-    top: 5px;
+    top: 18px;
     font-size: 16px;
     font-weight: normal;
     line-height: 0.88;
@@ -150,13 +152,9 @@
       position: absolute;
       width: 68px;
       height: 68px;
-      top: -10px;
+      top: 10px;
       left: 0;
       font-size: 21px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: -5px;
     }
   }
 
@@ -170,13 +168,25 @@
 }
 
 .business-offer__service {
+  padding-top: 13px;
+  border-top: 1px solid #e1e3e9;
   margin-bottom: 6px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 20px;
     padding-left: 64px;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 440px;
+    width: 430px;
+    text-overflow: ellipsis;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+  }
+
+    &:last-child {
+    border-bottom: 1px solid #e1e3e9;
   }
 }
 
@@ -185,6 +195,7 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 64px;
+    margin-top: 18px;
   }
 
   @media (min-width: $desktop-width) {
@@ -223,7 +234,7 @@
   }
 
   &::before {
-    display: inline-block;
+    display: none;
     width: 10px;
     height: 10px;
     position: absolute;
@@ -234,6 +245,7 @@
     content: "";
 
     @media (min-width: $tablet-width) {
+      display:inline-flex;
       width: 68px;
       height: 68px;
       left: -22px;

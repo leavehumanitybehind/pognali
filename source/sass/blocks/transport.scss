@@ -2,9 +2,7 @@
   @include no-list;
   position: relative;
   display: flex;
-  padding-top: 9px;
-  padding-left: 0;
-  padding-bottom: 16px;
+  align-self: center;
 
   @media (min-width: $tablet-width) {
     margin-left: 25px;
@@ -12,12 +10,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto;
   }
 }
 
 .transport__item {
-  position: relative;
+  display: flex;
+  justify-content: center;
   background-color: $basic-white;
   width: 33px;
   height: 33px;
@@ -29,42 +27,22 @@
   }
 }
 
+.transport__label {
+  position: relative;
+  width: 33px;
+  height: 33px;
+}
+
 .transport__checkbox {
   display: none;
   position: absolute;
   appearance: none;
 }
-
-.transport__checkbox:checked + .transport__label {
-  opacity: 0.5;
+.transport__label-icon {
+margin: auto;
 }
 
-.transport__label {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: center;
 
-  @media (min-width: $tablet-width) {
-    width: 43px;
-    height: 43px;
-  }
-
-  &--plane {
-    background-image: url("../img/plane.svg");
-  }
-
-  &--bicycle {
-    background-image: url("../img/bike.svg");
-  }
-
-  &--bus {
-    background-image: url("../img/bus.svg");
-  }
-
-  &--walk {
-    background-image: url("../img/run.svg");
-  }
+.transport__checkbox:checked  .transport__label-icon {
+  fill: rgba($basic-blue, 0.3);
 }
