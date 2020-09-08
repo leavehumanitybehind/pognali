@@ -124,28 +124,14 @@
   }
 }
 
-.directions__show-all-btn {
-  position: relative;
-  padding: 21px 141px 20px 24px;
-  text-transform: none;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 0.6;
-  border-radius: 10px;
 
+.directions__show-all-btn {
   @media (min-width: $tablet-width) {
-    display: block;
-    width: 616px;
-    margin-left: 25px;
-    padding: 28px 29px;
-    font-size: 24px;
-    line-height: 1;
+    width: 100%;
   }
 
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    bottom: 130px;
-    right: 300px;
-    width: 275px;
+   @media (min-width: $desktop-width) {
+    width: 280px;
+    height: 70px;
   }
 }

@@ -115,27 +115,11 @@
 .about-service__link {
   position: relative;
   display: none;
-  font-size: 24px;
-  line-height: 1;
-  font-weight: bold;
-  background-color: $basic-yellow;
-  color: $basic-blue-light;
-  text-decoration: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
-    padding: 29px 32px;
-    width: 276px;
-    margin-left: 26px;
-    border-radius: 20px;
-    margin-bottom: 85px;
-    text-transform: none;
+    display: flex;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 23px 130px 28px 22px;
-    border-radius: 20px;
-    margin-left: 68px;
-    text-transform: none;
   }
 }

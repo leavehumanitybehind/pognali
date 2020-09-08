@@ -121,13 +121,12 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: (24 / 20);
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 53px;
-    padding-right: 405px;
-    margin-bottom: 53px;
+    max-width: 577px;
+    margin-bottom: 55px;
   }
 
   &--way {
@@ -263,15 +262,17 @@
 }
 
 .plan-filters__input {
-  width: 99%;
+  width: 220px;
+height: 43px;
   text-align: center;
-  padding: 10px;
   color: $basic-blue-light;
+  font-family: inherit;
   font-weight: 500;
   font-size: 14.86px;
   line-height: 14px;
   margin-top: 9px;
   margin-bottom: 21px;
+  border: 1px solid #e5e5e5;
 
   &:hover,
   &:focus {
@@ -280,14 +281,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 20px 0;
-    margin-left: 4px;
+    width: 531px;
+height: 70px;
+font-size: 20px;
   }
 
   @media (min-width: $desktop-width) {
     font-weight: 700;
-    font-size: 20px;
-    padding: 0;
+width: 180px;
     order: 2;
   }
 
@@ -316,6 +317,8 @@
 }
 
 .plan-filters__toggle {
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 9px;
   width: 42px;
@@ -339,7 +342,7 @@
   }
 
   &--minus {
-    right: 0;
+    right: 10px;
 
     @media (min-width: $tablet-width) {
       right: 20px;
@@ -667,44 +670,43 @@
 }
 
 .plan-filters__btn {
-  display: block;
   margin-bottom: 15px;
-  font-size: 17px;
-  line-height: (30 / 17);
-  text-align: center;
-  font-weight: bold;
+  width: 229px;
+height: 40px;
+border-radius: 30px;
+text-transform: uppercase;
+
+
+  @media (min-width: $tablet-width) {
+    width: 284px;
+height: 80px;
+border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 19px;
+  }
+
+    @media (min-width: $desktop-width) {
+    width: 286px;
+text-transform: none;
+  }
 
   &::after {
     display: none;
 
     @media (min-width: $tablet-width) {
-      display: block;
+      display: flex;
+
     }
   }
 
   &--submit {
-    border: none;
-    padding: 8px;
-    margin: 0;
-    font-size: 17px;
-
     margin-bottom: 15px;
   }
 
-  @media (min-width: $tablet-width) {
-    text-align: left;
-    display: inline-block;
-    font-size: 24px;
-    padding: 22px;
-    text-transform: none;
-    margin-top: 30px;
-    margin-bottom: 19px;
-    width: 280px;
-  }
+
 
   &--submit--back {
     position: relative;
-    display: block;
     margin: 0 auto;
     padding-bottom: 10px;
 

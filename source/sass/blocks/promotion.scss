@@ -97,24 +97,28 @@
 
 .promotion__form {
   position: relative;
+  display: flex;
 }
 
 .promotion__form-field {
   width: 230px;
+  border-radius: 10px 0 0 10px;
   padding: 22px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  height: 62px;
 
   @media (min-width: $tablet-width) {
     width: 556px;
+    height: 80px;
     padding: 30px;
     margin-bottom: 36px;
     margin-left: 35px;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
   }
 
   @media (min-width: $desktop-width) {
     width: 880px;
+    height: 81px;
     margin-left: 72px;
     margin-bottom: 40px;
   }
@@ -130,42 +134,33 @@
 }
 
 .promotion__button {
-  border: none;
-  border-radius: 10px;
-  position: absolute;
-  padding: 32px;
-  top: 2px;
-  right: 0;
-  background-color: $basic-yellow;
+width: 60px;
+height: 62px;
+margin-left: -5px;
+
+&::after {
+    top: 25px;
+    right: 17px;
+
+      @media (min-width: $tablet-width) {
+width: 22px;
+height: 24px;
+top: 29px;
+    right: 23px;
+  }
+
+}
 
   @media (min-width: $tablet-width) {
-    padding: 40px;
-    right: 42px;
-    border-radius: 0 20px 20px 0;
+width: 80px;
+height: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 330px;
-    height: 81px;
-    padding: 36px;
-    right: 70px;
-    top: 0;
+width: 330px;
+height: 81px;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 40%;
-    right: 35%;
-    width: 14px;
-    height: 16px;
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
-
-    @media (min-width: $desktop-width) {
-      top: 40%;
-      right: 12%;
-    }
-  }
 }
 
 .promotion__button-text {

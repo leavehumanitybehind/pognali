@@ -133,6 +133,12 @@
       width: 32px;
       height: 30px;
       border: 2px solid #ff5c23;
+
+      @media (min-width: $tablet-width) {
+        width: 76px;
+        height: 69px;
+        border: 3px solid #ff5c23;
+      }
     }
   }
 
@@ -148,6 +154,12 @@
       width: 32px;
       height: 30px;
       border: 2px solid #ff5c23;
+
+      @media (min-width: $tablet-width) {
+        width: 76px;
+        height: 69px;
+        border: 3px solid #ff5c23;
+      }
     }
   }
 }

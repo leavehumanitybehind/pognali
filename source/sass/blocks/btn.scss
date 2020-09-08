@@ -1,29 +1,38 @@
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 230px;
-  padding: 8px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1;
-  color: $basic-blue-light;
-  text-decoration: none;
-  text-transform: uppercase;
+  width: 270px;
+  height: 62px;
   background: $basic-yellow;
-  border-radius: 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+  color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+   width: 280px;
+  height: 80px;
+}
 
   &::after {
     position: absolute;
     content: "";
     top: 40%;
     right: 10%;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 13px;
     background: url("../img/triangle-arrow-right.svg") no-repeat;
 
     @media (min-width: $tablet-width) {
-      width: 14px;
-      height: 14px;
       right: 5%;
     }
   }
@@ -36,4 +45,19 @@
     background-color: $special-yellow-dark;
     color: rgba($basic-blue-light, 0.3);
   }
+}
+
+.btn-text {
+  align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
 }

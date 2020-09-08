@@ -1,19 +1,21 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const csso = require("gulp-csso");
-const terser = require("gulp-terser");
-const server = require("browser-sync").create();
-const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
-const del = require("del");
+"use strict";
+
+let gulp = require("gulp");
+let plumber = require("gulp-plumber");
+let sourcemap = require("gulp-sourcemaps");
+let rename = require("gulp-rename");
+let sass = require("gulp-sass");
+let postcss = require("gulp-postcss");
+let autoprefixer = require("autoprefixer");
+let csso = require("gulp-csso");
+let terser = require("gulp-terser");
+let server = require("browser-sync").create();
+let imagemin = require("gulp-imagemin");
+let webp = require("gulp-webp");
+let svgstore = require("gulp-svgstore");
+let posthtml = require("gulp-posthtml");
+let include = require("posthtml-include");
+let del = require("del");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")

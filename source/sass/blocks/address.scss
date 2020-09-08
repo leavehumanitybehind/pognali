@@ -80,17 +80,7 @@
 }
 
 .address__way-to {
-  position: relative;
-  padding: 20px 24px;
-  width: 100%;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1;
-  color: $basic-blue-light;
-  text-decoration: none;
-  text-align: left;
   border: 3px solid $basic-medium-blue;
-  border-radius: 10px;
 
   &:hover {
     background-color: $basic-medium-blue;
@@ -102,24 +92,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 24px;
-    padding-bottom: 30px;
-    padding-right: 358px;
-    border-radius: 20px;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
-    width: auto;
-    padding: 27px 65px 28px 20px;
-  }
+   width: 324px;
+  height: 80px;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 45%;
-    right: 5%;
-    width: 10px;
-    height: 10px;
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
-  }
 }

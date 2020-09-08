@@ -150,6 +150,7 @@
 }
 
 .traveller__likes {
+  position: relative;
   padding-top: 5px;
   margin-left: -9px;
   grid-column-start: 2;
@@ -177,6 +178,32 @@
     padding-left: 230px;
   }
 }
+
+.traveller__likes-btn {
+  position: absolute;
+  top: 13%;
+    right: 63%;
+    border: none;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+    background-size: 31px 31px;
+
+    @media (min-width: $tablet-width) {
+      width: 50px;
+      height: 50px;
+      background-size: 51px 51px;
+      top: 54%;
+    right: 34%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 64%;
+    right: 42%;
+    }
+  }
 
 .traveller__hashtags {
   margin: 0;
@@ -268,9 +295,9 @@
   @media (min-width: $tablet-width) {
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    margin-top: -8px;
+   grid-row-start: 5;
+    grid-row-end: 5;
+    margin-top: -40px;
     margin-left: 75px;
 
     @media (min-width: $tablet-width) {
@@ -343,15 +370,20 @@
 
 .traveller__property-progress-bar {
   position: absolute;
-  top: 35px;
+  top: 17px;
   left: 12px;
   width: 60px;
   height: 60px;
 
   @media (min-width: $tablet-width) {
-    top: 5px;
+    top: -15px;
     left: -4px;
   }
+
+ @media (min-width: $desktop-width) {
+  top: -15px;
+    left: -2px;
+ }
 
   &--99 {
     stroke-dasharray: 170, 170;
@@ -406,40 +438,7 @@
   }
 
   &::after {
-    position: absolute;
-    content: "";
-    width: 31px;
-    height: 31px;
-    left: 50px;
-    top: -330px;
-    background-image: url("../img/heart.svg");
-    background-repeat: no-repeat;
-    background-size: 31px 31px;
-
-    @media (min-width: $tablet-width) {
-      left: 148px;
-      top: 0;
-      width: 50px;
-      height: 50px;
-      background-size: 51px 51px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 158px;
-    }
-  }
-
-  &--liked::after {
-    background-image: url("../img/heart-active.svg");
-    width: 31px;
-    height: 31px;
-    background-size: 31px 31px;
-
-    @media (min-width: $tablet-width) {
-      width: 50px;
-      height: 50px;
-      background-size: 51px 51px;
-    }
+    display:none;
   }
 }
 
