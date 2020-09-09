@@ -5,15 +5,23 @@
   grid-template-rows: 42px 38px 14% 30% 20% 10% 10%;
   position: relative;
   border-radius: 20px;
-  margin-bottom: 11px;
+  margin-bottom: 8px;
   background-color: $basic-white;
+
+  &:nth-child(2) {
+    margin-bottom: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     height: 332px;
     grid-template-columns: 1fr 1fr 20%;
     grid-template-rows: 39px 61px 1fr 1fr 1fr;
     margin-bottom: 40px;
-    padding: 33px 20px;
+    padding: 30px 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -151,7 +159,7 @@
 
 .traveller__likes {
   position: relative;
-  padding-top: 5px;
+  padding-top: 7px;
   margin-left: -9px;
   grid-column-start: 2;
   grid-column-end: 2;
@@ -164,7 +172,8 @@
   color: $basic-blue;
 
   @media (min-width: $tablet-width) {
-    margin-left: 12px;
+    padding-top: 1px;
+    margin-left: 20px;
     font-size: 20px;
     line-height: 1;
     grid-column-end: 3;
@@ -182,33 +191,33 @@
 .traveller__likes-btn {
   position: absolute;
   top: 13%;
-    right: 63%;
-    border: none;
-    border-radius: 50%;
-    width: 31px;
-    height: 31px;
-    background-image: url("../img/heart.svg");
-    background-repeat: no-repeat;
-    background-size: 31px 31px;
+  right: 63%;
+  border: none;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-size: 31px 31px;
 
-    @media (min-width: $tablet-width) {
-      width: 50px;
-      height: 50px;
-      background-size: 51px 51px;
-      top: 54%;
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+    background-size: 51px 51px;
+    top: 51%;
     right: 34%;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 64%;
-    right: 42%;
-    }
   }
+
+  @media (min-width: $desktop-width) {
+    top: 64%;
+    right: 42%;
+  }
+}
 
 .traveller__hashtags {
   margin: 0;
   padding-left: 18px;
-  padding-top: 2px;
+  padding-top: 4px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -284,8 +293,6 @@
 .traveller-property-level {
   position: relative;
   margin-left: 75px;
-  width: 45px;
-  height: 45px;
   border-radius: 50%;
   grid-column-start: 2;
   grid-column-end: 2;
@@ -295,7 +302,7 @@
   @media (min-width: $tablet-width) {
     grid-column-start: 3;
     grid-column-end: 4;
-   grid-row-start: 5;
+    grid-row-start: 5;
     grid-row-end: 5;
     margin-top: -40px;
     margin-left: 75px;
@@ -314,6 +321,7 @@
 }
 
 .traveller-property-level svg {
+  transform: scale(1.3) translate(12px, 12px);
   @media (min-width: $tablet-width) {
     transform: scale(1.7) translate(12px, 12px);
   }
@@ -327,13 +335,19 @@
   line-height: (16 / 14);
   color: $special-grey;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 61px;
+  }
+
   &--transport {
+    margin-top: -6px;
     @media (min-width: $tablet-width) {
       display: none;
     }
   }
 
   &--level {
+    margin-top: -5px;
     @media (min-width: $tablet-width) {
       display: none;
     }
@@ -345,12 +359,18 @@
 }
 
 .traveller-property-level__value {
-  margin-top: 20px;
-  padding-left: 20px;
+  position: absolute;
+  margin-top: 21px;
+  padding-left: 22px;
   font-weight: bold;
   font-size: 24px;
   line-height: 1;
   color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -23px;
+    padding-left: 9px;
+  }
 }
 
 .traveller-property-level__lvl {
@@ -365,25 +385,26 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    margin-left: 3px;
   }
 }
 
 .traveller__property-progress-bar {
   position: absolute;
-  top: 17px;
-  left: 12px;
+  top: 18px;
+  left: 3px;
   width: 60px;
   height: 60px;
 
   @media (min-width: $tablet-width) {
-    top: -15px;
-    left: -4px;
+    top: -42px;
+    left: -13px;
   }
 
- @media (min-width: $desktop-width) {
-  top: -15px;
+  @media (min-width: $desktop-width) {
+    top: -15px;
     left: -2px;
- }
+  }
 
   &--99 {
     stroke-dasharray: 170, 170;
@@ -403,15 +424,16 @@
 }
 
 .traveller__btn {
+  width: 223px;
+  height: 37px;
   position: relative;
   font-size: 20px;
   line-height: 1;
   text-transform: uppercase;
-  margin-top: 5px;
-  margin-left: 9px;
-  margin-bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 30px;
+  margin-top: 14px;
+  margin-left: 16px;
+  margin-bottom: 13px;
+  padding-left: 74px;
   border-radius: 25px;
   text-align: center;
   grid-column-start: 1;
@@ -420,9 +442,9 @@
   grid-row-end: 7;
 
   @media (min-width: $tablet-width) {
-    margin-top: -8px;
-    margin-left: -29px;
-    padding: 13px 10px 3px;
+    margin-top: -12px;
+    margin-left: -25px;
+    padding: 0;
     width: 150px;
     height: 50px;
     grid-column-start: 2;
@@ -438,7 +460,15 @@
   }
 
   &::after {
-    display:none;
+    display: none;
+  }
+}
+
+.traveller__btn-text {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    font-weight: 700;
+    margin: auto;
   }
 }
 

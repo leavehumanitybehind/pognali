@@ -19,12 +19,14 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   margin-left: 0;
-  margin-top: 10px;
+  margin-top: 3px;
 
   @media (min-width: $tablet-width) {
     order: 2;
+    margin-right: 17px;
+    margin-top: -3px;
   }
 
   @media (min-width: $desktop-width) {
@@ -63,13 +65,15 @@
 }
 
 .range__input {
-  width: 110px;
+  font-family: inherit;
+  width: 114px;
 
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #cbced9;
 
   @media (min-width: $tablet-width) {
-    width: 80px;
+    width: 75px;
+    padding: 14px 8px
   }
 
   &--left {
@@ -86,14 +90,15 @@
 
   width: 100%;
   height: 2px;
-  margin-bottom: 26px;
+  margin-bottom: 15px;
 
   background-color: rgba($special-grey, 0.3);
 
   @media (min-width: $tablet-width) {
-    left: 120px;
+        left: 68px;
     position: absolute;
-    width: 40%;
+    width: 50%;
+    top: 12px;
   }
 
   @media (min-width: $desktop-width) {
@@ -119,7 +124,7 @@
 .range__toggle {
   position: absolute;
   top: 50%;
-  right: 0;
+      right: 4px;
 
   width: 10px;
   height: 10px;
@@ -144,7 +149,7 @@
   right: 145px;
 
   @media (min-width: $tablet-width) {
-    right: 145px;
+    right: 205px;
   }
 
   @media (min-width: $desktop-width) {
@@ -163,9 +168,9 @@
     background-color: $basic-blue;
 
     @media (min-width: $tablet-width) {
-      height: 3px;
-      width: 144px;
-      right: -190px;
+      height: 5px;
+      width: 198px;
+    right: -43px;
     }
 
     @media (min-width: $desktop-width) {

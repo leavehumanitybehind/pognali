@@ -8,7 +8,7 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 0 0 55px 55px;
-    padding-top: 130px;
+    padding-top: 122px;
   }
 }
 
@@ -59,7 +59,7 @@
 
 .page-main-header__link {
   position: relative;
-  padding-right: 100px;
+  padding-right: 94px;
   padding-top: 10px;
   display: none;
   font-weight: bold;
@@ -81,8 +81,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 60%;
-    right: 68px;
+   top: 49%;
+    right: 33px;
     width: 32px;
     height: 16px;
     margin-top: -11px;

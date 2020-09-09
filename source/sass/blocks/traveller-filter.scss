@@ -11,15 +11,18 @@
 
 .traveller-filter__title {
   width: 150px;
-  padding-top: 26px;
-  margin-bottom: 24px;
+  padding-left: 5px;
+    padding-top: 24px;
+  margin-bottom: 25px;
   font-weight: bold;
   font-size: 22px;
   line-height: 1;
   color: $basic-blue-light;
 
   @media (min-width: $tablet-width) {
-    margin-top: 38px;
+    margin: 0;
+    padding-top: 41px;
+    padding-left: 10px;
     margin-bottom: 43px;
     font-size: 30px;
     line-height: 1;
@@ -38,15 +41,14 @@
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 60px;
+    margin-bottom: 47px;
   }
 }
 
 .traveller-filter-list__item {
   @media (min-width: $tablet-width) {
     display: flex;
-    align-items: center;
-    margin-top: -10px;
+    align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
@@ -70,13 +72,14 @@
 
   &::after {
     content: "";
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
+    background: url(../img/triangle-arrow-right.svg) no-repeat;
     position: absolute;
-    width: 10px;
-    height: 6px;
+    width: 13px;
+    height: 8px;
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     top: 20px;
-    right: 20px;
+    right: 2px;
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -88,6 +91,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-left: 12px;
     font-size: 20px;
     line-height: 1;
   }
@@ -101,8 +106,8 @@
 .traveller-filter__preferences {
   @include no-list;
 
-  padding-top: 3px;
-  padding-bottom: 11px;
+  padding-top: 6px;
+    padding-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     width: 520px;
@@ -121,12 +126,14 @@
 }
 
 .traveller-filter__preferences-item {
-  margin-bottom: 7px;
-
+  margin-bottom: 12px;
   @media (min-width: $tablet-width) {
-    margin-right: 20px;
-    width: 160px;
-    height: 55px;
+    display: flex;
+    align-items: flex-end;
+        margin-left: 20px;
+        margin-bottom: 0;
+    width: 150px;
+    height: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -162,7 +169,7 @@
 }
 
 .traveller-filter__label {
-  margin-bottom: 16px;
+  padding-left: 31px;
   position: relative;
   font-size: 15px;
   line-height: (20 / 15);
@@ -173,9 +180,9 @@
   }
 
   &::before {
-    display: inline-block;
-
-    margin-right: 9px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
     width: 18px;
     height: 18px;
     background-color: $basic-white;
@@ -185,7 +192,8 @@
     @media (min-width: $tablet-width) {
       width: 24px;
       height: 24px;
-      margin-top: 20px;
+      top: -4px;
+    left: -5px;
     }
 
     @media (min-width: $desktop-width) {
@@ -196,7 +204,7 @@
 
 .traveller-filter__checkbox:checked + .traveller-filter__label::before {
   background-image: url("../img/tick.svg");
-  background-size: 13px;
+  background-size: 8px;
   background-position: 50%;
   background-repeat: no-repeat;
 }
@@ -220,8 +228,8 @@
   margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
-    margin-bottom: 42px;
+    width: 98%;
+    margin: 0 auto 42px;
   }
 
   @media (min-width: $desktop-width) {

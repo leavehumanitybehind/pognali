@@ -1,8 +1,8 @@
 .wish-list {
   @include no-list;
 
-  padding-top: 13px;
-  padding-left: 16px;
+  padding-top: 12px;
+  padding-left: 15px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -16,6 +16,8 @@
 }
 
 .wish-list__item {
+  margin-bottom: 6px;
+
   @media (min-width: $tablet-width) {
     margin-right: 29px;
   }
@@ -26,6 +28,8 @@
 }
 
 .wish-list__link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 15px;
   line-height: (16 / 15);
@@ -36,5 +40,21 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
+  }
+}
+
+.wish-list__country-icon {
+  transform: scale(0.74);
+
+  @media (min-width: $tablet-width) {
+    transform: scale(1);
+  }
+}
+
+.wish-list__country-name {
+  padding-left: 3px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 16px;
   }
 }

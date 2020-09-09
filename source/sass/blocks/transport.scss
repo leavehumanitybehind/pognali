@@ -1,12 +1,15 @@
 .transport {
   @include no-list;
+  padding-left: 4px;
+  padding-top: 6px;
+  padding-bottom: 20px;
   position: relative;
   display: flex;
   align-self: center;
 
   @media (min-width: $tablet-width) {
-    margin-left: 25px;
-    margin-top: 30px;
+    margin-left: 17px;
+    margin-top: 19px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,7 +31,7 @@
 }
 
 .transport__label {
-  position: relative;
+  display: flex;
   width: 33px;
   height: 33px;
 }
@@ -39,10 +42,10 @@
   appearance: none;
 }
 .transport__label-icon {
-margin: auto;
+  fill: $basic-blue-light;
+  margin: auto;
 }
 
-
-.transport__checkbox:checked  .transport__label-icon {
-  fill: rgba($basic-blue, 0.3);
+.transport__checkbox:checked + .transport__label {
+  opacity: .3;
 }
