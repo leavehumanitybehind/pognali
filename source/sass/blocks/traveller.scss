@@ -14,6 +14,10 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 40px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 32px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -21,7 +25,7 @@
     grid-template-columns: 1fr 1fr 20%;
     grid-template-rows: 39px 61px 1fr 1fr 1fr;
     margin-bottom: 40px;
-    padding: 30px 20px;
+    padding: 30px 20px 16px 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,6 +36,12 @@
     grid-template-rows: 70px 31px 1fr 1fr;
     padding: 0;
   }
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.16);
+  }
 }
 
 .traveller__photo {
@@ -41,7 +51,6 @@
   grid-row-start: 1;
   grid-row-end: 3;
   border-radius: 50px;
-  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     grid-column-start: 1;
@@ -60,8 +69,25 @@
   }
 }
 
+.traveller:hover .traveller__photo {
+  transform: scale(1.05);
+}
+
 .traveller__link {
+  width: 70px;
+  height: 70px;
   margin-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 20px;
+    width: 190px;
+    height: 190px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .traveller__title {
@@ -86,8 +112,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 35px;
-    margin-left: 26px;
+    padding-top: 49px;
+    margin-left: 23px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   &--offline {
@@ -115,7 +149,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        top: 45px;
+        top: 60px;
         right: 315px;
         width: 11px;
         height: 11px;
@@ -148,7 +182,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        top: 45px;
+        top: 60px;
         right: 315px;
         width: 11px;
         height: 11px;
@@ -184,7 +218,8 @@
 
   @media (min-width: $desktop-width) {
     grid-column-end: 2;
-    padding-left: 230px;
+    padding-top: 15px;
+    padding-left: 201px;
   }
 }
 
@@ -199,6 +234,20 @@
   background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
   background-size: 31px 31px;
+  opacity: 0.6;
+
+  &--liked {
+    background-image: url("../img/heart-active.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     width: 50px;
@@ -209,8 +258,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 64%;
-    right: 42%;
+    top: 67%;
+    right: 44%;
   }
 }
 
@@ -241,7 +290,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 24px;
-    padding-top: 26px;
+    padding-top: 31px;
     grid-row-start: 2;
     grid-row-end: 2;
   }
@@ -260,7 +309,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 35px;
+    padding-top: 44px;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -368,14 +417,21 @@
   color: $basic-blue-light;
 
   @media (min-width: $tablet-width) {
-    margin-top: -23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -35px;
     padding-left: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
+    padding-left: 38px;
   }
 }
 
 .traveller-property-level__lvl {
-  width: 40px;
-  margin-left: 11px;
+  width: 20px;
   display: none;
   font-weight: normal;
   text-align: center;
@@ -384,8 +440,14 @@
   border-top: 1px solid rgba($special-grey, 0.3);
 
   @media (min-width: $tablet-width) {
-    display: block;
-    margin-left: 3px;
+    display: flex;
+    margin-left: 11px;
+    margin-top: -9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 38px;
+    margin-top: 48px;
   }
 }
 
@@ -397,13 +459,13 @@
   height: 60px;
 
   @media (min-width: $tablet-width) {
-    top: -42px;
+    top: -55px;
     left: -13px;
   }
 
   @media (min-width: $desktop-width) {
-    top: -15px;
-    left: -2px;
+    top: 8px;
+    left: 18px;
   }
 
   &--99 {
@@ -442,7 +504,7 @@
   grid-row-end: 7;
 
   @media (min-width: $tablet-width) {
-    margin-top: -12px;
+    margin-top: -17px;
     margin-left: -25px;
     padding: 0;
     width: 150px;
@@ -456,11 +518,21 @@
   @media (min-width: $desktop-width) {
     width: 150px;
     height: 50px;
-    margin-left: 29px;
+    margin-top: 0;
+    margin-left: 16px;
   }
 
   &::after {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special-yellow-dark;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

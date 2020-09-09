@@ -31,6 +31,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 30px;
+    margin-top: 9px;
   }
 
   &::after {
@@ -71,10 +72,23 @@
   padding: 8px;
   border: 1px solid #cbced9;
 
+  &:hover,
+  &:focus {
+    border: 1px solid #959BB2;
+  }
+
+  &:active {
+    border: 1px solid $basic-blue;
+  }
+
   @media (min-width: $tablet-width) {
     width: 75px;
     padding: 14px 8px
   }
+
+@media (min-width: $desktop-width) {
+  width: 95px;
+}
 
   &--left {
     border-radius: 5px 0 0 5px;
@@ -102,6 +116,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+    top: 8px;
     left: 10px;
     width: 90%;
     background-color: rgba($special-grey, 0.3);
@@ -137,6 +153,18 @@
 
   cursor: pointer;
 
+
+&:hover,
+&:active {
+  width: 19px;
+height: 19px;
+}
+
+&:active {
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
+}
+
+
   @media (min-width: $tablet-width) {
     margin-left: 65px;
     margin-bottom: 0;
@@ -154,6 +182,20 @@
 
   @media (min-width: $desktop-width) {
     right: 117px;
+  }
+
+&:hover,
+&:active {
+  width: 19px;
+height: 19px;
+}
+
+&:active {
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
+}
+
+  &:hover::before {
+    width: 212px;
   }
 
   &::before {

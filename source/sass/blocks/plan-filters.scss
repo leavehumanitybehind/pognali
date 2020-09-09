@@ -263,7 +263,7 @@
 
 .plan-filters__input {
   width: 220px;
-height: 43px;
+  height: 43px;
   text-align: center;
   color: $basic-blue-light;
   font-family: inherit;
@@ -282,13 +282,13 @@ height: 43px;
 
   @media (min-width: $tablet-width) {
     width: 531px;
-height: 70px;
-font-size: 20px;
+    height: 70px;
+    font-size: 20px;
   }
 
   @media (min-width: $desktop-width) {
     font-weight: 700;
-width: 180px;
+    width: 180px;
     order: 2;
   }
 
@@ -669,25 +669,33 @@ width: 180px;
   }
 }
 
-.plan-filters__btn {
+.plan-filters__step {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.plan-filters__step-btn {
   margin-bottom: 15px;
   width: 229px;
-height: 40px;
-border-radius: 30px;
-text-transform: uppercase;
-
+  height: 40px;
+  border-radius: 30px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     width: 284px;
-height: 80px;
-border-radius: 20px;
+    height: 80px;
+    border-radius: 20px;
     margin-top: 30px;
     margin-bottom: 19px;
+    text-transform: none;
   }
 
-    @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 286px;
-text-transform: none;
+
   }
 
   &::after {
@@ -695,15 +703,12 @@ text-transform: none;
 
     @media (min-width: $tablet-width) {
       display: flex;
-
     }
   }
 
   &--submit {
     margin-bottom: 15px;
   }
-
-
 
   &--submit--back {
     position: relative;

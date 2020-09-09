@@ -19,7 +19,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding-top: 181px;
+    padding-top: 185px;
   }
 }
 
@@ -47,7 +47,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 20px;
+    padding: 34px;
+    margin-bottom: 36px;
+    margin-left: -64px;
+    font-size: 20px;
+line-height: 1px;
   }
 
   &::before {
@@ -67,8 +71,17 @@
     }
 
     @media (min-width: $desktop-width) {
-      top: 25px;
+      top: 29px;
+      left: 39%;
     }
+  }
+
+  &:hover::after {
+    opacity: .6;
+  }
+
+  &:active:after {
+    opacity: .3;
   }
 }
 
@@ -87,5 +100,9 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 114px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 132px;
   }
 }

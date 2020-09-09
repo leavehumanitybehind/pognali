@@ -8,7 +8,10 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 0 0 55px 55px;
-    padding-top: 122px;
+  }
+
+  @media (min-width: $desktop-width) {
+      padding-top: 122px;
   }
 }
 

@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 40px;
+    padding-left: 31px;
     display: flex;
     flex-direction: column;
   }
@@ -54,7 +54,7 @@
 .wish-list__country-name {
   padding-left: 3px;
 
-  @media (min-width: $tablet-width) {
-    padding-left: 16px;
+  @media (min-width: $desktop-width) {
+        padding-left: 16px;
   }
 }

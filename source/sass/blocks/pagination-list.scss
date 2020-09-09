@@ -5,6 +5,18 @@
   background-color: $basic-white;
   border-radius: 20px;
 
+  &::after:hover,
+  &::after:focus,
+  &::before:hover,
+  &::before:focus {
+    opacity: 0.6;
+  }
+
+  &::after:active,
+  &::before:active {
+    opacity: 0.3;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -18,7 +30,7 @@
       width: 10px;
       height: 20px;
       top: 40px;
-    right: 78px;
+      right: 78px;
     }
   }
 
@@ -45,7 +57,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
-    width: 75%;
+    width: 71%;
   }
 }
 
@@ -64,12 +76,30 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 30px;
+    margin-right: -5px;
   }
 }
 
 .pagination-list__link {
   display: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active:not(.pagination-list__link--current) {
+    background-color: $basic-yellow;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    opacity: 1;
+
+    @media (min-width: $tablet-width) {
+      height: 40px;
+      width: 40px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -92,6 +122,6 @@
 
     @media (min-width: $tablet-width) {
       height: 40px;
+    }
   }
-}
 }

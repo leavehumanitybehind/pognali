@@ -23,7 +23,8 @@ border-radius: 30px;
     display: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $special-yellow-dark;
   }
 

@@ -144,7 +144,7 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <div class="mobile-nav-popup__nav ">
+          <div class="mobile-nav-popup__nav">
             <ul class="mobile-nav__list">
               <li class="mobile-nav__item">
                 <a class="mobile-nav__link" href="index.html">
@@ -162,17 +162,17 @@
                 </a>
               </li>
               <li class="mobile-nav__item mobile-nav__item--auth">
-                  <a class="mobile-nav__login btn" href="#">
-                    <span class="mobile-nav__login-text btn-text">
-                      Авторизация</span>
-                  </a>
+                <a class="mobile-nav__login btn" href="login.html">
+                  <span class="mobile-nav__login-text btn-text">
+                    Авторизация</span>
+                </a>
               </li>
             </ul>
             <div class="mobile-nav__buttons">
-              <a class="mobile-nav__buttons-link" href="tel:88005558628">
+              <a class="mobile-nav__buttons-link mobile-nav__buttons-link--phone" href="tel:88005558628">
                 8 800 555-86-28
               </a>
-              <a class="mobile-nav__buttons-link" href="email:mail@htmlacademy.ru">
+              <a class="mobile-nav__buttons-link mobile-nav__buttons-link--email" href="email:mail@htmlacademy.ru">
                 mail@htmlacademy.ru
               </a>
             </div>
@@ -197,7 +197,7 @@
                 <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
                   <span class="visually-hidden">Instagram</span>
                   <svg class="social-icon" width="23" height="22">
-                    <use href="#inst-icon"></use>
+                    <use href="#instagram-icon"></use>
                   </svg>
                 </a>
               </li>
@@ -236,11 +236,12 @@
         </ul>
         <button class="country-filter__toggle" type="button">
           <span class="country-filter__toggle-text">Показать все</span>
+          <span class="country-filter__toggle-text--close">Свернуть</span>
         </button>
 
 
       </div>
-      <div class="country-filter-popup__alphabet-wrapper country-filter-popup__alphabet-wrapper--closed">
+      <div class="country-filter-popup__alphabet-wrapper country-filter-popup__alphabet-wrapper--desktop">
 
         <div class="country-filter-popup__alphabet alphabet">
           <div class="alphabet__wrapper alphabet__wrapper--current">
@@ -622,7 +623,7 @@
                   <h3 class="traveller-filter-list__title">
                     Mузыка
                   </h3>
-                  <div class="traveller-filter__option traveller-filter__option--active">
+                  <div class="traveller-filter__option">
                     <ul class="traveller-filter__preferences">
                       <li class="traveller-filter__preferences-item">
                         <input class="traveller-filter__checkbox visually-hidden" id="hard-rock" name="music"
@@ -682,39 +683,39 @@
                   <h3 class="traveller-filter-list__title">
                     Транспорт
                   </h3>
-                  <div class="traveller-filter__option traveller-filter__option--active">
+                  <div class="traveller-filter__option">
                     <ul class="traveller-filter__transport transport">
                       <li class="transport__item">
                         <input class="transport__checkbox visually-hidden" name="transport" type="checkbox"
                           id="checkbox-plane" checked>
                         <label class="transport__label" for="checkbox-plane">
-                        <svg class="transport__label-icon" width="16" height="18" aria-label="Авиаперелет">
-                  <use href="#plane"></use>
-                </svg></label>
+                          <svg class="transport__label-icon" width="16" height="18" aria-label="Авиаперелет">
+                            <use href="#plane"></use>
+                          </svg></label>
                       </li>
                       <li class="transport__item">
                         <input class="transport__checkbox visually-hidden" name="transport" type="checkbox"
                           id="checkbox-bus">
                         <label class="transport__label" for="checkbox-bus">
-                        <svg class="transport__label-icon" width="16" height="18" aria-label="Автобус">
-                  <use href="#bus"></use>
-                </svg></label>
+                          <svg class="transport__label-icon" width="16" height="18" aria-label="Автобус">
+                            <use href="#bus"></use>
+                          </svg></label>
                       </li>
                       <li class="transport__item">
                         <input class="transport__checkbox visually-hidden" name="transport" type="checkbox"
                           id="checkbox-bicycle">
                         <label class="transport__label" for="checkbox-bicycle">
-                        <svg class="transport__label-icon" width="16" height="18" aria-label="Велосипед">
-                  <use href="#bike"></use>
-                </svg></label>
+                          <svg class="transport__label-icon" width="16" height="18" aria-label="Велосипед">
+                            <use href="#bike"></use>
+                          </svg></label>
                       </li>
                       <li class="transport__item">
                         <input class="transport__checkbox visually-hidden" name="transport" type="checkbox"
                           id="checkbox-walk">
                         <label class="transport__label" for="checkbox-walk">
-                        <svg class="transport__label-icon" width="16" height="18" aria-label="Пешком">
-                        <use href="#run"></use>
-                        </svg></label>
+                          <svg class="transport__label-icon" width="16" height="18" aria-label="Пешком">
+                            <use href="#run"></use>
+                          </svg></label>
                       </li>
                     </ul>
                   </div>
@@ -723,7 +724,7 @@
                   <h3 class="traveller-filter-list__title">
                     Левел
                   </h3>
-                  <div class="traveller-filter__option traveller-filter__option--active range">
+                  <div class="traveller-filter__option range">
                     <div class="range__wrap">
                       <div class="range__output">
                         <div class="range__output-value range__output-value--left">
@@ -915,7 +916,8 @@
                   <span class="traveller-property-level__value">80</span>
                   <span class="traveller-property-level__lvl">level</span>
                 </div>
-                <a class="traveller__btn btn" href="invite.html"><span class="traveller__btn-text btn-text">Позвать!</span></a>
+                <a class="traveller__btn btn" href="invite.html"><span
+                    class="traveller__btn-text btn-text">Позвать!</span></a>
 
               </li>
               <li class="travellers__list-item traveller">
@@ -1001,7 +1003,8 @@
                   <span class="traveller-property-level__value">25</span>
                   <span class="traveller-property-level__lvl">level</span>
                 </div>
-                <a class="traveller__btn btn" href="invite.html"><span class="traveller__btn-text btn-text">Позвать!</span></a>
+                <a class="traveller__btn btn" href="invite.html"><span
+                    class="traveller__btn-text btn-text">Позвать!</span></a>
               </li>
               <li class="travellers__list-item traveller">
                 <a class="traveller__link" href="profile/rogovaya.html">
@@ -1080,7 +1083,8 @@
                   <span class="traveller-property-level__value">50</span>
                   <span class="traveller-property-level__lvl">level</span>
                 </div>
-                <a class="traveller__btn btn" href="invite.html"><span class="traveller__btn-text btn-text">Позвать!</span></a>
+                <a class="traveller__btn btn" href="invite.html"><span
+                    class="traveller__btn-text btn-text">Позвать!</span></a>
               </li>
             </ul>
             <a class="travellers__show-more" href="show-all.html">Показать еще</a>

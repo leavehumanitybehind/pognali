@@ -144,7 +144,7 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <div class="mobile-nav-popup__nav ">
+          <div class="mobile-nav-popup__nav">
             <ul class="mobile-nav__list">
               <li class="mobile-nav__item">
                 <a class="mobile-nav__link" href="index.html">
@@ -163,15 +163,16 @@
               </li>
               <li class="mobile-nav__item mobile-nav__item--auth">
                 <a class="mobile-nav__login btn" href="login.html">
-                  <span class="btn-text">
-                  Авторизация</span></a>
+                  <span class="mobile-nav__login-text btn-text">
+                    Авторизация</span>
+                </a>
               </li>
             </ul>
             <div class="mobile-nav__buttons">
-              <a class="mobile-nav__buttons-link" href="tel:88005558628">
+              <a class="mobile-nav__buttons-link mobile-nav__buttons-link--phone" href="tel:88005558628">
                 8 800 555-86-28
               </a>
-              <a class="mobile-nav__buttons-link" href="email:mail@htmlacademy.ru">
+              <a class="mobile-nav__buttons-link mobile-nav__buttons-link--email" href="email:mail@htmlacademy.ru">
                 mail@htmlacademy.ru
               </a>
             </div>
@@ -196,15 +197,15 @@
                 <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
                   <span class="visually-hidden">Instagram</span>
                   <svg class="social-icon" width="23" height="22">
-                    <use href="#inst-icon"></use>
+                    <use href="#instagram-icon"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
+        </div>
+        </div>
   </header>
   <main class="page-main">
     <header class="page-main-header">
@@ -646,10 +647,13 @@
                     </button>
                   </div>
                 </div>
-                <a class="plan-filters__btn btn" href="#step-3">
+                <div class="plan-filters__step">
+                  <a class="plan-filters__step-btn btn" href="#step-3">
                   <span class="btn-text">Следующий шаг</span>
                 </a>
-                <a class="plan-filters__btn--back btn-back" href="#step-1">На шаг назад</a>
+                <a class="plan-filters__step-btn--back btn-back" href="#step-1">На шаг назад</a>
+                </div>
+
               </div>
             </div>
           </div>
@@ -688,8 +692,10 @@
                   placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все."
                   readonly></textarea>
               </div>
-              <button class="plan-filters__btn plan-filters__btn--submit btn" type="submit"><span class="btn-text">Отправить</span></button>
-              <a class="plan-filters__btn--back plan-filters__btn-submit--back btn-back" href="#step-2">На шаг назад</a>
+              <div class="plan-filters__step">
+              <button class="plan-filters__step-btn plan-filters__step-btn--submit btn" type="submit"><span class="btn-text">Отправить</span></button>
+              <a class="plan-filters__step-btn--back plan-filters__step-btn-submit--back btn-back" href="#step-2">На шаг назад</a>
+            </div>
             </div>
           </div>
         </form>

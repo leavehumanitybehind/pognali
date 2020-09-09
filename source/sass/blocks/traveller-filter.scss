@@ -12,7 +12,7 @@
 .traveller-filter__title {
   width: 150px;
   padding-left: 5px;
-    padding-top: 24px;
+  padding-top: 24px;
   margin-bottom: 25px;
   font-weight: bold;
   font-size: 22px;
@@ -31,8 +31,8 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin-top: 48px;
-    margin-bottom: 36px;
+    margin-top: 51px;
+    margin-bottom: 26px;
   }
 }
 
@@ -42,6 +42,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
   }
 }
 
@@ -70,9 +74,18 @@
   border-top: 1px solid #f3c72b;
   padding-top: 10px;
 
+  &:hover,
+  &:focus {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+
   &::after {
     content: "";
-    background: url(../img/triangle-arrow-right.svg) no-repeat;
+    background: url("../img/triangle-arrow-right.svg") no-repeat;
     position: absolute;
     width: 13px;
     height: 8px;
@@ -87,10 +100,12 @@
 
     @media (min-width: $desktop-width) {
       display: block;
+      right: 26px;
     }
   }
 
   @media (min-width: $tablet-width) {
+    border-top:none;
     margin-bottom: 0;
     padding-left: 12px;
     font-size: 20px;
@@ -99,7 +114,7 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 120px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 }
 
@@ -107,7 +122,7 @@
   @include no-list;
 
   padding-top: 6px;
-    padding-bottom: 3px;
+  padding-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     width: 520px;
@@ -120,7 +135,7 @@
   @media (min-width: $desktop-width) {
     width: auto;
     margin: 0;
-    padding: 15px 0;
+    padding: 13px 0 7px;
     flex-direction: column;
   }
 }
@@ -130,23 +145,20 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: flex-end;
-        margin-left: 20px;
-        margin-bottom: 0;
+    margin-left: 20px;
+    margin-bottom: 0;
     width: 150px;
     height: 47px;
   }
 
   @media (min-width: $desktop-width) {
     height: auto;
+    margin-bottom: 19px;
   }
 }
 
 .traveller-filter__option {
   display: none;
-
-  &--active {
-    display: flex;
-  }
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -174,6 +186,15 @@
   font-size: 15px;
   line-height: (20 / 15);
 
+   &:hover,
+  &:focus {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
@@ -193,7 +214,7 @@
       width: 24px;
       height: 24px;
       top: -4px;
-    left: -5px;
+      left: -5px;
     }
 
     @media (min-width: $desktop-width) {
@@ -227,13 +248,24 @@
   color: $basic-blue;
   margin-bottom: 18px;
 
+  &:hover,
+  &:focus {
+    box-shadow:0px 3px 6px rgba(0, 0, 0, 0.14);
+  }
+
+  &:active {
+    background-color: inherit;
+    opacity: .3;
+  }
+
   @media (min-width: $tablet-width) {
     width: 98%;
     margin: 0 auto 42px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 17px 40px;
-    margin-bottom: 30px;
+    padding: 17px;
+    margin: 0 28px 43px;
+    width: 79%;
   }
 }
