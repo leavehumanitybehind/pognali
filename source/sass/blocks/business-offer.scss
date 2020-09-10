@@ -55,7 +55,7 @@
   @media (min-width: $tablet-width) {
     width: auto;
     margin-bottom: 61px;
-        margin-left: 6px;
+    margin-left: 6px;
     padding-top: 60px;
     text-align: center;
   }
@@ -97,18 +97,18 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 64px;
-    padding: 0 10px 0 2px
+    padding: 0 10px 0 2px;
   }
 
   @media (min-width: $desktop-width) {
-  padding: 0 76px 0 74px;
-  margin-bottom: 73px;
-}
+    padding: 0 76px 0 74px;
+    margin-bottom: 73px;
+  }
 }
 
 .business-offer__list-item {
   position: relative;
-   padding: 13px 25px 0 25px;
+  padding: 13px 25px 0 25px;
   font-weight: 300;
   font-size: 16px;
   line-height: 1;
@@ -120,7 +120,6 @@
     font-size: 28px;
     line-height: 1;
     margin-bottom: 0;
-
   }
 
   @media (min-width: $desktop-width) {
@@ -159,13 +158,13 @@
     }
   }
 
-    &:nth-child(2)::before {
-      background-color: $special-yellow-dark;
-    }
+  &:nth-child(2)::before {
+    background-color: $special-yellow-dark;
+  }
 
-    &:nth-child(3)::before {
-      background-color: $basic-yellow;
-    }
+  &:nth-child(3)::before {
+    background-color: $basic-yellow;
+  }
 }
 
 .business-offer__service {
@@ -186,7 +185,7 @@
     width: 630px;
   }
 
-    &:last-child {
+  &:last-child {
     border-bottom: 1px solid #e1e3e9;
   }
 }
@@ -246,7 +245,7 @@
     content: "";
 
     @media (min-width: $tablet-width) {
-      display:inline-flex;
+      display: inline-flex;
       width: 68px;
       height: 68px;
       left: -22px;

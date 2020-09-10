@@ -120,7 +120,7 @@
   z-index: 1;
 
   @media (min-width: $tablet-width) {
-      display: flex;
+    display: flex;
     margin: auto;
     top: 88px;
     left: 43%;
@@ -165,11 +165,10 @@
   border-radius: 10px;
 
   @media (min-width: $tablet-width) {
-        padding: 23px 54px;
+    padding: 23px 54px;
     margin-top: -10px;
   }
 }
-
 
 .profile-transport__item {
   position: relative;
@@ -237,7 +236,7 @@
   font-weight: 700;
   color: $basic-blue;
   margin-left: 26px;
-    margin-top: 6px;
+  margin-top: 6px;
 
   @media (min-width: $desktop-width) {
     color: $basic-white;
@@ -246,11 +245,11 @@
 
 .profile-property-level__lvl {
   font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    color: $special-grey;
-    margin-left: 29px;
-    width: 40px;
+  font-weight: 400;
+  text-align: center;
+  color: $special-grey;
+  margin-left: 29px;
+  width: 40px;
   border-top: 1px solid rgba($special-grey, 0.4);
 
   @media (min-width: $desktop-width) {
@@ -260,8 +259,8 @@
 
 .profile__property-progress-bar {
   position: absolute;
-      top: 4px;
-    left: -1px;
+  top: 4px;
+  left: -1px;
   width: 60px;
   height: 60px;
 
@@ -278,9 +277,9 @@
   text-align: center;
   text-transform: uppercase;
   font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: (18 / 20);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: (18 / 20);
   background-color: #dfe3f0;
   padding: 10px 20px 11px 15px;
   border-radius: 30px;

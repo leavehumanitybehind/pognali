@@ -101,9 +101,9 @@
 }
 
 .instruction__list-item--learn .instruction__list-text {
-   @media (min-width: $desktop-width) {
- margin-right: 58px;
-}
+  @media (min-width: $desktop-width) {
+    margin-right: 58px;
+  }
 }
 
 .instruction__list-text {
@@ -115,7 +115,7 @@
 
   @media (min-width: $desktop-width) {
     width: 190px;
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 }
 

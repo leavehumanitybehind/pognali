@@ -14,10 +14,10 @@
 }
 
 .user-list__login {
-width: 188px;
-    height: 50px;
-border-radius: 30px;
-    text-transform: uppercase;
+  width: 188px;
+  height: 50px;
+  border-radius: 30px;
+  text-transform: uppercase;
 
   &::after {
     display: none;
@@ -30,16 +30,15 @@ border-radius: 30px;
 
   @media (min-width: $tablet-width) {
     order: 3;
-        margin-top: -5px;
-        padding-left: 29px;
+    margin-top: -5px;
+    padding-left: 29px;
   }
 }
 
 .user-list__login-text {
   font-weight: bold;
   font-size: 20px;
-    line-height: 1;
-
+  line-height: 1;
 }
 
 .user-list__button {

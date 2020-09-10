@@ -16,14 +16,14 @@
     border-radius: 10px;
     font-size: 24px;
     line-height: 24px;
-       width: 280px;
-  height: 80px;
-  padding-left: 20px;
+    width: 280px;
+    height: 80px;
+    padding-left: 20px;
   }
 
   @media (min-width: $desktop-width) {
- padding-left: 33px;
-}
+    padding-left: 33px;
+  }
 
   &::after {
     position: absolute;
@@ -61,5 +61,4 @@
     font-size: 24px;
     line-height: 24px;
   }
-
 }

@@ -85,13 +85,13 @@
   text-align: center;
   color: $basic-yellow;
 
-    &:hover,
+  &:hover,
   &:focus {
     color: $special-orange;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
@@ -165,7 +165,7 @@
 
   &--error {
     color: #ff0000;
-    background-color: $basic-white
+    background-color: $basic-white;
   }
 }
 

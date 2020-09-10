@@ -124,14 +124,13 @@
   }
 }
 
-
 .directions__show-all-btn {
   @media (min-width: $tablet-width) {
-        width: 90%;
+    width: 90%;
     margin: 0 auto;
   }
 
-   @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 280px;
     height: 70px;
     margin: -117px 0 66px 749px;

@@ -1,14 +1,14 @@
-var mainnav = document.querySelector('.mobile-popup');
-var openButton = document.querySelector('.main-nav__toggle');
+var mainnav = document.querySelector(".mobile-popup");
+var openButton = document.querySelector(".main-nav__toggle");
 
-openButton.addEventListener('click', function (evt) {
+openButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (mainnav.classList.contains('mobile-popup--closed')) {
-    mainnav.classList.remove('mobile-popup--closed');
-    mainnav.classList.add('mobile-popup--open');
+  if (mainnav.classList.contains("mobile-popup--closed")) {
+    mainnav.classList.remove("mobile-popup--closed");
+    mainnav.classList.add("mobile-popup--open");
   } else {
-    mainnav.classList.add('mobile-popup--closed');
-    mainnav.classList.remove('mobile-popup--open');
+    mainnav.classList.add("mobile-popup--closed");
+    mainnav.classList.remove("mobile-popup--open");
   }
 });
 
@@ -21,7 +21,7 @@ window.addEventListener("keydown", function (evt) {
 });
 
 var header = document.querySelector(".page-header");
-var headerCont = document.querySelector('.page-header__container');
+var headerCont = document.querySelector(".page-header__container");
 var topOfHeader = header.offsetTop;
 function fixHeader() {
   if (window.scrollY > topOfHeader) {
@@ -32,30 +32,29 @@ function fixHeader() {
 }
 window.addEventListener("scroll", fixHeader);
 
-var list = document.querySelector('.country-filter-popup__list');
-var wrapper = document.querySelector('.country-filter-popup__alphabet-wrapper');
-var openButton = document.querySelector('.country-filter__toggle');
-var closeWrapButton = document.querySelector('.country-filter-popup__close-btn');
+var list = document.querySelector(".country-filter-popup__list");
+var wrapper = document.querySelector(".country-filter-popup__alphabet-wrapper");
+var openButton = document.querySelector(".country-filter__toggle");
+var closeWrapButton = document.querySelector(".country-filter-popup__close-btn");
 
-openButton.addEventListener('click', function (evt) {
+openButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (wrapper.classList.contains('country-filter-popup__alphabet-wrapper--closed')) {
-    wrapper.classList.remove('country-filter-popup__alphabet-wrapper--closed');
-    wrapper.classList.add('country-filter-popup__alphabet-wrapper--open');
-    list.classList.remove('country-filter-popup__list--closed');
+  if (wrapper.classList.contains("country-filter-popup__alphabet-wrapper--closed")) {
+    wrapper.classList.remove("country-filter-popup__alphabet-wrapper--closed");
+    wrapper.classList.add("country-filter-popup__alphabet-wrapper--open");
+    list.classList.remove("country-filter-popup__list--closed");
   } else {
-    wrapper.classList.add('country-filter-popup__alphabet-wrapper--closed');
-    wrapper.classList.remove('country-filter-popup__alphabet-wrapper--open');
-    list.classList.add('country-filter-popup__list--closed');
+    wrapper.classList.add("country-filter-popup__alphabet-wrapper--closed");
+    wrapper.classList.remove("country-filter-popup__alphabet-wrapper--open");
+    list.classList.add("country-filter-popup__list--closed");
   }
 });
 
-closeWrapButton.addEventListener('click', function (evt) {
+closeWrapButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  wrapper.classList.remove('country-filter-popup__alphabet-wrapper--open');
-  wrapper.classList.add('country-filter-popup__alphabet-wrapper--closed');
+  wrapper.classList.remove("country-filter-popup__alphabet-wrapper--open");
+  wrapper.classList.add("country-filter-popup__alphabet-wrapper--closed");
 });
-
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -64,28 +63,30 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+
 //accordeon
 
-var filterItem = document.querySelectorAll('.traveller-filter-list__item').forEach(item =>
-  item.addEventListener('click', () => {
-    var options = document.querySelectorAll('.traveller-filter__option').forEach(option => {
-      if (option.classList.contains('traveller-filter__option--open')) {
-        option.classList.remove('traveller-filter__option--open');
+var filterItem = document.querySelectorAll(".traveller-filter-list__item").forEach(item =>
+  item.addEventListener("click", () => {
+    var options = document.querySelectorAll(".traveller-filter__option").forEach(option => {
+      if (option.classList.contains("traveller-filter__option--open")) {
+        option.classList.remove("traveller-filter__option--open");
       }
     })
 
-    item.querySelector('.traveller-filter__option').classList.add('traveller-filter__option--open');
+    item.querySelector(".traveller-filter__option").classList.add("traveller-filter__option--open");
   }))
 
 
 
-const alphabetWrapper = document.querySelectorAll('.alphabet__wrapper');
+const alphabetWrapper = document.querySelectorAll(".alphabet__wrapper");
 alphabetWrapper.forEach(wrapper => {
-  wrapper.addEventListener('click', function () {
-    if (wrapper.classList.contains('alphabet__wrapper--current')) {
-      wrapper.classList.remove('alphabet__wrapper--current');
+  wrapper.addEventListener("click", function () {
+    if (wrapper.classList.contains("alphabet__wrapper--current")) {
+      wrapper.classList.remove("alphabet__wrapper--current");
     } else {
-      wrapper.classList.add('alphabet__wrapper--current');
+      wrapper.classList.add("alphabet__wrapper--current");
     }
 
   })
@@ -95,15 +96,15 @@ alphabetWrapper.forEach(wrapper => {
 
 //counter
 
-const btns = document.querySelectorAll('.plan-filters__toggle');
+const btns = document.querySelectorAll(".plan-filters__toggle");
 btns.forEach(btn => {
-  btn.addEventListener('click', function () {
+  btn.addEventListener("click", function () {
     const direction = this.dataset.direction;
-    const input = this.parentElement.querySelector('.plan-filters__input');
+    const input = this.parentElement.querySelector(".plan-filters__input");
     const currentValue = +input.value;
     let newValue;
 
-    if (direction === 'plus') {
+    if (direction === "plus") {
       newValue = currentValue + 1;
     } else {
       newValue = currentValue - 1 > 0 ?
@@ -116,21 +117,21 @@ btns.forEach(btn => {
 
 
 //calendar popup
-var buttonChoose = document.querySelector('.plan-filters__select--choose-country');
-var addPlanModal = document.querySelector('.add-plan-popup');
-var closeButtonChoose = document.querySelector('.add-plan-popup__button-close');
+var buttonChoose = document.querySelector(".plan-filters__select--choose-country");
+var addPlanModal = document.querySelector(".add-plan-popup");
+var closeButtonChoose = document.querySelector(".add-plan-popup__button-close");
 
 if (buttonChoose) {
-  buttonChoose.addEventListener('click', function (evt) {
+  buttonChoose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    addPlanModal.classList.add('add-plan-popup--open');
+    addPlanModal.classList.add("add-plan-popup--open");
   });
 }
 
 if (closeButtonChoose) {
-  closeButtonChoose.addEventListener('click', function (evt) {
+  closeButtonChoose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    addPlanModal.classList.remove('add-plan-popup--open');
+    addPlanModal.classList.remove("add-plan-popup--open");
   });
 }
 
@@ -157,21 +158,21 @@ if (buttonSubmit) {
   });
 }
 
-var tariffes = document.querySelector('.tariffes');
-var closeButtonTariffes = document.querySelector('.tariffes__button');
-var link = document.querySelector('.business-offer__link');
+var tariffes = document.querySelector(".tariffes");
+var closeButtonTariffes = document.querySelector(".tariffes__button");
+var link = document.querySelector(".business-offer__link");
 
 if (link) {
-  link.addEventListener('click', function (evt) {
+  link.addEventListener("click", function (evt) {
     evt.preventDefault();
-    tariffes.classList.add('tariffes--open');
+    tariffes.classList.add("tariffes--open");
   });
 }
 
 if (closeButtonTariffes) {
-  closeButtonTariffes.addEventListener('click', function (evt) {
+  closeButtonTariffes.addEventListener("click", function (evt) {
     evt.preventDefault();
-    tariffes.classList.remove('tariffes--open');
+    tariffes.classList.remove("tariffes--open");
   });
 }
 
@@ -196,4 +197,35 @@ if (buttonPromotion) {
       emailForm.classList.remove("promotion__form-field--error");
     }
   });
+}
+
+function initializeInteractiveMap(elMap, elInteractiveMap) {
+  ymaps.ready(init);
+
+  function init() {
+
+    let map = new ymaps.Map("map", {
+      center: [59.936250, 30.321222],
+      zoom: 16,
+      controls: []
+    }, {
+      searchControlProvider: "yandex#search"
+    }),
+
+      MyIconContentLayout = new ymaps.templateLayoutFactory.createClass(
+        "<div style='color: #FFFFFF; font-weight: bold;'>$[properties.iconContent]</div>"
+      ),
+
+      myPlacemark = new ymaps.Placemark([59.936309, 30.321222], {
+        hintContent: "",
+        balloonContent: ""
+      }, {
+        iconLayout: "default#image",
+        iconImageHref: "img/map-marker.svg",
+        iconImageSize: [54, 54],
+        iconImageOffset: [-27, -27]
+      });
+
+    map.geoObjects.add(myPlacemark);
+  }
 }

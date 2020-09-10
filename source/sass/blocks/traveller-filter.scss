@@ -76,11 +76,11 @@
 
   &:hover,
   &:focus {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   &::after {
@@ -89,7 +89,6 @@
     position: absolute;
     width: 13px;
     height: 8px;
-    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     top: 20px;
     right: 2px;
@@ -105,7 +104,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    border-top:none;
+    border-top: none;
     margin-bottom: 0;
     padding-left: 12px;
     font-size: 20px;
@@ -142,6 +141,7 @@
 
 .traveller-filter__preferences-item {
   margin-bottom: 12px;
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: flex-end;
@@ -186,13 +186,13 @@
   font-size: 15px;
   line-height: (20 / 15);
 
-   &:hover,
+  &:hover,
   &:focus {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
@@ -250,12 +250,12 @@
 
   &:hover,
   &:focus {
-    box-shadow:0px 3px 6px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
   }
 
   &:active {
     background-color: inherit;
-    opacity: .3;
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {

@@ -36,6 +36,7 @@
 
   &--desktop {
     display: none;
+
     @media (min-width: $tablet-width) {
       display: none;
     }
@@ -212,8 +213,6 @@
   }
 }
 
-
-
 .country-filter__toggle-text {
   display: none;
 
@@ -244,8 +243,9 @@
 
   @media (min-width: $tablet-width) {
     display: none;
-    }
+  }
 }
+
 .country-filter-popup__alphabet-wrapper--open + .country-filter__toggle-text--close,
 .country-filter-popup__wrapper--desktop + .country-filter__toggle-text--close {
   display: flex;
@@ -322,7 +322,7 @@
     content: "";
     width: 12px;
     height: 13px;
-    background: url(../img/close.svg) no-repeat;
+    background: url("../img/close.svg") no-repeat;
     background-position: center;
     top: 3px;
     left: 1px;

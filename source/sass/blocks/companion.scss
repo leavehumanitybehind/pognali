@@ -131,8 +131,6 @@
 
 .companion__wish-list-item {
   margin: 0 10px;
-  @media (min-width: $tablet-width) {
-  }
 }
 
 .companion__title {
@@ -272,6 +270,7 @@
   transform: translate(-30%, 0);
 
   white-space: nowrap;
+
   &::before {
     position: absolute;
     content: "";

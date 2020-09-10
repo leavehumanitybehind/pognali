@@ -51,7 +51,7 @@
     margin-bottom: 36px;
     margin-left: -64px;
     font-size: 20px;
-line-height: 1px;
+    line-height: 1px;
   }
 
   &::before {
@@ -67,7 +67,7 @@ line-height: 1px;
       top: 5px;
       left: 36%;
       width: 24px;
-    height: 24px;
+      height: 24px;
     }
 
     @media (min-width: $desktop-width) {
@@ -77,11 +77,11 @@ line-height: 1px;
   }
 
   &:hover::after {
-    opacity: .6;
+    opacity: 0.6;
   }
 
-  &:active:after {
-    opacity: .3;
+  &:active::after {
+    opacity: 0.3;
   }
 }
 

@@ -74,8 +74,8 @@
       height: 90px;
       margin-right: 31px;
       background-size: 28px;
-          left: -120px;
-    top: -27px;
+      left: -120px;
+      top: -27px;
     }
   }
 }
@@ -94,15 +94,13 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
-        padding-left: 32px;
-        border-radius: 20px;
-
+    padding-left: 32px;
+    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
-   width: 318px;
-  height: 80px;
-  padding-left: 37px;
-}
-
+    width: 318px;
+    height: 80px;
+    padding-left: 37px;
+  }
 }

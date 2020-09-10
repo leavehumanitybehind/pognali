@@ -74,7 +74,7 @@
 
   &:hover,
   &:focus {
-    border: 1px solid #959BB2;
+    border: 1px solid #959bb2;
   }
 
   &:active {
@@ -83,12 +83,12 @@
 
   @media (min-width: $tablet-width) {
     width: 75px;
-    padding: 14px 8px
+    padding: 14px 8px;
   }
 
-@media (min-width: $desktop-width) {
-  width: 95px;
-}
+  @media (min-width: $desktop-width) {
+    width: 95px;
+  }
 
   &--left {
     border-radius: 5px 0 0 5px;
@@ -109,7 +109,7 @@
   background-color: rgba($special-grey, 0.3);
 
   @media (min-width: $tablet-width) {
-        left: 68px;
+    left: 68px;
     position: absolute;
     width: 50%;
     top: 12px;
@@ -140,7 +140,7 @@
 .range__toggle {
   position: absolute;
   top: 50%;
-      right: 4px;
+  right: 4px;
 
   width: 10px;
   height: 10px;
@@ -153,17 +153,15 @@
 
   cursor: pointer;
 
+  &:hover,
+  &:active {
+    width: 19px;
+    height: 19px;
+  }
 
-&:hover,
-&:active {
-  width: 19px;
-height: 19px;
-}
-
-&:active {
-  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
-}
-
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
 
   @media (min-width: $tablet-width) {
     margin-left: 65px;
@@ -184,15 +182,15 @@ height: 19px;
     right: 117px;
   }
 
-&:hover,
-&:active {
-  width: 19px;
-height: 19px;
-}
+  &:hover,
+  &:active {
+    width: 19px;
+    height: 19px;
+  }
 
-&:active {
-  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
-}
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
 
   &:hover::before {
     width: 212px;
@@ -212,7 +210,7 @@ height: 19px;
     @media (min-width: $tablet-width) {
       height: 5px;
       width: 198px;
-    right: -43px;
+      right: -43px;
     }
 
     @media (min-width: $desktop-width) {

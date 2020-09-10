@@ -18,10 +18,10 @@
       margin-top: -85px;
     }
 
-   @media (min-width: $desktop-width) {
-    margin-top: -95px;
+    @media (min-width: $desktop-width) {
+      margin-top: -95px;
+    }
   }
-}
 }
 
 .page-footer__container {
@@ -70,13 +70,13 @@
   padding-top: 13px;
   border-top: 1px solid #f2f2f2;
 
-    &:hover,
+  &:hover,
   &:focus {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {

@@ -43,11 +43,12 @@
   position: absolute;
   appearance: none;
 }
+
 .transport__label-icon {
   fill: $basic-blue-light;
   margin: auto;
 }
 
 .transport__checkbox:checked + .transport__label {
-  opacity: .3;
+  opacity: 0.3;
 }

@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $desktop-width) {
-      padding-top: 122px;
+    padding-top: 122px;
   }
 }
 
@@ -73,18 +73,18 @@
   text-transform: uppercase;
 
   &:hover,
-  &:focus{
-    opacity: .6;
+  &:focus {
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   &::after {
     content: "";
     position: absolute;
-   top: 49%;
+    top: 49%;
     right: 33px;
     width: 32px;
     height: 16px;
