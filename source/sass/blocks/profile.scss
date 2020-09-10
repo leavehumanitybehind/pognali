@@ -229,14 +229,15 @@
 }
 
 .profile-property-level svg {
-  transform: scale(2.5) translate(16px, 10px);
+  transform: scale(2.8) translate(16px, 16px);
 }
 
 .profile-property-level__value {
   font-size: 38px;
   font-weight: 700;
   color: $basic-blue;
-  margin-left: 20px;
+  margin-left: 26px;
+    margin-top: 6px;
 
   @media (min-width: $desktop-width) {
     color: $basic-white;
@@ -244,13 +245,12 @@
 }
 
 .profile-property-level__lvl {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  color: $special-grey;
-  margin-left: 19px;
-  width: 40px;
+  font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: $special-grey;
+    margin-left: 29px;
+    width: 40px;
   border-top: 1px solid rgba($special-grey, 0.4);
 
   @media (min-width: $desktop-width) {
@@ -260,8 +260,8 @@
 
 .profile__property-progress-bar {
   position: absolute;
-  top: 5px;
-  left: -5px;
+      top: 4px;
+    left: -1px;
   width: 60px;
   height: 60px;
 
@@ -277,10 +277,12 @@
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 17px;
+  font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: (18 / 20);
   background-color: #dfe3f0;
-  padding: 10px 20px 5px 15px;
+  padding: 10px 20px 11px 15px;
   border-radius: 30px;
   margin-bottom: 35px;
   margin-top: -15px;

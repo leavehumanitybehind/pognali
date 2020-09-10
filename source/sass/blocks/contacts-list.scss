@@ -9,7 +9,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    max-width: 881px;
+    max-width: 871px;
     margin: auto;
   }
 }
@@ -75,8 +75,8 @@
     @media (min-width: $desktop-width) {
       width: 90px;
       height: 90px;
-      top: -28px;
-      left: 0;
+      top: -31px;
+    left: 4px;
       background-size: 29px 31px;
     }
   }
@@ -116,9 +116,9 @@
     @media (min-width: $desktop-width) {
       width: 90px;
       height: 90px;
-      top: -28px;
-      left: 0;
-      background-size: 29px 31px;
+          top: -28px;
+    left: 7px;
+      background-size: 36px 25px;
     }
   }
 }

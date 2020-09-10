@@ -16,7 +16,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: -50px;
-    padding-top: 93px;
+    padding-top: 97px;
     padding-bottom: 195px;
   }
 
@@ -61,7 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 120px;
+    margin-bottom: 122px;
   }
 
   &::after {
@@ -101,7 +101,8 @@
   }
 
   @media (min-width: $desktop-width) {
-  padding: 0 76px 0 71px;
+  padding: 0 76px 0 74px;
+  margin-bottom: 73px;
 }
 }
 
@@ -222,7 +223,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 135px;
+    padding-left: 137px;
   }
 
   &:hover {
@@ -256,7 +257,7 @@
       border-radius: 50%;
 
       @media (min-width: $desktop-width) {
-        left: 42px;
+        left: 47px;
       }
     }
   }

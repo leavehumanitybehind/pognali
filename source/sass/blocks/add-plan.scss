@@ -25,14 +25,14 @@
 
 .add-plan__title {
   position: relative;
-  padding: 24px;
-  margin-bottom: 8px;
+  padding: 26px;
+  margin-bottom: 6px;
 
   &::after {
     position: absolute;
     content: "";
     top: 50%;
-    right: 10%;
+    right: 13%;
     width: 47px;
     height: 5px;
     background: url("../img/dots-mobile.svg") no-repeat;
@@ -59,8 +59,9 @@
 }
 
 .add-plan__filters {
-  padding: 0 15px 0 18px;
+  padding: 0 24px 0 24px;
 
+  
   @media (min-width: $tablet-width) {
     padding: 0 15px 0 18px;
   }

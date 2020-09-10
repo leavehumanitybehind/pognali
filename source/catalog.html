@@ -753,29 +753,34 @@
 
             <ul class="travellers__list">
               <li class="travellers__list-item traveller">
-                <a class="traveller__link" href="profile/firsova.html">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)"
-                      srcset="img/firsova-desktop@1x.jpg, img/firsova-desktop@2x.jpg 2x ">
-                    <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg, img/firsova-tablet@2x.jpg 2x">
-                    <img class="traveller__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x"
-                      width="70" height="70" alt="Фото Тани Фирсовой">
-                  </picture>
-                </a>
+                <div class="traveller__main-wrapper">
+                  <a class="traveller__link" href="profile/firsova.html">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)"
+                        srcset="img/firsova-desktop@1x.jpg, img/firsova-desktop@2x.jpg 2x ">
+                      <source media="(min-width: 768px)"
+                        srcset="img/firsova-tablet@1x.jpg, img/firsova-tablet@2x.jpg 2x">
+                      <img class="traveller__photo" src="img/firsova-mobile@1x.jpg"
+                        srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Фото Тани Фирсовой">
+                    </picture>
+                  </a>
+                  <div class="traveller__info-wrapper">
+                    <a class="traveller__title traveller__title--offline" href="profile/firsova.html">
+                      Таня Фирсова
+                    </a>
+                    <div class="traveller__likes">
+                      <span class="traveller__likes-follow">1,5 м</span>
+                      <button class="traveller__likes-btn traveller__likes-btn--liked" type="button"></button>
+                    </div>
+                    <p class="traveller__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                  </div>
+                </div>
 
-                <a class="traveller__title traveller__title--offline" href="profile/firsova.html">
-                  Таня Фирсова
-                </a>
-                <span class="traveller__likes">1,5 м</span>
-                <button class="traveller__likes-btn traveller__likes-btn--liked" type="button"></button>
-
-
-                <p class="traveller__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <div class="traveller__property traveller-property-country">
                   <span class="traveller__property-title">хочет посетить:</span>
                   <ul class="traveller-property-country__list wish-list">
@@ -802,64 +807,73 @@
                     </li>
                   </ul>
                 </div>
-                <div class="traveller__property traveller-property-transport">
-                  <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
-                  <ul class="traveller-property-transport__list list-prefer">
-                    <li class="list-prefer__item list-prefer__item--current">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
-                        height="18" aria-label="Самолет">
-                        <use href="#plane"></use>
+                <div class="traveller__prefers-wrapper">
+                  <div class="traveller__property traveller-property-transport">
+                    <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
+                    <ul class="traveller-property-transport__list list-prefer">
+                      <li class="list-prefer__item list-prefer__item--current">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
+                          height="18" aria-label="Самолет">
+                          <use href="#plane"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item list-prefer__item--current">
+                        <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Автобус">
+                          <use href="#bus"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
+                          <use href="#bike"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
+                          <use href="#run"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="traveller__property traveller-property-level">
+                      <div class="traveller__property-title traveller__property-title--level">левел:</div>
+                      <svg class="traveller__property-progress-bar traveller__property-progress-bar--99" width="60"
+                        height="60">
+                        <use xlink:href="#icon-level-small"></use>
                       </svg>
-                    </li>
-                    <li class="list-prefer__item list-prefer__item--current">
-                      <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Автобус">
-                        <use href="#bus"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
-                        <use href="#bike"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
-                        <use href="#run"></use>
-                      </svg>
-                    </li>
-                  </ul>
+                      <span class="traveller-property-level__value">99</span>
+                      <span class="traveller-property-level__lvl">level</span>
+                    </div>
                 </div>
-                <div class="traveller__property traveller-property-level">
-                  <div class="traveller__property-title traveller__property-title--level">левел:</div>
-                  <svg class="traveller__property-progress-bar traveller__property-progress-bar--99" width="60"
-                    height="60">
-                    <use xlink:href="#icon-level-small"></use>
-                  </svg>
-                  <span class="traveller-property-level__value">99</span>
-                  <span class="traveller-property-level__lvl">level</span>
-                </div>
-                <a class="traveller__btn traveller__btn--liked btn" href="#">
-                  <span class="traveller__btn-text btn-text">Позвать!</span></a>
+                  <a class="traveller__btn traveller__btn--liked btn" href="#">
+                    <span class="traveller__btn-text btn-text">Позвать!</span></a>
               </li>
               <li class="travellers__list-item traveller">
-                <a class="traveller__link" href="profile/smolov.html">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
-                    <img class="traveller__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
-                      width="70" height="70" alt="Аватар Петя Демин">
-                  </picture>
-                </a>
-                <a class="traveller__title traveller__title--offline" href="profile/smolov.html">
-                  Петя Демин
-                </a>
-                <span class="traveller__likes">1500</span>
-                <button class="traveller__likes-btn" type="button"></button>
-                <p class="traveller__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+                <div class="traveller__main-wrapper">
+                  <a class="traveller__link" href="profile/demin.html">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)"
+                        srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
+                      <img class="traveller__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
+                        width="70" height="70" alt="Аватар Петя Демин">
+                    </picture>
+                  </a>
+                  <div class="traveller__info-wrapper">
+                    <a class="traveller__title traveller__title--offline" href="profile/demin.html">
+                      Петя Демин
+                    </a>
+                    <div class="traveller__likes">
+                      <span class="traveller__likes-follow">1500</span>
+                      <button class="traveller__likes-btn" type="button"></button>
+                    </div>
+                    <p class="traveller__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+                  </div>
+                </div>
                 <div class="traveller__property traveller-property-country">
                   <span class="traveller__property-title">хочет посетить:</span>
                   <ul class="traveller-property-country__list wish-list">
@@ -879,68 +893,79 @@
                     </li>
                   </ul>
                 </div>
-                <div class="traveller__property traveller-property-transport">
-                  <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
-                  <ul class="traveller-property-transport__list list-prefer">
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
-                        height="21" aria-label="Самолет">
-                        <use href="#plane"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item ">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
-                        height="21" aria-label="Автобус">
-                        <use href="#bus"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
-                        height="21" aria-label="Велосипед">
-                        <use href="#bike"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon" width="19" height="21" aria-label="Пешком">
-                        <use href="#run"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-                <div class="traveller__property traveller-property-level">
-                  <div class="traveller__property-title traveller__property-title--level">левел:</div>
-                  <svg class="traveller__property-progress-bar traveller__property-progress-bar--80" width="60"
-                    height="60">
-                    <use xlink:href="#icon-level-small"></use>
-                  </svg>
-                  <span class="traveller-property-level__value">80</span>
-                  <span class="traveller-property-level__lvl">level</span>
+                <div class="traveller__prefers-wrapper">
+                  <div class="traveller__property traveller-property-transport">
+                    <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
+                    <ul class="traveller-property-transport__list list-prefer">
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
+                          height="21" aria-label="Самолет">
+                          <use href="#plane"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item ">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
+                          height="21" aria-label="Автобус">
+                          <use href="#bus"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
+                          height="21" aria-label="Велосипед">
+                          <use href="#bike"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon" width="19" height="21" aria-label="Пешком">
+                          <use href="#run"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <div class="traveller__property traveller-property-level">
+                    <div class="traveller__property-title traveller__property-title--level">левел:</div>
+                    <svg class="traveller__property-progress-bar traveller__property-progress-bar--80" width="60"
+                      height="60">
+                      <use xlink:href="#icon-level-small"></use>
+                    </svg>
+                    <span class="traveller-property-level__value">80</span>
+                    <span class="traveller-property-level__lvl">level</span>
+                  </div>
                 </div>
                 <a class="traveller__btn btn" href="invite.html"><span
                     class="traveller__btn-text btn-text">Позвать!</span></a>
 
               </li>
               <li class="travellers__list-item traveller">
-                <a class="traveller__link" href="profile/smolov.html">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)"
-                      srcset="img/smolov-desktop@1x.jpg, img/smolov-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x ">
-                    <img class="traveller__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x"
-                      width="70" height="70" alt="Аватар Марк Смолов">
-                  </picture>
-                </a>
-                <a href="profile/smolov.html" class="traveller__title traveller__title--offline">
-                  Марк Смолов
-                </a>
-                <span class="traveller__likes">170</span>
-                <button class="traveller__likes-btn" type="button"></button>
-                <p class="traveller__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+                <div class="traveller__main-wrapper">
+                  <a class="traveller__link" href="profile/smolov.html">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)"
+                        srcset="img/smolov-desktop@1x.jpg, img/smolov-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x ">
+                      <img class="traveller__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x"
+                        width="70" height="70" alt="Аватар Марк Смолов">
+                    </picture>
+                  </a>
+                  <div class="traveller__info-wrapper">
+                    <a href="profile/smolov.html" class="traveller__title traveller__title--offline">
+                      Марк Смолов
+                    </a>
+                    <div class="traveller__likes">
+                      <span class="traveller__likes-follow">170</span>
+                      <button class="traveller__likes-btn" type="button"></button>
+                    </div>
+                    <p class="traveller__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+                  </div>
+                </div>
                 <div class="traveller__property traveller-property-country">
                   <span class="traveller__property-title">хочет посетить:</span>
                   <ul class="traveller-property-country__list wish-list">
@@ -967,67 +992,75 @@
                     </li>
                   </ul>
                 </div>
-                <div class="traveller__property traveller-property-transport">
-                  <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
-                  <ul class="traveller-property-transport__list list-prefer">
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
-                        height="18" aria-label="Самолет">
-                        <use href="#plane"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
-                        height="18" aria-label="Автобус">
-                        <use href="#bus"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
-                        <use href="#bike"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
-                        <use href="#run"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-                <div class="traveller__property traveller-property-level">
-                  <div class="traveller__property-title traveller__property-title--level">левел:</div>
-                  <svg class="traveller__property-progress-bar traveller__property-progress-bar--25" width="60"
-                    height="60">
-                    <use xlink:href="#icon-level-small"></use>
-                  </svg>
-                  <span class="traveller-property-level__value">25</span>
-                  <span class="traveller-property-level__lvl">level</span>
+                <div class="traveller__prefers-wrapper">
+                  <div class="traveller__property traveller-property-transport">
+                    <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
+                    <ul class="traveller-property-transport__list list-prefer">
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
+                          height="18" aria-label="Самолет">
+                          <use href="#plane"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
+                          height="18" aria-label="Автобус">
+                          <use href="#bus"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
+                          <use href="#bike"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
+                          <use href="#run"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="traveller__property traveller-property-level">
+                    <div class="traveller__property-title traveller__property-title--level">левел:</div>
+                    <svg class="traveller__property-progress-bar traveller__property-progress-bar--25" width="60"
+                      height="60">
+                      <use xlink:href="#icon-level-small"></use>
+                    </svg>
+                    <span class="traveller-property-level__value">25</span>
+                    <span class="traveller-property-level__lvl">level</span>
+                  </div>
                 </div>
                 <a class="traveller__btn btn" href="invite.html"><span
                     class="traveller__btn-text btn-text">Позвать!</span></a>
               </li>
               <li class="travellers__list-item traveller">
-                <a class="traveller__link" href="profile/rogovaya.html">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)"
-                      srcset="img/rogovaya-desktop@1x.jpg, img/rogovaya-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)"
-                      srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x ">
-                    <img class="traveller__photo" src="img/rogovaya-mobile@1x.jpg"
-                      srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Лариса Роговая">
-                  </picture>
-                </a>
-                <a href="profile/rogovaya.html" class="traveller__title traveller__title--online">
-                  Лариса Роговая
-                </a>
-                <span class="traveller__likes">23</span>
-                <button class="traveller__likes-btn" type="button"></button>
-                <p class="traveller__hashtags">#образование #карьера #учеба #линкедин</p>
+                <div class="traveller__main-wrapper">
+                  <a class="traveller__link" href="profile/rogovaya.html">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)"
+                        srcset="img/rogovaya-desktop@1x.jpg, img/rogovaya-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x ">
+                      <img class="traveller__photo" src="img/rogovaya-mobile@1x.jpg"
+                        srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Аватар Лариса Роговая">
+                    </picture>
+                  </a>
+                  <div class="traveller__info-wrapper">
+                    <a href="profile/rogovaya.html" class="traveller__title traveller__title--online">
+                      Лариса Роговая
+                    </a>
+                    <div class="traveller__likes">
+                      <span class="traveller__likes-follow">23</span>
+                      <button class="traveller__likes-btn" type="button"></button>
+                    </div>
+                    <p class="traveller__hashtags">#образование #карьера #учеба #линкедин</p>
+                  </div>
+                </div>
                 <div class="traveller__property traveller-property-country">
                   <span class="traveller__property-title">хочет посетить:</span>
                   <ul class="traveller-property-country__list wish-list">
@@ -1047,41 +1080,43 @@
                     </li>
                   </ul>
                 </div>
-                <div class="traveller__property traveller-property-transport">
-                  <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
-                  <ul class="traveller-property-transport__list list-prefer">
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
-                        height="18" aria-label="Самолет">
-                        <use href="#plane"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
-                        height="18" aria-label="Автобус">
-                        <use href="#bus"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
-                        <use href="#bike"></use>
-                      </svg>
-                    </li>
-                    <li class="list-prefer__item">
-                      <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
-                        <use href="#run"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-                <div class="traveller__property traveller-property-level">
-                  <div class="traveller__property-title traveller__property-title--level">левел:</div>
-                  <svg class="traveller__property-progress-bar traveller__property-progress-bar--50" width="60"
-                    height="60">
-                    <use xlink:href="#icon-level-small"></use>
-                  </svg>
-                  <span class="traveller-property-level__value">50</span>
-                  <span class="traveller-property-level__lvl">level</span>
+                <div class="traveller__prefers-wrapper">
+                  <div class="traveller__property traveller-property-transport">
+                    <div class="traveller__property-title traveller__property-title--transport">транспорт:</div>
+                    <ul class="traveller-property-transport__list list-prefer">
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
+                          height="18" aria-label="Самолет">
+                          <use href="#plane"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
+                          height="18" aria-label="Автобус">
+                          <use href="#bus"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
+                          <use href="#bike"></use>
+                        </svg>
+                      </li>
+                      <li class="list-prefer__item">
+                        <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
+                          <use href="#run"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="traveller__property traveller-property-level">
+                    <div class="traveller__property-title traveller__property-title--level">левел:</div>
+                    <svg class="traveller__property-progress-bar traveller__property-progress-bar--50" width="60"
+                      height="60">
+                      <use xlink:href="#icon-level-small"></use>
+                    </svg>
+                    <span class="traveller-property-level__value">50</span>
+                    <span class="traveller-property-level__lvl">level</span>
+                  </div>
                 </div>
                 <a class="traveller__btn btn" href="invite.html"><span
                     class="traveller__btn-text btn-text">Позвать!</span></a>

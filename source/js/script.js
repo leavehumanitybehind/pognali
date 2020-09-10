@@ -71,10 +71,10 @@ var filterItem = document.querySelectorAll('.traveller-filter-list__item').forEa
     var options = document.querySelectorAll('.traveller-filter__option').forEach(option => {
       if (option.classList.contains('traveller-filter__option--open')) {
         option.classList.remove('traveller-filter__option--open');
-      } else {
-        option.classList.add('traveller-filter__option--open');
       }
     })
+
+    item.querySelector('.traveller-filter__option').classList.add('traveller-filter__option--open');
   }))
 
 
@@ -116,19 +116,23 @@ btns.forEach(btn => {
 
 
 //calendar popup
-var buttonChoose = document.querySelector('.plan-filters__select--choose-country"');
+var buttonChoose = document.querySelector('.plan-filters__select--choose-country');
 var addPlanModal = document.querySelector('.add-plan-popup');
 var closeButtonChoose = document.querySelector('.add-plan-popup__button-close');
 
-buttonChoose.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  addPlanModal.classList.add('add-plan-popup--open');
-});
+if (buttonChoose) {
+  buttonChoose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    addPlanModal.classList.add('add-plan-popup--open');
+  });
+}
 
-closeButtonChoose.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  addPlanModal.classList.remove('add-plan-popup--open');
-});
+if (closeButtonChoose) {
+  closeButtonChoose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    addPlanModal.classList.remove('add-plan-popup--open');
+  });
+}
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -142,29 +146,34 @@ var form = document.querySelector(".plan-filters__comment");
 var textarea = document.querySelector("[name=comments]");
 var buttonSubmit = document.querySelector(".plan-filters__btn-submit");
 
-buttonSubmit.addEventListener("click", function (evt) {
-  if (!textarea.value) {
-    evt.preventDefault();
-    form.classList.add("plan-filters__comment--error");
-  } else {
-    form.classList.remove("plan-filters__comment--error");
-  }
-});
+if (buttonSubmit) {
+  buttonSubmit.addEventListener("click", function (evt) {
+    if (!textarea.value) {
+      evt.preventDefault();
+      form.classList.add("plan-filters__comment--error");
+    } else {
+      form.classList.remove("plan-filters__comment--error");
+    }
+  });
+}
 
 var tariffes = document.querySelector('.tariffes');
 var closeButtonTariffes = document.querySelector('.tariffes__button');
 var link = document.querySelector('.business-offer__link');
 
+if (link) {
+  link.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    tariffes.classList.add('tariffes--open');
+  });
+}
 
-link.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  tariffes.classList.add('tariffes--open');
-});
-
-closeButtonTariffes.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  tariffes.classList.remove('tariffes--open');
-});
+if (closeButtonTariffes) {
+  closeButtonTariffes.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    tariffes.classList.remove('tariffes--open');
+  });
+}
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -178,11 +187,13 @@ var emailForm = document.querySelector(".promotion__form-field");
 var emailValue = document.querySelector("[name=email]");
 var buttonPromotion = document.querySelector(".promotion__button");
 
-buttonPromotion.addEventListener("click", function (evt) {
-  if (!emailValue.value) {
-    evt.preventDefault();
-    emailForm.classList.add("promotion__form-field--error");
-  } else {
-    emailForm.classList.remove("promotion__form-field--error");
-  }
-});
+if (buttonPromotion) {
+  buttonPromotion.addEventListener("click", function (evt) {
+    if (!emailValue.value) {
+      evt.preventDefault();
+      emailForm.classList.add("promotion__form-field--error");
+    } else {
+      emailForm.classList.remove("promotion__form-field--error");
+    }
+  });
+}

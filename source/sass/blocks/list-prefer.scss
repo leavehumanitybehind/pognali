@@ -1,9 +1,11 @@
 .list-prefer {
   @include no-list;
-  padding-bottom: 13px;
-  padding-top: 19px;
-  padding-left: 12px;
+  padding-bottom: 3px;
+    padding-top: 17px;
+    padding-left: 14px;
   display: flex;
+  flex-wrap: wrap;
+    max-width: 150px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;

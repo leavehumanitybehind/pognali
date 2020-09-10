@@ -1,7 +1,7 @@
 .plan-filters__wrapper {
   background-color: $basic-white;
-  margin-bottom: 15px;
-  padding: 10px 20px;
+  margin-bottom: 9px;
+  padding: 10px 10px 10px 23px;
   border-radius: 25px;
 
   @media (min-width: $tablet-width) {
@@ -96,7 +96,7 @@
   margin: 0;
   padding-top: 10px;
   margin-left: -8px;
-  margin-bottom: 15px;
+      margin-bottom: -2px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -113,7 +113,7 @@
 
 .plan-filters__description {
   color: $special_grey;
-  margin-left: -9px;
+  margin-left: -13px;
   font-size: 16px;
   line-height: (22 / 16);
   margin-bottom: 18px;
@@ -131,6 +131,7 @@
 
   &--way {
     position: relative;
+    margin-bottom: 23px;
 
     @media (min-width: $tablet-width) {
       padding-right: 110px;
@@ -379,12 +380,13 @@
 
   &::before {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border: 1px solid #cbced9;
     border-radius: 4px;
     content: "";
-    left: 0;
+    left: -7px;
+    top: -5px;
 
     &:hover,
     &:focus {
@@ -420,8 +422,8 @@
     &::after {
       position: absolute;
       content: "";
-      bottom: 17px;
-      right: 45px;
+      bottom: 20px;
+    right: 53px;
       width: 8px;
       height: 8px;
       background-color: $basic-blue;
@@ -443,6 +445,7 @@
 
 .plan-filters__select--add {
   position: relative;
+  margin-bottom: 29px;
 
   &::after {
     position: absolute;
@@ -475,7 +478,7 @@
     position: absolute;
     content: "";
     bottom: 17px;
-    right: 45px;
+    right: 52px;
     width: 8px;
     height: 8px;
     background-color: $basic-white;
@@ -501,8 +504,9 @@
   font-weight: 500;
   border-radius: 4px;
   border: 1px solid #e5e5e5;
-  padding: 10px;
+  padding: 11px 10px;
   margin: 0;
+  margin-left: -10px;
   flex-grow: 1;
   text-transform: uppercase;
   white-space: nowrap;
@@ -563,14 +567,18 @@
   transform: rotate(-90deg);
   opacity: 0.3;
   border: none;
-  right: 61px;
-  top: 30%;
+  right: 69px;
+    top: 25%;
 
   @media (min-width: $tablet-width) {
     width: 22px;
     height: 24px;
     right: 210px;
     top: 32%;
+  }
+
+  &--choose {
+    right: 16px;
   }
 
   &--add {
@@ -580,8 +588,8 @@
     height: 12px;
     opacity: 0.3;
     border: none;
-    right: 55px;
-    top: 30%;
+    right: 15px;
+    top: 42%;
     background: url("../img/qty-plus-mobile.svg") no-repeat;
 
     &:active {
@@ -600,8 +608,15 @@
 .plan-filters__select-flag {
   position: relative;
   border: 1px solid #e5e5e5;
-  padding: 6px;
+  padding: 8px;
+    width: 51px;
+    width: 63px;
+    height: 44px;
   border-radius: 4px;
+
+  &--czech {
+    width: 53px;
+  }
 
   &::after {
     position: absolute;
@@ -634,8 +649,8 @@
 
 .plan-filters__select-btn-close {
   position: absolute;
-  top: -10px;
-  right: -2px;
+  top: -11px;
+    right: -6px;
   z-index: 1;
   width: 21px;
   height: 21px;
@@ -670,17 +685,21 @@
 }
 
 .plan-filters__step {
+
+  display: flex;
+    flex-direction: column;
   @media (min-width: $tablet-width) {
-    display: flex;
+flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
 
 .plan-filters__step-btn {
-  margin-bottom: 15px;
-  width: 229px;
-  height: 40px;
+  margin: 0 -11px 153px;
+      padding-left: 43px;
+    width: 226px;
+    height: 40px;
   border-radius: 30px;
   text-transform: uppercase;
 
@@ -738,7 +757,7 @@
 }
 
 .plan-filters__comment-label {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 15px;
   border-radius: 10px;
   font-weight: 500;
@@ -755,6 +774,7 @@
 
 .plan-filters__flag--comment {
   position: relative;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     margin-top: 11px;

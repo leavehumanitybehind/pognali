@@ -36,10 +36,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-
-
-  padding: 24px;
-  margin-bottom: 10px;
+    padding: 24px 25px;
+  margin-bottom: 11px;
   border-radius: 20px;
   background-color: $basic-white;
 
@@ -79,6 +77,7 @@
 
 .plans__item-number {
   font-size: 16px;
+  margin-right: 5px;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;

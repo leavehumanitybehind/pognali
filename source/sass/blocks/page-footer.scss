@@ -17,7 +17,11 @@
       z-index: 4;
       margin-top: -85px;
     }
+
+   @media (min-width: $desktop-width) {
+    margin-top: -95px;
   }
+}
 }
 
 .page-footer__container {
