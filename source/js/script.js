@@ -199,33 +199,52 @@ if (buttonPromotion) {
   });
 }
 
-function initializeInteractiveMap(elMap, elInteractiveMap) {
-  ymaps.ready(init);
+ymaps.ready(init);
+function init() {
+  // Создание карты.
+  var myMap = new ymaps.Map("map", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    // Чтобы не определять координаты центра карты вручную,
+    // воспользуйтесь инструментом Определение координат.
+    center: [55.76, 37.64],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 7
+  });
+}
 
-  function init() {
-
-    let map = new ymaps.Map("map", {
-      center: [59.936250, 30.321222],
+ymaps.ready(function () {
+  var myMap = new ymaps.Map(
+    "map",
+    {
+      center: [59.939346, 30.329383],
       zoom: 16,
       controls: []
-    }, {
+    },
+    {
+      suppressMapOpenBlock: true
+    },
+    {
       searchControlProvider: "yandex#search"
-    }),
-
-      MyIconContentLayout = new ymaps.templateLayoutFactory.createClass(
-        "<div style='color: #FFFFFF; font-weight: bold;'>$[properties.iconContent]</div>"
-      ),
-
-      myPlacemark = new ymaps.Placemark([59.936309, 30.321222], {
-        hintContent: "",
-        balloonContent: ""
-      }, {
+    }
+  ),
+    myPlacemark = new ymaps.Placemark(
+      [59.938669, 30.323057],
+      {},
+      {
         iconLayout: "default#image",
-        iconImageHref: "img/map-marker.svg",
+        iconImageHref: "./img/map-marker.svg",
         iconImageSize: [54, 54],
         iconImageOffset: [-27, -27]
-      });
-
-    map.geoObjects.add(myPlacemark);
-  }
-}
+      }
+    );
+  myMap.geoObjects.add(myPlacemark);
+  myMap.controls.remove("rulerControl");
+  myMap.controls.remove("searchControl");
+  myMap.controls.remove("trafficControl");
+  myMap.controls.remove("typeSelector");
+  myMap.controls.remove("zoomControl");
+  myMap.controls.remove("geolocationControl");
+  myMap.controls.remove("routeEditor");
+});
