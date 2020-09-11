@@ -36,6 +36,11 @@
   display: flex;
   width: 33px;
   height: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .transport__checkbox {

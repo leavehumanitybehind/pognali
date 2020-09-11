@@ -136,5 +136,13 @@
     width: 280px;
     height: 80px;
     margin: -177px 40px 10px;
+    border-radius: 20px;
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      right: 12%;
+      top: 42%;
+    }
   }
 }

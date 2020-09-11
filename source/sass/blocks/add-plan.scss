@@ -15,7 +15,7 @@
 
   @media (min-width: $desktop-width) {
     z-index: 3;
-        margin-top: -69px;
+    margin-top: -69px;
     border-radius: 30px 30px 0 0;
     padding: 10px 40px;
   }
@@ -28,7 +28,7 @@
 .add-plan__title {
   position: relative;
   padding: 31px 25px 28px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   &::after {
     position: absolute;
@@ -57,7 +57,7 @@
   }
 
   @media (min-width: $desktop-width) {
-        padding: 5px 89px;
+    padding: 5px 89px;
     margin-bottom: 55px;
   }
 }

@@ -31,7 +31,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 63px;
   }
 }
 
@@ -54,7 +54,7 @@
 
   @media (min-width: $desktop-width) {
     width: 616px;
-    margin-bottom: 61px;
+    margin-bottom: 59px;
   }
 }
 
@@ -75,6 +75,12 @@
   @media (min-width: $desktop-width) {
     width: auto;
     margin-bottom: 81px;
+  }
+
+  & .promotion__description--break-line {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 }
 
@@ -103,6 +109,10 @@
 .promotion__description--break-line {
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 
@@ -192,9 +202,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 330px;
+    width: 320px;
     height: 81px;
-    margin-left: -28px;
+    margin-left: -27px;
+    border-radius: 0 20px 20px 0;
   }
 }
 

@@ -17,7 +17,7 @@
   @media (min-width: $desktop-width) {
     margin-top: -50px;
     padding-top: 97px;
-    padding-bottom: 195px;
+    padding-bottom: 186px;
   }
 
   &::after {
@@ -102,7 +102,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 76px 0 74px;
-    margin-bottom: 73px;
+    margin-bottom: 70px;
   }
 }
 
@@ -174,15 +174,16 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 20px;
-    padding-left: 64px;
+    margin-left: 54px;
     white-space: nowrap;
     overflow: hidden;
-    width: 430px;
+    width: 330px;
     text-overflow: ellipsis;
   }
 
   @media (min-width: $desktop-width) {
-    width: 630px;
+    width: 540px;
+    margin-left: 64px;
   }
 
   &:last-child {

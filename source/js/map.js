@@ -1,0 +1,322 @@
+var $jscomp = $jscomp || {}; $jscomp.scope = {}; $jscomp.arrayIteratorImpl = function (g) { var n = 0; return function () { return n < g.length ? { done: !1, value: g[n++] } : { done: !0 } } }; $jscomp.arrayIterator = function (g) { return { next: $jscomp.arrayIteratorImpl(g) } }; $jscomp.ASSUME_ES5 = !1; $jscomp.ASSUME_NO_NATIVE_MAP = !1; $jscomp.ASSUME_NO_NATIVE_SET = !1; $jscomp.SIMPLE_FROUND_POLYFILL = !1;
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function (g, n, p) { g != Array.prototype && g != Object.prototype && (g[n] = p.value) }; $jscomp.getGlobal = function (g) { return "undefined" != typeof window && window === g ? g : "undefined" != typeof global && null != global ? global : g }; $jscomp.global = $jscomp.getGlobal(this); $jscomp.SYMBOL_PREFIX = "jscomp_symbol_"; $jscomp.initSymbol = function () { $jscomp.initSymbol = function () { }; $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol) };
+$jscomp.SymbolClass = function (g, n) { this.$jscomp$symbol$id_ = g; $jscomp.defineProperty(this, "description", { configurable: !0, writable: !0, value: n }) }; $jscomp.SymbolClass.prototype.toString = function () { return this.$jscomp$symbol$id_ }; $jscomp.Symbol = function () { function g(p) { if (this instanceof g) throw new TypeError("Symbol is not a constructor"); return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (p || "") + "_" + n++, p) } var n = 0; return g }();
+$jscomp.initSymbolIterator = function () { $jscomp.initSymbol(); var g = $jscomp.global.Symbol.iterator; g || (g = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("Symbol.iterator")); "function" != typeof Array.prototype[g] && $jscomp.defineProperty(Array.prototype, g, { configurable: !0, writable: !0, value: function () { return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this)) } }); $jscomp.initSymbolIterator = function () { } };
+$jscomp.initSymbolAsyncIterator = function () { $jscomp.initSymbol(); var g = $jscomp.global.Symbol.asyncIterator; g || (g = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("Symbol.asyncIterator")); $jscomp.initSymbolAsyncIterator = function () { } }; $jscomp.iteratorPrototype = function (g) { $jscomp.initSymbolIterator(); g = { next: g }; g[$jscomp.global.Symbol.iterator] = function () { return this }; return g };
+$jscomp.iteratorFromArray = function (g, n) { $jscomp.initSymbolIterator(); g instanceof String && (g += ""); var p = 0, a = { next: function () { if (p < g.length) { var w = p++; return { value: n(w, g[w]), done: !1 } } a.next = function () { return { done: !0, value: void 0 } }; return a.next() } }; a[Symbol.iterator] = function () { return a }; return a };
+$jscomp.polyfill = function (g, n, p, a) { if (n) { p = $jscomp.global; g = g.split("."); for (a = 0; a < g.length - 1; a++) { var w = g[a]; w in p || (p[w] = {}); p = p[w] } g = g[g.length - 1]; a = p[g]; n = n(a); n != a && null != n && $jscomp.defineProperty(p, g, { configurable: !0, writable: !0, value: n }) } }; $jscomp.polyfill("Array.prototype.keys", function (g) { return g ? g : function () { return $jscomp.iteratorFromArray(this, function (g) { return g }) } }, "es6", "es3");
+(function (g, n) {
+  var p = this, a = { ns: {}, supports: {}, env: g, project: { preload: ["package.system"], combineBatchSize: 500 } }; a.performance = function (a) {
+    function d() { clearTimeout(l); l = null; var e = []; if (e = (b(e, u), b(e, x), e.join(","))) { e = g + "/vars=" + e + "/*"; if (!f || !navigator.sendBeacon(h, e)) { var a = new Image, z = (new Date).getTime() + Math.round(100 * Math.random()); a.src = h + "/rnd=" + z + e } l = l || setTimeout(d, c) } } function b(c, l) { for (var r in l) if (l.hasOwnProperty(r) && l[r].length && (c.push(r + "=" + l[r].shift()), c.length >= e)) break } var h,
+      g, f, k; a = {}; var y = (a, window.performance || Object.create(null)), v = y.now ? y.now.bind(y) : function () { return Date.now() }, q = y.getEntriesByType ? function (c) { return y.getEntriesByType("resource").filter(function (e) { return e.name === c })[0] } : function () { }, x = {}, u = {}, n = { initjs: "i", mapjs: "m", combine_s: "cs", combine_m: "cm", combine_l: "cl" }, p = { eval: "e", duration: "d", cached: "c", encodedSize: "esz", decodedSize: "dsz", responseDuration: "res", requestDuration: "req" }, m = {
+        statistics: { combine: { total: 0, size: 0, modules: 0 } }, initTimings: {},
+        now: v, getResourceTimings: function (c) { return q(c) || {} }, init: function (c) { h = c.url; g = "/pid=443/cid=73188/dtype=stred" + c.data; f = !(!c.useSendBeacon || !navigator.sendBeacon); k = c.enable; m.initTimings = m.getResourceTimings(c.initUrl); m.saveResourceTimings("initjs", m.initTimings, { size: !1, cached: !1 }) }, saveMeasure: function (e, a) { if (k) { var r = /^@/.test(e); r && (e = e.replace(/^@/, "").split("."), e = (n[e[0]] || e[0]) + "." + (p[e[1]] || e[1])); (a = Math.round(a), isNaN(a)) || (r = r ? x : u, r[e] = r[e] || [], r[e].push(a), l = l || setTimeout(d, c)) } },
+        startMeasure: function (c, e) { e = "undefined" == typeof e ? v() : e; var l = !1; return { finish: function (a) { l || (a = "undefined" == typeof a ? v() : a, m.saveMeasure(c, a - e), l = !0) } } }, saveResourceTimings: function (c, e, l) {
+          if ((e = "object" == typeof e ? e : q(e)) && (l = l || {}, c = c.replace(/^@?/, "@"), this.saveMeasure(c + ".duration", e.duration), e.responseStart)) {
+            var a = 0 === e.transferSize ? 1 : 0; this.saveMeasure(c + ".responseDuration", e.responseEnd - e.responseStart); this.saveMeasure(c + ".requestDuration", e.responseStart - e.requestStart); !1 !== l.cached &&
+              this.saveMeasure(c + ".cached", a); !1 === l.size || a || (this.saveMeasure(c + ".encodedSize", e.encodedBodySize / 1024), this.saveMeasure(c + ".decodedSize", e.decodedBodySize / 1024))
+          }
+        }
+      }, e = 40, c = 5E3, l = null; return window.addEventListener("beforeunload", function () { m.saveMeasure("combine.total", m.statistics.combine.total); m.saveMeasure("combine.modules", m.statistics.combine.modules); m.saveMeasure("combine.size", m.statistics.combine.size / 1024); d() }), a = m, a
+  }(); g = a.performance.startMeasure("@initjs.eval"); a.count = function (a) {
+    function d() { b.push(arguments) }
+    a = {}; var b = (a, []), h = null, g = function () { (h || d).apply(null, arguments) }; return g.provideImplementation = function (a) { if (h) throw Error("ym.count: implementation was already provided."); h = a(b) }, a = g, a
+  }(); a.vow = a.ns.vow = function (a) {
+    var d = { exports: {} }; d.exports; return function (a) {
+      var b = function () {
+        var c = [], e = function (e) { return c.push(e), 1 === c.length }, r = function () { var e = c, l = 0, a = c.length; for (c = []; l < a;)e[l++]() }; if ("function" == typeof setImmediate) return function (c) { e(c) && setImmediate(r) }; if ("object" == typeof process &&
+          process.nextTick) return function (c) { e(c) && process.nextTick(r) }; var f = a.MutationObserver || a.WebKitMutationObserver; if (f) { var b = 1, d = document.createTextNode(""); return (new f(r)).observe(d, { characterData: !0 }), function (c) { e(c) && (d.data = b *= -1) } } if (a.postMessage) {
+            var h = !0; a.attachEvent && (f = function () { h = !1 }, a.attachEvent("onmessage", f), a.postMessage("__checkAsync", "*"), a.detachEvent("onmessage", f)); if (h) {
+              var g = "__promise" + Math.random() + "_" + new Date; f = function (c) {
+                c.data === g && (c.stopPropagation && c.stopPropagation(),
+                  r())
+              }; return a.addEventListener ? a.addEventListener("message", f, !0) : a.attachEvent("onmessage", f), function (c) { e(c) && a.postMessage(g, "*") }
+            }
+          } var k = a.document; if ("onreadystatechange" in k.createElement("script")) { var q = function () { var c = k.createElement("script"); c.onreadystatechange = function () { c.parentNode.removeChild(c); c = c.onreadystatechange = null; r() }; (k.documentElement || k.body).appendChild(c) }; return function (c) { e(c) && q() } } return function (c) { e(c) && setTimeout(r, 0) }
+      }(), g = function (c) {
+        b(function () {
+          throw c;
+        })
+      }, f = function (c) { return "function" == typeof c }, k = Object.prototype.toString, A = Array.isArray || function (c) { return "[object Array]" === k.call(c) }, v = function (c) { var e = [], a = 0; for (c = c.length; a < c;)e.push(a++); return e }, q = Object.keys || function (c) { var e = [], a; for (a in c) c.hasOwnProperty(a) && e.push(a); return e }, x = function (c, e) { return function (a) { c.call(this, a, e) } }, u = function () { this._promise = new n }; u.prototype = {
+        promise: function () { return this._promise }, resolve: function (c) { this._promise.isResolved() || this._promise._resolve(c) },
+        reject: function (c) { this._promise.isResolved() || (e.isPromise(c) ? (c = c.then(function (c) { var a = e.defer(); return a.reject(c), a.promise() }), this._promise._resolve(c)) : this._promise._reject(c)) }, notify: function (c) { this._promise.isResolved() || this._promise._notify(c) }
+      }; var n = function (c) {
+        if (this._value = void 0, this._status = 0, this._fulfilledCallbacks = [], this._rejectedCallbacks = [], this._progressCallbacks = [], c) {
+          var e = this, a = c.length; c(function (c) { e.isResolved() || e._resolve(c) }, 1 < a ? function (c) {
+            e.isResolved() ||
+              e._reject(c)
+          } : void 0, 2 < a ? function (c) { e.isResolved() || e._notify(c) } : void 0)
+        }
+      }; n.prototype = {
+        valueOf: function () { return this._value }, isResolved: function () { return 0 !== this._status }, isFulfilled: function () { return 2 === this._status }, isRejected: function () { return 3 === this._status }, then: function (c, e, a, f) { var l = new u; return this._addCallbacks(l, c, e, a, f), l.promise() }, catch: function (c, e) { return this.then(void 0, c, e) }, fail: function (c, e) { return this.then(void 0, c, e) }, always: function (c, e) {
+          var a = this, l = function () {
+            return c.call(this,
+              a)
+          }; return this.then(l, l, e)
+        }, progress: function (c, e) { return this.then(void 0, void 0, c, e) }, spread: function (c, e, a) { return this.then(function (e) { return c.apply(this, e) }, e, a) }, done: function (c, e, a, f) { this.then(c, e, a, f).fail(g) }, delay: function (c) { var e, a = this.then(function (a) { var l = new u; return e = setTimeout(function () { l.resolve(a) }, c), l.promise() }); return a.always(function () { clearTimeout(e) }), a }, timeout: function (c) {
+          var a = new u, f = setTimeout(function () { a.reject(new e.TimedOutError("timed out")) }, c); return this.then(function (c) { a.resolve(c) },
+            function (c) { a.reject(c) }), a.promise().always(function () { clearTimeout(f) }), a.promise()
+        }, _vow: !0, _resolve: function (c) {
+          if (!(1 < this._status)) {
+            if (c === this) return void this._reject(TypeError("Can't resolve promise with itself")); if (this._status = 1, c && c._vow) return void (c.isFulfilled() ? this._fulfill(c.valueOf()) : c.isRejected() ? this._reject(c.valueOf()) : c.then(this._fulfill, this._reject, this._notify, this)); if (null !== c && "object" == typeof c || f(c)) {
+              try { var e = c.then } catch (z) { return void this._reject(z) } if (f(e)) {
+                var a =
+                  this, b = !1; try { e.call(c, function (c) { b || (b = !0, a._resolve(c)) }, function (c) { b || (b = !0, a._reject(c)) }, function (c) { a._notify(c) }) } catch (z) { b || this._reject(z) } return
+              }
+            } this._fulfill(c)
+          }
+        }, _fulfill: function (c) { 1 < this._status || (this._status = 2, this._value = c, this._callCallbacks(this._fulfilledCallbacks, c), this._fulfilledCallbacks = this._rejectedCallbacks = this._progressCallbacks = void 0) }, _reject: function (c) {
+          1 < this._status || (this._status = 3, this._value = c, this._callCallbacks(this._rejectedCallbacks, c), this._fulfilledCallbacks =
+            this._rejectedCallbacks = this._progressCallbacks = void 0)
+        }, _notify: function (c) { this._callCallbacks(this._progressCallbacks, c) }, _addCallbacks: function (c, e, a, b, d) {
+          a && !f(a) ? (d = a, a = void 0) : b && !f(b) && (d = b, b = void 0); var l; this.isRejected() || (l = { defer: c, fn: f(e) ? e : void 0, ctx: d }, this.isFulfilled() ? this._callCallbacks([l], this._value) : this._fulfilledCallbacks.push(l)); this.isFulfilled() || (l = { defer: c, fn: a, ctx: d }, this.isRejected() ? this._callCallbacks([l], this._value) : this._rejectedCallbacks.push(l)); 1 >= this._status &&
+            this._progressCallbacks.push({ defer: c, fn: b, ctx: d })
+        }, _callCallbacks: function (c, e) { var a = c.length; if (a) { var l = this.isResolved(), f = this.isFulfilled(), d = this.isRejected(); b(function () { for (var b, r, h, g = 0; g < a;)if (b = c[g++], r = b.defer, h = b.fn) { var k = b.ctx; try { var B = k ? h.call(k, e) : h(e) } catch (G) { r.reject(G); continue } l ? r.resolve(B) : r.notify(B) } else f ? r.resolve(e) : d ? r.reject(e) : r.notify(e) }) } }
+      }; var p = {
+        cast: function (c) { return e.cast(c) }, all: function (c) { return e.all(c) }, race: function (c) { return e.anyResolved(c) }, resolve: function (c) { return e.resolve(c) },
+        reject: function (c) { return e.reject(c) }
+      }, m; for (m in p) p.hasOwnProperty(m) && (n[m] = p[m]); var e = {
+        Deferred: u, Promise: n, defer: function () { return new u }, when: function (c, a, f, b, d) { return e.cast(c).then(a, f, b, d) }, fail: function (c, a, f) { return e.when(c, void 0, a, f) }, always: function (c, a, f) { return e.when(c).always(a, f) }, progress: function (c, a, f) { return e.when(c).progress(a, f) }, spread: function (c, a, f, b) { return e.when(c).spread(a, f, b) }, done: function (c, a, f, b, d) { e.when(c).done(a, f, b, d) }, isPromise: function (c) {
+          return null !==
+            c && "object" == typeof c && f(c.then)
+        }, cast: function (c) { return c && c._vow ? c : e.resolve(c) }, valueOf: function (c) { return c && f(c.valueOf) ? c.valueOf() : c }, isFulfilled: function (c) { return !c || !f(c.isFulfilled) || c.isFulfilled() }, isRejected: function (c) { return !(!c || !f(c.isRejected)) && c.isRejected() }, isResolved: function (c) { return !c || !f(c.isResolved) || c.isResolved() }, resolve: function (c) { var a = e.defer(); return a.resolve(c), a.promise() }, fulfill: function (c) {
+          var a = e.defer(), f = a.promise(); return a.resolve(c), f.isFulfilled() ?
+            f : f.then(null, function (c) { return c })
+        }, reject: function (c) { var a = e.defer(); return a.reject(c), a.promise() }, invoke: function (c, f) { var l = Math.max(arguments.length - 1, 0); if (l) { var b = Array(l); for (var d = 0; d < l;)b[d++] = arguments[d] } try { return e.resolve(b ? c.apply(a, b) : c.call(a)) } catch (F) { return e.reject(F) } }, all: function (c) { var a = new u, f = A(c), b = f ? v(c) : q(c), d = b.length, h = f ? [] : {}; if (!d) return a.resolve(h), a.promise(); var g = d; return e._forEach(c, function (c, e) { h[b[e]] = c; --g || a.resolve(h) }, a.reject, a.notify, a, b), a.promise() },
+        allResolved: function (c) { var a = new u, f = A(c), b = f ? v(c) : q(c), d = b.length; f = f ? [] : {}; if (!d) return a.resolve(f), a.promise(); f = function () { --d || a.resolve(c) }; return e._forEach(c, f, f, a.notify, a, b), a.promise() }, allPatiently: function (c) { return e.allResolved(c).then(function () { var a, f, b = A(c), d = b ? v(c) : q(c), h = d.length, g = 0; if (!h) return b ? [] : {}; for (; g < h;) { var k = d[g++]; var t = c[k]; e.isRejected(t) ? (a || (a = b ? [] : {}), b ? a.push(t.valueOf()) : a[k] = t.valueOf()) : a || ((f || (f = b ? [] : {}))[k] = e.valueOf(t)) } if (a) throw a; return f }) }, any: function (c) {
+          var a =
+            new u, f = c.length; if (!f) return a.reject(Error()), a.promise(); var b, d = 0; return e._forEach(c, a.resolve, function (c) { d || (b = c); ++d === f && a.reject(b) }, a.notify, a), a.promise()
+        }, anyResolved: function (c) { var a = new u; return c.length ? (e._forEach(c, a.resolve, a.reject, a.notify, a), a.promise()) : (a.reject(Error()), a.promise()) }, delay: function (c, a) { return e.resolve(c).delay(a) }, timeout: function (c, a) { return e.resolve(c).timeout(a) }, _forEach: function (c, a, f, b, d, h) {
+          for (var l = h ? h.length : c.length, g = 0; g < l;)e.when(c[h ? h[g] :
+            g], x(a, g), f, b, d), ++g
+        }, TimedOutError: function (c) { var e = function (e) { this.name = c; this.message = e }; return e.prototype = Error(), e }("TimedOut")
+      }; e.__nextTick__ = b; p = !0; "object" == typeof d && "object" == typeof d.exports && (d.exports = e, p = !1); "object" == typeof modules && f(modules.define) && (modules.define("vow", function (c) { c(e) }), p = !1); p && (a.vow = e)
+    }("undefined" != typeof window ? window : p), d.exports
+  }(); a.utils = function (a) {
+    var b = {}; a = a.vow; var g = Object.prototype.hasOwnProperty; return b.nextTick = a.__nextTick__, a.__nextTick__ =
+      void 0, b.isArray = Array.isArray ? Array.isArray : function (a) { return "[object Array]" === Object.prototype.toString.call(a) }, b.extend = Object.assign ? Object.assign : function (a) { for (var b = 1, f = arguments.length; b < f; b++) { var d = arguments[b]; if (null != d) for (var h in d) g.call(d, h) && (a[h] = d[h]) } return a }, b.setDeep = function (a, b, f) { b = b.split("."); for (var d = 0; d < b.length - 1; d++) { var h = b[d]; a[h] = a[h] || {}; a = a[h] } a[b[b.length - 1]] = f }, b.createPackage = function (a, d, f) {
+        var h = b.registerImports({}, a, d); return f && (h.__expand = {
+          depends: a,
+          imports: d
+        }), h
+      }, b.registerImports = function (a, d, f) { for (var h = 0; h < d.length; h++)f[h].__expand ? b.registerImports(a, f[h].__expand.depends, f[h].__expand.imports) : b.setDeep(a, d[h], f[h]); return a }, b
+  }({ vow: a.vow }); (function () {
+    function b(f) { if ("undefined" == typeof n[f]) { var b = n; var h = d(f) || d(p + g(f)) || d(a.env.browser.cssPrefix + g(f)); f = b[f] = h } else f = n[f]; return f } function d(a) { return "undefined" != typeof (t || (t = document.createElement("div"))).style[a] ? a : null } function g(a) {
+      return a ? a.substr(0, 1).toUpperCase() + a.substr(1) :
+        a
+    } function h(a) { if (f[a] && b("transitionProperty")) { var d = f[a]; a = b(d); d = (a && a != d && (a = "-" + p + "-" + d), a) } else d = null; return d } var t, f = { transform: "transform", opacity: "opacity", transitionTimingFunction: "transition-timing-function", userSelect: "user-select", height: "height" }, k = {}, n = {}, p = a.env.browser.cssPrefix.toLowerCase(); a.supports.css = { checkProperty: b, checkTransitionProperty: function (a) { return "undefined" == typeof k[a] ? k[a] = h(a) : k[a] }, checkTransitionAvailability: h }
+  })(); a.supports.csp = {
+    isSupported: "undefined" !=
+      typeof Blob && "undefined" != typeof URL, isNonceSupported: a.env.browser.name && a.env.browser.version ? !(-1 != a.env.browser.name.search("Safari") && 10 > parseInt(a.env.browser.version)) : null
+  }; (function () {
+    var b = { failIfMajorPerformanceCaveat: !0, antialias: !1 }, d = {}; a.supports.graphics = {
+      hasSvg: function () { return "svg" in d || (d.svg = document.implementation && document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")), d.svg }, hasCanvas: function () {
+        if (!("canvas" in d)) {
+          var a = document.createElement("canvas"),
+            b = "getContext" in a ? a.getContext("2d") : null, g = d, f; if (f = !!b) { a.width = 226; a.height = 256; b.fillStyle = "#fff"; b.fillRect(0, 0, 150, 150); b.globalCompositeOperation = "xor"; b.fillStyle = "#f00"; b.fillRect(10, 10, 100, 100); b.fillStyle = "#0f0"; b.fillRect(50, 50, 100, 100); a = b.getImageData(49, 49, 2, 2); b = []; for (f = 0; 16 > f; f++)b.push(a.data[f]); f = "0x0x0x0x0x0x0x0x0x0x0x0x0x255x0x255" == b.join("x") } g.canvas = f
+        } return d.canvas
+      }, hasWebGl: function () {
+        if (!("webgl" in d)) {
+          var g = d, h; if (window.WebGLRenderingContext) {
+            var t = {
+              "Samsung Internet": !0,
+              AndroidBrowser: !0
+            }; t = !("Webkit" == a.env.browser.engine && 537 > +a.env.browser.engineVersion) && !t[a.env.browser.name]
+          } else t = !1; if (t) { var f; try { var k = document.createElement("canvas"); (f = k.getContext(h = "webgl", b)) || (f = k.getContext(h = "experimental-webgl", b), f || (h = null)) } catch (y) { h = null } h = h ? { contextName: h, context: f } : null } else h = null; g.webgl = h
+        } return d.webgl
+      }, redetect: function () { d = {} }, getWebGlContextName: function () { return d.webgl && d.webgl.contextName }
+    }
+  })(); (function () {
+    function b() {
+      var b = !0; "MacOS" == a.env.browser.osFamily &&
+        /^10\.[0-8](\.|$)/.test(a.env.browser.osVersion) && (b = !1, d("OldMac")); "requestAnimationFrame Worker URL Blob XMLHttpRequest Set Map WebAssembly".split(" ").forEach(function (a) { window[a] || (b = !1, d(a)) }); "function" != typeof Math.trunc && (b = !1, d("MathTrunc")); var k = a.supports.graphics.hasWebGl(); if (!k || "webgl" !== k.contextName) return d("hasWebGl"), !1; k = k.context; 0 == k.getParameter(k.MAX_VERTEX_TEXTURE_IMAGE_UNITS) && (b = !1, d("MAX_VERTEX_TEXTURE_IMAGE_UNITS")); k.getExtension("OES_vertex_array_object") || (b = !1,
+          d("OES_vertex_array_object")); k.getExtension("OES_standard_derivatives") || (b = !1, d("OES_standard_derivatives")); k = k.getShaderPrecisionFormat(k.FRAGMENT_SHADER, k.HIGH_FLOAT); (k && 0 != k.precision || (b = !1, d("highp")), g()) || (k = h(), b = !1, a.count("error", { path: ["vectorEngine.drawPointsError", a.env.browser.platform, a.env.browser.name, k.vendor, k.renderer].join("."), share: 1 })); return b
+    } function d(b) {
+      var f = h(); a.count("error", {
+        path: ["vectorEngine.reasonsVectorNotSupported", b, a.env.browser.platform, a.env.browser.name,
+          f.vendor, f.renderer].join("."), share: .1
+      })
+    } function g() {
+      var a = document.createElement("canvas"); a.width = 1; a.height = 1; a = a.getContext("webgl", { alpha: !1, depth: !1, antialias: !1 }); var b = a.createShader(a.VERTEX_SHADER); a.shaderSource(b, "#version 100\nattribute vec2 p;\nvoid main() {\n    gl_Position = vec4(p,0,1);\n    gl_PointSize = 1.0;\n}"); a.compileShader(b); var d = a.createShader(a.FRAGMENT_SHADER); a.shaderSource(d, "#version 100\nvoid main() {\n    gl_FragColor = vec4(1, 0, 0, 1);\n}"); a.compileShader(d);
+      var g = a.createProgram(); a.attachShader(g, b); a.attachShader(g, d); a.bindAttribLocation(g, 0, "p"); a.linkProgram(g); b = a.createBuffer(); a.bindBuffer(a.ARRAY_BUFFER, b); a.bufferData(a.ARRAY_BUFFER, new Float32Array([0, 0]), a.STATIC_DRAW); a.enableVertexAttribArray(0); a.vertexAttribPointer(0, 2, a.FLOAT, !1, 0, 0); a.clearColor(0, 1, 0, 1); a.clear(a.COLOR_BUFFER_BIT); a.useProgram(g); a.drawArrays(a.POINTS, 0, 1); g = new Uint8Array(4); return a.readPixels(0, 0, 1, 1, a.RGBA, a.UNSIGNED_BYTE, g), 255 === g[0]
+    } function h() {
+      var b = {}, d =
+        a.supports.graphics.hasWebGl(); if (!d) return b; d = d.context; var g = d.getExtension("WEBGL_debug_renderer_info"); return g && (b.vendor = d.getParameter(g.UNMASKED_VENDOR_WEBGL).replace(/\W/g, "_"), b.renderer = d.getParameter(g.UNMASKED_RENDERER_WEBGL).replace(/\W/g, "_")), b
+    } var t; a.supports.vector = { isSupported: function () { return void 0 === t && (t = b()), t } }
+  })(); a.supports.printPatchNeeded = !a.supports.css.checkProperty("printColorAdjust"); a.logger = function (b) {
+    function d(b, d) {
+      var f = ""; return a.env.debug && (f += "(" + b + "): "),
+        f + d
+    } b = {}; var g = (b, "Yandex Maps JS API"); return b = { assert: function (b, t) { b || a.env.debug && console.log(d(g, t)) }, log: function (b) { a.env.debug && console.log(d(g, b)) }, notice: function (b) { a.env.debug && console.info(d(g, b)) }, warning: function (b) { a.env.debug && console.warn(d(g, b)) }, error: function (a) { console.error(d(g, a)) }, exception: function (a, b) { throw Error(d(a, b)); } }, b
+  }(); (function () {
+    var b = a.env.browser; b.documentMode = document.documentMode; b.isIE = "MSIE" == b.name || "IEMobile" == b.name; b.isEdge = "Edge" == b.engine; b.isChromium =
+      b.base && "chromium" == b.base.toLocaleLowerCase(); b.isSafari = "Safari" == b.name; "Edge" == b.engine || "MSIE" == b.name && 6.1 < b.osVersion || "IEMobile" == b.name && 6 <= b.engineVersion ? b.eventMapper = "pointer" : b.eventMapper = "touchMouse"; b.androidBrokenBuild = "AndroidBrowser" == b.name && "534.30" == b.engineVersion; window.devicePixelRatio || screen.deviceXDPI && screen.deviceXDPI / 96 || 1; b.graphicsRenderEngine = "svg"; b.transformTransition = "Android" == b.osFamily || "iOS" == b.osFamily || "MSIE" == b.name || b.isChromium; b.css3DTransform = "WebKit" ==
+        b.engine && !("Android" == b.osFamily && 3 > parseFloat(b.osVersion)) || "Gecko" == b.engine && 10 <= parseInt(b.engineVersion.split(".")[0]); b.unsupported = "OperaMini" == b.name
+  })(); var w = function (b) { var d = {}, g = (d, b.vow); return d = function (b, d) { var f = document.createElement("script"), h = g.defer(); return "production" == a.env.type && (f.crossOrigin = "anonymous"), window[d] = function (a) { delete window[d]; f.parentElement.removeChild(f); h.resolve(a) }, f.src = b, document.head.appendChild(f), h.promise() }, d }({ vow: a.vow }), D = "__jsonp_" + (a.env.namespace ||
+    "ymaps" + Date.now()), I = function (a) {
+      function b(a) { this._config = a; this._sandbox = null; this._definitionsByName = Object.create(null); this._definitionsByStorage = Object.create(null); this._definitionsByAlias = Object.create(null); this._queuedForFetching = Object.create(null); this._remoteLoadingAllowed = q.defer(); this._modulesMapLoaded = this._remoteLoadingAllowed.promise().then(this._config.fetchMap).spread(function (a, e) { this._processLoadedMap(a); e() }, this) } function g(a, c, b, d, f, g, h, k, q) {
+        this.state = a; this.alias = null;
+        this.name = c; this.storage = b; this.key = d; this.depends = f; this.dynamicDepends = k; this.declaration = g; this.context = h; this.exports = a === m.DEFINED ? q : void 0; this.fetchingDeferred = this.resolvingPromise = void 0
+      } function h(a, c) { if (!a.dynamicDepends) return C; var e = [], b; for (b in a.dynamicDepends) if (u.call(a.dynamicDepends, b)) for (var d = 0, g = c.length; d < g; d++) { var h = c[d]; void 0 !== h && (h = a.dynamicDepends[b](h), f(h) && e.push(h)) } return e } function n(a, c, b) {
+        return u.call(a.dynamicDepends, c) ? a.dynamicDepends[c].call(null, b) :
+          w
+      } function f(a) { return "string" == typeof a || null != a && "object" == typeof a && "string" == typeof a.key && "string" == typeof a.storage } function k(a) { return a && "object" == typeof a ? a.key + "@" + a.storage : String(a) } function p(a) { var c = x.isArray(a); return "object" == typeof a && !c && u.call(a, "modules") ? { modules: x.isArray(a.modules) ? a.modules : [a.modules], data: a.data } : c ? { modules: a } : { modules: [a] } } var v = {}, q = (v, a.vow), x = a["./utils"], u = Object.prototype.hasOwnProperty, w = {}, C = Object.freeze([]), m = {
+        MENTIONED: 1, QUEUED: 2, FETCHING: 3,
+        DECLARED: 4, RESOLVING: 5, ERROR: 6, DEFINED: 7
+      }; return v = b, b.prototype.allowRemoteLoading = function () { this._remoteLoadingAllowed.resolve() }, b.prototype.isDefined = function (a) { return !!this._findDefinition(a) }, b.prototype.preload = function (a) { return a }, b.prototype.define = function (a, c, b, d) { if ("object" == typeof a) { var e = a; a = e.name; var f = e.storage; var l = e.key; c = e.depends; b = e.declaration; d = e.context; var h = e.dynamicDepends; e = e.exports } else 2 === arguments.length && (b = c, c = null); l = new g(m.DECLARED, a, f, l, c, b, d, h, e); this._define(l) },
+        b.prototype.defineSync = function (a) { a = new g(m.DEFINED, a.name, a.storage, a.key, null, null, null, null, a.module); this._define(a) }, b.prototype._define = function (a) {
+          var c = this._definitionsByName[a.name]; if (c) { if (c.state !== m.FETCHING || a.state !== m.DECLARED) throw a = Error("ymaps.modules: redefinition of " + a.name), console.error(a), a; return c.state = m.DECLARED, c.declaration = a.declaration, void (c.context = a.context) } "function" == typeof a.depends && (a.depends = a.depends.call({ name: a.name }, this._config.dependenciesContext));
+          a.depends = a.depends || C; this._definitionsByName[a.name] = a; this._saveDefinitionToStorage(a)
+        }, b.prototype._resolve = function (a, c) {
+          if (!a.dynamicDepends) { if (a.state === m.DEFINED) return q.resolve(a.exports); if (a.state === m.ERROR) return q.reject(a.exports) } a.state < m.RESOLVING && !a.resolvingPromise && (a.resolvingPromise = this._resolveCore(a, c).always(function (c) { return a.resolvingPromise = void 0, c })); var e = h(a, [c]); return q.all([a.resolvingPromise, this._require(e, c)]).then(function () {
+            return a.state === m.DEFINED ?
+              q.resolve(a.exports) : q.reject(a.exports)
+          })
+        }, b.prototype._resolveCore = function (a, c) {
+          return this._fetchModule(a, c).then(function () { return a.state = m.RESOLVING, this._require(a.depends, c) }, this).then(function (c) {
+            function b(c, b) { a.state === m.RESOLVING && (a.state = b ? m.ERROR : m.DEFINED, a.exports = b || c); d && d.resolve(); b && console.warn("ymaps.modules: provide(undefined, error) is deprecated and will be removed, throw instead. Module `" + a.name + "`.") } var e, d; b.async = function (c) {
+              a.state === m.RESOLVING && (e = c.then(function (a) { b(a) },
+                function (a) { b(void 0, a) }))
+            }; b.provide = b; b.provideAsync = b.async; b.dynamicDepends = a.dynamicDepends ? { getValue: function (c, b) { var e = n(a, c, b); return e === w ? q.reject(Error("ymaps.modules: dynamic dependency `" + c + "` is not declared.")) : f(e) ? this._require([e], b) : q.resolve([e]) }.bind(this), getValueSync: function (c, b) { c = n(a, c, b); return f(c) ? (c = this._findDefinition(c)) ? this._requireSingleSync(c, b) : void 0 : c }.bind(this) } : null; var g = a.context || { name: a.name, depends: a.depends }; try { a.declaration.apply(g, [b].concat(c)) } catch (H) {
+              return a.state =
+                m.ERROR, void (a.exports = H)
+            } return e ? e : a.state !== m.DEFINED && a.state !== m.ERROR ? (console.warn("ymaps.modules: asynchronous provide is deprecated and will be removed. Module `" + a.name + "`."), d = q.defer(), d.promise()) : void 0
+          }, this)
+        }, b.prototype.require = function (a, c, b, d) { var e = "object" == typeof a && !x.isArray(a), f = 1 === arguments.length; e && (c = a.successCallback, b = a.errorCallback, d = a.context, f = !c && !b); a = p(a); e = this._require(a.modules, a.data); return f ? e : void e.spread(c, b, d) }, b.prototype.requireSync = function (a) {
+          if (a =
+            p(a), 1 !== a.modules.length) throw Error("ymaps.modules: only one module can be required synchronously."); var c = this._findDefinition(a.modules[0]); return c && this._requireSingleSync(c, a.data)
+        }, b.prototype._requireSingleSync = function (a, c) { for (var b = h(a, [c]), e = 0, d = b.length; e < d; e++) { var f = this._findDefinition(b[e]); if (!f || !this._requireSingleSync(f, c)) return } return a.state === m.DEFINED ? a.exports : void 0 }, b.prototype._require = function (a, c) { a = a.map(function (a) { return this._requireSingle(a, c) }, this); return q.all(a) },
+        b.prototype._requireSingle = function (a, c) { var b = this._findDefinition(a); return b ? this._resolve(b, c) : this._modulesMapLoaded.then(function () { var b = this._findDefinition(a); return b ? this._resolve(b, c) : q.reject(Error("ymaps.modules: module `" + k(a) + "` is not defined.")) }, this) }, b.prototype._findDefinition = function (a) { if ("undefined" != typeof a) return "string" == typeof a ? this._definitionsByName[a] : this._definitionsByStorage[a.storage] && this._definitionsByStorage[a.storage][a.key] }, b.prototype._saveDefinitionToStorage =
+        function (a, c) { if (a.key && a.storage) { c = c || { key: a.key, storage: a.storage }; for (var b = x.isArray(c.key) ? c.key : [c.key], e = 0, d = b.length; e < d; e++)this._definitionsByStorage[c.storage] = this._definitionsByStorage[c.storage] || {}, this._definitionsByStorage[c.storage][b[e]] = a } }, b.prototype._fetchModule = function (a, c) {
+          return a.state >= m.DECLARED ? q.resolve() : (a.fetchingDeferred = a.fetchingDeferred || q.defer(), a.state === m.MENTIONED && (a.state = m.QUEUED, this._queuedForFetching[a.name] = { definition: a, dataList: [] }, this._enqueueCombine()),
+            a.state !== m.FETCHING && this._queuedForFetching[a.name].dataList.push(c), a.fetchingDeferred.promise())
+        }, b.prototype._enqueueCombine = function () {
+          this._combineEnqueued || (this._combineEnqueued = !0, this._modulesMapLoaded.then(function () {
+            this._combineEnqueued = !1; var a = this._queuedForFetching; this._queuedForFetching = Object.create(null); var c = Object.create(null), b; for (b in a) if (b in a) { var d = this._getAliasesToFetchFor(b, a[b].dataList); x.extend(c, d) } a = Object.keys(c); c = 0; for (b = a.length; c < b; c += this._config.combineBatchSize)this._fetchCombine(a.slice(c,
+              c + this._config.combineBatchSize))
+          }, this))
+        }, b.prototype._fetchCombine = function (a) {
+          this._config.fetchCombine(a).spread(function (a, b) {
+            this._sandbox = this._sandbox || this._config.createSandbox(); for (var c = 0, e = a.length; c < e; c++) {
+              var d = this._definitionsByAlias[a[c][0]]; if (a[c][1].call(null, this._sandbox), d.state === m.DECLARED) d.fetchingDeferred && d.fetchingDeferred.resolve(); else {
+                d.state = m.ERROR; var f = Error("[internal] ymaps.modules: module `" + d.name + "` was not defined after dynamic module loading"); d.exports =
+                  f; d.fetchingDeferred && d.fetchingDeferred.reject(f)
+              } d.fetchingDeferred = void 0
+            } b()
+          }, this)["catch"](function (c) { for (var b = 0, e = a.length; b < e; b++) { var d = this._definitionsByAlias[a[b]]; c = Error("[internal] ymaps.modules: dynamic module loading failed"); d.state = m.ERROR; d.exports = c; d.fetchingDeferred && d.fetchingDeferred.reject(c); d.fetchingDeferred = void 0 } }, this)
+        }, b.prototype._getAliasesToFetchFor = function (a, c) {
+          for (var b = [a], e = Object.create(null); b.length;) {
+            var d = b.shift(), f = this._findDefinition(d); if (!f) return void console.error("ymaps.modules: trying to fetch unknown module `" +
+              k(d) + "` while loading `" + k(a) + "`."); f.state <= m.QUEUED && (f.state = m.FETCHING, e[f.alias] = !0, Array.prototype.push.apply(b, f.depends)); Array.prototype.push.apply(b, h(f, c))
+          } return e
+        }, b.prototype._processLoadedMap = function (a) {
+          for (var c = {}, b = 0, e = a.length; b < e; b++) { var d = a[b][0], f = a[b][1]; c[f] = d } b = 0; for (e = a.length; b < e; b++) {
+            d = a[b][0]; f = a[b][1]; var h = this._definitionsByName[d]; if (!h) {
+              h = a[b][2]; if ("function" != typeof h) { for (var k = [], q = 0, n = h.length; q < n; q += 2) { var p = h.substr(q, 2); k.push(c[p]) } h = k } h = new g(m.MENTIONED,
+                d, a[b][4], a[b][3], h, null, null, a[b][5]); this._define(h)
+            } h.alias = f; this._definitionsByAlias[f] = h
+          }
+        }, v
+    }({ vow: a.vow, "./utils": a.utils }), E = "&mode=" + a.env.server.params.mode + "&flags=" + a.env.flags.join(",") + (a.env.cacheVersion ? "&v=" + a.env.cacheVersion : ""), J = a.env.server.url + "/map.js?callback={CALLBACK}" + E, K = a.env.server.url + "/combine.js?callback_prefix={CALLBACK_PREFIX}" + E, L = a.env.server.url + "/" + a.env.server.path.replace(/\/$/, "") + "/images/"; a.modules = new I({
+      dependenciesContext: a, combineBatchSize: a.project.combineBatchSize,
+      fetchMap: function () { if (0 <= a.env.flags.indexOf("inline-map") && n) { var b = a.performance.startMeasure("@mapjs.eval"); return a.vow.resolve([n, b.finish.bind(b)]) } b = D + "_map"; var d = J.replace("{CALLBACK}", b); return w(d, b).then(function (b) { var g = a.performance.getResourceTimings(d); a.performance.saveResourceTimings("mapjs", g); g = a.performance.startMeasure("@mapjs.eval"); return [b, g.finish.bind(g)] }) }, fetchCombine: function (b) {
+        a.performance.statistics.combine.total++; a.performance.statistics.combine.modules += b.length;
+        var d = 100 > b.length ? "s" : 300 > b.length ? "m" : "l"; b = b.join(""); var g = D + "_combine", h = K.replace("{CALLBACK_PREFIX}", g) + "&load=" + b; return w(h, g + "_" + b).then(function (b) { var f = a.performance.getResourceTimings(h); a.performance.saveResourceTimings("combine_" + d, f); a.performance.statistics.combine.size += f.encodedBodySize; f = a.performance.startMeasure("@combine_" + d + ".eval"); return [b, f.finish.bind(f)] })
+      }, createSandbox: function () {
+        var b = Object.create(a.modules); return b.importImages = function (a) {
+          return {
+            get: function (b) {
+              return L +
+                a[b].src
+            }
+          }
+        }, a.utils.extend({}, a, { modules: b })
+      }
+    }); a.ns.load = function (b, d, g, h) { return "function" == typeof b ? d ? a.ns.ready(["package.full"], b, d) : a.ns.ready(["package.full"], b) : ("string" == typeof b && (b = [b]), a.ns.ready.apply(this, arguments)) }; (function () {
+      function b(b) {
+        return function () {
+          console.warn("{NS}.modules.{FN} is not a public API and will be removed from {NS}.modules.".replace(/\{NS\}/g, a.project.namespace).replace(/\{FN\}/g, b)); var d = a.modules[b].apply(a.modules, arguments); return d === a.modules ? a.ns.modules :
+            d
+        }
+      } a.ns.modules = {
+        require: function () { return a.modules.require.apply(a.modules, arguments) }, isDefined: function () { return a.modules.isDefined.apply(a.modules, arguments) }, requireSync: function () { return a.modules.requireSync.apply(a.modules, arguments) }, define: function (b, g, h, n) { return a.modules.define.apply(a.modules, arguments), a.ns.modules }, defineSync: b("defineSync"), getDefinition: b("getDefinition"), getState: b("getState"), setOptions: b("setOptions"), flush: b("flush"), nextTick: b("nextTick"), watchResolving: b("watchResolving"),
+        __modules: a.modules
+      }
+    })(); (function (b) {
+      function d(a, d) { if (a) { var f = g(b, a); f && setTimeout(function () { f.method.call(f.context, d) }) } } function g(a, b) { b = b.split("."); for (var d = 0, f = b.length - 1; d < f; d++)if (a = a[b[d]], !a) return; return { method: a[b[f]], context: a } } var h = a.vow, n = [].concat(a.project.preload, a.env.preload.load.split(",").filter(Boolean)), f = a.performance.startMeasure("ymaps.preload"), k = a.modules.require(n).then(function (b) { a.utils.registerImports(a.ns, n, b); f.finish(); d(a.env.preload.onLoad, a.ns) }, function (b) {
+        return d(a.env.preload.onError,
+          b), h.reject(b)
+      }), p = "complete" === document.readyState || "interactive" === document.readyState ? h.resolve() : new h.Promise(function (a) { document.addEventListener("DOMContentLoaded", a, !1); document.addEventListener("load", a, !1) }); a.ns.ready = function () {
+        v && (a.performance.saveMeasure("ymaps.readyDelay", a.performance.now() - a.performance.initTimings.responseEnd), v = !1); var b = a.performance.startMeasure("ymaps.ready"), d = {}; arguments.length && (1 != arguments.length || "object" != typeof arguments[0] || arguments[0].length ? "function" !=
+          typeof arguments[0] ? (d.require = "string" == typeof arguments[0] ? [arguments[0]] : arguments[0], d.successCallback = arguments[1], d.errorCallback = arguments[2] && "function" == typeof arguments[2] ? arguments[2] : null, d.context = arguments[2] && "object" == typeof arguments[2] ? arguments[2] : arguments[3]) : (d.successCallback = arguments[0], d.errorCallback = arguments[1] && "function" == typeof arguments[1] ? arguments[1] : null, d.context = arguments[1] && "object" == typeof arguments[1] ? arguments[1] : arguments[2]) : d = arguments[0]); var f = d.require ||
+            [], g = h.all([a.modules.require(f), k, p]).spread(function (d) { return a.utils.registerImports(a.ns, f, d), b.finish(), a.ns }); return g.then(d.successCallback && function (a) { setTimeout(d.successCallback.bind(d.context), 0, a) }, d.errorCallback && function (a) { setTimeout(d.errorCallback.bind(d.context), 0, a) }), g
+      }; var v = !0
+    })(this); a.env.server.params.csp && !a.supports.csp.isSupported && a.logger.warning("CSP is not suported in this browser"); a.modules.define("vectorEngine.loadEngine", "vow Hotspot Monitor collection.Item event.Manager hotspot.layer.Hint hotspot.layer.optionMapper interactivityModel.EventController interactivityModel.layer option.Manager poi.BalloonManager util.shapeFactory".split(" "),
+      function (b, d) {
+        function g() { var b = d.defer(), f = document.createElement("script"); return f.onload = b.resolve.bind(b), f.onerror = b.reject.bind(b), f.src = a.env.hosts.vectorIndex.replace("{{version}}", a.env.vectorVersion), a.env.vectorEngineFileName && (f.src = f.src.replace("vector.min.js", a.env.vectorEngineFileName)), document.head.insertAdjacentElement("afterbegin", f), b.promise()["catch"](function () { return d.reject(Error("Failed to load vector engine")) }) } if ("ymaps" !== a.env.namespace) throw Error("Vector supports only `ymaps` namespace.");
+        if (null == a.env.vectorVersion) throw Error("No vector version."); var h = null; b(function () { return h = h || g() })
+      }); a.modules.define("vectorEngine.preload", [], function (b) { a.supports.vector.isSupported() && a.modules.require(["vectorEngine.loadEngine"]).spread(function (a) { a() }); b({}) }); a.modules.allowRemoteLoading(); a.env.namespace && a.utils.setDeep(p, a.env.namespace, a.ns); a.performance.init({
+        url: a.env.hosts.api.statCounter + "/counter", data: "/path=" + a.env.version.replace(/\W/g, "_") + "." + a.env.browser.platform, enable: "all" ==
+          a.env.counters || .01 > Math.random() && !a.env.server.params.debug, initUrl: document.currentScript && document.currentScript.src, useSendBeacon: !a.env.server.params.csp
+      }); a.env.hasValidApiKey || (a.env.apikey = void 0, "undefined" != typeof a.env.hasValidApiKey && console.warn("(Yandex Maps JS API): Invalid API key")); g.finish()
+})({
+  vectorVersion: "5.6.0", vectorVersionTimestamp: 1593285629235, cacheVersion: null, type: "production", flags: [], server: {
+    url: "https://api-maps.yandex.ru/2.1.76", path: "build/release", params: {
+      apikey: "12576af1-5dd4-46e2-90ec-98c87c49775c",
+      mode: "release", ns: "ymaps", csp: null
+    }
+  }, preload: { load: "package.full" }, mode: "release", debug: !1, namespace: "ymaps", enterprise: !1, apikey: "12576af1-5dd4-46e2-90ec-98c87c49775c", hasValidApiKey: !0, hasApiKeyParam: !0, browser: { name: "Chrome", version: "83.0.4103.116", base: "Chromium", engine: "WebKit", engineVersion: "537.36", osName: "Windows 8", osFamily: "Windows", osVersion: "6.2", isMobile: !1, isTablet: !1, multiTouch: !1, platform: "Desktop", cssPrefix: "Webkit" }, lang: "ru_RU", languageCode: "ru", countryCode: "RU", hosts: {
+    api: {
+      main: "https://api-maps.yandex.ru/",
+      ua: "https://yandex.ru/legal/maps_termsofuse/?lang={{lang}}", maps: "https://yandex.ru/maps/", statCounter: "https://yandex.ru/clck/", services: {
+        coverage: "https://api-maps.yandex.ru/services/coverage/", geocode: "https://geocode-maps.yandex.ru/", geoxml: "https://api-maps.yandex.ru/services/geoxml/", inception: "https://api-maps.yandex.ru/services/inception/", panoramaLocate: "https://api-maps.yandex.ru/services/panoramas/", search: "https://api-maps.yandex.ru/services/search/", suggest: "https://suggest-maps.yandex.ru/",
+        regions: "https://api-maps.yandex.ru/services/regions/", route: "https://api-maps.yandex.ru/services/route/"
+      }
+    }, layers: {
+      map: "https://vec0%d.maps.yandex.net/tiles?l=map&%c&%l", mapj: "https://vec0%d.maps.yandex.net/tiles?l=mapj&%c&%l", sat: "https://core-sat.maps.yandex.net/tiles?l=sat&%c&%l", skl: "https://vec0%d.maps.yandex.net/tiles?l=skl&%c&%l", sklj: "https://vec0%d.maps.yandex.net/tiles?l=sklj&%c&%l", stv: "https://0%d.core-stv-renderer.maps.yandex.net/2.x/tiles?l=stv&%c&v=%v&%l&format=png", sta: "https://0%d.core-stv-renderer.maps.yandex.net/2.x/tiles?l=sta&%c&v=%v&%l&format=png",
+      staHotspot: "https://core-stv-renderer.maps.yandex.net/2.x/tiles?l=stj&%c&v=%v&format=js", staHotspotKey: "%c&l=stj&tm=%v", carparks: "https://core-carparks-renderer-lots.maps.yandex.net/"
+    }, metro_RU: "https://yandex.ru/metro/", metro_UA: "https://yandex.ua/metro/", metro_BY: "https://yandex.by/metro/", metro_US: "https://yandex.com/metro/", traffic: "https://core-jams-rdr.maps.yandex.net/", trafficInfo: "https://core-jams-info.maps.yandex.net/", trafficArchive: "https://core-jams-rdr-hist.maps.yandex.net/", vectorIndex: "https://yastatic.net/s3/mapsapi-v3/vector/{{version}}/out/vector.min.js",
+    vectorTiles: "https://vec0{{hostAlias}}.maps.yandex.net/vmap2/tiles?lang={{lang}}&x={{x}}&y={{y}}&z={{z}}&zmin={{zmin}}&zmax={{zmax}}&v={{version}}", vectorImages: "https://vec0{{hostAlias}}.maps.yandex.net/vmap2/icons?id={{id}}&scale={{scale}}", vectorMeshes: "https://vec0{{hostAlias}}.maps.yandex.net/vmap2/meshes?id={{id}}", vectorGlyphs: "https://vec0{{hostAlias}}.maps.yandex.net/vmap2/glyphs?lang={{lang}}&font_id={{fontId}}&range={{range}}", indoorTiles: "https://vec0{{hostAlias}}.maps.yandex.net/", panoramasTiles: "https://pano.maps.yandex.net/%s/%z.%x.%y",
+    taxiRouteInfo: "https://taxi-routeinfo.taxi.yandex.net/taxi_info?clid=yamaps&apikey=f6d7c076e16e4d53a928961595e76215&rll={rll}"
+  }, layers: { map: { version: "20.06.27-0", scaled: !0, hotspotZoomRange: [8, 23] }, sat: { version: "3.602.0" }, skl: { version: "20.06.27-0", scaled: !0, hotspotZoomRange: [8, 23] }, trf: { version: "1593285750", scaled: !0 }, sta: { version: "2020.06.27.01.12-1" }, stv: { version: "2020.06.27.01.12-1" }, carparks: { version: "20200627-020915" } }, geolocation: {
+    longitude: 37.514401, latitude: 55.93362, isHighAccuracy: !1, span: {
+      longitude: .082357,
+      latitude: .098615
+    }
+  }, token: "6fc1f67fff70b59c0ac62ba235f1f49c", distribution: {}, version: "2.1.76", majorVersion: "2.1", cssPrefix: "ymaps-2-1-76-", coordinatesOrder: "latlong"
+}, null);
+ymaps.ready(function () {
+  var myMap = new ymaps.Map(
+    "map",
+    {
+      center: [59.939346, 30.329383],
+      zoom: 16,
+      controls: []
+    },
+    {
+      suppressMapOpenBlock: true
+    },
+    {
+      searchControlProvider: "yandex#search"
+    }
+  ),
+    myPlacemark = new ymaps.Placemark(
+      [59.938669, 30.323057],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "./img/map-marker.svg",
+        iconImageSize: [54, 54],
+        iconImageOffset: [-27, -27]
+      }
+    );
+
+  myMap.geoObjects.add(myPlacemark);
+  myMap.controls.remove("rulerControl");
+  myMap.controls.remove("searchControl");
+  myMap.controls.remove("trafficControl");
+  myMap.controls.remove("typeSelector");
+  myMap.controls.remove("zoomControl");
+  myMap.controls.remove("geolocationControl");
+  myMap.controls.remove("routeEditor")
+});

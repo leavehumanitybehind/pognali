@@ -90,12 +90,25 @@
   position: relative;
   font-weight: 400;
   color: $special-grey;
+  opacity: 0.6;
   background-color: transparent;
   resize: none;
   padding: 22px 30px 15px 25px;
   border-radius: 10px;
   border: 1px solid #cbced9;
   margin-bottom: 30px;
+
+  &:hover {
+    border-color: rgba(#000000, 0.5);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: #000000;
+    color: #000000;
+    opacity: 1;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 35px;
@@ -187,6 +200,15 @@
   height: 33px;
   border-radius: 50%;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: #e5e5e5;
+  }
+
   @media (min-width: $tablet-width) {
     width: 44px;
     height: 44px;
@@ -214,7 +236,7 @@
   width: 33px;
   height: 33px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     width: 44px;
     height: 44px;
   }

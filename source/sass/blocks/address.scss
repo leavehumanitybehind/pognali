@@ -85,7 +85,14 @@
 
   &:hover {
     background-color: $basic-medium-blue;
+  }
+
+  &:hover .address__btn-text {
     color: $basic-white;
+  }
+
+  &:hover::after {
+    border-left-color: $basic-white;
   }
 
   &:active {
@@ -101,18 +108,32 @@
   @media (min-width: $desktop-width) {
     width: 318px;
     height: 80px;
-    padding-left: 37px;
+    padding-left: 43px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 10px;
+    height: 14px;
+    margin-top: -7px;
+    border-left: 10px solid $basic-blue-light;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+
+    @media (min-width: $desktop-width) {
+      top: 42%;
+      right: 8%;
+    }
   }
 }
 
 .address__btn-text {
   position: relative;
+
   @media (min-width: $desktop-width) {
     margin-left: -10px;
-
-    &::after {
-      top: 43%;
-      right: 7%;
-    }
   }
 }

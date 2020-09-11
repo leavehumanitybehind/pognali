@@ -154,4 +154,13 @@
 .plans__link {
   text-decoration: none;
   color: rgba(#000000, 0.3);
+
+  &:hover,
+  &:focus {
+    color: rgba(#000000, 0.6);
+  }
+
+  &:active {
+    color: rgba(#000000, 0.1);
+  }
 }
