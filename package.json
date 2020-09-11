@@ -5,7 +5,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.8.4",
-    "browser-sync": "2.26.x",
+    "browser-sync": "^2.26.12",
     "del": "^5.0.0",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
@@ -45,5 +45,8 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "chokidar": "^3.4.0"
   }
 }

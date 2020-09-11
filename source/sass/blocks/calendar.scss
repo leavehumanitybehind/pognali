@@ -5,20 +5,24 @@
   border-top: 1px solid #d6d9e6;
   padding: 10px;
   margin-bottom: 18px;
-  margin-top: 25px;
+  margin-top: 32px;
 
   @media (min-width: $tablet-width) {
-    padding: 12px 12px 20px 12px;
-    margin-bottom: 38px;
+    padding: 15px 12px 20px 12px;
+    margin-bottom: 21px;
+    margin-top: -6px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 18px 12px 24px 12px;
+    padding: 18px 0 24px 0;
+    margin-top: 22px;
+    margin-bottom: 1px;
   }
 }
 
 .calendar__name {
   position: relative;
+  margin-left: -12px;
   font-weight: bold;
   font-size: 20px;
   line-height: 1;
@@ -26,6 +30,10 @@
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -2px;
   }
 }
 
@@ -46,6 +54,7 @@
   @media (min-width: $tablet-width) {
     width: 18px;
     height: 34px;
+    right: -21px;
   }
 
   &:hover {
@@ -57,29 +66,39 @@
   }
 
   &--next {
-    right: -20px;
+    right: -9px;
     background: url("../img/month-arrow-right.svg") no-repeat;
 
     @media (min-width: $tablet-width) {
       right: 10px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: 3px;
+    }
   }
 }
 
-/* calendar-table */
 .calendar-table {
-  width: 108%;
-  margin-left: -7px;
+  width: 103%;
+  margin-left: -10px;
   margin-bottom: 25px;
   border-collapse: collapse;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+
   @media (min-width: $desktop-width) {
+    width: 100%;
     font-size: 18px;
+    margin-left: -2px;
+    margin-bottom: 68px;
   }
 }
 
 .calendar-table__title {
-  padding-bottom: 8px;
+  padding-bottom: 12px;
 }
 
 .calendar-table__title-mobile {
@@ -93,11 +112,17 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    margin-left: 19px;
   }
 }
 
 .calendar-table__week {
-  margin-left: 12px;
+  margin-left: 9px;
   text-decoration: none;
   color: $special-grey;
   font-weight: 300;
@@ -158,13 +183,11 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 32px;
-      height: 30px;
+      width: 100%;
+      height: 100%;
       border: 2px solid #ff5c23;
 
       @media (min-width: $tablet-width) {
-        width: 76px;
-        height: 69px;
         border: 3px solid #ff5c23;
       }
     }

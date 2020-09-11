@@ -37,24 +37,29 @@ var wrapper = document.querySelector(".country-filter-popup__alphabet-wrapper");
 var openButton = document.querySelector(".country-filter__toggle");
 var closeWrapButton = document.querySelector(".country-filter-popup__close-btn");
 
-openButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  if (wrapper.classList.contains("country-filter-popup__alphabet-wrapper--closed")) {
-    wrapper.classList.remove("country-filter-popup__alphabet-wrapper--closed");
-    wrapper.classList.add("country-filter-popup__alphabet-wrapper--open");
-    list.classList.remove("country-filter-popup__list--closed");
-  } else {
-    wrapper.classList.add("country-filter-popup__alphabet-wrapper--closed");
-    wrapper.classList.remove("country-filter-popup__alphabet-wrapper--open");
-    list.classList.add("country-filter-popup__list--closed");
-  }
-});
 
-closeWrapButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  wrapper.classList.remove("country-filter-popup__alphabet-wrapper--open");
-  wrapper.classList.add("country-filter-popup__alphabet-wrapper--closed");
-});
+if (openButton) {
+  openButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (wrapper.classList.contains("country-filter-popup__alphabet-wrapper--closed")) {
+      wrapper.classList.remove("country-filter-popup__alphabet-wrapper--closed");
+      wrapper.classList.add("country-filter-popup__alphabet-wrapper--open");
+      list.classList.remove("country-filter-popup__list--closed");
+    } else {
+      wrapper.classList.add("country-filter-popup__alphabet-wrapper--closed");
+      wrapper.classList.remove("country-filter-popup__alphabet-wrapper--open");
+      list.classList.add("country-filter-popup__list--closed");
+    }
+  });
+}
+
+if (closeWrapButton) {
+  closeWrapButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    wrapper.classList.remove("country-filter-popup__alphabet-wrapper--open");
+    wrapper.classList.add("country-filter-popup__alphabet-wrapper--closed");
+  });
+}
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -131,7 +136,9 @@ if (buttonChoose) {
 if (closeButtonChoose) {
   closeButtonChoose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    addPlanModal.classList.remove("add-plan-popup--open");
+    if (addPlanModal.classList.contains("add-plan-popup--open")) {
+      addPlanModal.classList.remove("add-plan-popup--open");
+    }
   });
 }
 
@@ -199,52 +206,42 @@ if (buttonPromotion) {
   });
 }
 
-ymaps.ready(init);
-function init() {
-  // Создание карты.
-  var myMap = new ymaps.Map("map", {
-    // Координаты центра карты.
-    // Порядок по умолчанию: «широта, долгота».
-    // Чтобы не определять координаты центра карты вручную,
-    // воспользуйтесь инструментом Определение координат.
-    center: [55.76, 37.64],
-    // Уровень масштабирования. Допустимые значения:
-    // от 0 (весь мир) до 19.
-    zoom: 7
-  });
-}
 
 ymaps.ready(function () {
-  var myMap = new ymaps.Map(
-    "map",
-    {
-      center: [59.939346, 30.329383],
-      zoom: 16,
-      controls: []
-    },
-    {
-      suppressMapOpenBlock: true
-    },
-    {
-      searchControlProvider: "yandex#search"
-    }
-  ),
-    myPlacemark = new ymaps.Placemark(
-      [59.938669, 30.323057],
-      {},
+  function init() {
+    var myMap = new ymaps.Map(
+      "map",
       {
-        iconLayout: "default#image",
-        iconImageHref: "./img/map-marker.svg",
-        iconImageSize: [54, 54],
-        iconImageOffset: [-27, -27]
+        center: [59.939346, 30.329383],
+        zoom: 16,
+        controls: []
+      },
+      {
+        suppressMapOpenBlock: true
+      },
+      {
+        searchControlProvider: "yandex#search"
       }
-    );
-  myMap.geoObjects.add(myPlacemark);
-  myMap.controls.remove("rulerControl");
-  myMap.controls.remove("searchControl");
-  myMap.controls.remove("trafficControl");
-  myMap.controls.remove("typeSelector");
-  myMap.controls.remove("zoomControl");
-  myMap.controls.remove("geolocationControl");
-  myMap.controls.remove("routeEditor");
+    ),
+      myPlacemark = new ymaps.Placemark(
+        [59.938669, 30.323057],
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "./img/map-marker.svg",
+          iconImageSize: [54, 54],
+          iconImageOffset: [-27, -27]
+        }
+      );
+
+    myMap.geoObjects.add(myPlacemark);
+    myMap.controls.remove("rulerControl");
+    myMap.controls.remove("searchControl");
+    myMap.controls.remove("trafficControl");
+    myMap.controls.remove("typeSelector");
+    myMap.controls.remove("zoomControl");
+    myMap.controls.remove("geolocationControl");
+    myMap.controls.remove("routeEditor")
+  }
 });
+

@@ -135,8 +135,7 @@
             <span class="visually-hidden">Телефон</span>
           </a>
           <a class="user-list__login btn" href="login.html">
-            <span class="btn-text"> Авторизация</span>
-
+            <span class="user-list__login-text btn-text">Авторизация</span>
           </a>
         </div>
 
@@ -235,7 +234,7 @@
           </picture>
         </div>
         <a class="profile__toggle" href="#">
-          Сменить фото
+          <span class="profile__toggle-change-text">Сменить</span> фото
         </a>
         <div class="profile__wrapper profile__wrapper--hashtags">
           <label class="profile__label profile__label--hashtags" for="hashtags">
@@ -249,33 +248,33 @@
           </span>
           <ul class="profile__transport">
             <li class="profile-transport__item">
-              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-plane" checked>
-              <label class="transport__label" for="checkbox-plane">
-                <svg class="transport__label-icon" width="16" height="18" aria-label="Авиаперелет">
+              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-plane" checked>
+              <label class="profile__transport-label" for="checkbox-plane">
+                <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Авиаперелет">
                   <use href="#plane"></use>
                 </svg>
               </label>
             </li>
             <li class="profile-transport__item">
-              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-bus">
-              <label class="transport__label" for="checkbox-bus">
-                <svg class="transport__label-icon" width="16" height="18" aria-label="Автобус">
+              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-bus">
+              <label class="profile__transport-label" for="checkbox-bus">
+                <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Автобус">
                   <use href="#bus"></use>
                 </svg>
               </label>
             </li>
             <li class="profile-transport__item">
-              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-bicycle">
-              <label class="transport__label" for="checkbox-bicycle">
-                <svg class="transport__label-icon" width="16" height="18" aria-label="Велосипед">
+              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-bicycle">
+              <label class="profile__transport-label" for="checkbox-bicycle">
+                <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Велосипед">
                   <use href="#bike"></use>
                 </svg>
               </label>
             </li>
             <li class="profile-transport__item">
-              <input class="transport__checkbox" name="transport" type="checkbox" id="checkbox-walk">
-              <label class="transport__label" for="checkbox-walk">
-                <svg class="transport__label-icon" width="16" height="18" aria-label="Пешком">
+              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-walk">
+              <label class="profile__transport-label" for="checkbox-walk">
+                <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Пешком">
                   <use href="#run"></use>
                 </svg>
               </label>
@@ -579,11 +578,8 @@
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Г</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Д</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Е</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ё</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ж</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">З</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">И</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Й</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">К</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Л</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">М</a></div>
@@ -596,10 +592,8 @@
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">У</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ф</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Х</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ц</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ч</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ш</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Щ</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Э</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ю</a></div>
                             <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Я</a></div>
@@ -672,22 +666,27 @@
                     href="#step-3">Развлечения</a>
                 </li>
               </ul>
-              <p class="plan-filters__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
+              <p class="plan-filters__description plan-filters__description--entertainment">Наконец, расскажите о своих
+                планах времяпровождения. Можно писать в
                 свободной
                 форме и ставить тэги.</p>
               <div class="plan-filters__comment-wrapper">
-                <label class="plan-filters__comment-label" for="comment">
-                  Босния и герцеговина</label>
-                <img class="plan-filters__flag plan-filters__flag--comment" src="img/flag-bosnia.svg"
-                  alt="Флаг Боснии и герцеговина" width="35" height="24">
+                <div class="plan-filters__comment-country">
+                  <label class="plan-filters__comment-label" for="comment">
+                    Босния и герцеговина</label>
+                  <img class="plan-filters__flag-comment" src="img/flag-bosnia.svg" alt="Флаг Боснии и герцеговина"
+                    width="35" height="24">
+                </div>
                 <textarea class="plan-filters__comment" id="comment" name="comments" rows="8"
                   placeholder="План действий" required></textarea>
               </div>
               <div class="plan-filters__comment-wrapper">
-                <label class="plan-filters__comment-label plan-filter__comment-label--czech" for="comment-czech">
-                  Чехия</label>
-                <img class="plan-filters__flag plan-filters__flag--comment" src="img/flag-czech.svg" alt="Флаг Чехии"
-                  width="35" height="24">
+                <div class="plan-filters__comment-country">
+                  <label class="plan-filters__comment-label plan-filter__comment-label--czech" for="comment-czech">
+                    Чехия</label>
+                  <img class="plan-filters__flag-comment" src="img/flag-czech.svg" alt="Флаг Чехии" width="35"
+                    height="24">
+                </div>
                 <textarea class="plan-filters__comment--last" id="comment-czech" name="comment" rows="8"
                   placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все."
                   readonly></textarea>

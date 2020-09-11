@@ -21,6 +21,10 @@
   align-items: baseline;
   padding-top: 22px;
   padding-bottom: 15px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 24px;
+  }
 }
 
 .page-main-header__title {
@@ -32,16 +36,16 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    padding-top: 75px;
+    padding-top: 128px;
     font-size: 60px;
     padding-left: 28px;
     padding-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 70px;
-    padding-bottom: 49px;
-    padding-left: 68px;
+        padding-top: 75px;
+    padding-bottom: 48px;
+    padding-left: 64px;
   }
 
   &::after {
@@ -56,6 +60,7 @@
 
     @media (min-width: $desktop-width) {
       left: 60px;
+      bottom: -29px;
     }
   }
 }

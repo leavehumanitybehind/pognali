@@ -104,3 +104,15 @@
     padding-left: 37px;
   }
 }
+
+.address__btn-text {
+  position: relative;
+  @media (min-width: $desktop-width) {
+    margin-left: -10px;
+
+    &::after {
+      top: 43%;
+      right: 7%;
+    }
+  }
+}
