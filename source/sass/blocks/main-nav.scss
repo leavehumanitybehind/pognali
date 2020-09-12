@@ -1,12 +1,25 @@
 .main-nav {
   display: none;
-  position: relative;
-  width: auto;
-  min-height: 51px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 40px;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
+    justify-content: space-between;
+    width: 791px;
+    margin-right: auto;
+    padding: 0;
   }
+}
+
+.nav {
+  display: block;
 }
 
 .main-nav__list {
@@ -27,8 +40,8 @@
 
   @media (min-width: $tablet-width) {
     order: 2;
-    top: 2px;
-    right: -10px;
+    top: 13px;
+    right: -14px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,7 +49,7 @@
   }
 
   &::before {
-    margin-top: -10px;
+    margin-top: -6px;
     margin-bottom: 5px;
     content: "";
     display: block;
@@ -48,7 +61,7 @@
   }
 
   &::after {
-    margin-top: 0;
+    margin-top: 1px;
     margin-bottom: 5px;
     content: "";
     display: block;
@@ -60,13 +73,28 @@
   }
 }
 
+.no-js .main-nav__toggle {
+  display: none;
+}
+
 .main-nav__social-list {
   @include no-list;
   display: flex;
 }
 
 .main-nav__user-list {
+  display: none;
+
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
     order: 1;
+    max-width: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 }

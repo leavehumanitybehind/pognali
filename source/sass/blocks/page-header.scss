@@ -2,28 +2,31 @@
   position: fixed;
   z-index: 50;
   top: 0;
-  color: $basic-blue;
+  margin: 0 auto;
+  width: 320px;
 
   @media (min-width: $tablet-width) {
-    left: 0;
-    right: 0;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
   }
 }
 
 .page-header__container {
-  width: 320px;
-  padding: 28px 25px 14px 25px;
+  padding: 0 24px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 44px 40px 0;
+    padding: 18px 40px 0;
     margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
     min-height: 100px;
-    padding-top: 49px;
+    padding: 18px;
   }
 }
 
@@ -31,39 +34,70 @@
   padding: 18px 25px 27px 25px;
 
   @media (min-width: $tablet-width) {
-    padding: 48px 44px 27px 35px;
+    padding: 45px 40px 27px 39px;
   }
 }
 
 .page-header__container--fixed {
-  left: 0;
-  right: 0;
+  margin: 0 auto;
   z-index: 20;
+  width: 320px;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 42px;
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
     margin-left: 0;
-    padding-top: 17px;
-    padding-bottom: 19px;
+    padding: 1px;
   }
 }
 
+.page-header__logo-blue {
+  display: none;
+}
+
+.page-header__container--fixed .page-header__logo-blue {
+  display: block;
+}
+
+.page-header__container--fixed .page-header__logo-white {
+  display: none;
+}
+
 .page-header__wrapper {
-  position: relative;
-  z-index: 11;
+  color: $basic-blue;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   @media (min-width: $desktop-width) {
     width: 1320px;
-    margin: 0 auto;
+    flex-wrap: nowrap;
+  }
+}
+
+.page-header__logo-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 1px 27px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
   }
 }
 

@@ -8,6 +8,7 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 0 0 55px 55px;
+    margin: -60px auto 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -17,7 +18,7 @@
 
 .country-filter-popup__wrapper {
   padding: 58px 5px 12px 2px;
-  margin-bottom: 6px;
+  margin-bottom: 27px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -25,12 +26,13 @@
   background: #e2e5f2;
 
   @media (min-width: $tablet-width) {
-    padding: 68px 34px 45px;
+    padding: 90px 34px 45px;
+    margin-bottom: 6px;
     align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 75px 36px 23px;
+    padding: 90px 36px 23px;
     flex-wrap: nowrap;
   }
 
@@ -90,7 +92,7 @@
 
     @media (min-width: $desktop-width) {
       top: 1px;
-      left: -12px;
+      left: -16px;
       width: 23px;
       height: 15px;
     }
@@ -107,6 +109,7 @@
   @media (min-width: $tablet-width) {
     width: 58%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     order: 1;
     padding-left: 0;
@@ -167,7 +170,6 @@
 }
 
 .country-filter__toggle {
-  display: none;
   order: 2;
   position: relative;
   border: none;
@@ -179,8 +181,17 @@
   font-stretch: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  color: #192144;
+  color: $basic-medium-blue;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 179px;
+    margin-right: 17px;
+  }
 
   &:hover,
   &:focus {
@@ -190,51 +201,79 @@
   &:active {
     opacity: 0.3;
   }
+}
 
-  @media (min-width: $tablet-width) {
-    display: inline-block;
-  }
+.country-filter__toggle-text--open {
+  position: relative;
 
-  &--open {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 20px;
-      height: 20px;
-      background-image: url("../img/dots.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      top: -8px;
-      right: 0;
-
-      @media (min-width: $tablet-width) {
-        width: 32px;
-        top: 3px;
-        right: -3px;
-      }
-    }
-
-    &--close {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 20px;
-        height: 20px;
-        background-image: url("../img/close.svg");
-        top: -8px;
-        right: 0;
-      }
-    }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/dots.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -8px;
+    right: 0;
 
     @media (min-width: $tablet-width) {
-      display: flex;
-      padding-right: 48px;
+      width: 32px;
+      top: 3px;
+      right: -55px;
     }
   }
+}
+
+.country-filter__toggle-text--close {
+  position: relative;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 38px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/close.svg");
+    top: -7px;
+    left: -19px;
+
+    @media (min-width: $tablet-width) {
+      top: 2px;
+
+      left: 115px;
+
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 2px;
+      left: 155px;
+    }
+  }
+}
+
+.country-filter__toggle-text--close span,
+.country-filter__toggle-text--open span {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+  }
+}
+
+.country-filter__toggle--show .country-filter__toggle-text--close {
+  display: flex;
+}
+
+.country-filter__toggle--show .country-filter__toggle-text--open,
+.country-filter-popup__alphabet-wrapper--desktop .country-filter__toggle-text--open {
+  display: none;
 }
 
 .country-filter-popup__alphabet-wrapper--closed {
@@ -253,7 +292,7 @@
 }
 
 .country-filter-popup__country-item {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .country-filter-popup__country-name {
@@ -265,10 +304,11 @@
 .country-filter-popup__close-btn {
   width: 100%;
   padding: 12px;
+  padding-bottom: 7px;
   border: none;
   font-family: inherit;
   font-weight: 700;
-  color: #192144;
+  color: $basic-medium-blue;
   font-size: 16px;
   line-height: (20 / 16);
   letter-spacing: 0.05em;
@@ -289,28 +329,47 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1;
+    height: 100px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     display: block;
+    height: auto;
     width: 100%;
-    padding: 30px 0;
-    margin-top: 50px;
+    padding: 40px 0;
+    margin-top: 58px;
   }
 }
 
 .country-filter-popup__close-text {
   position: relative;
-  padding-left: 24px;
+  padding-left: 25px;
 
-  &::after {
+  @media (min-width: $desktop-width) {
+    padding-left: 40px;
+  }
+
+  &::before {
     position: absolute;
     content: "";
-    width: 12px;
-    height: 13px;
-    background: url("../img/close.svg") no-repeat;
-    background-position: center;
-    top: 3px;
-    left: 1px;
+    width: 15px;
+    height: 12px;
+    top: 2px;
+    left: -1px;
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 2px;
+      left: 0;
+    }
   }
 }

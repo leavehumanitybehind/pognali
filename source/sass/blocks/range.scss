@@ -109,10 +109,10 @@
   background-color: rgba($special-grey, 0.3);
 
   @media (min-width: $tablet-width) {
-    left: 68px;
+    left: -335px;
     position: absolute;
-    width: 50%;
-    top: 12px;
+    width: 280px;
+    top: 14px;
   }
 
   @media (min-width: $desktop-width) {
@@ -168,6 +168,10 @@
     margin-bottom: 0;
     width: 13px;
     height: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -4px;
   }
 }
 

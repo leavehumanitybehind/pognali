@@ -95,18 +95,35 @@
     <div class="page-header__container page-header__container--catalog">
       <div class="page-header__wrapper">
         <a class="page-header__logo logo" href="index.html">
-          <picture class="logo">
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
-            <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.png 2x">
-            <source media="(min-width: 1440px)"
-              srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
-            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="18"
-              alt="Логотип сайта поиска попутчиков">
-          </picture>
+          <div class="page-header__logo-white">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.png 2x">
+              <source media="(min-width: 1440px)"
+                srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+              <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="18"
+                alt="Логотип сайта поиска попутчиков">
+            </picture>
+          </div>
+          <div class="page-header__logo-blue">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/logo-desktop-blue@1x.webp, img/logo-desktop-blue@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/logo-tablet-blue@1x.webp, img/logo-tablet-blue@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp, img/logo-mobile-blue@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+              <img class="logo__img" src="img/logo-mobile-blue@1x.png"
+                srcset="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" width="96" height="18"
+                alt="Логотип сайта поиска попутчиков">
+            </picture>
+          </div>
         </a>
         <nav class="main-nav nav">
           <ul class="main-nav__list nav-list">
@@ -135,10 +152,9 @@
             <span class="visually-hidden">Телефон</span>
           </a>
           <a class="user-list__login btn" href="login.html">
-            <span class="user-list__login-text btn-text">Авторизация
-            </span></a>
+            <span class="user-list__login-text btn-text">Авторизация</span>
+          </a>
         </div>
-
         <div class="mobile-popup mobile-popup--open">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -234,8 +250,8 @@
           </li>
         </ul>
         <button class="country-filter__toggle" type="button">
-          <span class="country-filter__toggle-text country-filter__toggle-text--open">Показать все</span>
-          <span class="country-filter__toggle-text country-filter__toggle-text--close">Свернуть</span>
+          <span class="country-filter__toggle-text--open"><span>Показать все</span></span>
+          <span class="country-filter__toggle-text--close"><span>Свернуть</span></span>
         </button>
 
 
@@ -382,7 +398,7 @@
               <li class="alphabet__item"><a href="/country/luxembourg" class="alphabet__link">Люксембург</a></li>
             </ul>
           </div>
-          <div class="alphabet__wrapper">
+          <div class="alphabet__wrapper alphabet__wrapper--m">
             <a class="alphabet__title" href="#">М</a>
             <ul class="alphabet__list">
               <li class="alphabet__item"><a href="/country/mauritius" class="alphabet__link">Маврикий</a></li>
@@ -592,6 +608,8 @@
                   <h3 class="traveller-filter-list__title">
                     Хобби
                   </h3>
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
+                      меню</span></button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__preferences">
                       <li class="traveller-filter__preferences-item">
@@ -622,6 +640,8 @@
                   <h3 class="traveller-filter-list__title">
                     Mузыка
                   </h3>
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
+                      меню</span></button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__preferences">
                       <li class="traveller-filter__preferences-item">
@@ -652,6 +672,8 @@
                   <h3 class="traveller-filter-list__title">
                     Еда
                   </h3>
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
+                      меню</span></button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__preferences">
                       <li class="traveller-filter__preferences-item">
@@ -679,10 +701,12 @@
                     </ul>
                   </div>
                 </li>
-                <li class="traveller-filter-list__item">
+                <li class="traveller-filter-list__item traveller-filter-list__item--transport">
                   <h3 class="traveller-filter-list__title">
                     Транспорт
                   </h3>
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
+                      меню</span></button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__transport transport">
                       <li class="transport__item">
@@ -724,6 +748,8 @@
                   <h3 class="traveller-filter-list__title">
                     Левел
                   </h3>
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
+                      меню</span></button>
                   <div class="traveller-filter__option range">
                     <div class="range__wrap">
                       <div class="range__output">

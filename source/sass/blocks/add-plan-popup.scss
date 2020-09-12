@@ -11,17 +11,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 34px 17px;
+    padding: 34px 24px;
   }
 }
 
 .add-plan-popup--open {
   display: block;
-  width: 100%;
+  width: 104%;
   position: absolute;
-  top: -5px;
+  top: 1px;
+  left: -11px;
   z-index: 11;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $light-grey;
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
 
   @media (min-width: $desktop-width) {
@@ -33,16 +34,16 @@
 
 .add-plan-popup__title {
   font-size: 14px;
-  width: 100%;
+  width: 101%;
   margin: 0;
   padding: 14px 10px 10px;
   color: $basic-white;
   background-color: $basic-blue-light;
   font-weight: 500;
   line-height: 1;
-
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  border-radius: 4px 4px 0 0;
 
   @media (min-width: $tablet-width) {
     width: 70%;
@@ -101,7 +102,7 @@
 
 .add-plan-popup__country-item {
   @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 }
 

@@ -1,11 +1,20 @@
 .nav-list {
   @include no-list;
-  display: none;
+  justify-content: center;
+  display: flex;
   flex-direction: column;
+  width: 100%;
+  margin: 0 0 50px;
+  padding-top: 76px;
 
   @media (min-width: $desktop-width) {
     position: relative;
     display: flex;
+    margin: 0;
+    padding-top: 0;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 700px;
     flex-direction: row;
     align-items: center;
   }
@@ -24,20 +33,29 @@
 
 .nav-list__item {
   margin-right: 34px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1;
   text-transform: uppercase;
   overflow: hidden;
 }
 
 .nav-list__link {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: (35 / 30);
   text-decoration: none;
   color: $basic-white;
   position: relative;
   display: block;
   transition: transform 0.3s;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: (71 / 60);
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 1;
+  }
 
   &:hover {
     transform: translateY(-100%);
@@ -52,7 +70,7 @@
     position: absolute;
     top: 100%;
     content: attr(data-hover);
-    color: #ffd74b;
+    color: $basic-yellow;
     transform: translate3d(0, 0, 0);
   }
 }

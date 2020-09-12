@@ -18,7 +18,7 @@
 .page-main-header__container {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   padding-top: 22px;
   padding-bottom: 15px;
 
@@ -38,8 +38,8 @@
   @media (min-width: $tablet-width) {
     padding-top: 128px;
     font-size: 60px;
-    padding-left: 28px;
-    padding-bottom: 60px;
+    padding-left: 33px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -96,13 +96,21 @@
     margin-top: -11px;
     background-image: url("../img/return.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 91%;
+      right: 63px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     display: flex;
+    padding-right: 101px;
+    padding-top: 78px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 120px;
+    padding-top: 33px;
   }
 }

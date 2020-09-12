@@ -23,7 +23,7 @@
     margin: 0;
     padding-top: 41px;
     padding-left: 10px;
-    margin-bottom: 43px;
+    margin-bottom: 40px;
     font-size: 30px;
     line-height: 1;
     width: auto;
@@ -33,6 +33,7 @@
     padding: 0;
     margin-top: 51px;
     margin-bottom: 26px;
+    padding-left: 24px;
   }
 }
 
@@ -41,28 +42,45 @@
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 44px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 36px;
+    padding-left: 16px;
   }
 }
 
 .traveller-filter-list__item {
+  border-top: 1px solid #f3c72b;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   @media (min-width: $tablet-width) {
-    display: flex;
+    border-top: none;
+    flex-wrap: nowrap;
     align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &--transport {
+    @media (min-width: $tablet-width) {
+      justify-content: flex-start;
+      margin-top: -5px;
+    }
   }
 }
 
 .traveller-filter-list__title {
   margin: 0;
   margin-bottom: 10px;
+  margin-right: 100px;
   padding-left: 5px;
   position: relative;
   font-style: normal;
@@ -71,7 +89,6 @@
   line-height: (18 / 16);
   text-transform: uppercase;
   color: $basic-blue-light;
-  border-top: 1px solid #f3c72b;
   padding-top: 10px;
 
   &:hover,
@@ -83,6 +100,38 @@
     opacity: 0.3;
   }
 
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding-left: 12px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 114px;
+
+    margin-bottom: 9px;
+  }
+}
+
+.traveller-filter-list__toggle {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    right: 0;
+    top: -9px;
+  }
+
   &::after {
     content: "";
     background: url("../img/triangle-arrow-right.svg") no-repeat;
@@ -90,7 +139,6 @@
     width: 13px;
     height: 8px;
     transform: rotate(90deg);
-    top: 20px;
     right: 2px;
 
     @media (min-width: $tablet-width) {
@@ -102,30 +150,25 @@
       right: 26px;
     }
   }
+}
 
-  @media (min-width: $tablet-width) {
-    border-top: none;
-    margin-bottom: 0;
-    padding-left: 12px;
-    font-size: 20px;
-    line-height: 1;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 120px;
-    margin-bottom: 12px;
-  }
+.traveller-filter__option--open .traveller-filter-list__toggle::after {
+  transform: rotate(-90deg);
 }
 
 .traveller-filter__preferences {
   @include no-list;
-
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding-top: 6px;
   padding-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     width: 520px;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     font-size: 20px;
     margin-left: auto;
     padding-bottom: 0;
@@ -159,11 +202,12 @@
 
 .traveller-filter__option {
   display: none;
+  flex-grow: 1;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    flex-grow: 1;
+    flex-grow: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -173,6 +217,7 @@
 
 .traveller-filter__option--open {
   display: flex;
+  flex-grow: 1;
 }
 
 .traveller-filter__option--open .traveller-filter-list__title::after,
@@ -259,8 +304,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 98%;
-    margin: 0 auto 42px;
+    font-size: 20px;
+    width: 96%;
+    margin: 0 auto 35px 12px;
+    padding-bottom: 19px;
   }
 
   @media (min-width: $desktop-width) {

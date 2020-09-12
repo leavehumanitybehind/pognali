@@ -5,50 +5,13 @@
   background-color: $basic-white;
   border-radius: 20px;
 
-  &::after:hover,
-  &::after:focus,
-  &::before:hover,
-  &::before:focus {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
-  &::after:active,
-  &::before:active {
+  &:active {
     opacity: 0.3;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    right: 196px;
-    width: 14px;
-    height: 18px;
-    background: url("../img/triangle-arrow-left.svg") no-repeat;
-
-    @media (min-width: $tablet-width) {
-      width: 10px;
-      height: 20px;
-      top: 40px;
-      right: 78px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    right: 61px;
-    width: 14px;
-    height: 18px;
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
-
-    @media (min-width: $tablet-width) {
-      width: 10px;
-      height: 20px;
-      top: 40px;
-      right: 34px;
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -58,6 +21,20 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
     width: 71%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    left: 138px;
+    top: 0;
+    background-color: #edeff6;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -77,6 +54,58 @@
 
   @media (min-width: $desktop-width) {
     margin-right: -5px;
+  }
+
+  &:nth-last-child(3) {
+    @media (min-width: $tablet-width) {
+      margin-right: auto;
+    }
+  }
+
+  &-back {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 150px;
+      width: 14px;
+      height: 18px;
+      background: url("../img/triangle-arrow-left.svg") no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 10px;
+        height: 20px;
+        top: 17px;
+        right: 6px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 15px;
+      }
+    }
+  }
+
+  &-next {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 60px;
+      width: 14px;
+      height: 18px;
+      background: url("../img/triangle-arrow-right.svg") no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 10px;
+        height: 20px;
+        top: 17px;
+        right: 13px;
+      }
+    }
   }
 }
 

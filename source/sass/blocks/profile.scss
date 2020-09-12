@@ -175,6 +175,7 @@
 .profile__transport {
   @include no-list;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -206,7 +207,7 @@
   }
 
   &:active {
-    background-color: #e5e5e5;
+    background-color: $light-grey;
   }
 
   @media (min-width: $tablet-width) {
@@ -344,7 +345,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: (18 / 20);
-  background-color: #dfe3f0;
+  background-color: $blue-grey;
   padding: 10px 20px 11px 15px;
   border-radius: 30px;
   margin-bottom: 35px;

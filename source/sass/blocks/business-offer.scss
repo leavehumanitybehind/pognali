@@ -92,7 +92,7 @@
 
 .business-offer__list {
   @include no-list;
-  margin-bottom: 44px;
+  margin-bottom: 34px;
   counter-reset: myCounter;
 
   @media (min-width: $tablet-width) {
@@ -165,11 +165,16 @@
   &:nth-child(3)::before {
     background-color: $basic-yellow;
   }
+
+  &:last-child {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 10px;
+  }
 }
 
 .business-offer__service {
   padding-top: 13px;
-  border-top: 1px solid #e1e3e9;
+  border-top: 1px solid $light-grey;
   margin-bottom: 6px;
 
   @media (min-width: $tablet-width) {
@@ -184,10 +189,6 @@
   @media (min-width: $desktop-width) {
     width: 540px;
     margin-left: 64px;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid #e1e3e9;
   }
 }
 
