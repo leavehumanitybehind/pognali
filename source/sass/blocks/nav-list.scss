@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 0 50px;
-  padding-top: 76px;
+      margin: 0 auto 55px;
+    padding: 37px 0 0;
 
   @media (min-width: $desktop-width) {
     position: relative;
@@ -32,9 +32,13 @@
 }
 
 .nav-list__item {
-  margin-right: 34px;
+
   text-transform: uppercase;
   overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 34px;
+  }
 }
 
 .nav-list__link {
@@ -44,7 +48,9 @@
   text-decoration: none;
   color: $basic-white;
   position: relative;
-  display: block;
+  display: flex;
+    justify-content: center;
+    margin-left: 2px;
   transition: transform 0.3s;
 
   @media (min-width: $tablet-width) {
@@ -75,12 +81,3 @@
   }
 }
 
-.page-header__container--fixed .nav-list__link {
-  color: $basic-blue;
-}
-
-.page-header__container--fixed .nav-list::before {
-  @media (min-width: $desktop-width) {
-    background-color: $basic-blue;
-  }
-}

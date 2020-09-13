@@ -12,6 +12,11 @@
   @media (min-width: $desktop-width) {
     margin-right: 34px;
   }
+
+  &--nav {
+        justify-content: center;
+    margin-bottom: 28px;
+  }
 }
 
 .social-list__link {

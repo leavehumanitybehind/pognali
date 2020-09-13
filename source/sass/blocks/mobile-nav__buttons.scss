@@ -1,0 +1,111 @@
+.mobile-nav__buttons {
+  z-index: 16;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 117px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.mobile-nav__buttons-link {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 37px;
+  font-size: 16px;
+  line-height: (18 / 16);
+  font-weight: bold;
+  color: $basic-medium-blue;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 1;
+    margin: 0 105px;
+    margin-bottom: 38px;
+    width: 308px;
+  }
+
+  &--auth {
+    border-radius: 25px;
+    height: 50px;
+    font-size: 17px;
+    line-height: (30 / 17);
+    margin-left: -21px;
+    margin-bottom: 65px;
+    padding-left: 62px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &--phone {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: -24px;
+      background-color: $basic-blue;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background-image: url("../img/yellow-phone.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 18px 16px;
+
+      @media (min-width: $tablet-width) {
+        width: 68px;
+        height: 68px;
+        top: -21px;
+        left: -34px;
+      }
+    }
+  }
+  &--email {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: -24px;
+
+      background-color: $basic-blue;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background-image: url("../img/yellow-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 25px 23px;
+
+      @media (min-width: $tablet-width) {
+        width: 68px;
+        height: 68px;
+        top: -21px;
+        left: -34px;
+      }
+    }
+  }
+}
+
+.mobile-nav__social-list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 117px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

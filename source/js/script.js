@@ -1,21 +1,30 @@
 var mainnav = document.querySelector(".main-nav");
-var openButton = document.querySelector(".main-nav__toggle");
+var openButton = document.querySelector(".page-header__toggle");
+var jsToggle = document.querySelector(".page-header__toggle--js");
 var headerCont = document.querySelector(".page-header__container");
 openButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (mainnav.classList.contains("nav")) {
-    mainnav.classList.remove("nav");
+  if (mainnav.classList.contains("main-nav-js")) {
+    headerCont.classList.remove("page-header__container--fixed");
+    mainnav.classList.remove("main-nav-js");
+    jsToggle.classList.remove("page-header__toggle-close");
+    jsToggle.classList.add("page-header__toggle--open");
+
 
   } else {
-    mainnav.classList.add("nav");
+    mainnav.classList.add("main-nav-js");
     headerCont.classList.add("page-header__container--fixed");
+    jsToggle.classList.add("page-header__toggle--close");
+    jsToggle.classList.remove("page-header__toggle--open");
+
   }
 });
 
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (mainnav.classList.contains("mobile-popup--open")) {
-      mainnav.classList.remove("mobile-popup--open");
+    if (mainnav.classList.contains("main-nav-js")) {
+      mainnav.classList.remove("main-nav-js");
     }
   }
 });
@@ -216,3 +225,40 @@ if (buttonPromotion) {
     }
   });
 }
+
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map(
+    "map",
+    {
+      center: [59.939346, 30.329383],
+      zoom: 16,
+      controls: []
+    },
+    {
+      suppressMapOpenBlock: true
+    },
+    {
+      searchControlProvider: "yandex#search"
+    }
+  ),
+    myPlacemark = new ymaps.Placemark(
+      [59.938669, 30.323057],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "./img/map-marker.svg",
+        iconImageSize: [54, 54],
+        iconImageOffset: [-27, -27]
+      }
+    );
+
+  myMap.geoObjects.add(myPlacemark);
+  myMap.controls.remove("rulerControl");
+  myMap.controls.remove("searchControl");
+  myMap.controls.remove("trafficControl");
+  myMap.controls.remove("typeSelector");
+  myMap.controls.remove("zoomControl");
+  myMap.controls.remove("geolocationControl");
+  myMap.controls.remove("routeEditor")
+});

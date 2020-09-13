@@ -43,7 +43,7 @@
 .directions__container {
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 }

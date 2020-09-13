@@ -37,6 +37,7 @@ gulp.task("js", function () {
   return gulp.src("source/js/script.js")
     .pipe(sourcemap.init())
     .pipe(terser())
+    .pipe(gulp.dest("build/js"))
     .pipe(rename("script.min.js"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/js"))
@@ -63,7 +64,7 @@ gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.jpegtran({ progressive: true }),
+      imagemin.mozjpeg({ progressive: true }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
@@ -96,8 +97,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/*.js",
-    "source/css/*.css"
   ], {
     base: "source"
   })
@@ -125,6 +124,8 @@ gulp.task("refresh", function (done) {
 gulp.task("start", gulp.series(
   "clean",
   "copy",
+  "images",
+  "webp",
   "css",
   "js",
   "sprite",
