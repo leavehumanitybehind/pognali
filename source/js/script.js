@@ -5,18 +5,15 @@ var headerCont = document.querySelector(".page-header__container");
 openButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (mainnav.classList.contains("main-nav-js")) {
+    jsToggle.classList.remove("page-header__toggle-close");
     headerCont.classList.remove("page-header__container--fixed");
     mainnav.classList.remove("main-nav-js");
-    jsToggle.classList.remove("page-header__toggle-close");
-    jsToggle.classList.add("page-header__toggle--open");
 
 
   } else {
     mainnav.classList.add("main-nav-js");
     headerCont.classList.add("page-header__container--fixed");
     jsToggle.classList.add("page-header__toggle--close");
-    jsToggle.classList.remove("page-header__toggle--open");
-
   }
 });
 
@@ -45,7 +42,6 @@ var list = document.querySelector(".country-filter-popup__list");
 var wrapper = document.querySelector(".country-filter-popup__alphabet-wrapper");
 var openButton = document.querySelector(".country-filter__toggle");
 var closeWrapButton = document.querySelector(".country-filter-popup__close-btn");
-
 
 
 if (openButton) {
@@ -96,8 +92,7 @@ var filterButton = document.querySelectorAll(".traveller-filter-list__toggle").f
     })
   }))
 
-const alphabetWrapper = document.querySelectorAll(".alphabet__wrapper");
-alphabetWrapper.forEach(wrapper => {
+const alphabetWrapper = document.querySelector(".alphabet__wrapper");
   wrapper.addEventListener("click", function () {
     if (wrapper.classList.contains("alphabet__wrapper--current")) {
 
@@ -105,8 +100,6 @@ alphabetWrapper.forEach(wrapper => {
     } else {
       wrapper.classList.add("alphabet__wrapper--current");
     }
-
-  })
 })
 
 
@@ -226,8 +219,8 @@ if (buttonPromotion) {
   });
 }
 
-
-ymaps.ready(function () {
+if (ymaps) {
+  ymaps.ready(function () {
   var myMap = new ymaps.Map(
     "map",
     {
@@ -262,3 +255,5 @@ ymaps.ready(function () {
   myMap.controls.remove("geolocationControl");
   myMap.controls.remove("routeEditor")
 });
+
+}

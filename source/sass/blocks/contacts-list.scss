@@ -9,7 +9,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    max-width: 875px;
+    max-width: 866px;
     margin: auto;
   }
 }
@@ -50,7 +50,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding-left: 124px;
+    padding-left: 119px;
   }
 
   &::before {
@@ -76,7 +76,7 @@
       width: 90px;
       height: 90px;
       top: -28px;
-      left: 0;
+      left: -3px;
 
       background-size: 29px 31px;
     }
@@ -118,7 +118,7 @@
       width: 90px;
       height: 90px;
       top: -28px;
-      left: 5px;
+      left: 7px;
       background-size: 36px 25px;
     }
   }

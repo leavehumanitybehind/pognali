@@ -59,6 +59,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 62px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .directions__description {
@@ -76,6 +80,10 @@
     font-size: 28px;
     line-height: (33 / 28);
   }
+
+@media (min-width: $desktop-width) {
+  width: 344px;
+}
 }
 
 .directions__list {

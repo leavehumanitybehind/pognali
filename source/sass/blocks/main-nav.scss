@@ -22,6 +22,17 @@
   display: block;
 }
 
+.no-js .main-nav {
+  display:flex;
+  order: 1;
+  flex-direction: column;
+
+
+    @media(min-width: $desktop-width) {
+      order: 2;
+      background-color:inherit;
+    }
+}
 
 .main-nav__list {
   @include no-list;

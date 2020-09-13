@@ -61,7 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 122px;
+    margin-bottom: 116px;
   }
 
   &::after {
@@ -102,7 +102,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 76px 0 74px;
-    margin-bottom: 70px;
+    margin-bottom: 61px;
   }
 }
 
@@ -127,6 +127,7 @@
     justify-content: flex-start;
     font-size: 28px;
     line-height: 1;
+    margin-bottom: -1px;
   }
 
   &::before {
@@ -203,6 +204,7 @@
   @media (min-width: $desktop-width) {
     margin-left: auto;
     padding-right: 244px;
+    margin-top: 20px;
   }
 }
 

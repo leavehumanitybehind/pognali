@@ -31,7 +31,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    margin-bottom: 63px;
+    margin-bottom: 57px;
   }
 }
 
@@ -54,7 +54,7 @@
 
   @media (min-width: $desktop-width) {
     width: 616px;
-    margin-bottom: 59px;
+    margin-bottom: 62px;
   }
 }
 
@@ -74,7 +74,8 @@
 
   @media (min-width: $desktop-width) {
     width: auto;
-    margin-bottom: 82px;
+    margin-bottom: 80px;
+    margin-left: -19px;
   }
 
   & .promotion__description--break-line {
@@ -146,7 +147,7 @@
     width: 880px;
     height: 81px;
     margin-left: 72px;
-    margin-bottom: 40px;
+    margin-bottom: 43px;
   }
 
   &::placeholder {
@@ -229,6 +230,7 @@
 
 .promotion__popup-title {
   margin-left: 0;
-  padding-top: 24px;
+  padding-top: 12px;
+  margin-bottom: 29px;
   text-align: center;
 }

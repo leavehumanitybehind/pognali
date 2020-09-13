@@ -14,6 +14,14 @@
   }
 }
 
+.no-js .page-header {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    position: fixed;
+  }
+}
+
 .page-header__container {
   padding: 0 24px;
 
@@ -34,7 +42,7 @@
   padding: 18px 25px 27px 25px;
 
   @media (min-width: $tablet-width) {
-    padding: 45px 40px 27px 39px;
+    padding: 27px 40px 27px 39px;
   }
 }
 
@@ -55,8 +63,8 @@
   }
 }
 
-.page-header__container--fixed .page-header__toggle{
-  opacity: .3;
+.page-header__container--fixed .page-header__toggle {
+  opacity: 0.3;
 }
 
 .page-header__logo-blue {
@@ -105,11 +113,23 @@
   }
 }
 
+.no-js .page-header__logo-button-wrapper {
+  display: flex;
+  order: 2;
+  justify-content: center;
 
-.page-header__container--fixed .page-header__logo-button-wrapper {
-  padding:6px 1px 27px;
+  @media (min-width: $desktop-width) {
+    order: 1;
+  }
 }
 
+.page-header__container--fixed .page-header__logo-button-wrapper {
+  padding: 6px 1px 27px;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 1px;
+  }
+}
 
 .page-header__toggle {
   position: relative;
@@ -135,20 +155,24 @@
 
   &--open {
     width: 19px;
-  height: 19px;
-  background-image: url("../img/menu.svg");
-  background-repeat: no-repeat;
+    height: 19px;
+    background-image: url("../img/menu.svg");
+    background-repeat: no-repeat;
   }
 
   &--close {
-  background-image: url("../img/menu-close.svg");
-  background-repeat: no-repeat;
-  top: -2px;
+    background-image: url("../img/menu-close.svg");
+    background-repeat: no-repeat;
+    top: -2px;
     right: -9px;
-}
+    @media (min-width: $tablet-width) {
+      top: 12px;
+      right: -21px;
+    }
+  }
 }
 
-.no-js .page-header__toggle{
+.no-js .page-header__toggle {
   display: none;
 }
 
@@ -168,14 +192,12 @@
   }
 }
 
-
 .page-header__user-list {
   display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    order: 1;
     max-width: 300px;
   }
 
@@ -183,9 +205,13 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    order: 1;
   }
 }
 
+.no-js .page-header__user-list {
+  order: 3;
+}
 
 .page-header__container--fixed .nav-list__link {
   color: $basic-blue;

@@ -94,11 +94,12 @@
 
 .travellers__filter {
   @media (min-width: $desktop-width) {
-    width: 285px;
+    width: 286px;
     padding: 44px 43px 43px 47px;
     margin: 0;
     order: 2;
     align-self: flex-start;
+    margin-left: -14px;
   }
 }
 

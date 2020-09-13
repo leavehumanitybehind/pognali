@@ -39,12 +39,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
-    padding: 40px 55px;
+    padding: 44px 61px;
   }
 }
 
@@ -54,6 +54,10 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+  margin-top: 10px;
+}
 }
 
 .logo__img {

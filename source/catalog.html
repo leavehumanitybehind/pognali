@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>HTML Academy: Погнали</title>
+  <title>HTML Academy: Погнали </title>
   <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
   <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
   <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '');</script>
 </head>
 
 <body class="page-body">
@@ -94,38 +95,54 @@
   <header class="page-header">
     <div class="page-header__container page-header__container--catalog">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo" href="index.html">
-          <div class="page-header__logo-white">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
-              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.png 2x">
-              <source media="(min-width: 1440px)"
-                srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
-              <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="18"
-                alt="Логотип сайта поиска попутчиков">
-            </picture>
-          </div>
-          <div class="page-header__logo-blue">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="img/logo-desktop-blue@1x.webp, img/logo-desktop-blue@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/logo-tablet-blue@1x.webp, img/logo-tablet-blue@2x.webp 2x">
-              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp, img/logo-mobile-blue@2x.webp 2x">
-              <source media="(min-width: 1440px)"
-                srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-              <img class="logo__img" src="img/logo-mobile-blue@1x.png"
-                srcset="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" width="96" height="18"
-                alt="Логотип сайта поиска попутчиков">
-            </picture>
-          </div>
-        </a>
-        <nav class="main-nav nav">
+        <div class="page-header__logo-button-wrapper">
+          <a class="page-header__logo" href="index.html">
+            <div class="page-header__logo-white">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+                <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.png 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+                <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="18"
+                  alt="Логотип сайта поиска попутчиков">
+              </picture>
+            </div>
+            <div class="page-header__logo-blue">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/logo-desktop-blue@1x.webp, img/logo-desktop-blue@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/logo-tablet-blue@1x.webp, img/logo-tablet-blue@2x.webp 2x">
+                <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp, img/logo-mobile-blue@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+                <img class="logo__img" src="img/logo-mobile-blue@1x.png"
+                  srcset="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" width="96" height="18"
+                  alt="Логотип сайта поиска попутчиков">
+              </picture>
+            </div>
+          </a>
+          <button class="page-header__toggle page-header__toggle--js" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <div class="page-header__user-list user-list">
+          <a class="user-list__button user-list__button--email" href="mailto:mail@htmlacademy.ru">
+            <span class="visually-hidden">Почта</span>
+          </a>
+          <a class="user-list__button user-list__button--tel" href="tel:88005558628">
+            <span class="visually-hidden">Телефон</span>
+          </a>
+          <a class="user-list__login btn" href="login.html">
+            <span class="user-list__login-text btn-text">Авторизация</span>
+          </a>
+        </div>
+        <nav class="main-nav">
           <ul class="main-nav__list nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link" href="index.html" data-hover="О сервисе">
@@ -143,82 +160,44 @@
               </a>
             </li>
           </ul>
-        </nav>
-        <div class="main-nav__user-list user-list">
-          <a class="user-list__button user-list__button--email" href="mailto:mail@htmlacademy.ru">
-            <span class="visually-hidden">Почта</span>
-          </a>
-          <a class="user-list__button user-list__button--tel" href="tel:88005558628">
-            <span class="visually-hidden">Телефон</span>
-          </a>
-          <a class="user-list__login btn" href="login.html">
-            <span class="user-list__login-text btn-text">Авторизация</span>
-          </a>
-        </div>
-        <div class="mobile-popup mobile-popup--open">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <div class="mobile-nav-popup__nav">
-            <ul class="mobile-nav__list">
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="index.html">
-                  <span class="nav-list__text">О сервисе</span>
-                </a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="form.html">
-                  <span class="nav-list__text">Направления</span>
-                </a>
-              </li>
-              <li class="mobile-nav__item">
-                <a class="mobile-nav__link" href="#">
-                  <span class="nav-list__text">Попутчики</span>
-                </a>
-              </li>
-              <li class="mobile-nav__item mobile-nav__item--auth">
-                <a class="mobile-nav__login btn" href="login.html">
-                  <span class="mobile-nav__login-text btn-text">
-                    Авторизация</span>
-                </a>
-              </li>
-            </ul>
-            <div class="mobile-nav__buttons">
-              <a class="mobile-nav__buttons-link mobile-nav__buttons-link--phone" href="tel:88005558628">
-                8 800 555-86-28
-              </a>
-              <a class="mobile-nav__buttons-link mobile-nav__buttons-link--email" href="email:mail@htmlacademy.ru">
-                mail@htmlacademy.ru
-              </a>
-            </div>
-            <ul class="mobile-nav__social-list social-list">
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg class="social-icon" width="23" height="22">
-                    <use href="#fb-icon"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://vk.com/htmlacademy">
-                  <span class="visually-hidden">VKontakte</span>
-                  <svg class="social-icon" width="23" height="22">
-                    <use href="#vk-icon"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
-                  <span class="visually-hidden">Instagram</span>
-                  <svg class="social-icon" width="23" height="22">
-                    <use href="#instagram-icon"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <div class="main-nav__mobile-nav-buttons mobile-nav__buttons">
+            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--auth btn" href="login.html">
+              <span>Авторизация</span>
+            </a>
+            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--phone" href="tel:88005558628">
+              8 800 555-86-28
+            </a>
+            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--email" href="email:mail@htmlacademy.ru">
+              mail@htmlacademy.ru
+            </a>
           </div>
-        </div>
+          <ul class="mobile-nav__social-list social-list social-list--nav">
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">Facebook</span>
+                <svg class="social-icon" width="23" height="22">
+                  <use href="#fb-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">VKontakte</span>
+                <svg class="social-icon" width="23" height="22">
+                  <use href="#vk-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
+                <span class="visually-hidden">Instagram</span>
+                <svg class="social-icon" width="23" height="22">
+                  <use href="#instagram-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
