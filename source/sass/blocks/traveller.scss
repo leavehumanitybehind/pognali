@@ -560,19 +560,9 @@
 }
 
 .traveller__list-prefer-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #edeff6;
-  padding: 6px;
   fill: rgba($basic-blue, 0.15);
 
   &--current {
     fill: $basic-blue;
-  }
-
-  @media (min-width: $tablet-width) {
-    background-color: inherit;
-    border-radius: 0;
   }
 }

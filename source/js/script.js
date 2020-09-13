@@ -92,17 +92,6 @@ var filterButton = document.querySelectorAll(".traveller-filter-list__toggle").f
     })
   }))
 
-const alphabetWrapper = document.querySelector(".alphabet__wrapper");
-  wrapper.addEventListener("click", function () {
-    if (wrapper.classList.contains("alphabet__wrapper--current")) {
-
-      wrapper.classList.remove("alphabet__wrapper--current");
-    } else {
-      wrapper.classList.add("alphabet__wrapper--current");
-    }
-})
-
-
 
 //counter
 
