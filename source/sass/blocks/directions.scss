@@ -81,9 +81,9 @@
     line-height: (33 / 28);
   }
 
-@media (min-width: $desktop-width) {
-  width: 344px;
-}
+  @media (min-width: $desktop-width) {
+    width: 344px;
+  }
 }
 
 .directions__list {

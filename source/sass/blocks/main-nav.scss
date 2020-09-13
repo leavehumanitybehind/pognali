@@ -23,15 +23,14 @@
 }
 
 .no-js .main-nav {
-  display:flex;
+  display: flex;
   order: 1;
   flex-direction: column;
 
-
-    @media(min-width: $desktop-width) {
-      order: 2;
-      background-color:inherit;
-    }
+  @media (min-width: $desktop-width) {
+    order: 2;
+    background-color: inherit;
+  }
 }
 
 .main-nav__list {

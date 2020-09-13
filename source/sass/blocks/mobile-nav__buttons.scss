@@ -43,9 +43,9 @@
     margin-bottom: 65px;
     padding-left: 79px;
 
-      @media (min-width: $tablet-width) {
-        display: none;
-      }
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
 
     &::after {
       display: none;
@@ -76,6 +76,7 @@
       }
     }
   }
+
   &--email {
     position: relative;
 
@@ -94,7 +95,6 @@
       background-position: center;
       background-size: 25px 23px;
 
-
       @media (min-width: $tablet-width) {
         width: 68px;
         height: 68px;
@@ -105,7 +105,6 @@
     }
   }
 }
-
 
 .no-js .mobile-nav__buttons-link {
   color: $basic-white;
