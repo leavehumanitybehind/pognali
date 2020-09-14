@@ -32,6 +32,15 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 42px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 286px;
+    padding: 44px 43px 43px 47px;
+    margin: 0;
+    order: 2;
+    align-self: flex-start;
+    margin-left: -14px;
+  }
 }
 
 .travellers__list {
@@ -101,17 +110,6 @@
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-.travellers__filter {
-  @media (min-width: $desktop-width) {
-    width: 286px;
-    padding: 44px 43px 43px 47px;
-    margin: 0;
-    order: 2;
-    align-self: flex-start;
-    margin-left: -14px;
   }
 }
 
