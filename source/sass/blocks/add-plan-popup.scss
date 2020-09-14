@@ -15,6 +15,10 @@
   }
 }
 
+.no-js .add-plan-popup {
+  display: block;
+}
+
 .add-plan-popup--open {
   display: block;
   width: 104%;

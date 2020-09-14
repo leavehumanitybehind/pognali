@@ -13,7 +13,7 @@
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '');</script>
 </head>
 
-<body class="page-body">
+<body>
   <svg style="display: none;">
     <symbol id="plane" viewBox="0 0 19 21">
       <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
@@ -122,7 +122,7 @@
                 <source media="(min-width: 1440px)"
                   srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-                <img class="logo__img" src="img/logo-mobile-blue@1x.png"
+                <img class="page-header__logo-img" src="img/logo-mobile-blue@1x.png"
                   srcset="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" width="96" height="18"
                   alt="Логотип сайта поиска попутчиков">
               </picture>
@@ -161,22 +161,22 @@
               </a>
             </li>
           </ul>
-          <div class="main-nav__mobile-nav-buttons mobile-nav__buttons">
-            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--auth btn" href="login.html">
+          <div class="main-nav__mobile-nav mobile-nav">
+            <a class="mobile-nav__link mobile-nav__link--auth btn" href="login.html">
               <span>Авторизация</span>
             </a>
-            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--phone" href="tel:88005558628">
+            <a class="mobile-nav__link mobile-nav__link--phone" href="tel:88005558628">
               8 800 555-86-28
             </a>
-            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--email" href="email:mail@htmlacademy.ru">
+            <a class="mobile-nav__link mobile-nav__link--email" href="email:mail@htmlacademy.ru">
               mail@htmlacademy.ru
             </a>
           </div>
-          <ul class="mobile-nav__social-list social-list social-list--nav">
+          <ul class="main-nav__social-list social-list social-list--nav">
             <li class="social-list__item">
               <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="social-icon" width="23" height="22">
+                <svg class="social-list_icon" width="23" height="22">
                   <use href="#fb-icon"></use>
                 </svg>
               </a>
@@ -184,7 +184,7 @@
             <li class="social-list__item">
               <a class="social-list__link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">VKontakte</span>
-                <svg class="social-icon" width="23" height="22">
+                <svg class="social-list_icon" width="23" height="22">
                   <use href="#vk-icon"></use>
                 </svg>
               </a>
@@ -192,7 +192,7 @@
             <li class="social-list__item">
               <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
                 <span class="visually-hidden">Instagram</span>
-                <svg class="social-icon" width="23" height="22">
+                <svg class="social-list_icon" width="23" height="22">
                   <use href="#instagram-icon"></use>
                 </svg>
               </a>
@@ -230,8 +230,8 @@
           </li>
         </ul>
         <button class="country-filter__toggle" type="button">
-          <span class="country-filter__toggle-text--open"><span>Показать все</span></span>
-          <span class="country-filter__toggle-text--close"><span>Свернуть</span></span>
+          <span class="country-filter__toggle-text country-filter__toggle-text--open"><span>Показать все</span></span>
+          <span class="country-filter__toggle-text country-filter__toggle-text--close"><span>Свернуть</span></span>
         </button>
 
 
@@ -583,13 +583,14 @@
             <h2 class="traveller-filter__title">
               Подберите идеального попутчика</h2>
             <form action="https://echo.htmlacademy.ru" method="post" class="traveller-filter__form">
-              <ul class="traveller-filter__list">
-                <li class="traveller-filter__list-item">
-                  <h3 class="traveller-filter__list-title">
+              <ul class="traveller-filter-list">
+                <li class="traveller-filter-list__item">
+                  <h3 class="traveller-filter-list__title">
                     Хобби
                   </h3>
-                  <button class="traveller-filter__list-toggle" type="button"><span class="visually-hidden">открыть
-                      меню</span></button>
+                  <button class="traveller-filter-list__toggle" type="button">
+                    <span class="visually-hidden">открыть меню</span>
+                  </button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__preferences">
                       <li class="traveller-filter__preferences-item">
@@ -616,11 +617,11 @@
                     </ul>
                   </div>
                 </li>
-                <li class="traveller-filter__list-item">
-                  <h3 class="traveller-filter__list-title">
+                <li class="traveller-filter-list__item">
+                  <h3 class="traveller-filter-list__title">
                     Mузыка
                   </h3>
-                  <button class="traveller-filter__list-toggle" type="button"><span class="visually-hidden">открыть
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
                       меню</span></button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__preferences">
@@ -648,11 +649,11 @@
                     </ul>
                   </div>
                 </li>
-                <li class="traveller-filter__list-item">
-                  <h3 class="traveller-filter__list-title">
+                <li class="traveller-filter-list__item">
+                  <h3 class="traveller-filter-list__title">
                     Еда
                   </h3>
-                  <button class="traveller-filter__list-toggle" type="button"><span class="visually-hidden">открыть
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
                       меню</span></button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__preferences">
@@ -681,11 +682,11 @@
                     </ul>
                   </div>
                 </li>
-                <li class="traveller-filter__list-item traveller-filter__list-item--transport">
-                  <h3 class="traveller-filter__list-title">
+                <li class="traveller-filter-list__item traveller-filter-list__item--transport">
+                  <h3 class="traveller-filter-list__title">
                     Транспорт
                   </h3>
-                  <button class="traveller-filter__list-toggle" type="button"><span class="visually-hidden">открыть
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
                       меню</span></button>
                   <div class="traveller-filter__option">
                     <ul class="traveller-filter__transport transport">
@@ -724,11 +725,11 @@
                     </ul>
                   </div>
                 </li>
-                <li class="traveller-filter__list-item">
-                  <h3 class="traveller-filter__list-title">
+                <li class="traveller-filter-list__item">
+                  <h3 class="traveller-filter-list__title">
                     Левел
                   </h3>
-                  <button class="traveller-filter__list-toggle" type="button"><span class="visually-hidden">открыть
+                  <button class="traveller-filter-list__toggle" type="button"><span class="visually-hidden">открыть
                       меню</span></button>
                   <div class="traveller-filter__option range">
                     <div class="range__wrap">
@@ -821,25 +822,25 @@
                           height="18" aria-label="Самолет">
                           <use href="#plane"></use>
                         </svg>
-                        <span class="list-prefer-hint">Авиаперелет</span>
+                        <span class="list-prefer__hint">Авиаперелет</span>
                       </li>
                       <li class="list-prefer__item list-prefer__item--current">
                         <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Автобус">
                           <use href="#bus"></use>
                         </svg>
-                        <span class="list-prefer-hint">Автобус</span>
+                        <span class="list-prefer__hint">Автобус</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
                           <use href="#bike"></use>
                         </svg>
-                        <span class="list-prefer-hint">Велосипед</span>
+                        <span class="list-prefer__hint">Велосипед</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
                           <use href="#run"></use>
                         </svg>
-                        <span class="list-prefer-hint">Пешком</span>
+                        <span class="list-prefer__hint">Пешком</span>
                       </li>
                     </ul>
                   </div>
@@ -911,27 +912,27 @@
                           height="21" aria-label="Самолет">
                           <use href="#plane"></use>
                         </svg>
-                        <span class="list-prefer-hint">Авиаперелет</span>
+                        <span class="list-prefer__hint">Авиаперелет</span>
                       </li>
                       <li class="list-prefer__item ">
                         <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
                           height="21" aria-label="Автобус">
                           <use href="#bus"></use>
                         </svg>
-                        <span class="list-prefer-hint">Автобус</span>
+                        <span class="list-prefer__hint">Автобус</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="19"
                           height="21" aria-label="Велосипед">
                           <use href="#bike"></use>
                         </svg>
-                        <span class="list-prefer-hint">Велосипед</span>
+                        <span class="list-prefer__hint">Велосипед</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon" width="19" height="21" aria-label="Пешком">
                           <use href="#run"></use>
                         </svg>
-                        <span class="list-prefer-hint">Пешком</span>
+                        <span class="list-prefer__hint">Пешком</span>
                       </li>
                     </ul>
                   </div>
@@ -1014,26 +1015,26 @@
                           height="18" aria-label="Самолет">
                           <use href="#plane"></use>
                         </svg>
-                        <span class="list-prefer-hint">Авиаперелет</span>
+                        <span class="list-prefer__hint">Авиаперелет</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
                           height="18" aria-label="Автобус">
                           <use href="#bus"></use>
                         </svg>
-                        <span class="list-prefer-hint">Автобус</span>
+                        <span class="list-prefer__hint">Автобус</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
                           <use href="#bike"></use>
                         </svg>
-                        <span class="list-prefer-hint">Велосипед</span>
+                        <span class="list-prefer__hint">Велосипед</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
                           <use href="#run"></use>
                         </svg>
-                        <span class="list-prefer-hint">Пешком</span>
+                        <span class="list-prefer__hint">Пешком</span>
                       </li>
                     </ul>
                   </div>
@@ -1106,26 +1107,26 @@
                           height="18" aria-label="Самолет">
                           <use href="#plane"></use>
                         </svg>
-                        <span class="list-prefer-hint">Авиаперелет</span>
+                        <span class="list-prefer__hint">Авиаперелет</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon traveller__list-prefer-icon--current" width="16"
                           height="18" aria-label="Автобус">
                           <use href="#bus"></use>
                         </svg>
-                        <span class="list-prefer-hint">Автобус</span>
+                        <span class="list-prefer__hint">Автобус</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Велосипед">
                           <use href="#bike"></use>
                         </svg>
-                        <span class="list-prefer-hint">Велосипед</span>
+                        <span class="list-prefer__hint">Велосипед</span>
                       </li>
                       <li class="list-prefer__item">
                         <svg class="traveller__list-prefer-icon" width="16" height="18" aria-label="Пешком">
                           <use href="#run"></use>
                         </svg>
-                        <span class="list-prefer-hint">Пешком</span>
+                        <span class="list-prefer__hint">Пешком</span>
                       </li>
                     </ul>
                   </div>
@@ -1181,7 +1182,7 @@
   </main>
   <footer class="page-footer page-footer--catalog">
     <div class="page-footer__container container">
-      <a class="page-footer__logo logo" href="#">
+      <a class="page-footer__logo" href="#">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
             srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
@@ -1190,15 +1191,15 @@
           <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-          <img class="logo__img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96"
-            height="15" alt="Логотип сайта поиска попутчиков">
+          <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            width="96" height="15" alt="Логотип сайта поиска попутчиков">
         </picture>
       </a>
       <ul class="page-footer__social-list social-list social-list--with-bg">
         <li class="social-list-item">
           <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook</span>
-            <svg class="social-icon" width="23" height="22">
+            <svg class="social-list__icon" width="23" height="22">
               <use href="#fb-icon"></use>
             </svg>
           </a>
@@ -1206,7 +1207,7 @@
         <li class="social-list-item">
           <a class="social-list__link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">VKontakte</span>
-            <svg class="social-icon" width="23" height="22">
+            <svg class="social-list__icon" width="23" height="22">
               <use href="#vk-icon"></use>
             </svg>
           </a>
@@ -1214,7 +1215,7 @@
         <li class="social-list-item">
           <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Instagram</span>
-            <svg class="social-icon" width="23" height="22">
+            <svg class="social-list__icon" width="23" height="22">
               <use href="#instagram-icon"></use>
             </svg>
           </a>

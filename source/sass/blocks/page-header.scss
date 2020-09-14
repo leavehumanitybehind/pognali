@@ -125,13 +125,6 @@
   }
 }
 
-.page-header__container--fixed .page-header__logo-button-wrapper {
-  padding: 6px 1px 27px;
-
-  @media (min-width: $tablet-width) {
-    padding: 17px 1px;
-  }
-}
 
 .page-header__toggle {
   position: relative;
@@ -173,6 +166,14 @@
       right: -19px;
     }
   }
+}
+
+.page-header__container--fixed .page-header__toggle--open {
+  background-image: url("../img/menu-scroll.svg");
+}
+
+.page-header__container--fixed .page-header__toggle--close {
+  background-image: url("../img/menu-close.svg");
 }
 
 .no-js .page-header__toggle {

@@ -1,0 +1,130 @@
+.calendar-table {
+  width: 103%;
+  margin-left: -10px;
+  margin-bottom: 25px;
+  border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    font-size: 18px;
+    margin-left: -2px;
+    margin-bottom: 59px;
+  }
+}
+
+.calendar-table__title {
+  padding-bottom: 12px;
+}
+
+.calendar-table__title-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.calendar-table__title-tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    margin-left: 19px;
+  }
+}
+
+.calendar-table__week {
+  margin-left: 9px;
+  text-decoration: none;
+  color: $special-grey;
+  font-weight: 300;
+
+  &--end {
+    color: #ff5c23;
+  }
+}
+
+.calendar-table__day {
+  position: relative;
+  width: 32px;
+  height: 30px;
+  border: 1px solid #d6d9e6;
+  padding: 0;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 77px;
+    height: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 142px;
+    height: 71px;
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  &--fill {
+    position: relative;
+    color: $basic-white;
+    background-color: $basic-blue-light;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #ff5c23;
+
+      @media (min-width: $tablet-width) {
+        border: 3px solid #ff5c23;
+      }
+    }
+  }
+
+  &--active {
+    position: relative;
+    background: #edeff6;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #ff5c23;
+
+      @media (min-width: $tablet-width) {
+        border: 3px solid #ff5c23;
+      }
+    }
+  }
+}
+
+.calendar-table__day-desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    opacity: 0.3;
+  }
+
+  &--period {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      opacity: 1;
+    }
+  }
+}

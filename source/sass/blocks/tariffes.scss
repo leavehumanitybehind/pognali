@@ -1,36 +1,4 @@
 .tariffes {
-  display: none;
-  background-color: $basic-white;
-}
-
-.tariffes--open {
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 60;
-  width: 270px;
-  height: 443px;
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
-
-  @media (min-width: $tablet-width) {
-    width: 688px;
-    height: 526px;
-    border-radius: 30px;
-    box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 750px;
-    padding-bottom: 20px;
-  }
-}
-
-.tariffes__list {
   @include no-list;
   margin: 0 25px 40px;
 
@@ -65,34 +33,4 @@
 .tariffes__text {
   margin: 0;
   color: $special-grey;
-}
-
-.tariffes__button {
-  color: $basic-blue-light;
-  background-color: #f3f4f8;
-  border: none;
-  width: 100%;
-  padding: 21px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: (24 / 16);
-
-  border-radius: 0 0 20px 20px;
-  text-transform: uppercase;
-
-  &:hover,
-  &:focus {
-    background-color: #edeff6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 24px;
-    padding: 41px;
-    text-transform: none;
-  }
 }

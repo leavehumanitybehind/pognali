@@ -13,7 +13,7 @@
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '');</script>
 </head>
 
-<body class="page-body">
+<body>
   <svg style="display: none;">
     <symbol id="plane" viewBox="0 0 19 21">
       <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
@@ -122,7 +122,7 @@
                 <source media="(min-width: 1440px)"
                   srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-                <img class="logo__img" src="img/logo-mobile-blue@1x.png"
+                <img class="page-header__logo-img" src="img/logo-mobile-blue@1x.png"
                   srcset="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" width="96" height="18"
                   alt="Логотип сайта поиска попутчиков">
               </picture>
@@ -161,22 +161,22 @@
               </a>
             </li>
           </ul>
-          <div class="main-nav__mobile-nav-buttons mobile-nav__buttons">
-            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--auth btn" href="login.html">
+          <div class="main-nav__mobile-nav mobile-nav">
+            <a class="mobile-nav__link mobile-nav__link--auth btn" href="login.html">
               <span>Авторизация</span>
             </a>
-            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--phone" href="tel:88005558628">
+            <a class="mobile-nav__link mobile-nav__link--phone" href="tel:88005558628">
               8 800 555-86-28
             </a>
-            <a class="mobile-nav__buttons-link mobile-nav__buttons-link--email" href="email:mail@htmlacademy.ru">
+            <a class="mobile-nav__link mobile-nav__link--email" href="email:mail@htmlacademy.ru">
               mail@htmlacademy.ru
             </a>
           </div>
-          <ul class="mobile-nav__social-list social-list social-list--nav">
+          <ul class="main-nav__social-list social-list social-list--nav">
             <li class="social-list__item">
               <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="social-icon" width="23" height="22">
+                <svg class="social-list_icon" width="23" height="22">
                   <use href="#fb-icon"></use>
                 </svg>
               </a>
@@ -184,7 +184,7 @@
             <li class="social-list__item">
               <a class="social-list__link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">VKontakte</span>
-                <svg class="social-icon" width="23" height="22">
+                <svg class="social-list_icon" width="23" height="22">
                   <use href="#vk-icon"></use>
                 </svg>
               </a>
@@ -192,7 +192,7 @@
             <li class="social-list__item">
               <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
                 <span class="visually-hidden">Instagram</span>
-                <svg class="social-icon" width="23" height="22">
+                <svg class="social-list_icon" width="23" height="22">
                   <use href="#instagram-icon"></use>
                 </svg>
               </a>
@@ -243,7 +243,7 @@
             Транспорт
           </span>
           <ul class="profile__transport">
-            <li class="profile-transport__item">
+            <li class="profile__transport-item">
               <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-plane" checked>
               <label class="profile__transport-label" for="checkbox-plane">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Авиаперелет">
@@ -251,7 +251,7 @@
                 </svg>
               </label>
             </li>
-            <li class="profile-transport__item">
+            <li class="profile__transport-item">
               <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-bus">
               <label class="profile__transport-label" for="checkbox-bus">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Автобус">
@@ -259,7 +259,7 @@
                 </svg>
               </label>
             </li>
-            <li class="profile-transport__item">
+            <li class="profile__transport-item">
               <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-bicycle">
               <label class="profile__transport-label" for="checkbox-bicycle">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Велосипед">
@@ -267,7 +267,7 @@
                 </svg>
               </label>
             </li>
-            <li class="profile-transport__item">
+            <li class="profile__transport-item">
               <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-walk">
               <label class="profile__transport-label" for="checkbox-walk">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Пешком">
@@ -518,10 +518,8 @@
                   <a class="plan-filters__list-item-link" href="#step-3">Развлечения</a>
                 </li>
               </ul>
-              <p class="plan-filters__description plan-filters__description--way">Укажите страны, которые вы хотели по
-                посетить. Это может быть одна
-                или
-                сразу несколько</p>
+              <p class="plan-filters__description plan-filters__description--way">
+                Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько</p>
               <div class="plan-filters__select-wrapper">
                 <div class="plan-filters__select plan-filters__select--country">
                   <p class="plan-filters__title plan-filters__title--bosnia">Босния и герцеговина</p>
@@ -565,32 +563,32 @@
                         </button>
                         <div class="add-plan-popup__table-wrap">
                           <div class="add-plan-popup__table alphabet-table">
-                            <div class="alphabet__table-item alphabet__table-item--active"><a
-                                class="alphabet__table-link" href="#">А</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Б</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">В</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Г</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Д</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Е</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">З</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">И</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">К</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Л</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">М</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Н</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">О</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">П</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Р</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">С</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Т</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">У</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ф</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Х</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ч</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ш</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Э</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Ю</a></div>
-                            <div class="alphabet__table-item"><a class="alphabet__table-link" href="#">Я</a></div>
+                            <div class="alphabet-table__item alphabet-table__item--active">
+                              <a class="alphabet-table__link" href="#">А</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Б</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">В</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Г</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Д</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Е</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">З</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">И</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">К</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Л</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">М</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Н</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">О</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">П</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Р</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">С</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Т</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">У</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ф</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Х</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ч</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ш</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Э</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ю</a></div>
+                            <div class="alphabet-table__item"><a class="alphabet-table__link" href="#">Я</a></div>
                           </div>
                           <ul class="add-plan-popup__country-list">
                             <li class="add-plan-popup__country-item">
@@ -637,7 +635,7 @@
                 <div class="plan-filters__select-wrapper">
                   <div class="plan-filters__select plan-filters__select--add">
                     <p class="plan-filters__title plan-filters__title--add">Добавить страну</p>
-                    <button type="button" class="plan-filters__button--add">
+                    <button type="button" class="plan-filters__button plan-filters__button--add">
                       <span class="visually-hidden">выбрать</span>
                     </button>
                   </div>
@@ -646,7 +644,8 @@
                   <a class="plan-filters__step-btn btn" href="#step-3">
                     <span class="btn-text">Следующий шаг</span>
                   </a>
-                  <a class="plan-filters__step-btn--back btn-back" href="#step-1">На шаг назад</a>
+                  <a class="plan-filters__step-btn plan-filters__step-btn--back btn-back" href="#step-1">На шаг
+                    назад</a>
                 </div>
 
               </div>
@@ -683,19 +682,20 @@
               </div>
               <div class="plan-filters__comment-wrapper">
                 <div class="plan-filters__comment-country">
-                  <label class="plan-filters__comment-label plan-filter__comment-label--czech" for="comment-czech">
+                  <label class="plan-filters__comment-label plan-filters__comment-label--czech" for="comment-czech">
                     Чехия</label>
                   <img class="plan-filters__flag-comment" src="img/flag-czech.svg" alt="Флаг Чехии" width="35"
                     height="24">
                 </div>
-                <textarea class="plan-filters__comment--last" id="comment-czech" name="comment" rows="8"
-                  placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все."
+                <textarea class="plan-filters__comment plan-filters__comment--last" id="comment-czech" name="comment"
+                  rows="8" placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все."
                   readonly></textarea>
               </div>
               <div class="plan-filters__step">
                 <button class="plan-filters__step-btn plan-filters__step-btn--submit btn" type="submit"><span
                     class="btn-text">Отправить</span></button>
-                <a class="plan-filters__step-btn--back plan-filters__step-btn-submit--back btn-back" href="#step-2">На
+                <a class="plan-filters__step-btn plan-filters__step-btn-submit--back btn-back"
+                  href="#step-2">На
                   шаг назад</a>
               </div>
             </div>
@@ -716,15 +716,15 @@
           <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-          <img class="logo__img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96"
-            height="15" alt="Логотип сайта поиска попутчиков">
+          <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            width="96" height="15" alt="Логотип сайта поиска попутчиков">
         </picture>
       </a>
       <ul class="page-footer__social-list social-list social-list--with-bg">
         <li class="social-list-item">
           <a class="social-list__link" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook</span>
-            <svg class="social-icon" width="23" height="22">
+            <svg class="social-list__icon" width="23" height="22">
               <use href="#fb-icon"></use>
             </svg>
           </a>
@@ -732,7 +732,7 @@
         <li class="social-list-item">
           <a class="social-list__link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">VKontakte</span>
-            <svg class="social-icon" width="23" height="22">
+            <svg class="social-list__icon" width="23" height="22">
               <use href="#vk-icon"></use>
             </svg>
           </a>
@@ -740,7 +740,7 @@
         <li class="social-list-item">
           <a class="social-list__link" href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Instagram</span>
-            <svg class="social-icon" width="23" height="22">
+            <svg class="social-list__icon" width="23" height="22">
               <use href="#instagram-icon"></use>
             </svg>
           </a>

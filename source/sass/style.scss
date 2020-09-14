@@ -5,6 +5,7 @@
 @import "global";
 @import "blocks/btn";
 @import "blocks/btn-back";
+@import "blocks/btn-text";
 @import "blocks/social-list";
 @import "blocks/section-title";
 @import "blocks/container";
@@ -16,11 +17,15 @@
 @import "blocks/alphabet-table";
 @import "blocks/business-offer";
 @import "blocks/calendar";
+@import "blocks/calendar-table";
+@import "blocks/calendar-title";
 @import "blocks/companion";
+@import "blocks/companion-property-level";
 @import "blocks/companions";
 @import "blocks/contacts-list";
 @import "blocks/country";
 @import "blocks/country-filter";
+@import "blocks/country-filter-popup";
 @import "blocks/directions";
 @import "blocks/page-footer";
 @import "blocks/plan-filters";
@@ -29,13 +34,15 @@
 @import "blocks/main-intro";
 @import "blocks/main-nav";
 @import "blocks/map";
+@import "blocks/map-wrapper";
 @import "blocks/address";
 @import "blocks/nav-list";
 @import "blocks/user-list";
-@import "blocks/mobile-nav__buttons";
+@import "blocks/mobile-nav";
 @import "blocks/page-main-header";
 @import "blocks/pagination-list";
 @import "blocks/promotion";
+@import "blocks/promotion-popup";
 @import "blocks/profile";
 @import "blocks/plans";
 @import "blocks/range";
@@ -44,5 +51,6 @@
 @import "blocks/tariffes";
 @import "blocks/travellers";
 @import "blocks/traveller-filter";
+@import "blocks/traveller-filter-list";
 @import "blocks/transport";
 @import "blocks/wish-list";

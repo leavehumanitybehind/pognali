@@ -48,17 +48,3 @@
     color: rgba($basic-blue-light, 0.3);
   }
 }
-
-.btn-text {
-  align-items: center;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1;
-  color: $basic-blue-light;
-
-  @media (min-width: $tablet-width) {
-    font-size: 24px;
-    line-height: 24px;
-  }
-}

@@ -1,14 +1,3 @@
-.travellers__filter {
-  background-color: $basic-yellow;
-  border-radius: 20px;
-  padding: 0 20px;
-  margin-bottom: 28px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 42px;
-  }
-}
-
 .traveller-filter__title {
   width: 150px;
   padding-left: 5px;
@@ -34,121 +23,6 @@
     margin-top: 51px;
     margin-bottom: 26px;
     padding-left: 24px;
-  }
-}
-
-.traveller-filter__list {
-  @include no-list;
-  margin-bottom: 10px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 44px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 36px;
-    padding-left: 16px;
-  }
-}
-
-.traveller-filter__list-item {
-  border-top: 1px solid #f3c72b;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @media (min-width: $tablet-width) {
-    border-top: none;
-    flex-wrap: nowrap;
-    align-items: baseline;
-  }
-
-  @media (min-width: $desktop-width) {
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &--transport {
-    @media (min-width: $tablet-width) {
-      justify-content: flex-start;
-      margin-top: -5px;
-    }
-  }
-}
-
-.traveller-filter__list-title {
-  margin: 0;
-  margin-bottom: 10px;
-  margin-right: 100px;
-  padding-left: 5px;
-  position: relative;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: (18 / 16);
-  text-transform: uppercase;
-  color: $basic-blue-light;
-  padding-top: 10px;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (min-width: $tablet-width) {
-    border-top: none;
-    margin-bottom: 0;
-    margin-right: 0;
-    padding-left: 12px;
-    font-size: 20px;
-    line-height: 1;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 114px;
-
-    margin-bottom: 9px;
-  }
-}
-
-.traveller-filter__list-toggle {
-  position: relative;
-  border: none;
-  padding: 0;
-  margin: 0;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: block;
-    right: 0;
-    top: -9px;
-  }
-
-  &::after {
-    content: "";
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
-    position: absolute;
-    width: 13px;
-    height: 8px;
-    transform: rotate(90deg);
-    right: 2px;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: block;
-      right: 26px;
-    }
   }
 }
 
@@ -213,6 +87,10 @@
   @media (min-width: $desktop-width) {
     display: none;
   }
+}
+
+.no-js .traveller-filter__option {
+  display: flex;
 }
 
 .traveller-filter__option--open {

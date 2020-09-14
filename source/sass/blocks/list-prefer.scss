@@ -38,7 +38,7 @@
   }
 }
 
-.list-prefer-hint {
+.list-prefer__hint {
   display: none;
   position: relative;
   z-index: 10;
@@ -61,7 +61,7 @@
   }
 }
 
-.list-prefer__item:hover .list-prefer-hint {
+.list-prefer__item:hover .list-prefer__hint {
   display: table;
   position: absolute;
   top: 44px;

@@ -58,27 +58,6 @@
   left: 16px;
 }
 
-.companion-property-level {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  padding: 5px 0 0 2px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  @media (min-width: $tablet-width) {
-    top: 20px;
-    left: 19px;
-  }
-}
-
-.companion-property-level svg {
-  transform: scale(1.7) translate(12px, 12px);
-}
-
 .companion__property-title {
   position: relative;
   z-index: 1;
@@ -88,31 +67,6 @@
   color: $basic-white;
 }
 
-.companion-property-level__value {
-  position: relative;
-  z-index: 1;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1;
-  color: $basic-white;
-  border-top: 1px solid $basic-white;
-}
-
-.companion__property-progress-bar {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 60px;
-  height: 60px;
-
-  &--99 {
-    stroke-dasharray: 170, 170;
-  }
-
-  &--80 {
-    stroke-dasharray: 150, 150;
-  }
-}
 
 .companion__wish-list {
   @include no-list;

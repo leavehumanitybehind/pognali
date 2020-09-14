@@ -12,6 +12,10 @@
   &:focus {
     background-color: $special-yellow-dark;
   }
+
+  &:active {
+    opacity: .3;
+  }
 }
 
 .user-list__login-text {

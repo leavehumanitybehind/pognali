@@ -125,3 +125,13 @@
     background: $special-yellow-dark url("../img/topmenu-mail.svg") center/18px no-repeat;
   }
 }
+
+.main-intro__recommendation {
+  @media (min-width: $tablet-width) {
+    margin-top: -215px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 120px;
+  }
+}

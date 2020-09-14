@@ -4,14 +4,15 @@ var jsToggle = document.querySelector(".page-header__toggle--js");
 var headerCont = document.querySelector(".page-header__container");
 openButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (mainnav.classList.contains("main-nav-js")) {
-    jsToggle.classList.remove("page-header__toggle-close");
+  if (mainnav.classList.contains("main-nav--js")) {
+    jsToggle.classList.remove("page-header__toggle--close");
+    jsToggle.classList.add("page-header__toggle--open");
     headerCont.classList.remove("page-header__container--fixed");
-    mainnav.classList.remove("main-nav-js");
+    mainnav.classList.remove("main-nav--js");
 
 
   } else {
-    mainnav.classList.add("main-nav-js");
+    mainnav.classList.add("main-nav--js");
     headerCont.classList.add("page-header__container--fixed");
     jsToggle.classList.add("page-header__toggle--close");
   }
@@ -130,9 +131,7 @@ if (buttonChoose) {
 if (closeButtonChoose) {
   closeButtonChoose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    if (addPlanModal.classList.contains("add-plan-popup--open")) {
-      addPlanModal.classList.remove("add-plan-popup--open");
-    }
+    addPlanModal.classList.remove("add-plan-popup--open");
   });
 }
 
@@ -163,21 +162,21 @@ if (buttonSubmit) {
   });
 }
 
-var tariffes = document.querySelector(".tariffes");
-var closeButtonTariffes = document.querySelector(".tariffes__button");
+var tariffes = document.querySelector(".promotion-popup");
+var closeButtonTariffes = document.querySelector(".promotion-popup");
 var link = document.querySelector(".business-offer__link");
 
 if (link) {
   link.addEventListener("click", function (evt) {
     evt.preventDefault();
-    tariffes.classList.add("tariffes--open");
+    tariffes.classList.add("promotion-popup--open");
   });
 }
 
 if (closeButtonTariffes) {
   closeButtonTariffes.addEventListener("click", function (evt) {
     evt.preventDefault();
-    tariffes.classList.remove("tariffes--open");
+    tariffes.classList.remove("promotion-popup--open");
   });
 }
 
@@ -185,8 +184,8 @@ if (closeButtonTariffes) {
 if (tariffes) {
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-      if (tariffes.classList.contains("tariffes--open")) {
-        tariffes.classList.remove("tariffes--open");
+      if (tariffes.classList.contains("promotion-popup--open")) {
+        tariffes.classList.remove("promotion-popup--open");
       }
     }
   });
@@ -210,39 +209,39 @@ if (buttonPromotion) {
 
 if (ymaps) {
   ymaps.ready(function () {
-  var myMap = new ymaps.Map(
-    "map",
-    {
-      center: [59.939346, 30.329383],
-      zoom: 16,
-      controls: []
-    },
-    {
-      suppressMapOpenBlock: true
-    },
-    {
-      searchControlProvider: "yandex#search"
-    }
-  ),
-    myPlacemark = new ymaps.Placemark(
-      [59.938669, 30.323057],
-      {},
+    var myMap = new ymaps.Map(
+      "map",
       {
-        iconLayout: "default#image",
-        iconImageHref: "./img/map-marker.svg",
-        iconImageSize: [54, 54],
-        iconImageOffset: [-27, -27]
+        center: [59.939346, 30.329383],
+        zoom: 16,
+        controls: []
+      },
+      {
+        suppressMapOpenBlock: true
+      },
+      {
+        searchControlProvider: "yandex#search"
       }
-    );
+    ),
+      myPlacemark = new ymaps.Placemark(
+        [59.938669, 30.323057],
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "./img/map-marker.svg",
+          iconImageSize: [54, 54],
+          iconImageOffset: [-27, -27]
+        }
+      );
 
-  myMap.geoObjects.add(myPlacemark);
-  myMap.controls.remove("rulerControl");
-  myMap.controls.remove("searchControl");
-  myMap.controls.remove("trafficControl");
-  myMap.controls.remove("typeSelector");
-  myMap.controls.remove("zoomControl");
-  myMap.controls.remove("geolocationControl");
-  myMap.controls.remove("routeEditor")
-});
+    myMap.geoObjects.add(myPlacemark);
+    myMap.controls.remove("rulerControl");
+    myMap.controls.remove("searchControl");
+    myMap.controls.remove("trafficControl");
+    myMap.controls.remove("typeSelector");
+    myMap.controls.remove("zoomControl");
+    myMap.controls.remove("geolocationControl");
+    myMap.controls.remove("routeEditor")
+  });
 
 }

@@ -1,0 +1,19 @@
+.calendar-title {
+  font-size: 14px;
+  line-height: (18 / 14);
+  text-decoration: none;
+  color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+
+  &--fill {
+    position: relative;
+    color: $basic-white;
+  }
+}

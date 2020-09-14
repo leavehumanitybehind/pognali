@@ -1,4 +1,4 @@
-.mobile-nav__buttons {
+.mobile-nav {
   z-index: 16;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   }
 }
 
-.mobile-nav__buttons-link {
+.mobile-nav__link {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -106,6 +106,6 @@
   }
 }
 
-.no-js .mobile-nav__buttons-link {
+.no-js .mobile-nav__link {
   color: $basic-white;
 }

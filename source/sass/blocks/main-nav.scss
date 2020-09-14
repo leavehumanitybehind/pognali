@@ -18,7 +18,7 @@
   }
 }
 
-.main-nav-js {
+.main-nav--js {
   display: block;
 }
 
@@ -40,4 +40,8 @@
 .main-nav__social-list {
   @include no-list;
   display: flex;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

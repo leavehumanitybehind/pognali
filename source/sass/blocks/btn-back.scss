@@ -42,8 +42,14 @@
     @media (min-width: $tablet-width) {
       display: flex;
       width: 14px;
-      height: 14px;
-      left: -24%;
+      height: 13px;
+      left: 32%;
+      top: 5px;
     }
+
+    @media (min-width: $desktop-width) {
+    left: 32%;
+    top: 4px;
   }
+}
 }

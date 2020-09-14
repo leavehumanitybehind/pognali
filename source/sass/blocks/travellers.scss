@@ -23,6 +23,17 @@
   }
 }
 
+.travellers__filter {
+  background-color: $basic-yellow;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
+}
+
 .travellers__list {
   @include no-list;
   width: 100%;

@@ -15,17 +15,27 @@
     border-radius: 60px;
   }
 
+  &:nth-child(2) {
+    @media (min-width: $tablet-width) {
+      padding-bottom: 1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 62px;
+    }
+  }
+
   &--last {
     position: relative;
 
     @media (min-width: $tablet-width) {
       margin-top: 50px;
-      padding: 37px 33px;
+          padding: 30px 35px 16px;
     }
 
     @media (min-width: $desktop-width) {
       margin-top: 28px;
-      padding: 92px 145px;
+      padding: 92px 145px 75px;
     }
 
     &::after {
@@ -316,13 +326,13 @@
   margin-bottom: 17px;
   border: 1px solid $light-grey;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: rgba(#000000, 0.7);
     outline: none;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     outline: none;
     border-color: #000000;
   }
@@ -522,6 +532,10 @@
 .plan-filters__select--add {
   position: relative;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 62px;
@@ -813,13 +827,13 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-top: -8px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 10px;
+    margin-left: 1px;
     margin-bottom: 0;
   }
 }
@@ -863,14 +877,23 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
       padding-left: 38px;
+
+      width: 323px;
     }
 
     @media (min-width: $desktop-width) {
       padding-left: 30px;
+      width: 284px;
     }
   }
 
-  &--submit--back {
+  &--btn-back {
+    @media (min-width: $desktop-width) {
+      padding-left: 107px;
+    }
+  }
+
+  &-submit--back {
     position: relative;
     margin: 0 auto;
     padding-bottom: 10px;
@@ -879,7 +902,14 @@
       font-weight: bold;
       padding: 0;
       float: right;
+      margin: 0;
       margin-top: 54px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+      padding-left: 97px;
+      padding-bottom: 0;
     }
   }
 }
@@ -1004,14 +1034,15 @@
     width: 102%;
     height: 142px;
     margin-top: 26px;
-    margin-bottom: 51px;
+
+    margin-bottom: 33px;
   }
 
   @media (min-width: $desktop-width) {
     width: 74%;
     padding: 28px 14px;
     margin-left: 13px;
-    margin-bottom: 72px;
+    margin-bottom: 63px;
   }
 
   &::placeholder {
