@@ -1,6 +1,6 @@
 .btn-back {
   margin-left: -11px;
-  color: $basic-blue;
+  color: $basic-blue-light;
   font-size: 17px;
   font-weight: bold;
   line-height: (30 / 17);
@@ -25,7 +25,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 323px;
+    margin-top: -12px;
+    margin-right: 11px;
   }
 
   &::before {

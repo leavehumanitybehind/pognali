@@ -50,7 +50,8 @@
     font-size: 20px;
     line-height: 1px;
     margin-bottom: 56px;
-    padding-top: 11px;
+    padding-left: 41px;
+        padding-top: 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -71,7 +72,7 @@
     background: url("../img/qty-plus.svg") no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: -1px;
+      top: -7px;
       left: 36%;
       width: 24px;
       height: 24px;
@@ -83,11 +84,11 @@
     }
   }
 
-  &:hover::after {
+  &:hover {
     opacity: 0.6;
   }
 
-  &:active::after {
+  &:active {
     opacity: 0.3;
   }
 }
@@ -107,7 +108,7 @@
   padding-bottom: 42px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 114px;
+    padding-bottom: 116px;
   }
 
   @media (min-width: $desktop-width) {

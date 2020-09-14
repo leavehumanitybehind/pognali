@@ -51,7 +51,7 @@
   }
 }
 
-.traveller-filter-list__item {
+.traveller-filter__list-item {
   border-top: 1px solid #f3c72b;
   position: relative;
   display: flex;
@@ -77,7 +77,7 @@
   }
 }
 
-.traveller-filter-list__title {
+.traveller-filter__list-title {
   margin: 0;
   margin-bottom: 10px;
   margin-right: 100px;
@@ -116,7 +116,7 @@
   }
 }
 
-.traveller-filter-list__toggle {
+.traveller-filter__list-toggle {
   position: relative;
   border: none;
   padding: 0;

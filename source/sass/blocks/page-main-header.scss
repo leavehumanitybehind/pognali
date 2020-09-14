@@ -98,15 +98,18 @@
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: 91%;
-      right: 63px;
+      top: 93%;
+      right: 35px;
+    }
+    @media (min-width: $desktop-width) {
+      right: 65px;
     }
   }
 
   @media (min-width: $tablet-width) {
     display: flex;
-    padding-right: 101px;
-    padding-top: 78px;
+    padding-right: 94px;
+    padding-top: 79px;
   }
 
   @media (min-width: $desktop-width) {

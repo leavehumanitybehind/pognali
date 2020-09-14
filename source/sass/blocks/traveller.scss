@@ -201,7 +201,7 @@
 
       @media (min-width: $tablet-width) {
         top: 11px;
-        right: 28px;
+        right: 17px;
         width: 8px;
         height: 8px;
       }
@@ -235,6 +235,30 @@
     margin-top: 32px;
     margin-left: 163px;
     width: 108px;
+  }
+
+  &--larisa {
+    @media (min-width: $tablet-width) {
+      margin-top: 43px;
+      margin-left: 102px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 32px;
+      margin-left: 136px;
+    }
+  }
+
+  &--mark {
+    @media (min-width: $tablet-width) {
+      margin-top: 43px;
+      margin-left: 114px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 29px;
+      margin-left: 135px;
+    }
   }
 }
 
@@ -364,7 +388,7 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    margin-top: 29px;
+    margin-top: 43px;
     margin-left: 57px;
 
     @media (min-width: $tablet-width) {
@@ -521,7 +545,7 @@
     padding: 5px 39px 3px;
     width: 150px;
     height: 50px;
-    bottom: 107px;
+    bottom: 106px;
     left: 237px;
     order: 4;
   }
@@ -533,6 +557,16 @@
 
   &::after {
     display: none;
+  }
+
+  &--larisa {
+    @media (min-width: $tablet-width) {
+      bottom: 119px;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: 45px;
+    }
   }
 
   &:hover,

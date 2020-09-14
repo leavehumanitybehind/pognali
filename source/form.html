@@ -106,7 +106,8 @@
                 <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.png 2x">
                 <source media="(min-width: 1440px)"
                   srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
                 <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="96" height="18"
                   alt="Логотип сайта поиска попутчиков">
               </picture>
@@ -132,11 +133,11 @@
           </button>
         </div>
         <div class="page-header__user-list user-list">
-          <a class="user-list__button user-list__button--email" href="mailto:mail@htmlacademy.ru">
-            <span class="visually-hidden">Почта</span>
-          </a>
           <a class="user-list__button user-list__button--tel" href="tel:88005558628">
             <span class="visually-hidden">Телефон</span>
+          </a>
+          <a class="user-list__button user-list__button--email" href="mailto:mail@htmlacademy.ru">
+            <span class="visually-hidden">Почта</span>
           </a>
           <a class="user-list__login btn" href="login.html">
             <span class="user-list__login-text btn-text">Авторизация</span>
@@ -306,12 +307,11 @@
     </section>
 
     <section class="add-plan">
-
-      <div class="plan-filters__content-wrapper">
+      <div class="add-plan__content-wrapper">
         <h2 class="add-plan__title">Добавить план:</h2>
         <form class="add-plan__filters plan-filters" method="post" action="https://echo.htmlacademy.ru">
           <div class="plan-filters__wrapper" id="step-1">
-            <div class="add-plan__container container">
+            <div class="plan-filters__container">
               <h3 class="plan-filters__head">Шаг 1.<br> Даты пребывания</h3>
               <ul class="plan-filters__list plan-filters__list--current">
                 <li class="plan-filters__list-item plan-filters__list-item--date">
@@ -353,7 +353,7 @@
               <input class="plan-filters__checkbox" name="options" type="checkbox" id="options" checked>
               <label class="plan-filters__label-checkbox" for="options">Можно с детьми</label>
 
-              <ul class="add-plan__calendar calendar">
+              <ul class="plan-filters__head-calendar calendar">
                 <li class="calendar__item">
                   <button type="button" class="calendar__btn calendar__btn--back"><span
                       class="visually-hidden">назад</span>
@@ -504,7 +504,7 @@
             </div>
           </div>
           <div class="plan-filters__wrapper" id="step-2">
-            <div class="add-plan__container container">
+            <div class="plan-filters__container">
               <h3 class="plan-filters__head">Шаг 2.<br> Маршрут</h3>
               <ul class="plan-filters__list">
                 <li class="plan-filters__list-item plan-filters__list-item--date">
@@ -557,14 +557,13 @@
                     </button>
                     <button type="button"
                       class="plan-filters__select-btn-close plan-filters__select-btn-close--choose"></button>
-                    <div class="add-plan-popup">
+                    <div class="plan-filters__add-plan-popup add-plan-popup">
                       <div class="add-plan-popup__wrapper">
                         <p class="add-plan-popup__title">Выберите страну</p>
                         <button type="button" class="add-plan-popup__button-close">
                           <span class="visually-hidden">закрыть</span>
                         </button>
                         <div class="add-plan-popup__table-wrap">
-
                           <div class="add-plan-popup__table alphabet-table">
                             <div class="alphabet__table-item alphabet__table-item--active"><a
                                 class="alphabet__table-link" href="#">А</a></div>
@@ -616,7 +615,8 @@
                               <a href="/country/andorra" class="add-plan-popup__country-name">Андорра</a>
                             </li>
                             <li class="add-plan-popup__country-item">
-                              <a href="/country/antigua-and-barbuda" class="add-plan-popup__country-name">Антигуа и Барбуда</a>
+                              <a href="/country/antigua-and-barbuda" class="add-plan-popup__country-name">Антигуа и
+                                Барбуда</a>
                             </li>
                             <li class="add-plan-popup__country-item">
                               <a href="/country/argentina" class="add-plan-popup__country-name">Аргентина</a>
@@ -653,7 +653,7 @@
             </div>
           </div>
           <div class="plan-filters__wrapper plan-filters__wrapper--last" id="step-3">
-            <div class="add-plan__container container">
+            <div class="plan-filters__container">
               <h3 class="plan-filters__head">Шаг 3.<br> Развлечения</h3>
               <ul class="plan-filters__list">
                 <li class="plan-filters__list-item plan-filters__list-item--date">

@@ -8,21 +8,27 @@
   padding-bottom: 61px;
 
   @media (min-width: $tablet-width) {
-    z-index: 2;
+    z-index: 3;
     border-radius: 30px 30px 0 0;
-    padding: 10px 60px 85px 60px;
+    padding: 1px 60px 85px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    z-index: 3;
     margin-top: -69px;
     border-radius: 30px 30px 0 0;
     padding: 10px 40px;
   }
 }
 
-.add-plan__container {
-  padding: 0 12px;
+
+.add-plan__content-wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 20px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 119px;
+  }
 }
 
 .add-plan__title {
@@ -53,23 +59,19 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     margin-bottom: 28px;
-    padding: 24px 15px;
+    padding: 0 15px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 5px 89px;
-    margin-bottom: 55px;
+    margin-bottom: 33px;
   }
-}
-
-.add-plan__calendar {
-  list-style: none;
 }
 
 .add-plan__filters {
   padding: 0 24px 0 24px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 15px 0 18px;
+    padding: 23px 15px 0 18px;
   }
 }

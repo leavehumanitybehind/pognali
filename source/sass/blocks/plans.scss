@@ -10,10 +10,11 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 30px;
-    padding-bottom: 105px;
+    padding-bottom: 147px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 105px;
     margin-top: -152px;
     margin-bottom: 11px;
   }
@@ -25,7 +26,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
-    padding: 8px 30px 47px;
+    padding: 54px 32px 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,8 +37,13 @@
 .plans__list {
   @include no-list;
 
+  @media (min-width: $tablet-width) {
+    padding: 0 35px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-left: 67px;
+    padding: 0;
   }
 }
 
@@ -51,7 +57,8 @@
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    padding: 33px 30px 13px 38px;
+    padding: 34px 24px 10px 32px;
+    margin-bottom: 15px;
     flex-direction: row-reverse;
   }
 
@@ -130,9 +137,12 @@
   margin: 0;
   margin-bottom: 5px;
 
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
   @media (min-width: $desktop-width) {
     margin-right: 32px;
-    margin-bottom: 0;
   }
 }
 

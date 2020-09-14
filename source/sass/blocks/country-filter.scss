@@ -18,7 +18,7 @@
 
 .country-filter-popup__wrapper {
   padding: 58px 5px 12px 2px;
-  margin-bottom: 27px;
+  margin-bottom: 7px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -253,7 +253,7 @@
 
     @media (min-width: $desktop-width) {
       top: 2px;
-      left: 155px;
+      left: 139px;
     }
   }
 }

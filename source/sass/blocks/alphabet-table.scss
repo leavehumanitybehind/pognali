@@ -1,9 +1,12 @@
 .alphabet-table {
   display: flex;
   flex-wrap: wrap;
+  width: 104%;
 
   @media (min-width: $tablet-width) {
-    width: 70%;
+    width: 57%;
+    margin-right: 55px;
+
   }
 
   @media (min-width: $desktop-width) {
