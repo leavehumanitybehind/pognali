@@ -1,3 +1,11 @@
+.range {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-grow: 1;
+    align-items: baseline;
+  }
+}
+
 .range__wrap {
   position: relative;
 
@@ -5,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 71px;
 
     flex-grow: 1;
   }
@@ -12,6 +21,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     margin-bottom: 30px;
+    padding-left: 0;
   }
 }
 
@@ -109,10 +119,8 @@
   background-color: rgba($special-grey, 0.3);
 
   @media (min-width: $tablet-width) {
-    left: -335px;
-    position: absolute;
     width: 280px;
-    top: 14px;
+    margin-top: -20px;
   }
 
   @media (min-width: $desktop-width) {
