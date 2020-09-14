@@ -30,7 +30,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px 72px 45px;
+    padding: 48px 72px 45px;
   }
 }
 
@@ -58,7 +58,8 @@
 
   @media (min-width: $tablet-width) {
     padding: 34px 24px 10px 32px;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
+    border-radius: 10px;
     flex-direction: row-reverse;
   }
 
@@ -114,7 +115,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-top: 19px;
+    padding-top: 16px;
+    padding-bottom: 5px;
     letter-spacing: 0.1em;
     border-top: 1px solid $light-grey;
     font-size: 20px;

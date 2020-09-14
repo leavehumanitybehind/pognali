@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 90px 36px 23px;
+    padding: 86px 20px 23px 36px;
     flex-wrap: nowrap;
   }
 
@@ -40,6 +40,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    margin-left: 6px;
   }
 }
 
@@ -84,9 +85,9 @@
 .country-filter-popup__list {
   @include no-list;
   order: 3;
-  padding-top: 30px;
+  padding-top: 33px;
   padding-left: 23px;
-  margin-bottom: -2px;
+  margin-bottom: -7px;
 
   @media (min-width: $tablet-width) {
     width: 58%;
@@ -247,7 +248,7 @@
     height: auto;
     width: 100%;
     padding: 40px 0;
-    margin-top: 58px;
+    margin-top: 46px;
   }
 }
 

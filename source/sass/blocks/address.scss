@@ -19,6 +19,7 @@
   @media (min-width: $desktop-width) {
     padding: 114px 140px 21px 398px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
@@ -122,6 +123,10 @@
     border-left: 10px solid $basic-blue-light;
     border-bottom: 7px solid transparent;
     border-top: 7px solid transparent;
+
+    @media (min-width: $tablet-width) {
+      right: 33px;
+    }
 
     @media (min-width: $desktop-width) {
       top: 49%;

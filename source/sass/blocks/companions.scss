@@ -10,7 +10,7 @@
     border-radius: 0 0 55px 55px;
     margin-top: -50px;
     padding-top: 147px;
-    padding-bottom: 62px;
+    padding-bottom: 59px;
     background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
     background-repeat: no-repeat, no-repeat;
     background-position: top 15% right 15%, top 47% left 6%;
@@ -73,7 +73,7 @@
 .companions__description {
   width: 217px;
   margin-left: 26px;
-  margin-bottom: 58px;
+  margin-bottom: 55px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
@@ -88,7 +88,7 @@
 }
 
 .companions__description-text--thesis {
-  margin-bottom: 21px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     width: 427px;
@@ -115,7 +115,7 @@
     grid-template-columns: 285px 285px;
     padding: 0 34px;
     gap: 50px;
-    margin-bottom: 64px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: $desktop-width) {
@@ -131,16 +131,21 @@
   @media (min-width: $tablet-width) {
     width: 90%;
     margin: 0 auto;
+    border-radius: 20px;
+    padding-left: 33px;
   }
 
   @media (min-width: $desktop-width) {
     width: 280px;
     height: 80px;
     margin: -179px 40px 10px;
-    border-radius: 20px;
   }
 
   &::after {
+    @media (min-width: $tablet-width) {
+      right: 5%;
+    }
+
     @media (min-width: $desktop-width) {
       right: 12%;
       top: 42%;

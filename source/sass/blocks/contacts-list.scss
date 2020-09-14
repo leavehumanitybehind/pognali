@@ -8,6 +8,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 866px;
     margin: auto;
@@ -50,7 +51,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding-left: 119px;
+    padding-left: 123px;
   }
 
   &::before {

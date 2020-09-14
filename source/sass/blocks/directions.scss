@@ -83,6 +83,8 @@
 
   @media (min-width: $desktop-width) {
     width: 344px;
+    max-height: 265px;
+    overflow: hidden;
   }
 }
 

@@ -3,11 +3,10 @@
 
   padding-top: 18px;
   padding-left: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     padding-top: 23px;
     margin-bottom: 6px;
@@ -19,8 +18,17 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    max-height: 150px;
     overflow: hidden;
+  }
+
+  &--larisa {
+    padding: 15px 0 0 13px;
+    margin-bottom: 5px;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 23px;
+      padding-left: 40px;
+    }
   }
 }
 

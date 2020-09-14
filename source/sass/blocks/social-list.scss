@@ -29,6 +29,19 @@
       display: none;
     }
   }
+
+  &--with-bg {
+    @media (min-width: $tablet-width) {
+      margin-left: 89px;
+      max-width: 220px;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -12px;
+      max-width: 500px;
+    }
+  }
 }
 
 .social-list__link {

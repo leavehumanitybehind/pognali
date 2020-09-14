@@ -1,11 +1,11 @@
 .alphabet {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 28px;
-  margin-bottom: 18px;
+  padding: 0 25px;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
-    width: 500px;
+    width: 496px;
   }
 
   @media (min-width: $desktop-width) {
@@ -34,7 +34,7 @@
 
   &--m {
     @media (min-width: $desktop-width) {
-      margin-bottom: 53px;
+      margin-bottom: 31px;
     }
   }
 }
@@ -81,8 +81,8 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $basic-blue;
-  width: 43px;
-  height: 40px;
+  width: 44px;
+  height: 41px;
   border: 1px solid $light-grey;
   background-color: $basic-white;
 
@@ -96,13 +96,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0;
-    margin-left: -19px;
+    margin: 25px 0 22px -19px;
     font-weight: bold;
     font-size: 60px;
-    margin-bottom: 14px;
     opacity: 1;
-    margin-top: 25px;
   }
 }
 

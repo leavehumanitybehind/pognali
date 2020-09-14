@@ -244,7 +244,8 @@
           </span>
           <ul class="profile__transport">
             <li class="profile__transport-item">
-              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-plane" checked>
+              <input class="profile__transport-checkbox visually-hidden" name="transport" type="checkbox"
+                id="checkbox-plane" checked >
               <label class="profile__transport-label" for="checkbox-plane">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Авиаперелет">
                   <use href="#plane"></use>
@@ -252,7 +253,8 @@
               </label>
             </li>
             <li class="profile__transport-item">
-              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-bus">
+              <input class="profile__transport-checkbox visually-hidden" name="transport" type="checkbox"
+                id="checkbox-bus">
               <label class="profile__transport-label" for="checkbox-bus">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Автобус">
                   <use href="#bus"></use>
@@ -260,7 +262,8 @@
               </label>
             </li>
             <li class="profile__transport-item">
-              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-bicycle">
+              <input class="profile__transport-checkbox visually-hidden" name="transport" type="checkbox"
+                id="checkbox-bicycle" >
               <label class="profile__transport-label" for="checkbox-bicycle">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Велосипед">
                   <use href="#bike"></use>
@@ -268,7 +271,8 @@
               </label>
             </li>
             <li class="profile__transport-item">
-              <input class="profile__transport-checkbox" name="transport" type="checkbox" id="checkbox-walk">
+              <input class="profile__transport-checkbox visually-hidden" name="transport" type="checkbox"
+                id="checkbox-walk" >
               <label class="profile__transport-label" for="checkbox-walk">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Пешком">
                   <use href="#run"></use>
@@ -350,8 +354,9 @@
                     data-direction="minus">-</button>
                 </div>
               </div>
-              <input class="plan-filters__checkbox" name="options" type="checkbox" id="options" checked>
-              <label class="plan-filters__label-checkbox" for="options">Можно с детьми</label>
+              <input class="plan-filters__checkbox visually-hidden" name="options" type="checkbox" id="options"
+                tabindex="1" checked>
+              <label class="plan-filters__label-checkbox" for="options" tabindex="1">Можно с детьми</label>
 
               <ul class="plan-filters__head-calendar calendar">
                 <li class="calendar__item">
@@ -500,7 +505,8 @@
                   </tr>
                 </tbody>
               </table>
-              <a class="plan-filters__step-btn btn" href="#step-2"><span class="btn-text">Следующий шаг</span></a>
+              <a class="plan-filters__step-btn btn" href="#step-2"><span class="btn-text btn-text--form">Следующий
+                  шаг</span></a>
             </div>
           </div>
           <div class="plan-filters__wrapper" id="step-2">
@@ -642,7 +648,7 @@
                 </div>
                 <div class="plan-filters__step">
                   <a class="plan-filters__step-btn btn" href="#step-3">
-                    <span class="btn-text">Следующий шаг</span>
+                    <span class="btn-text btn-text--form">Следующий шаг</span>
                   </a>
                   <a class="plan-filters__step-btn plan-filters__step-btn--back btn-back" href="#step-1">На шаг
                     назад</a>
@@ -693,10 +699,9 @@
               </div>
               <div class="plan-filters__step">
                 <button class="plan-filters__step-btn plan-filters__step-btn--submit btn" type="submit"><span
-                    class="btn-text">Отправить</span></button>
-                <a class="plan-filters__step-btn plan-filters__step-btn-submit--back btn-back"
-                  href="#step-2">На
-                  шаг назад</a>
+                    class="btn-text btn-text--form">Отправить</span></button>
+                <a class="plan-filters__step-btn plan-filters__step-btn-submit plan-filters__step-btn-submit--btn-back btn-back"
+                  href="#step-2">На шаг назад</a>
               </div>
             </div>
           </div>

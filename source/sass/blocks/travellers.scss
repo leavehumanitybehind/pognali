@@ -11,7 +11,7 @@
 }
 
 .travellers__wrapper {
-  padding: 40px 2px 7px;
+  padding: 60px 2px 7px;
 
   @media (min-width: $tablet-width) {
     padding: 98px 2px 7px;
@@ -35,7 +35,7 @@
 
   @media (min-width: $desktop-width) {
     width: 286px;
-    padding: 0px 20px 16px 20px;
+    padding: 0 20px 16px 20px;
     margin: 0;
     order: 2;
     align-self: flex-start;
@@ -46,9 +46,15 @@
 .travellers__list {
   @include no-list;
   width: 100%;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 99%;
+    margin-bottom: 40px;
   }
 }
 

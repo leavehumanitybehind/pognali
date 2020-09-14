@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 112px;
+    padding-top: 116px;
     padding-bottom: 75px;
   }
 }
@@ -59,6 +59,7 @@
 }
 
 .promotion__description--questions {
+  width: auto;
   margin-bottom: 31px;
   font-weight: 300;
   font-size: 16px;
@@ -77,11 +78,11 @@
     margin-bottom: 80px;
     margin-left: -19px;
   }
+}
 
-  & .promotion__description-break-line {
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
+.promotion__description--questions br {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -126,7 +127,7 @@
   width: 230px;
   border-radius: 10px 0 0 10px;
   padding: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   height: 66px;
   font-size: 18px;
 
@@ -134,7 +135,7 @@
     width: 556px;
     height: 80px;
     padding: 30px;
-    margin-bottom: 36px;
+    margin-bottom: 55px;
     margin-left: 35px;
     border-radius: 20px 0 0 20px;
     font-weight: bold;
@@ -147,7 +148,7 @@
     width: 880px;
     height: 81px;
     margin-left: 72px;
-    margin-bottom: 43px;
+    margin-bottom: 67px;
   }
 
   &::placeholder {
@@ -200,13 +201,13 @@
     width: 80px;
     height: 80px;
     margin-left: -19px;
+    border-radius: 0 20px 20px 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 320px;
     height: 81px;
     margin-left: -27px;
-    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -218,7 +219,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    line-height: 10px;
+    margin: 0;
   }
 }
 

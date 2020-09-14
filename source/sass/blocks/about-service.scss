@@ -26,7 +26,7 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-tablet@2x.png");
       background-size: 90% 90%;
-      background-position: bottom 47px right 35px;
+      background-position: bottom 69px right 16px;
     }
   }
 
@@ -65,14 +65,14 @@
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 49px;
+    margin-bottom: 39px;
     padding-left: 6px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
     padding-left: 38px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 }
 
@@ -134,11 +134,12 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-left: 32px;
+    margin-left: 26px;
+    border-radius: 20px;
+    padding-left: 38px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 69px;
-    border-radius: 20px;
+    margin-left: 62px;
   }
 }

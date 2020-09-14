@@ -1,7 +1,7 @@
 .companion {
   position: relative;
   background-color: $basic-white;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   border-radius: 10px;
 
   @media (min-width: $tablet-width) {
@@ -72,6 +72,7 @@
 
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: -15px;
   margin-bottom: 7px;
