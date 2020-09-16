@@ -1,14 +1,14 @@
 .about-service {
   position: relative;
   z-index: 6;
-  padding: 18px 1px;
+  padding: 20px 1px;
   border-radius: 30px;
   background-color: #182044;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: 90% 90%;
   background-position: bottom 30px left 18px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/about-mobile@2x.png");
@@ -17,16 +17,16 @@
   @media (min-width: $tablet-width) {
     border-radius: 55px;
     padding: 4px;
-    padding-bottom: 86px;
+    padding-bottom: 88px;
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: bottom 50% right 28px;
-    background-size: 90% 94%;
+    background-position: bottom 210% right 24px;
+    background-size: 92% 96%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-tablet@2x.png");
-      background-size: 90% 90%;
-      background-position: bottom 69px right 16px;
+      background-size: 90% 87%;
+      background-position: bottom 95% right 19px;
     }
   }
 
@@ -91,7 +91,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 83px;
+    margin-bottom: 85px;
     padding-left: 38px;
   }
 }

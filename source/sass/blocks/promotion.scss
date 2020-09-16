@@ -10,7 +10,7 @@
     margin-top: -45px;
     border-radius: 0 0 55px 55px;
     padding-top: 80px;
-    padding-bottom: 28px;
+    padding-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,9 +36,9 @@
 }
 
 .promotion__description {
-  width: 205px;
+  width: 200px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-weight: 300;
   font-size: 16px;
   line-height: (22 / 16);
@@ -127,7 +127,7 @@
   width: 230px;
   border-radius: 10px 0 0 10px;
   padding: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   height: 66px;
   font-size: 18px;
 
@@ -148,7 +148,7 @@
     width: 880px;
     height: 81px;
     margin-left: 72px;
-    margin-bottom: 67px;
+    margin-bottom: 64px;
   }
 
   &::placeholder {

@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 0 0 32px;
+    padding: 0 0 0 34px;
     width: auto;
   }
 }
@@ -21,9 +21,15 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-    margin-right: 45px;
-    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-bottom: 15px;
     width: 210px;
+  }
+
+  &--current {
+    @media (min-width: $desktop-width) {
+      margin-right: 45px;
+    }
   }
 
   &--empty {
@@ -34,7 +40,7 @@
 
   &--m {
     @media (min-width: $desktop-width) {
-      margin-bottom: 31px;
+      margin-bottom: 41px;
     }
   }
 }

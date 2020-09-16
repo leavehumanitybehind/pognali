@@ -44,58 +44,6 @@
     margin-right: -11px;
   }
 
-  &:nth-last-child(3) {
-    @media (min-width: $tablet-width) {
-      margin-right: auto;
-    }
-  }
-
-  &-back {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 16px;
-      right: 150px;
-      width: 14px;
-      height: 18px;
-      background: url("../img/triangle-arrow-left.svg") no-repeat;
-
-      @media (min-width: $tablet-width) {
-        width: 11px;
-        height: 20px;
-        top: 18px;
-        right: 21px;
-      }
-
-      @media (min-width: $desktop-width) {
-        right: 15px;
-      }
-    }
-  }
-
-  &-next {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 16px;
-      right: 60px;
-      width: 14px;
-      height: 18px;
-      background: url("../img/triangle-arrow-right.svg") no-repeat;
-
-      @media (min-width: $tablet-width) {
-        width: 11px;
-        height: 20px;
-        top: 17px;
-        right: 23px;
-      }
-    }
-  }
-
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -103,6 +51,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:nth-last-child(3) {
+    @media (min-width: $tablet-width) {
+      margin-right: auto;
+    }
   }
 }
 
@@ -148,6 +102,56 @@
 
     @media (min-width: $tablet-width) {
       height: 48px;
+    }
+  }
+
+  &--back {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 150px;
+      width: 14px;
+      height: 18px;
+      background: url("../img/triangle-arrow-left.svg") no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 11px;
+        height: 20px;
+        top: 18px;
+        right: 21px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 15px;
+      }
+    }
+  }
+
+  &--next {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 60px;
+      width: 14px;
+      height: 18px;
+      background: url("../img/triangle-arrow-right.svg") no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 11px;
+        height: 20px;
+        top: 17px;
+        right: 23px;
+      }
     }
   }
 }

@@ -8,6 +8,7 @@
 
 .range__wrap {
   position: relative;
+  margin-left: 5px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -52,10 +53,11 @@
     background-position: 50%;
     width: 20px;
     height: 8px;
-    top: 15px;
+    top: 12px;
     right: 46%;
 
     @media (min-width: $tablet-width) {
+      top: 18px;
       right: 43%;
     }
   }
@@ -81,9 +83,9 @@
 
 .range__input {
   font-family: inherit;
-  width: 114px;
+  width: 110px;
 
-  padding: 8px;
+  padding: 6px;
   border: 1px solid #cbced9;
 
   &:hover,
@@ -215,14 +217,14 @@
     top: 3px;
     left: 4px;
 
-    width: 144px;
+    width: 147px;
     height: 3px;
 
     background-color: $basic-blue;
 
     @media (min-width: $tablet-width) {
       height: 5px;
-      width: 198px;
+      width: 205px;
       right: -43px;
     }
 

@@ -128,7 +128,7 @@
 
 .page-header__toggle {
   position: relative;
-  top: 0;
+  top: 5px;
   right: 0;
   z-index: 2;
   display: block;
@@ -140,7 +140,7 @@
 
   @media (min-width: $tablet-width) {
     order: 2;
-    top: 13px;
+    top: 16px;
     right: -14px;
   }
 
@@ -203,7 +203,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 300px;
-    margin-top: -10px;
+    margin-top: -8px;
   }
 
   @media (min-width: $desktop-width) {

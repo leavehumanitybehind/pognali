@@ -157,6 +157,10 @@
       left: 0;
       font-size: 21px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 15px;
+    }
   }
 
   &:nth-child(2)::before {
@@ -252,8 +256,8 @@
       display: inline-flex;
       width: 68px;
       height: 68px;
-      left: -22px;
-      top: -25px;
+      left: -24px;
+      top: -23px;
       background: #e2e5f2 url("../img/user.svg") no-repeat center;
       background-size: 20px 20px;
       content: "";

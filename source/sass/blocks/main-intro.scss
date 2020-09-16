@@ -13,13 +13,13 @@
   @media (min-width: $tablet-width) {
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: top 81% right 110px, top 158% left 44%;
+    background-position: top 90% right 110px, top 158% left 44%;
     background-size: 50% 50%, 170% 75%;
     background-color: #182044;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/traveller-illustration-tablet@2x.png"), url("../img/globe-back-tablet@2x.jpg");
-      background-position: bottom 20% right 108px, top 230% left 20%;
+      background-position: bottom 15% right 108px, top 230% left 20%;
       background-size: 50% 50%, 140% 85%;
     }
   }

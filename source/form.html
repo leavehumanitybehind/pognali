@@ -245,7 +245,7 @@
           <ul class="profile__transport">
             <li class="profile__transport-item">
               <input class="profile__transport-checkbox visually-hidden" name="transport" type="checkbox"
-                id="checkbox-plane" checked >
+                id="checkbox-plane" checked>
               <label class="profile__transport-label" for="checkbox-plane">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Авиаперелет">
                   <use href="#plane"></use>
@@ -263,7 +263,7 @@
             </li>
             <li class="profile__transport-item">
               <input class="profile__transport-checkbox visually-hidden" name="transport" type="checkbox"
-                id="checkbox-bicycle" >
+                id="checkbox-bicycle">
               <label class="profile__transport-label" for="checkbox-bicycle">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Велосипед">
                   <use href="#bike"></use>
@@ -272,7 +272,7 @@
             </li>
             <li class="profile__transport-item">
               <input class="profile__transport-checkbox visually-hidden" name="transport" type="checkbox"
-                id="checkbox-walk" >
+                id="checkbox-walk">
               <label class="profile__transport-label" for="checkbox-walk">
                 <svg class="profile__transport-label-icon" width="16" height="18" aria-label="Пешком">
                   <use href="#run"></use>
@@ -331,32 +331,34 @@
               <p class="plan-filters__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
                 позвать
                 в поездку и ее предполагаемую длительность.</p>
-              <div class="plan-filters__form plan-filters__form--companions">
-                <label class="plan-filters__label" for="companions">ищу попутчиков:</label>
-                <span class="plan-filters__measure">Чел.</span>
-                <div class="plan-filters__input-number-wrapper">
-                  <button type="button" class="plan-filters__toggle plan-filters__toggle--plus"
-                    data-direction="plus">+</button>
-                  <input class="plan-filters__input" name="companion" id="companions" type="number" value="2">
-                  <button type="button" class="plan-filters__toggle plan-filters__toggle--minus"
-                    data-direction="minus">-</button>
+              <div class="plan-filters__form-wrapper">
+                <div class="plan-filters__form plan-filters__form--companions">
+                  <label class="plan-filters__label" for="companions">ищу попутчиков:</label>
+                  <span class="plan-filters__measure">Чел.</span>
+                  <div class="plan-filters__input-number-wrapper">
+                    <button type="button" class="plan-filters__toggle plan-filters__toggle--plus"
+                      data-direction="plus">+</button>
+                    <input class="plan-filters__input" name="companion" id="companions" type="number" value="2">
+                    <button type="button" class="plan-filters__toggle plan-filters__toggle--minus"
+                      data-direction="minus">-</button>
+                  </div>
                 </div>
-              </div>
-              <div class="plan-filters__form plan-filters__form--duration">
-                <label class="plan-filters__label" for="duration">длительность:</label>
-                <span class="plan-filters__measure">Дн.</span>
-                <div class="plan-filters__input-number-wrapper">
-                  <button type="button" class="plan-filters__toggle plan-filters__toggle--plus"
-                    data-direction="plus">+</button>
-                  <input class="plan-filters__input" name="durations" id="duration" type="number" value="2">
+                <div class="plan-filters__form plan-filters__form--duration">
+                  <label class="plan-filters__label" for="duration">длительность:</label>
+                  <span class="plan-filters__measure">Дн.</span>
+                  <div class="plan-filters__input-number-wrapper">
+                    <button type="button" class="plan-filters__toggle plan-filters__toggle--plus"
+                      data-direction="plus">+</button>
+                    <input class="plan-filters__input" name="durations" id="duration" type="number" value="2">
 
-                  <button type="button" class="plan-filters__toggle plan-filters__toggle--minus"
-                    data-direction="minus">-</button>
+                    <button type="button" class="plan-filters__toggle plan-filters__toggle--minus"
+                      data-direction="minus">-</button>
+                  </div>
                 </div>
+                <input class="plan-filters__checkbox visually-hidden" name="option" type="checkbox" id="options"
+                  checked>
+                <label class="plan-filters__label-checkbox" for="options" tabindex="0">Можно с детьми</label>
               </div>
-              <input class="plan-filters__checkbox visually-hidden" name="options" type="checkbox" id="options"
-                tabindex="1" checked>
-              <label class="plan-filters__label-checkbox" for="options" tabindex="1">Можно с детьми</label>
 
               <ul class="plan-filters__head-calendar calendar">
                 <li class="calendar__item">

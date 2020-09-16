@@ -12,21 +12,31 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 40px;
-    padding: 30px 20px 16px 20px;
+    padding: 35px 20px 16px 20px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 84px;
+    margin-right: 58px;
     margin-bottom: 27px;
     padding: 0;
     flex-wrap: nowrap;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+      padding: 30px 20px 16px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+    }
   }
 
   &:nth-child(2) {
     margin-bottom: 12px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     @media (min-width: $desktop-width) {
@@ -89,6 +99,7 @@
     width: 285px;
     height: 285px;
     margin: 0;
+    border-radius: 0;
   }
 }
 
@@ -114,6 +125,7 @@
     width: 285px;
     height: 100%;
     margin-right: 38px;
+    border-radius: 0;
   }
 }
 
@@ -131,11 +143,11 @@
     font-size: 30px;
     line-height: 1;
     width: auto;
-    margin-bottom: 25px;
+    margin-bottom: 21px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 49px;
+    padding-top: 45px;
     margin-left: 23px;
     margin-bottom: 3px;
   }
@@ -173,10 +185,10 @@
       }
 
       @media (min-width: $desktop-width) {
-        top: 60px;
-        right: 269px;
-        width: 11px;
-        height: 11px;
+        top: 58px;
+        right: 267px;
+        width: 8px;
+        height: 8px;
       }
     }
   }
@@ -192,7 +204,7 @@
       background-color: #81e31e;
       content: "";
       position: absolute;
-      top: 8px;
+      top: 12px;
       right: -63px;
 
       width: 6px;
@@ -209,8 +221,8 @@
       @media (min-width: $desktop-width) {
         top: 60px;
         right: 269px;
-        width: 11px;
-        height: 11px;
+        width: 8px;
+        height: 8px;
       }
     }
   }
@@ -220,7 +232,7 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-left: -62px;
+  margin-left: -54px;
   width: 90px;
 
   @media (min-width: $tablet-width) {
@@ -231,17 +243,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 32px;
+    margin-top: 31px;
     margin-left: 163px;
     width: 108px;
+    margin-bottom: 8px;
   }
 
   &--larisa {
-    margin-left: -81px;
+    margin-left: -75px;
     margin-top: 3px;
 
     @media (min-width: $tablet-width) {
-      margin-top: 43px;
+      margin-top: 46px;
       margin-left: 102px;
     }
 
@@ -252,6 +265,8 @@
   }
 
   &--mark {
+    margin-left: -65px;
+
     @media (min-width: $tablet-width) {
       margin-top: 43px;
       margin-left: 114px;
@@ -276,10 +291,6 @@
     font-size: 20px;
     line-height: 1;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-top: -5px;
-  }
 }
 
 .traveller__likes-btn {
@@ -290,7 +301,9 @@
   background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
   background-size: 31px 31px;
-  opacity: 0.6;
+  opacity: 0.8;
+  z-index: 10;
+  margin-right: 8px;
 
   &--liked {
     background-image: url("../img/heart-active.svg");
@@ -302,7 +315,7 @@
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
   @media (min-width: $tablet-width) {
@@ -310,11 +323,6 @@
     height: 50px;
     background-size: 51px 51px;
     margin-right: 6px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 67%;
-    right: 44%;
   }
 }
 
@@ -365,8 +373,8 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     position: absolute;
-    right: -20px;
-    bottom: 51px;
+    right: -29px;
+    bottom: 57px;
     width: 320px;
     order: 3;
   }
@@ -401,8 +409,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    bottom: 50px;
-    right: 86px;
+    bottom: 47px;
+    right: 93px;
   }
 }
 
@@ -547,13 +555,13 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     width: 150px;
-    bottom: 106px;
+    bottom: 107px;
     left: 237px;
     order: 4;
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 45px;
+    bottom: 52px;
     left: 320px;
   }
 
@@ -567,7 +575,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      bottom: 45px;
+      bottom: 48px;
     }
   }
 

@@ -46,6 +46,10 @@
     padding-right: 38px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-right: 45px;
+  }
+
   &::after {
     position: absolute;
     content: "";

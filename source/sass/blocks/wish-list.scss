@@ -8,17 +8,19 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-    padding-top: 23px;
+    padding-top: 20px;
     margin-bottom: 6px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 230px;
-    padding-left: 40px;
+    padding-left: 43px;
+    padding-top: 15px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     overflow: hidden;
+    max-height: 150px;
   }
 
   &--larisa {
@@ -26,8 +28,9 @@
     margin-bottom: 5px;
 
     @media (min-width: $desktop-width) {
-      padding-top: 23px;
-      padding-left: 40px;
+      padding-top: 16px;
+      padding-left: 44px;
+      min-width: 260px;
     }
   }
 }
@@ -40,7 +43,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
+    margin-right: 0;
   }
 }
 

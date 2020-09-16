@@ -2,7 +2,7 @@
   width: 150px;
   padding-left: 5px;
   padding-top: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   font-weight: bold;
   font-size: 22px;
   line-height: 1;
@@ -10,9 +10,9 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding-top: 41px;
+    padding-top: 30px;
     padding-left: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 49px;
     font-size: 30px;
     line-height: 1;
     width: auto;
@@ -20,8 +20,8 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin-top: 51px;
-    margin-bottom: 26px;
+    margin-top: 47px;
+    margin-bottom: 25px;
     padding-left: 24px;
   }
 }
@@ -51,7 +51,7 @@
   @media (min-width: $desktop-width) {
     width: auto;
     margin: 0;
-    padding: 13px 0 7px;
+    padding: 15px 0 6px;
     flex-direction: column;
   }
 }
@@ -70,7 +70,7 @@
 
   @media (min-width: $desktop-width) {
     height: auto;
-    margin-bottom: 19px;
+    margin-bottom: 21px;
   }
 }
 
@@ -100,6 +100,10 @@
 .traveller-filter__option--open .traveller-filter-list__title::after,
 .traveller-filter__option--active .traveller-filter-list__title::after {
   transform: rotate(-90deg);
+}
+
+.traveller-filter__checkbox:focus + .traveller-filter__label {
+  opacity: 0.3;
 }
 
 .traveller-filter__label {
@@ -165,7 +169,7 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  padding: 13px 70px;
+  padding: 13px 74px;
   border-radius: 25px;
   color: $basic-blue;
   margin-bottom: 18px;
